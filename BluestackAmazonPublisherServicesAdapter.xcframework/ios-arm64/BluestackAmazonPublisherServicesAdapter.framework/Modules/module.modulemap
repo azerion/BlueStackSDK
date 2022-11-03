@@ -1,0 +1,11 @@
+framework module BluestackAmazonPublisherServicesAdapter {
+  umbrella header "BluestackAmazonPublisherServicesAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BluestackAmazonPublisherServicesAdapter.Swift {
+  header "BluestackAmazonPublisherServicesAdapter-Swift.h"
+  requires objc
+}

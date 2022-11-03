@@ -1,0 +1,11 @@
+framework module BlueStackFacebookAdapter {
+  umbrella header "BlueStackFacebookAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackFacebookAdapter.Swift {
+  header "BlueStackFacebookAdapter-Swift.h"
+  requires objc
+}

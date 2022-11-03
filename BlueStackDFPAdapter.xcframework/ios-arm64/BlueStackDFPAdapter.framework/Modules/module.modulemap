@@ -1,0 +1,11 @@
+framework module BlueStackDFPAdapter {
+  umbrella header "BlueStackDFPAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackDFPAdapter.Swift {
+  header "BlueStackDFPAdapter-Swift.h"
+  requires objc
+}

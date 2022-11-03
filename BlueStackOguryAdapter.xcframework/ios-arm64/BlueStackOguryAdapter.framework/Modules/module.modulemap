@@ -1,0 +1,11 @@
+framework module BlueStackOguryAdapter {
+  umbrella header "BlueStackOguryAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackOguryAdapter.Swift {
+  header "BlueStackOguryAdapter-Swift.h"
+  requires objc
+}

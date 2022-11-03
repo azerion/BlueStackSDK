@@ -1,0 +1,11 @@
+framework module BluestackCriteoAdapter {
+  umbrella header "BluestackCriteoAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BluestackCriteoAdapter.Swift {
+  header "BluestackCriteoAdapter-Swift.h"
+  requires objc
+}

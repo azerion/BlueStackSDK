@@ -1,0 +1,11 @@
+framework module BlueStackSASAdapter {
+  umbrella header "BlueStackSASAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackSASAdapter.Swift {
+  header "BlueStackSASAdapter-Swift.h"
+  requires objc
+}

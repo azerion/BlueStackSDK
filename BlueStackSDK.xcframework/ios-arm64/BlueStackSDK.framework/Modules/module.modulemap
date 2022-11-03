@@ -1,0 +1,6 @@
+framework module BlueStackSDK {
+  umbrella header "BlueStackSDK.h"
+
+  export *
+  module * { export * }
+}
