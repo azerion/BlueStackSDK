@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
                        }
 
 #  spec.source           = { :http => "https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/BlueStack-SDK-v4.1.3.zip" }
-  spec.source           = { :git => 'https://github.com/azerion/BlueStackSDK.git' }
+  spec.source           = { :git => 'https://github.com/azerion/BlueStackSDK.git' , :tag => "v{spec.version}" }
   
   s.source_files = 'BlueStack-SDK-v4.1.3.zip'
 
