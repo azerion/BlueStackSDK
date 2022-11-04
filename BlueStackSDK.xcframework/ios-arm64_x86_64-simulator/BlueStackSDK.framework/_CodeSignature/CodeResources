@@ -42,11 +42,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		T9GS2kURCJwIkQ5FsaGtVwZHbPI=
+		CBvzUAxK8Z3IDp+LKpMt3i/rgk4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		HV44fVPaGGxiBxIo5oZc+SZlzIQ=
+		</data>
+		<key>example.json</key>
+		<data>
+		AU/sK9u3ah/0HSUB1OdURJmkAYY=
 		</data>
 		<key>omsdk-v1.js</key>
 		<data>
@@ -127,6 +131,13 @@
 			<key>hash2</key>
 			<data>
 			/XUceiv6Of41iPnFvFIQ9Qlzsp1oXBhJ1/0Wy0sAew0=
+			</data>
+		</dict>
+		<key>example.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DcRD02cNRZPXYD06ugKeUZAYK+sQ5t8hMSaDu9VUwzE=
 			</data>
 		</dict>
 		<key>omsdk-v1.js</key>
