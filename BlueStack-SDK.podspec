@@ -14,6 +14,7 @@ Pod::Spec.new do |spec|
   FlurryAds
   mopub-ios-sdk
   AdColony
+  ImproveDigital
    DESC
   spec.homepage         = "https://developers.madvertise.com/"
   spec.license          = 'Commercial'
@@ -102,6 +103,12 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
       og.dependency                'OgurySdk','2.1.0'
       og.dependency                'BlueStack-SDK/Core'
   end
+  
+  spec.subspec 'ImproveDigital' do |impDigital|
+      impDigital.vendored_frameworks = 'BlueStackImproveAdapter.xcframework'
+      impDigital.dependency                'ImproveDigital','1.0.0-preview.1'
+      impDigital.dependency                'BlueStack-SDK/Core'
+  end
 
   spec.subspec 'In-App-Bidding' do |inApp|
      inApp.dependency            'BlueStack-SDK/CriteoPublisherSdk'
@@ -117,6 +124,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
     full.dependency              'BlueStack-SDK/Smart-Display-SDK'
     full.dependency              'BlueStack-SDK/OguryAds'
     full.dependency              'BlueStack-SDK/In-App-Bidding'
+    full.dependency              'BlueStack-SDK/ImproveDigital'
   end
 
 end
