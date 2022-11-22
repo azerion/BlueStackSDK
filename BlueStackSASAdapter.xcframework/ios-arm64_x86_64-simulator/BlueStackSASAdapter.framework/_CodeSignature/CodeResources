@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BlueStackSASAdapter-Swift.h</key>
 		<data>
-		wInZtQsF3/RGfMM047iarJ3Q7Xg=
+		X1/Jz7tjL+PzJD52EMKzLTvgmMY=
 		</data>
 		<key>Headers/BlueStackSASAdapter.h</key>
 		<data>
@@ -15,6 +15,26 @@
 		<key>Info.plist</key>
 		<data>
 		+Fdo+7Q47wuMBn/nFAlrvz3JUYI=
+		</data>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		+WbUkcBZimV0dQfWiFEzgyd2fPo=
+		</data>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		DjYkntXBVehaOaFDfWSKgV7PgGk=
+		</data>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		9zvDyK30w4oVdR4FMXAPJ5Vf/A0=
+		</data>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		DjYkntXBVehaOaFDfWSKgV7PgGk=
+		</data>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		ndrSwLogyNc1xw6nJrEiCRdGGOo=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -47,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jmm3F+MvFqZQ3MGVn5eCttQUCLt8QO6iLI7+bR68afE=
+			MPvUiaHOU5Z3Ji6PTJ5dt9JyL0JsLOQc3kfLqoMewYg=
 			</data>
 		</dict>
 		<key>Headers/BlueStackSASAdapter.h</key>
@@ -55,6 +75,41 @@
 			<key>hash2</key>
 			<data>
 			75Wp28n+zbO67Z1UcAr9H8CLp0XTlDEil2D/zqDWv20=
+			</data>
+		</dict>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gvyrdKIMetb/efverCojr01/DyEawpw2mKlzuHPaU2M=
+			</data>
+		</dict>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			L3iXcdlo7NYYCW93GvDteAUBk4jfqyN62YLw6JxFsGU=
+			</data>
+		</dict>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KAvetTyBI7AOvgyDFynYYK79jDnGZFM8mdglaLWla1U=
+			</data>
+		</dict>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			L3iXcdlo7NYYCW93GvDteAUBk4jfqyN62YLw6JxFsGU=
+			</data>
+		</dict>
+		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			d+/CUjW64L4uY91K2GLYTAACtKC+NzbAWkK392pUD98=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>

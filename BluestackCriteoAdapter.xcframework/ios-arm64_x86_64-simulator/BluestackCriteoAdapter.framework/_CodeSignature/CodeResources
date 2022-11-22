@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BluestackCriteoAdapter-Swift.h</key>
 		<data>
-		aOWitjHz/EYzjPM91fnTOKTLNPY=
+		Z3brARemrmC0TwDzcxYd+wmHvf4=
 		</data>
 		<key>Headers/BluestackCriteoAdapter.h</key>
 		<data>
@@ -15,6 +15,26 @@
 		<key>Info.plist</key>
 		<data>
 		S8IrgDT4gijNoEQavrHuBVc87nM=
+		</data>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		b3DyQ1CebSuLUMtNour+OCqHIEk=
+		</data>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		VNR0hhSUWj3OyOvwtkz+ZhKvesw=
+		</data>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		VfxAbVArakfkZ/aOWmiA8+J0Xmc=
+		</data>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		VNR0hhSUWj3OyOvwtkz+ZhKvesw=
+		</data>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		EzolBkQpV91tR3eCrz4RseTyoNo=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -47,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUVCVh778w3gof9a0xcZycwUpaW9mNQswoe9S12GGpI=
+			neKzkyLXr+uGakY3GieWDDubOvjmSfeLhfR45sivZEI=
 			</data>
 		</dict>
 		<key>Headers/BluestackCriteoAdapter.h</key>
@@ -55,6 +75,41 @@
 			<key>hash2</key>
 			<data>
 			x6KAQqqogv9cikBD4kT1YwhwY0yUQBeZ3zENT1byVzg=
+			</data>
+		</dict>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			otPNzQFbsdKTcLFPBKHWXjwELxD/EhxSRsKplI8AjIc=
+			</data>
+		</dict>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uqAtxD757Tid8c3nAXoc5GuKyzrIGLputUanb1Zu2aU=
+			</data>
+		</dict>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wLY+6t7a6gV0ZG/AgtjMJhLBhjt6CD7uL2Rv9olQMT4=
+			</data>
+		</dict>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uqAtxD757Tid8c3nAXoc5GuKyzrIGLputUanb1Zu2aU=
+			</data>
+		</dict>
+		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sSomFMlEQVaGMvXLctBjad7mg1cRk1S8XbvB5Nm0j0s=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BlueStackAdColonyAdapter-Swift.h</key>
 		<data>
-		un7WDtZ9BmP4q2zMTex5EwzNXfU=
+		it7AReN7EWhimAiWp6L82jSiy3Q=
 		</data>
 		<key>Headers/BlueStackAdColonyAdapter.h</key>
 		<data>
@@ -15,6 +15,26 @@
 		<key>Info.plist</key>
 		<data>
 		2RPwpmwssaomwx6BLZI65vxs0SY=
+		</data>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		75Jc2soF66O7zpioQH5WTuBENO8=
+		</data>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		iCXChQOt3PKGOOolJHxQMYe/mOM=
+		</data>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		b706Ax+do+U+UFhCJGGVOnXtjh4=
+		</data>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		iCXChQOt3PKGOOolJHxQMYe/mOM=
+		</data>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		4XdIGMLjeXHK3i/NZMyDME8RTxw=
 		</data>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -47,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			63X+ekoA4Dx3hgOSO4xE47/vfsihZXXapHl5myi3B8o=
+			fJfWukyQpRD82boSc1a4rfA+lR1jzZh/b9dITS7NyVY=
 			</data>
 		</dict>
 		<key>Headers/BlueStackAdColonyAdapter.h</key>
@@ -55,6 +75,41 @@
 			<key>hash2</key>
 			<data>
 			fGQ9IycLTfeM+ceqyV+zAwhUtP2qHMfzc86MOdO+TMs=
+			</data>
+		</dict>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bOBroVvxkHqkZaGPhxN/Rw+OLW9mjHXSbQkVCArIRAc=
+			</data>
+		</dict>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DQ+xkWeS9wQrrb/xsXebEbyHlZpnYNBY38+Rv5IvOJQ=
+			</data>
+		</dict>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uSW/CU94Ck56GRv1/fjTrBPHWbpE8B5vCNgiKvwbvdo=
+			</data>
+		</dict>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DQ+xkWeS9wQrrb/xsXebEbyHlZpnYNBY38+Rv5IvOJQ=
+			</data>
+		</dict>
+		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			X570Jjd9e46f1IgOjp1xBGkb1KzAysO9i9rx0j+QxJ0=
 			</data>
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>

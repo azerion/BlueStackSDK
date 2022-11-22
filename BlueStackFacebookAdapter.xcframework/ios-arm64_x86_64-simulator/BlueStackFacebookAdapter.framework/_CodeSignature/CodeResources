@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BlueStackFacebookAdapter-Swift.h</key>
 		<data>
-		dspXry4Y+Au6JgutrQHxp+W+Kts=
+		Ed9ALxiQJeXe6GBYcsvTCA3Qszo=
 		</data>
 		<key>Headers/BlueStackFacebookAdapter.h</key>
 		<data>
@@ -15,6 +15,26 @@
 		<key>Info.plist</key>
 		<data>
 		+9+59GesQKCL1CWmY/Yw6o+36ts=
+		</data>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		lvTS+h1BfhgSBuFZzo5TPAPwYVA=
+		</data>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		5xyxqoccToQvcsIM76PintmFo3g=
+		</data>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		l7HinhnAdNgzaWkbDSpKWLYIA20=
+		</data>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		5xyxqoccToQvcsIM76PintmFo3g=
+		</data>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		C5vvFHx5MA+kcY3BUihEa5faWdk=
 		</data>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -47,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TTnVH75DKb2s24e8w39S6Dnl8XhGkYZ60rDGqY+3Bck=
+			I/X7cNth/SZpeeSw6sa5xjdGsBLw+PuX/4sFjsPVAJo=
 			</data>
 		</dict>
 		<key>Headers/BlueStackFacebookAdapter.h</key>
@@ -55,6 +75,41 @@
 			<key>hash2</key>
 			<data>
 			cB3H39HvMUlYLiiKElkURPiM57X0eE/FV6Xz5++gJ8s=
+			</data>
+		</dict>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dF1Lpl7cWb4WmdunF+F8mZRYs9yrAn6A1ml5jzb8/QU=
+			</data>
+		</dict>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RBkW0+OLl7GBOg0ymLPtD8/pLJ93Q7JNQ94G3RhJuQo=
+			</data>
+		</dict>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EgI1+qzYWNnfmxBwWU5FYbAcA5rULoZn5BlYnX2p7fs=
+			</data>
+		</dict>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RBkW0+OLl7GBOg0ymLPtD8/pLJ93Q7JNQ94G3RhJuQo=
+			</data>
+		</dict>
+		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9xkcUqJHbZifAoESUPcK1W7U3voBWelnryDfRrr0EB4=
 			</data>
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>

@@ -1,0 +1,6 @@
+framework module BlueStackImproveAdapter {
+  umbrella header "BlueStackImproveAdapter.h"
+
+  export *
+  module * { export * }
+}
