@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   AdColony
   ImproveDigital
    DESC
-  spec.homepage         = "https://developers.madvertise.com/"
+  spec.homepage         = "https://github.com/azerion/bluestack-sdk-ios"
   spec.license          = 'Commercial'
   spec.author           = { "MadvertiseMedia" => "https://madvertise.com",
                          "Technical Assistance" => "tech@madvertise.com"
