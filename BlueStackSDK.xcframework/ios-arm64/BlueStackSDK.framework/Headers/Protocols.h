@@ -239,7 +239,13 @@
  
  */
 
-- (void)adsAdapterRewardedVideoAdComplete:(MNGAdsAdapter *)adsAdapter withReward:(MAdvertiseReward *)reward;
+- (void)adsAdapterRewardedVideoAd:(MNGAdsAdapter *)adsAdapter withReward:(MAdvertiseReward *)reward;
+
+/** Notifies the delegate that the method  rewardEarnedOnRewardedVideoAd is fired
+ 
+ 
+ */
+- (void)adsAdapterRewardEarnedOnRewardedVideoAd:(MNGAdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the interstitial ad has been disappeared.
  
