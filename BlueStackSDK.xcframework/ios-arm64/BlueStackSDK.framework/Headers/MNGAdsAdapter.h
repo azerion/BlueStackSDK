@@ -140,7 +140,7 @@ extern MNGAdSize const kMNGAdSizeMediumRectangle; //Square Banner 300 x 250
 
 -(void)loadBannerInFrame:(CGRect)frame withPreferences:(MNGPreference*)preferences;
 -(void)loadBannerInFrame:(CGRect)frame;
--(void)stopRefreshBanner;
+-(void)toggleRefresh:(BOOL)status;
 
 
 -(void)createBiddingBanner:(NSDictionary*)data;
