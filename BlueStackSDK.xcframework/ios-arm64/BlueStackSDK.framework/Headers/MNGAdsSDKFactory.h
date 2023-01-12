@@ -68,5 +68,6 @@ typedef NS_ENUM(NSInteger, MAdvertiseError) {
 
 +(NSUInteger)numberOfRunningFactory;
 -(BOOL)initRequest:(NSString *)method preferences:(MNGPreference *)preferences error:(NSError **)error;
+-(void)closeVideoRewarded;
 
 @end
