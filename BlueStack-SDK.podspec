@@ -100,7 +100,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
   spec.subspec 'OguryAds' do |og|
       og.vendored_frameworks = 'BlueStackOguryAdapter.xcframework'
-      og.dependency                'OgurySdk','2.2.0'
+      og.dependency                'OgurySdk','4.4.0'
       og.dependency                'BlueStack-SDK/Core'
   end
   
