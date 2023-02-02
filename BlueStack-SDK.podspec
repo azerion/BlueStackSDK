@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "4.1.10"
+  spec.version          = "4.2.0-preview.1"
   spec.summary          = "BlueStack by Madvertise provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
                        BlueStack by Madvertise provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack SDK is a library that allow you to handle the following Ads servers with the easy way :
@@ -82,7 +82,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
   spec.subspec 'MAdvertiseLocation' do |mlo|
       mlo.vendored_frameworks = 'BlueStackLocationAdapter.xcframework'
-      mlo.dependency 'MAdvertiseLocation', '3.1.0'
+      mlo.dependency 'MAdvertiseLocation', '3.1.5'
       mlo.dependency 'BlueStack-SDK/Core'
   end
 
