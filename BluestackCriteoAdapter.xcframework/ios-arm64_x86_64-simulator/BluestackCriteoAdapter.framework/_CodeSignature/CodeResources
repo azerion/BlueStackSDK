@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BluestackCriteoAdapter-Swift.h</key>
 		<data>
-		Z3brARemrmC0TwDzcxYd+wmHvf4=
+		N/aaf46ZmiO2Cccmm7VXioj+8wQ=
 		</data>
 		<key>Headers/BluestackCriteoAdapter.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		S8IrgDT4gijNoEQavrHuBVc87nM=
+		moqYrr7wS0TdreHnvNy5+KJks1s=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		VNR0hhSUWj3OyOvwtkz+ZhKvesw=
+		rcuaJxreOYz5eu/dxAo86xOKbik=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		VfxAbVArakfkZ/aOWmiA8+J0Xmc=
+		qBkmJxtRCXCkzz4IXMjaAsS2EIU=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		VNR0hhSUWj3OyOvwtkz+ZhKvesw=
+		rcuaJxreOYz5eu/dxAo86xOKbik=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EzolBkQpV91tR3eCrz4RseTyoNo=
+		TQ0VFIDI4JwFt6HcIF3ybL4yTAQ=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		o8oUmF42H41gR6KzxufBfGnxGsM=
+		aFy6alPLgv5bdyDNKfvgfeMGxpA=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		6nGtGYyf7GXEPgyOTYrVPHpX9ZE=
+		mqHqW7BlBVfUkmEG8QHZu+WdPo8=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		o8oUmF42H41gR6KzxufBfGnxGsM=
+		aFy6alPLgv5bdyDNKfvgfeMGxpA=
 		</data>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HiOHsVOddvj0RLDNqcKii9UgbEY=
+		fy/WcaCcUs690TTAT02pGKSrc58=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			neKzkyLXr+uGakY3GieWDDubOvjmSfeLhfR45sivZEI=
+			YgGT0TGQT6/9Wf2k/BP50Bcu9DiUlOewU1NKissvyLc=
 			</data>
 		</dict>
 		<key>Headers/BluestackCriteoAdapter.h</key>
@@ -88,28 +88,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uqAtxD757Tid8c3nAXoc5GuKyzrIGLputUanb1Zu2aU=
+			3dcNqIiliHbGnevGow/NIHkM3hAE4hBxWB5SHA+cgbw=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wLY+6t7a6gV0ZG/AgtjMJhLBhjt6CD7uL2Rv9olQMT4=
+			ohH3OXeOMJzaOWHUVNXKu8u3H5BPBeaFHrl+aO8ECzQ=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uqAtxD757Tid8c3nAXoc5GuKyzrIGLputUanb1Zu2aU=
+			3dcNqIiliHbGnevGow/NIHkM3hAE4hBxWB5SHA+cgbw=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sSomFMlEQVaGMvXLctBjad7mg1cRk1S8XbvB5Nm0j0s=
+			Pa9jnEqA5nDneYK/fgiSE7M7xseWhONE30I6iOZ0dfc=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -123,28 +123,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kxl2EPBCBemKMp0tzEi8gF3V8AixWIpZL46rVXsW/Xs=
+			fhTr/p3y8d2wsb2T4jZir9buhYYQdokbPKJoptJVFwI=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wqfdc4Cq7GFS5yqkJsz9YOkun2FHifef1n/5mdMr+tc=
+			zPTZV+FXMB+MNfMy1RMqtyI+w7XVIOl6FkRo27a7cfE=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kxl2EPBCBemKMp0tzEi8gF3V8AixWIpZL46rVXsW/Xs=
+			fhTr/p3y8d2wsb2T4jZir9buhYYQdokbPKJoptJVFwI=
 			</data>
 		</dict>
 		<key>Modules/BluestackCriteoAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i6aLR4LMvr+hGpPjAcUn8/6j2FjhvFIjUZL84W5hin8=
+			dMx3wWVrmzHHa13qMfbzPhnh43IHYTFuYzCrXUWd9GA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

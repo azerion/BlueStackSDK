@@ -1,0 +1,11 @@
+framework module BlueStackLocationAdapter {
+  umbrella header "BlueStackLocationAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackLocationAdapter.Swift {
+  header "BlueStackLocationAdapter-Swift.h"
+  requires objc
+}

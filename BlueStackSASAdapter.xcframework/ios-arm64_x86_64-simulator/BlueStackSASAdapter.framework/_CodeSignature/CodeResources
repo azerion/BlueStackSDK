@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BlueStackSASAdapter-Swift.h</key>
 		<data>
-		X1/Jz7tjL+PzJD52EMKzLTvgmMY=
+		XsEK+C/1sR/tDEvStP1YuPAtlXA=
 		</data>
 		<key>Headers/BlueStackSASAdapter.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+Fdo+7Q47wuMBn/nFAlrvz3JUYI=
+		lxUYlHxyoD/ptNq5w0iZe6/as9Q=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		DjYkntXBVehaOaFDfWSKgV7PgGk=
+		ppXMp1wWQbf/MAlAUaL+FOYBi8g=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		9zvDyK30w4oVdR4FMXAPJ5Vf/A0=
+		A1JBjkpTNODS2OXbgI2Zn5Wltk4=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DjYkntXBVehaOaFDfWSKgV7PgGk=
+		ppXMp1wWQbf/MAlAUaL+FOYBi8g=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ndrSwLogyNc1xw6nJrEiCRdGGOo=
+		PLNdFn38Dy1HNDqmgr+ceGvr9T8=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Rwk3NGM+5WddZHSTHCObZnbUOes=
+		SThGYVc9RU/dNkyYz3xvCwaIfOo=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		aV8fTM2vG7vhke2H0VZu1NgXZTs=
+		FtmI72wB64BL7oygn8z5vpOyryI=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Rwk3NGM+5WddZHSTHCObZnbUOes=
+		SThGYVc9RU/dNkyYz3xvCwaIfOo=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PdDRkYfhhJm7Z0zL7Ohi500fnX4=
+		0j5N7wI2vGgFmz11RIt5XTdMOEI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MPvUiaHOU5Z3Ji6PTJ5dt9JyL0JsLOQc3kfLqoMewYg=
+			YVG+MIGiKSutbOwh8dNRVJl2pjRtmzK+bWZzHJA/2NU=
 			</data>
 		</dict>
 		<key>Headers/BlueStackSASAdapter.h</key>
@@ -88,28 +88,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L3iXcdlo7NYYCW93GvDteAUBk4jfqyN62YLw6JxFsGU=
+			mxiI+lIRFcpNIXQ4CxEoDCTf3SigM4t6i/6EKtneAiA=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KAvetTyBI7AOvgyDFynYYK79jDnGZFM8mdglaLWla1U=
+			nbmJaLbFEX0JCsLQerhHkzI1KULWm71tWJg7rRT8GGg=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			L3iXcdlo7NYYCW93GvDteAUBk4jfqyN62YLw6JxFsGU=
+			mxiI+lIRFcpNIXQ4CxEoDCTf3SigM4t6i/6EKtneAiA=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d+/CUjW64L4uY91K2GLYTAACtKC+NzbAWkK392pUD98=
+			MX4OHMv8enJiyv7YTSvt72TQlm6U6B+F4I0Q3Vl3S40=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -123,28 +123,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O2in3JBajtysjeJmK+NaCD8pnXyA1GWL4z0K4LGACTM=
+			3coo8DiGbztojEe2ozvbSIzS0yquTqgIAVYzLENXLUQ=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K4cJcwBZk3PK+RILoD6Ob6fvpJcYg9jB4y+sQfH3k7s=
+			7Pz8fJUDbtB9yOk4sL5f6bZ3ncdjcSlR4fl9Yf3I9xc=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O2in3JBajtysjeJmK+NaCD8pnXyA1GWL4z0K4LGACTM=
+			3coo8DiGbztojEe2ozvbSIzS0yquTqgIAVYzLENXLUQ=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hkNl8tjwRxDsEXrkXmOD8fmRXgMRKiVYbV15c46DzqQ=
+			Ix/WjKPXxDwPETCfrPfIKjqveQTuo2IDsn9AcO8+09s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
