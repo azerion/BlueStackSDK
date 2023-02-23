@@ -69,7 +69,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   spec.subspec 'Smart-Display-SDK' do |sas|
       sas.vendored_frameworks = 'BlueStackSASAdapter.xcframework'
       sas.dependency 'BlueStack-SDK/Core'
-      sas.dependency 'Smart-Display-SDK',  '7.20.1''
+      sas.dependency 'Smart-Display-SDK',  '7.20.1'
       sas.dependency 'Smart-Core-SDK',  '7.20.0'
 
   end
