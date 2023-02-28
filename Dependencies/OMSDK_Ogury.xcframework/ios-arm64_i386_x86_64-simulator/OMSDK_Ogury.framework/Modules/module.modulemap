@@ -1,0 +1,4 @@
+module OMSDK_Ogury {
+    header "Headers/OMIDImports.h"
+    export *
+}

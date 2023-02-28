@@ -1,0 +1,11 @@
+framework module MAdvertiseLocation {
+  umbrella header "MAdvertiseLocation.h"
+
+  export *
+  module * { export * }
+}
+
+module MAdvertiseLocation.Swift {
+  header "MAdvertiseLocation-Swift.h"
+  requires objc
+}

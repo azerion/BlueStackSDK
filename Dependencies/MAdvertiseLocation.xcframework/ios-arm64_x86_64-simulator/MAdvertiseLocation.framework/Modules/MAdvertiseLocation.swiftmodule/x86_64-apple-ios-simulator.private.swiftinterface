@@ -1,0 +1,46 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MAdvertiseLocation
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AdSupport
+import AppTrackingTransparency
+import CoreLocation
+import Foundation
+@_exported import MAdvertiseLocation
+import SQLite3
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers @objc public class BlueStackLocation : ObjectiveC.NSObject {
+  @objc public class func start(madvertiseLocation: MAdvertiseLocation.BlueStackLocation)
+  @objc public class func stop()
+  @objc public class func madvertiseLocationRequestAuthorization()
+  @objc public class func debugMode(enabled: Swift.Bool)
+  @objc public class func getVersion() -> Swift.String
+  @objc public class func getAppID() -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class MadvertiseBuilder : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func set(appId: Swift.String)
+  @objc public func set(consentFlag: Swift.String)
+  @objc public func set(launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @objc public func build() -> MAdvertiseLocation.BlueStackLocation
+  @objc deinit
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers open class MadvertiseRequestBuilder {
+  @objc deinit
+}
+extension MAdvertiseLocation.HTTPMethod : Swift.Equatable {}
+extension MAdvertiseLocation.HTTPMethod : Swift.Hashable {}
+extension MAdvertiseLocation.HTTPMethod : Swift.RawRepresentable {}

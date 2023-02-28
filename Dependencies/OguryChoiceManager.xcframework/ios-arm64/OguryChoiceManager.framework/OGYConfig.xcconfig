@@ -1,0 +1,16 @@
+//
+//  OGYConfig.xcconfig
+//  OguryChoiceManager
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+// Identification
+FRAMEWORK_NAME = OguryChoiceManager
+PRODUCT_BUNDLE_IDENTIFIER = co.ogury.OguryChoiceManager
+
+// Versioning
+MARKETING_VERSION = 4.1.0
+BUNDLE_VERSION = 1

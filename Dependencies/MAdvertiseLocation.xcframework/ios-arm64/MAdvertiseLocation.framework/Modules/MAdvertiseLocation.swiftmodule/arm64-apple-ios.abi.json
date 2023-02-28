@@ -1,0 +1,1228 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BlueStackLocation",
+        "printedName": "BlueStackLocation",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(madvertiseLocation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BlueStackLocation",
+                "printedName": "MAdvertiseLocation.BlueStackLocation",
+                "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation(cm)startWithMadvertiseLocation:",
+            "mangledName": "$s18MAdvertiseLocation09BlueStackB0C5start010madvertiseB0yAC_tFZ",
+            "moduleName": "MAdvertiseLocation",
+            "static": true,
+            "objc_name": "startWithMadvertiseLocation:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation(cm)stop",
+            "mangledName": "$s18MAdvertiseLocation09BlueStackB0C4stopyyFZ",
+            "moduleName": "MAdvertiseLocation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "madvertiseLocationRequestAuthorization",
+            "printedName": "madvertiseLocationRequestAuthorization()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation(cm)madvertiseLocationRequestAuthorization",
+            "mangledName": "$s18MAdvertiseLocation09BlueStackB0C010madvertiseB20RequestAuthorizationyyFZ",
+            "moduleName": "MAdvertiseLocation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debugMode",
+            "printedName": "debugMode(enabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation(cm)debugModeWithEnabled:",
+            "mangledName": "$s18MAdvertiseLocation09BlueStackB0C9debugMode7enabledySb_tFZ",
+            "moduleName": "MAdvertiseLocation",
+            "static": true,
+            "objc_name": "debugModeWithEnabled:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getVersion",
+            "printedName": "getVersion()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation(cm)getVersion",
+            "mangledName": "$s18MAdvertiseLocation09BlueStackB0C10getVersionSSyFZ",
+            "moduleName": "MAdvertiseLocation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAppID",
+            "printedName": "getAppID()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation(cm)getAppID",
+            "mangledName": "$s18MAdvertiseLocation09BlueStackB0C8getAppIDSSyFZ",
+            "moduleName": "MAdvertiseLocation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BlueStackLocation",
+                "printedName": "MAdvertiseLocation.BlueStackLocation",
+                "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation(im)init",
+            "mangledName": "$s18MAdvertiseLocation09BlueStackB0CACycfc",
+            "moduleName": "MAdvertiseLocation",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation",
+        "mangledName": "$s18MAdvertiseLocation09BlueStackB0C",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MadvertiseBuilder",
+        "printedName": "MadvertiseBuilder",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MadvertiseBuilder",
+                "printedName": "MAdvertiseLocation.MadvertiseBuilder",
+                "usr": "c:@M@MAdvertiseLocation@objc(cs)MadvertiseBuilder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)MadvertiseBuilder(im)init",
+            "mangledName": "$s18MAdvertiseLocation17MadvertiseBuilderCACycfc",
+            "moduleName": "MAdvertiseLocation",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(appId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)MadvertiseBuilder(im)setWithAppId:",
+            "mangledName": "$s18MAdvertiseLocation17MadvertiseBuilderC3set5appIdySS_tF",
+            "moduleName": "MAdvertiseLocation",
+            "objc_name": "setWithAppId:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(consentFlag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)MadvertiseBuilder(im)setWithConsentFlag:",
+            "mangledName": "$s18MAdvertiseLocation17MadvertiseBuilderC3set11consentFlagySS_tF",
+            "moduleName": "MAdvertiseLocation",
+            "objc_name": "setWithConsentFlag:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(launchOptions:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIApplication.LaunchOptionsKey : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[UIKit.UIApplication.LaunchOptionsKey : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LaunchOptionsKey",
+                        "printedName": "UIKit.UIApplication.LaunchOptionsKey",
+                        "usr": "c:@T@UIApplicationLaunchOptionsKey"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)MadvertiseBuilder(im)setWithLaunchOptions:",
+            "mangledName": "$s18MAdvertiseLocation17MadvertiseBuilderC3set13launchOptionsySDySo019UIApplicationLaunchG3KeyaypGSg_tF",
+            "moduleName": "MAdvertiseLocation",
+            "objc_name": "setWithLaunchOptions:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "build",
+            "printedName": "build()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BlueStackLocation",
+                "printedName": "MAdvertiseLocation.BlueStackLocation",
+                "usr": "c:@M@MAdvertiseLocation@objc(cs)BlueStackLocation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MAdvertiseLocation@objc(cs)MadvertiseBuilder(im)build",
+            "mangledName": "$s18MAdvertiseLocation17MadvertiseBuilderC5buildAA09BlueStackB0CyF",
+            "moduleName": "MAdvertiseLocation",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@MAdvertiseLocation@objc(cs)MadvertiseBuilder",
+        "mangledName": "$s18MAdvertiseLocation17MadvertiseBuilderC",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      },
+      {
+        "kind": "Import",
+        "name": "AppTrackingTransparency",
+        "printedName": "AppTrackingTransparency",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      },
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HTTPMethod",
+        "printedName": "HTTPMethod",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "get",
+            "printedName": "get",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MAdvertiseLocation.HTTPMethod.Type) -> MAdvertiseLocation.HTTPMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPMethod",
+                    "printedName": "MAdvertiseLocation.HTTPMethod",
+                    "usr": "s:18MAdvertiseLocation10HTTPMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MAdvertiseLocation.HTTPMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPMethod",
+                        "printedName": "MAdvertiseLocation.HTTPMethod",
+                        "usr": "s:18MAdvertiseLocation10HTTPMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18MAdvertiseLocation10HTTPMethodO3getyA2CmF",
+            "mangledName": "$s18MAdvertiseLocation10HTTPMethodO3getyA2CmF",
+            "moduleName": "MAdvertiseLocation"
+          },
+          {
+            "kind": "Var",
+            "name": "post",
+            "printedName": "post",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MAdvertiseLocation.HTTPMethod.Type) -> MAdvertiseLocation.HTTPMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPMethod",
+                    "printedName": "MAdvertiseLocation.HTTPMethod",
+                    "usr": "s:18MAdvertiseLocation10HTTPMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MAdvertiseLocation.HTTPMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPMethod",
+                        "printedName": "MAdvertiseLocation.HTTPMethod",
+                        "usr": "s:18MAdvertiseLocation10HTTPMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18MAdvertiseLocation10HTTPMethodO4postyA2CmF",
+            "mangledName": "$s18MAdvertiseLocation10HTTPMethodO4postyA2CmF",
+            "moduleName": "MAdvertiseLocation"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MAdvertiseLocation.HTTPMethod?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPMethod",
+                    "printedName": "MAdvertiseLocation.HTTPMethod",
+                    "usr": "s:18MAdvertiseLocation10HTTPMethodO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18MAdvertiseLocation10HTTPMethodO8rawValueACSgSS_tcfc",
+            "mangledName": "$s18MAdvertiseLocation10HTTPMethodO8rawValueACSgSS_tcfc",
+            "moduleName": "MAdvertiseLocation",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18MAdvertiseLocation10HTTPMethodO8rawValueSSvp",
+            "mangledName": "$s18MAdvertiseLocation10HTTPMethodO8rawValueSSvp",
+            "moduleName": "MAdvertiseLocation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18MAdvertiseLocation10HTTPMethodO8rawValueSSvg",
+                "mangledName": "$s18MAdvertiseLocation10HTTPMethodO8rawValueSSvg",
+                "moduleName": "MAdvertiseLocation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:18MAdvertiseLocation10HTTPMethodO",
+        "mangledName": "$s18MAdvertiseLocation10HTTPMethodO",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MadvertiseRequestBuilder",
+        "printedName": "MadvertiseRequestBuilder",
+        "declKind": "Class",
+        "usr": "s:18MAdvertiseLocation24MadvertiseRequestBuilderC",
+        "mangledName": "$s18MAdvertiseLocation24MadvertiseRequestBuilderC",
+        "moduleName": "MAdvertiseLocation",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SQLite3",
+        "printedName": "SQLite3",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "MAdvertiseLocation"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/MadvertiseLocationFactory\/MAdvertiseLocation.swift",
+      "kind": "StringLiteral",
+      "offset": 328,
+      "length": 3,
+      "value": "\"0\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/MadvertiseLocationFactory\/MAdvertiseLocation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 462,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/MadvertiseLocationFactory\/MAdvertiseLocation.swift",
+      "kind": "StringLiteral",
+      "offset": 200,
+      "length": 17,
+      "value": "\"MAdvertiseLocation.BlueStackLocation\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 436,
+      "length": 8,
+      "value": "\"v3.1.5\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 585,
+      "length": 26,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ss'Z'\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 729,
+      "length": 6,
+      "value": "180000"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 805,
+      "length": 5,
+      "value": "10000"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "FloatLiteral",
+      "offset": 880,
+      "length": 4,
+      "value": "50.0"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 954,
+      "length": 4,
+      "value": "5000"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1028,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "FloatLiteral",
+      "offset": 1099,
+      "length": 3,
+      "value": "0.1"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1172,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "FloatLiteral",
+      "offset": 1245,
+      "length": 5,
+      "value": "300.0"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "FloatLiteral",
+      "offset": 1320,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1394,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1469,
+      "length": 8,
+      "value": "86400000"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1612,
+      "length": 25,
+      "value": "\"LOCCURRENTDATABASECOUNT\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1708,
+      "length": 22,
+      "value": "\"LOCLASTLOCATIONSAVED\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1801,
+      "length": 23,
+      "value": "\"LOCLASTLOCATIONSENDED\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1895,
+      "length": 28,
+      "value": "\"LOCLASTDATESENDEDLOCATIONS\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1994,
+      "length": 23,
+      "value": "\"Loc-Current-Time-Diff\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2081,
+      "length": 20,
+      "value": "\"LOC_DATE_SENDED_WS\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2220,
+      "length": 20,
+      "value": "\"LOC_RSYNC_INTERVAL\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2311,
+      "length": 15,
+      "value": "\"LOC_FREQUENCY\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2397,
+      "length": 18,
+      "value": "\"LOC_MIN_DISTANCE\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2486,
+      "length": 19,
+      "value": "\"LOC_DATABASE_SIZE\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2576,
+      "length": 19,
+      "value": "\"LOC_DATABASE_DAYS\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2666,
+      "length": 20,
+      "value": "\"gdpr-consentString\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2757,
+      "length": 21,
+      "value": "\"Loc-Max-Daily-Event\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2849,
+      "length": 18,
+      "value": "\"Loc-Max-Accuracy\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2938,
+      "length": 20,
+      "value": "\"Loc-Delta-Accuracy\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3029,
+      "length": 11,
+      "value": "\"Loc-Debug\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3111,
+      "length": 33,
+      "value": "\"MadvertiseConsent-ConsentString\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3215,
+      "length": 18,
+      "value": "\"Loc-Current-Time\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3304,
+      "length": 18,
+      "value": "\"Loc-CheckConsent\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3393,
+      "length": 9,
+      "value": "\"accAuth\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3473,
+      "length": 5,
+      "value": "\"att\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3588,
+      "length": 26,
+      "value": "\"IABConsent_ConsentString\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3688,
+      "length": 33,
+      "value": "\"MadvertiseConsent_ConsentString\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3793,
+      "length": 17,
+      "value": "\"IABTCF_TCString\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3878,
+      "length": 30,
+      "value": "\"BlueStackConsent_UserId_Flag\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 4073,
+      "length": 32,
+      "value": "\"https:\/\/dispatcher.mng-ads.com\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Global\/LocationConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 4175,
+      "length": 17,
+      "value": "\"\/%@\/location\/%@\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Builders\/MadvertiseBuilder.swift",
+      "kind": "StringLiteral",
+      "offset": 402,
+      "length": 3,
+      "value": "\"0\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Network\/MadvertiseRequestBuilder.swift",
+      "kind": "StringLiteral",
+      "offset": 354,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Network\/MadvertiseRequestBuilder.swift",
+      "kind": "StringLiteral",
+      "offset": 379,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Network\/MadvertiseRequestBuilder.swift",
+      "kind": "StringLiteral",
+      "offset": 354,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Network\/MadvertiseRequestBuilder.swift",
+      "kind": "StringLiteral",
+      "offset": 379,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/Network\/MadvertiseRequestBuilder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 457,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/MadvertiseLocationManager\/MadvertiseLocationManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 868,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Blabla\/Documents\/Projects\/MAdvertise\/Location\/MAdvertiseLocation\/MAdvertiseLocation\/MadvertiseLocationManager\/MadvertiseLocationManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1032,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

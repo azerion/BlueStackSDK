@@ -1,0 +1,15 @@
+{
+    "bannerRefreshRate": 30,
+    "azerionAdsConfigs": [],
+    "adNetworks": [{
+            "id": 1,
+            "name": "ImproveDigital",
+            "isThirdParty": false
+        },
+        {
+            "id": 2,
+            "name": "AdMob",
+            "isThirdParty": true
+        }
+    ]
+}
