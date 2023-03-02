@@ -27,6 +27,8 @@ let package = Package(
                     .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "SASDisplayKit", condition: .when(platforms: [.iOS])),
                     .target(name: "SCSCoreKit", condition: .when(platforms: [.iOS])),
+                    //fb
+                    .target(name: "BlueStackFacebookAdapter",condition: .when(platforms: [.iOS])),
                     //amazon
                     .target(name: "BluestackAmazonPublisherServicesAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "DTBiOSSDK", condition: .when(platforms: [.iOS])),
