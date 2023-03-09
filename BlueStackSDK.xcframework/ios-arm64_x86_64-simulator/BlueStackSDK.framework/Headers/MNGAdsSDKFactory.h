@@ -30,10 +30,33 @@ typedef NS_ENUM(NSInteger, MAdvertiseError) {
     MAdvertiseErrorMissingViewController //Factory's viewController was not assigned
 };
 
+typedef enum
+{
+    BlueStackAdapterInitializationStateReady = 1,
+    BlueStackAdapterInitializationStateNotReady = 0,
+    BlueStackAdapterInitializationStateUnknown = 2
+} BlueStackAdapterInitializationState;
+
+
+@interface BlueStackAdapterStatus : NSObject
+
+@property BlueStackAdapterInitializationState state;
+@property NSString* provider;
+@property NSString* descriptionStatus;
+
+@end
+
+@interface BlueStackInitializationStatus : NSObject
+
+@property NSArray<BlueStackAdapterStatus *> *adaptersStatus;
+
+@end
+
 @protocol MNGAdsSDKFactoryDelegate <NSObject>
 
 @optional
 -(void)MNGAdsSDKFactoryDidFinishInitializing;
+-(void)MNGAdsSDKFactoryDidFinishAdaptersInitializing:(BlueStackInitializationStatus*)blueStackInitializationStatus;
 -(void)MNGAdsSDKFactoryDidFailInitializationWithError:(NSError*) error;
 @end
 
