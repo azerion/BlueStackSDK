@@ -68,7 +68,7 @@ typedef enum
 + (void)initMAdvertiseDataAfterInitialisedWithOptions:(NSDictionary *)launchOptions;
 @property NSString *placementId;
 @property (readonly,getter=isBusy) BOOL busy;
-@property BOOL isrefreshFactory;
+
 
 @property (weak) id<MNGAdsAdapterNativeCollectionDelegate> nativeCollectionDelegate;
 
