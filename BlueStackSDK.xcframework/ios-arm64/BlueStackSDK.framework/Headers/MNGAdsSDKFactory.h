@@ -14,21 +14,7 @@ void DebugLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 /**
  Enumeration that define the type of error incase an ad fails to load
  */
-typedef NS_ENUM(NSInteger, MAdvertiseError) {
-    MAdvertiseErrorWrongPlacement, //Wrong PlacementId
-    MAdvertiseErrorNoInternet,
-    MAdvertiseErrorSDKUninitialized,
-    MAdvertiseErrorCappedRequest, //Request has been capped
-    MAdvertiseErrorLockedPlacement, //placement locked by another factory
-    MAdvertiseErrorBusyFactory,
-    MAdvertiseErrorBusy,
-    MAdvertiseErrorUnallowedBackgroundRequest, //Cannot send request when application is on background
-    MAdvertiseErrorNoAds,
-    MAdvertiseErrorInterstitialCooldown, //Time between last [interstitalDisappear] and [createInterstital] Must be more than 5s
-    MAdvertiseErrorAlreadyShownInterstitial, //Other Interstitial is shown
-    MAdvertiseErrorRequestTimedOut,
-    MAdvertiseErrorMissingViewController //Factory's viewController was not assigned
-};
+
 
 typedef enum
 {
