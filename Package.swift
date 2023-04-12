@@ -76,9 +76,9 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-                    .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
-                    .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
-                    .target(name: "nanopb", condition: .when(platforms: [.iOS])),
+                    .target(name: "MyFBLPromises", condition: .when(platforms: [.iOS])),
+                    .target(name: "MyGoogleUtilities", condition: .when(platforms: [.iOS])),
+                    .target(name: "Mynanopb", condition: .when(platforms: [.iOS])),
                      .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
@@ -99,9 +99,9 @@ let package = Package(
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
         //for dfp dependencies
-        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
-        .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
-        .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
+        .binaryTarget(name: "MyFBLPromises", path: "Dependencies/FBLPromises.xcframework"),
+        .binaryTarget(name: "MyGoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
+        .binaryTarget(name: "Mynanopb", path: "Dependencies/nanopb.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
