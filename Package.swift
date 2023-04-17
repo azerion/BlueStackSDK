@@ -77,7 +77,7 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-                    .product(name: "MyGoogleUtilities", package: "GoogleUtilities"),
+                    .product(name: "GoogleUtilities", package: "GoogleUtilities"),
                     .target(name: "MyFBLPromises", condition: .when(platforms: [.iOS])),
                     .target(name: "Mynanopb", condition: .when(platforms: [.iOS])),
                      .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
