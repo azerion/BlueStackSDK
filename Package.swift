@@ -96,10 +96,6 @@ let package = Package(
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
-        .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
-        //for dfp dependencies
-        .binaryTarget(name: "MyFBLPromises", path: "Dependencies/MyFBLPromises.xcframework"),
-        .binaryTarget(name: "Mynanopb", path: "Dependencies/Mynanopb.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
