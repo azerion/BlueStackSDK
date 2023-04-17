@@ -15,7 +15,9 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(name: "GoogleMobileAds", url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", "9.0.0"..<"10.3.0")
+        .package(name: "GoogleMobileAds", url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", "9.0.0"..<"10.3.0"),
+        .package(name: "Promises", url: "https://github.com/google/promises", "1.1.0"..<"2.0.0")
+        
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -45,10 +47,7 @@ let package = Package(
                     .target(name: "ImproveDigital", condition: .when(platforms: [.iOS])),
                     .target(name: "GoogleInteractiveMediaAds",condition: .when(platforms: [.iOS])),
                     //dfp
-                        .target(
-                            name: "BlueStackDFPAdapterWrapper",
-                            condition: .when(platforms: [.iOS])
-                        ),
+                    .target(name: "BlueStackDFPAdapterWrapper",condition: .when(platforms: [.iOS])),
                     //ogury
                     .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
@@ -78,6 +77,7 @@ let package = Package(
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
                     .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
+                    .product(name: "FBLPromises", package: "Promises"),
                     .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
