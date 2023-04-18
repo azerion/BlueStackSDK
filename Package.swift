@@ -10,13 +10,13 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BlueStackSDK",
-            targets: ["BlueStackSDKWrapper"]
-        ),
+            targets: ["BlueStackSDKWrapper"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", "9.0.0"..<"10.3.0"),
+        .package(url: "https://github.com/google/promises", "1.1.0"..<"2.0.0"),
         
     ],
     targets: [
@@ -78,6 +78,7 @@ let package = Package(
                 dependencies: [
                     .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+                    .product(name: "FBLPromises", package: "promises"),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
