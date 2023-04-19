@@ -46,7 +46,8 @@ let package = Package(
                     .target(name: "ImproveDigital", condition: .when(platforms: [.iOS])),
                     .target(name: "GoogleInteractiveMediaAds",condition: .when(platforms: [.iOS])),
                     //dfp
-                    .target(name: "BlueStackDFPAdapterWrapper",condition: .when(platforms: [.iOS])),
+                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+                    .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                     //ogury
                     .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
@@ -72,13 +73,6 @@ let package = Package(
                     .linkedLibrary("z"),
                     .linkedLibrary("sqlite3")
                 ]
-               ),
-        .target(name: "BlueStackDFPAdapterWrapper",
-                dependencies: [
-                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
-                    .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
-                ],
-                path: "BlueStackDFPAdapterWrapper"
                ),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
