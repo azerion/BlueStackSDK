@@ -15,7 +15,6 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "9.13.0")),
         
     ],
     targets: [
@@ -45,9 +44,6 @@ let package = Package(
                     .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "ImproveDigital", condition: .when(platforms: [.iOS])),
                     .target(name: "GoogleInteractiveMediaAds",condition: .when(platforms: [.iOS])),
-                    //dfp
-                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
-                    .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                     //ogury
                     .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
@@ -86,8 +82,6 @@ let package = Package(
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
         //criteo
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
-        //dfp
-        .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
