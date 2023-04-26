@@ -7,50 +7,119 @@ let package = Package(
     name: "BlueStackSDK",
     platforms: [.iOS(.v12)],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BlueStackSDK",
-            targets: ["BlueStackSDKWrapper"]),
+            targets: ["BlueStackSDKTarget"]),
+        .library(
+            name: "BlueStackDFPAdapter",
+            targets: ["BlueStackDFPAdapterTarget"]),
+        .library(
+            name: "BlueStackSASAdapter",
+            targets: ["BlueStackSASAdapterTarget"]),
+        .library(
+            name: "BlueStackFacebookAdapter",
+            targets: ["BlueStackFacebookAdapterTarget"]),
+        .library(
+            name: "BluestackAmazonPublisherServicesAdapter",
+            targets: ["BluestackAmazonPublisherServicesAdapterTarget"]),
+        .library(
+            name: "BlueStackAdColonyAdapter",
+            targets: ["BlueStackAdColonyAdapterTarget"]),
+        .library(
+            name: "BluestackCriteoAdapter",
+            targets: ["BluestackCriteoAdapterTarget"]),
+        .library(
+            name: "BlueStackLocationAdapter",
+            targets: ["BlueStackLocationAdapterTarget"]),
+        .library(
+            name: "BlueStackImproveAdapter",
+            targets: ["BlueStackImproveAdapterTarget"]),
+        .library(
+            name: "BlueStackOguryAdapter",
+            targets: ["BlueStackOguryAdapterTarget"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "9.12.0")),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(name: "BlueStackSDKWrapper",
+        .target(name: "BlueStackDFPAdapterTarget",
                 dependencies: [
-                    .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
-                    .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
-                    //smart
+                    .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+                ],
+                path: "BlueStackDFPAdapterWrapper",
+                linkerSettings: [.linkedFramework("JavaScriptCore")]
+        ),
+        
+        .target(name: "BlueStackSASAdapterTarget",
+                dependencies: [
                     .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "SASDisplayKit", condition: .when(platforms: [.iOS])),
                     .target(name: "SCSCoreKit", condition: .when(platforms: [.iOS])),
-                    //fb
+                ],
+                path: "BlueStackSASAdapterWrapper"
+        ),
+        
+        .target(name: "BlueStackFacebookAdapterTarget",
+                dependencies: [
                     .target(name: "BlueStackFacebookAdapter",condition: .when(platforms: [.iOS])),
-                    //amazon
+                    .target(name: "FBAudienceNetwork",condition: .when(platforms: [.iOS])),
+                ],
+                path: "BlueStackFacebookAdapterWrapper"
+        ),
+        
+        .target(name: "BluestackAmazonPublisherServicesAdapterTarget",
+                dependencies: [
                     .target(name: "BluestackAmazonPublisherServicesAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "DTBiOSSDK", condition: .when(platforms: [.iOS])),
-                    //adcolony
+                ],
+                path: "BluestackAmazonPublisherServicesAdapterWrapper"
+        ),
+        
+        .target(name: "BlueStackAdColonyAdapterTarget",
+                dependencies: [
                     .target(name: "BlueStackAdColonyAdapter", condition: .when(platforms: [.iOS])),
-                    //criteo
+                    .target(name: "AdColony", condition: .when(platforms: [.iOS])),
+                ],
+                path: "BlueStackAdColonyAdapterWrapper"
+        ),
+        
+        .target(name: "BluestackCriteoAdapterTarget",
+                dependencies: [
                     .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
-                    //location
+                ],
+                path: "BluestackCriteoAdapterWrapper"
+        ),
+        
+        .target(name: "BlueStackLocationAdapterTarget",
+                dependencies: [
                     .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
-                    //ImproveDigital
+                ],
+                path: "BlueStackLocationAdapterWrapper"
+        ),
+        
+        .target(name: "BlueStackImproveAdapterTarget",
+                dependencies: [
                     .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "ImproveDigital", condition: .when(platforms: [.iOS])),
                     .target(name: "GoogleInteractiveMediaAds",condition: .when(platforms: [.iOS])),
-                    //dfp
-                        .target(
-                            name: "BlueStackDFPAdapterWrapper",
-                            condition: .when(platforms: [.iOS])
-                        ),
-                    //ogury
+                ],
+                path: "BlueStackImproveAdapterWrapper"
+        ),
+        
+        .target(name: "BlueStackOguryAdapterTarget",
+                dependencies: [
                     .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
+                ],
+                path: "BlueStackOguryAdapterWrapper"
+        ),
+        
+        .target(name: "BlueStackSDKTarget",
+                dependencies: [
+                    .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
+                    .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackSDKWrapper",
                 linkerSettings: [
@@ -74,15 +143,6 @@ let package = Package(
                     .linkedLibrary("sqlite3")
                 ]
                ),
-        .target(name: "BlueStackDFPAdapterWrapper",
-                dependencies: [
-                    .target(name: "MyFBLPromises", condition: .when(platforms: [.iOS])),
-                    .target(name: "MyGoogleUtilities", condition: .when(platforms: [.iOS])),
-                    .target(name: "Mynanopb", condition: .when(platforms: [.iOS])),
-                     .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
-                ],
-                path: "BlueStackDFPAdapterWrapper"
-               ),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
@@ -97,11 +157,6 @@ let package = Package(
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
-        .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
-        //for dfp dependencies
-        .binaryTarget(name: "MyFBLPromises", path: "Dependencies/FBLPromises.xcframework"),
-        .binaryTarget(name: "MyGoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
-        .binaryTarget(name: "Mynanopb", path: "Dependencies/nanopb.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
