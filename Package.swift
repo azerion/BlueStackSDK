@@ -39,15 +39,13 @@ let package = Package(
             targets: ["BlueStackOguryAdapterTarget"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "10.3.0")),
-        .package(url: "https://github.com/google/promises.git", "1.2.8" ..< "3.0.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "9.12.0")),
     ],
     targets: [
         .target(name: "BlueStackDFPAdapterTarget",
                 dependencies: [
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                     .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
-                    .product(name: "FBLPromises", package: "Promises")
                 ],
                 path: "BlueStackDFPAdapterWrapper",
                 linkerSettings: [.linkedFramework("JavaScriptCore")]
