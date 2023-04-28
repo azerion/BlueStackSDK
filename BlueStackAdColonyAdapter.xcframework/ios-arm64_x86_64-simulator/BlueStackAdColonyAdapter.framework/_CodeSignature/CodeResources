@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YY6lgzANw842zJRzyif0TOJWXyQ=
+		Ly5+m6hw+HeXBKll6GDP9v6/wJY=
 		</data>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		K80P2IldDmUsgkBhQBNYTFkpTso=
+		8qBxsWGC/9r2JJ7LW5GqpQNuf8w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/2uNqBPndIQ4GRe5c0UI+FwrMQNED9guItjAkVm+s0w=
+			77Y1cnNBZieKBAhPY3NhEEom/kw+KrdcC4mlFEsgu/U=
 			</data>
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VD94afX2koWkXfn1btXlzMaB9AIDnK4OYpSTblSvOeo=
+			1MAHTq7mcmpcrk7iofM0SOOm1WGiGuYBXwPetpQz+l4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

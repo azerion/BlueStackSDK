@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QI59CFxKWjzXvxVDjbKwHWSLJlw=
+		Dg5CwYYG8JMAGRT6qCQg8C1hL58=
 		</data>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1MSxRCSrKDONZy56oafQIQM0CpM=
+		wUxxdYtYIkBh6pwIZktNrrxBxb0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JLYYz2TytpKvTvIr9YrLC/8U7nFyc9NbRSc/K0S9uxA=
+			EBopr6G1vVer5IIP67IvfnGqvhbpLUUjDhUM0f1z9Us=
 			</data>
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KKlHbLPSPCeB5LQLJ4aH0giBdV/utmhcVTNxg/DLTto=
+			fuQwr6bWFF0YGman3fId6OkF0wNEaqKcMbtMewM/jkA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

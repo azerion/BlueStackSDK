@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PLNdFn38Dy1HNDqmgr+ceGvr9T8=
+		pigDhd1sL7NNdJXOJ2lcjWQILmE=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0j5N7wI2vGgFmz11RIt5XTdMOEI=
+		3rhSo1jQy3bjHlHGGHSBEE/5MyE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MX4OHMv8enJiyv7YTSvt72TQlm6U6B+F4I0Q3Vl3S40=
+			F3Zosy6ywwCYIX9Nir7KwtF53PrPSiIA6aHSsWuFKpw=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ix/WjKPXxDwPETCfrPfIKjqveQTuo2IDsn9AcO8+09s=
+			iyu3eAiZv3K8/W6TtuLJf5wm8ErlvYeyFyRLHOYMWCg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
