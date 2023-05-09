@@ -87,6 +87,7 @@ let package = Package(
         .target(name: "BluestackCriteoAdapterTarget",
                 dependencies: [
                     .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
+                    .target(name: "CriteoPublisherSdk", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BluestackCriteoAdapterWrapper"
         ),
@@ -111,7 +112,12 @@ let package = Package(
         .target(name: "BlueStackOguryAdapterTarget",
                 dependencies: [
                     .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
+                    .target(name: "OguryCore", condition: .when(platforms: [.iOS])),
+                    .target(name: "OgurySdk", condition: .when(platforms: [.iOS])),
+                    .target(name: "OguryAds", condition: .when(platforms: [.iOS])),
+                    .target(name: "OguryChoiceManager", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
+
                 ],
                 path: "BlueStackOguryAdapterWrapper"
         ),
@@ -153,6 +159,7 @@ let package = Package(
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
         //criteo
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
+        .binaryTarget(name: "CriteoPublisherSdk", path: "Dependencies/CriteoPublisherSdk.xcframework"),
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         //fb
@@ -163,6 +170,8 @@ let package = Package(
         .binaryTarget(name: "MAdvertiseLocation", path: "Dependencies/MAdvertiseLocation.xcframework"),
         //ogury
         .binaryTarget(name: "BlueStackOguryAdapter", path: "BlueStackOguryAdapter.xcframework"),
+        .binaryTarget(name: "OguryCore", path: "Dependencies/OguryCore.xcframework"),
+        .binaryTarget(name: "OgurySdk", path: "Dependencies/OgurySdk.xcframework"),
         .binaryTarget(name: "OguryAds", path: "Dependencies/OguryAds.xcframework"),
         .binaryTarget(name: "OguryChoiceManager", path: "Dependencies/OguryChoiceManager.xcframework"),
         .binaryTarget(name: "OMSDK_Ogury", path: "Dependencies/OMSDK_Ogury.xcframework"),
