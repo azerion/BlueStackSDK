@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BlueStackAdMobAdapter.h"
 
 //! Project version number for BlueStackDFPAdapter.
 FOUNDATION_EXPORT double BlueStackDFPAdapterVersionNumber;

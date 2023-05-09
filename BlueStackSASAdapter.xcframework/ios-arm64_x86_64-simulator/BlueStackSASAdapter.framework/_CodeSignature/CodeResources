@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PLNdFn38Dy1HNDqmgr+ceGvr9T8=
+		jSxtPJQ1RvD+SZ5fflRPJ8gBPtc=
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0j5N7wI2vGgFmz11RIt5XTdMOEI=
+		ssbBE5A9JZqbT0fEbWZrtVH6CZo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,6 +65,10 @@
 	<dict>
 		<key>Headers/BlueStackSASAdapter-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			XsEK+C/1sR/tDEvStP1YuPAtlXA=
+			</data>
 			<key>hash2</key>
 			<data>
 			YVG+MIGiKSutbOwh8dNRVJl2pjRtmzK+bWZzHJA/2NU=
@@ -72,6 +76,10 @@
 		</dict>
 		<key>Headers/BlueStackSASAdapter.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9d9tBYJHi/BHdx0JgMefztnNWHY=
+			</data>
 			<key>hash2</key>
 			<data>
 			75Wp28n+zbO67Z1UcAr9H8CLp0XTlDEil2D/zqDWv20=
@@ -79,6 +87,10 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			+WbUkcBZimV0dQfWiFEzgyd2fPo=
+			</data>
 			<key>hash2</key>
 			<data>
 			gvyrdKIMetb/efverCojr01/DyEawpw2mKlzuHPaU2M=
@@ -86,6 +98,10 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ppXMp1wWQbf/MAlAUaL+FOYBi8g=
+			</data>
 			<key>hash2</key>
 			<data>
 			mxiI+lIRFcpNIXQ4CxEoDCTf3SigM4t6i/6EKtneAiA=
@@ -93,6 +109,10 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			A1JBjkpTNODS2OXbgI2Zn5Wltk4=
+			</data>
 			<key>hash2</key>
 			<data>
 			nbmJaLbFEX0JCsLQerhHkzI1KULWm71tWJg7rRT8GGg=
@@ -100,6 +120,10 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ppXMp1wWQbf/MAlAUaL+FOYBi8g=
+			</data>
 			<key>hash2</key>
 			<data>
 			mxiI+lIRFcpNIXQ4CxEoDCTf3SigM4t6i/6EKtneAiA=
@@ -107,13 +131,21 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			jSxtPJQ1RvD+SZ5fflRPJ8gBPtc=
+			</data>
 			<key>hash2</key>
 			<data>
-			MX4OHMv8enJiyv7YTSvt72TQlm6U6B+F4I0Q3Vl3S40=
+			0VShAE3UNMcY59Bl3fT5HL5zo1ndZaQhTg/AgEbKRPM=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			+WbUkcBZimV0dQfWiFEzgyd2fPo=
+			</data>
 			<key>hash2</key>
 			<data>
 			gvyrdKIMetb/efverCojr01/DyEawpw2mKlzuHPaU2M=
@@ -121,6 +153,10 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			SThGYVc9RU/dNkyYz3xvCwaIfOo=
+			</data>
 			<key>hash2</key>
 			<data>
 			3coo8DiGbztojEe2ozvbSIzS0yquTqgIAVYzLENXLUQ=
@@ -128,6 +164,10 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			FtmI72wB64BL7oygn8z5vpOyryI=
+			</data>
 			<key>hash2</key>
 			<data>
 			7Pz8fJUDbtB9yOk4sL5f6bZ3ncdjcSlR4fl9Yf3I9xc=
@@ -135,6 +175,10 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			SThGYVc9RU/dNkyYz3xvCwaIfOo=
+			</data>
 			<key>hash2</key>
 			<data>
 			3coo8DiGbztojEe2ozvbSIzS0yquTqgIAVYzLENXLUQ=
@@ -142,13 +186,21 @@
 		</dict>
 		<key>Modules/BlueStackSASAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ssbBE5A9JZqbT0fEbWZrtVH6CZo=
+			</data>
 			<key>hash2</key>
 			<data>
-			Ix/WjKPXxDwPETCfrPfIKjqveQTuo2IDsn9AcO8+09s=
+			c4ivoT9nmR0yjN0xnbCx01llvnUx9/HKkpX1lycsL+g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			gcd36QcwsXwus7KlGkbwlw6b1k4=
+			</data>
 			<key>hash2</key>
 			<data>
 			WCtBvVFO2aDui6ZNBTnPzMwgkfOHnT+K4vhsCxpPl0Q=

@@ -119,7 +119,6 @@ let package = Package(
         .target(name: "BlueStackSDKTarget",
                 dependencies: [
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
-                    .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackSDKWrapper",
                 linkerSettings: [
@@ -145,7 +144,6 @@ let package = Package(
                ),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
-        .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         //smart
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
         .binaryTarget(name: "SASDisplayKit", path: "Dependencies/SASDisplayKit.xcframework"),

@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YY6lgzANw842zJRzyif0TOJWXyQ=
+		14ksJ63MI8uYvnY2mCmvjkseblY=
 		</data>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		K80P2IldDmUsgkBhQBNYTFkpTso=
+		/nmeaIEIHPP0gViL01biOiJn46w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,6 +65,10 @@
 	<dict>
 		<key>Headers/BlueStackAdColonyAdapter-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			cT2E/zOFXBEZBCoF6CqdqR+VsvU=
+			</data>
 			<key>hash2</key>
 			<data>
 			k5Ni9VblKHRSx8HtMjG0+UoVuXEMj0f1fTYS0JJKDDc=
@@ -72,6 +76,10 @@
 		</dict>
 		<key>Headers/BlueStackAdColonyAdapter.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			7kYcq7CgJfdJ0HxWtROQeqqxMp0=
+			</data>
 			<key>hash2</key>
 			<data>
 			fGQ9IycLTfeM+ceqyV+zAwhUtP2qHMfzc86MOdO+TMs=
@@ -79,6 +87,10 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			75Jc2soF66O7zpioQH5WTuBENO8=
+			</data>
 			<key>hash2</key>
 			<data>
 			bOBroVvxkHqkZaGPhxN/Rw+OLW9mjHXSbQkVCArIRAc=
@@ -86,6 +98,10 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			RpWih/CdSI3IDAb4jn7YtX6/jJE=
+			</data>
 			<key>hash2</key>
 			<data>
 			3R7UPjmIPfqkflgqArS4UVUlAgkkVSVSozDV0LHaSwE=
@@ -93,6 +109,10 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			LPeFmyFEb/kun+NnS0dUB2zZ6BE=
+			</data>
 			<key>hash2</key>
 			<data>
 			KzKlNWRVtvGNQ3Rrzhl2opXbZBZgsRPjMymPhLPLRWc=
@@ -100,6 +120,10 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			RpWih/CdSI3IDAb4jn7YtX6/jJE=
+			</data>
 			<key>hash2</key>
 			<data>
 			3R7UPjmIPfqkflgqArS4UVUlAgkkVSVSozDV0LHaSwE=
@@ -107,13 +131,21 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			14ksJ63MI8uYvnY2mCmvjkseblY=
+			</data>
 			<key>hash2</key>
 			<data>
-			/2uNqBPndIQ4GRe5c0UI+FwrMQNED9guItjAkVm+s0w=
+			Yfm37cIFxIHxQqtdWVRkTB+h/otPG9wwZ5OInuHXe7I=
 			</data>
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			75Jc2soF66O7zpioQH5WTuBENO8=
+			</data>
 			<key>hash2</key>
 			<data>
 			bOBroVvxkHqkZaGPhxN/Rw+OLW9mjHXSbQkVCArIRAc=
@@ -121,6 +153,10 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ro5VXGghXwtxObxxOUq6T5x9+Ls=
+			</data>
 			<key>hash2</key>
 			<data>
 			RyHdn8zuskjJ795wcqKr1NNSxtzjoB91xv4nvKJpSos=
@@ -128,6 +164,10 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			cCZ8v801PgRwLnVS/siuGnqHnvA=
+			</data>
 			<key>hash2</key>
 			<data>
 			3bakF/X3VrJXJuUJFAF0M3mY76QhyCNkJ85rgA0q+EM=
@@ -135,6 +175,10 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ro5VXGghXwtxObxxOUq6T5x9+Ls=
+			</data>
 			<key>hash2</key>
 			<data>
 			RyHdn8zuskjJ795wcqKr1NNSxtzjoB91xv4nvKJpSos=
@@ -142,13 +186,21 @@
 		</dict>
 		<key>Modules/BlueStackAdColonyAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			/nmeaIEIHPP0gViL01biOiJn46w=
+			</data>
 			<key>hash2</key>
 			<data>
-			VD94afX2koWkXfn1btXlzMaB9AIDnK4OYpSTblSvOeo=
+			Ug83bB58fq2xGv9D0oJ+WuUW8wuO4I161uNyxxgkT9E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			1EGSPHLc/bs5v3B9xNN49zSYFLI=
+			</data>
 			<key>hash2</key>
 			<data>
 			bjzouQORD1ls4y36Y0tCpMvfrZQBJD3DI1dbClyT2p4=
