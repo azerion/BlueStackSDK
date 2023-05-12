@@ -43,11 +43,6 @@ let package = Package(
                     .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "ImproveDigital", condition: .when(platforms: [.iOS])),
                     .target(name: "GoogleInteractiveMediaAds",condition: .when(platforms: [.iOS])),
-                    //dfp
-                        .target(
-                            name: "BlueStackDFPAdapterWrapper",
-                            condition: .when(platforms: [.iOS])
-                        ),
                     //ogury
                     .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
@@ -74,15 +69,6 @@ let package = Package(
                     .linkedLibrary("sqlite3")
                 ]
                ),
-        .target(name: "BlueStackDFPAdapterWrapper",
-                dependencies: [
-                    .target(name: "MyFBLPromises", condition: .when(platforms: [.iOS])),
-                    .target(name: "MyGoogleUtilities", condition: .when(platforms: [.iOS])),
-                    .target(name: "Mynanopb", condition: .when(platforms: [.iOS])),
-                     .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
-                ],
-                path: "BlueStackDFPAdapterWrapper"
-               ),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
@@ -95,13 +81,6 @@ let package = Package(
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
         //criteo
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
-        //dfp
-        .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
-        .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
-        //for dfp dependencies
-        .binaryTarget(name: "MyFBLPromises", path: "Dependencies/FBLPromises.xcframework"),
-        .binaryTarget(name: "MyGoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
-        .binaryTarget(name: "Mynanopb", path: "Dependencies/nanopb.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
