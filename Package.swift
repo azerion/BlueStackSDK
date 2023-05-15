@@ -40,6 +40,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "9.12.0")),
+        .package(url: "https://github.com/azerion/improvedigital-sdk-ios", .upToNextMajor(from: "2.0.1")),
     ],
     targets: [
         .target(name: "BlueStackDFPAdapterTarget",
@@ -103,8 +104,7 @@ let package = Package(
         .target(name: "BlueStackImproveAdapterTarget",
                 dependencies: [
                     .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
-                    .target(name: "ImproveDigital", condition: .when(platforms: [.iOS])),
-                    .target(name: "GoogleInteractiveMediaAds",condition: .when(platforms: [.iOS])),
+                    .product(name: "ImproveDigital", package: "improvedigital-sdk-ios"),
                 ],
                 path: "BlueStackImproveAdapterWrapper"
         ),
@@ -179,8 +179,6 @@ let package = Package(
         .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
         .binaryTarget(name: "DTBiOSSDK", path: "Dependencies/DTBiOSSDK.xcframework"),
        //Improve
-        .binaryTarget(name: "BlueStackImproveAdapter", path: "BlueStackImproveAdapter.xcframework"),
-        .binaryTarget(name: "ImproveDigital", path: "Dependencies/ImproveDigital.xcframework"),
-        .binaryTarget(name: "GoogleInteractiveMediaAds", path: "Dependencies/GoogleInteractiveMediaAds.xcframework")
+        .binaryTarget(name: "BlueStackImproveAdapter", path: "BlueStackImproveAdapter.xcframework")
     ]
 )
