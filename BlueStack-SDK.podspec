@@ -2,9 +2,9 @@ Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
   spec.version          = "4.2.5"
-  spec.summary          = "BlueStack by Madvertise provides functionalities for monetizing your mobile application"
+  spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
-                       BlueStack by Madvertise provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack SDK is a library that allow you to handle the following Ads servers with the easy way :
+                       BlueStack by Azerion provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack SDK is a library that allow you to handle the following Ads servers with the easy way :
   Smart-Display-SDK
   FBAudienceNetwork
   Google-Mobile-Ads-SDK
@@ -18,9 +18,9 @@ Pod::Spec.new do |spec|
    DESC
   spec.homepage         = "https://developers.bluestack.app/"
   spec.license          = 'Commercial'
-  spec.author           = { "MadvertiseMedia" => "https://madvertise.com",
-                         "Technical Assistance" => "tech@madvertise.com"
-                       }
+  spec.author           = { 
+                            "Azerion" => "https://www.azerion.com/contact/"
+                          }
 
 #  spec.source           = { :http => "https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/BlueStack-SDK-v4.1.3.zip" }
 spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git", :tag => "v#{spec.version}" }
