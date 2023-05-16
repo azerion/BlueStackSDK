@@ -1,6 +1,0 @@
-framework module ImproveDigital {
-  umbrella header "ImproveDigital.h"
-
-  export *
-  module * { export * }
-}

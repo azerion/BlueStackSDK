@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8jtT8ibLlNsCfeXFxjX+pcz90GA=
+		mfd87JfdQjaEiPPLQYB7udRgTy8=
 		</data>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0LS9N+CtqHjs9szefdWikq6PoiI=
+		lrDFtCPKcKdv+QmsO4ksLMhUap0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,6 +65,10 @@
 	<dict>
 		<key>Headers/BlueStackLocationAdapter-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			4pyYrb+0ijvvsoxL1u+n+xyQ+LE=
+			</data>
 			<key>hash2</key>
 			<data>
 			0QlR81I8Nd0/d4vtaskoc8HXHSG6NgXDpda8ZoNtAF0=
@@ -72,6 +76,10 @@
 		</dict>
 		<key>Headers/BlueStackLocationAdapter.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			NXlIJdGLEC3Zy+KuDJIl/gVY1cI=
+			</data>
 			<key>hash2</key>
 			<data>
 			4Ee+fFJ6EjpthxV6r7ZgwYyQN3ucoO1ITHCKY8eOJAE=
@@ -79,6 +87,10 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ogiIP2p090B37tcB7E6T9MLwo0Y=
+			</data>
 			<key>hash2</key>
 			<data>
 			9mSBfAMuA0BivjcHiEItwIxeCruGsg0NL692K3oKVjg=
@@ -86,6 +98,10 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			Y8sgi+vPH1G5TDz8mSBoPPieOqY=
+			</data>
 			<key>hash2</key>
 			<data>
 			tUenQjgLMX/7aiRnB3/knPBzxUZ1mGRjBYEOB+fmXOo=
@@ -93,6 +109,10 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			YGcIIcJmJr9myhkKvmyThJ+dCHE=
+			</data>
 			<key>hash2</key>
 			<data>
 			uRbmaHynE6EpwoY6bq0pni2v84jYeUOZX0/mq2dbvLY=
@@ -100,6 +120,10 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			Y8sgi+vPH1G5TDz8mSBoPPieOqY=
+			</data>
 			<key>hash2</key>
 			<data>
 			tUenQjgLMX/7aiRnB3/knPBzxUZ1mGRjBYEOB+fmXOo=
@@ -107,13 +131,21 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			mfd87JfdQjaEiPPLQYB7udRgTy8=
+			</data>
 			<key>hash2</key>
 			<data>
-			E4nKiC4qVk0Gdui+HhpRFnNom6siW8bLoYrxrUhdaZ8=
+			zmOygbHAH2gl8XT9bTfze0FoZqp5FEGekJhruzG6PkY=
 			</data>
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ogiIP2p090B37tcB7E6T9MLwo0Y=
+			</data>
 			<key>hash2</key>
 			<data>
 			9mSBfAMuA0BivjcHiEItwIxeCruGsg0NL692K3oKVjg=
@@ -121,6 +153,10 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			DUhrdLih6s6BbAZWUWPSOekrlfE=
+			</data>
 			<key>hash2</key>
 			<data>
 			NOnu1g+o3v4DPhGIX4V1B/rv+MXnNIdCtuGgUv6eVoQ=
@@ -128,6 +164,10 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			rjOXhMgm/yDKzCXvhGfN+c6n+/s=
+			</data>
 			<key>hash2</key>
 			<data>
 			scywLmWh1mug4s3zPKTVbv2L5clciV6rgKnV0fMzsws=
@@ -135,6 +175,10 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			DUhrdLih6s6BbAZWUWPSOekrlfE=
+			</data>
 			<key>hash2</key>
 			<data>
 			NOnu1g+o3v4DPhGIX4V1B/rv+MXnNIdCtuGgUv6eVoQ=
@@ -142,13 +186,21 @@
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			lrDFtCPKcKdv+QmsO4ksLMhUap0=
+			</data>
 			<key>hash2</key>
 			<data>
-			Db9ubSh9I59SmKlJaXFrCw5aNoReeiyv0A5flCDkftY=
+			Z78EijVTayoC4rd7ugtQS5DRDosdZvzvzPy9dB5ZNdg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			FOemUz1jWh+asveKl3x5NrYl7Q4=
+			</data>
 			<key>hash2</key>
 			<data>
 			mfwQGCiadPct1bH33Fp6Ca+1b1kX6pIyT5K55acjX2Q=

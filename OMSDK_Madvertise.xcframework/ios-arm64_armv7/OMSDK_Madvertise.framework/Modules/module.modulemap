@@ -1,4 +1,0 @@
-module OMSDK_Madvertise {
-    header "Headers/OMIDImports.h"
-    export *
-}
