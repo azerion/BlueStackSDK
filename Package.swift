@@ -127,6 +127,8 @@ let package = Package(
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackSDKWrapper",
+                exclude: ["../BlueStack-SDK.podspec", "../README.md"],
+                resources: [.copy("Resources/BlueStackSDKResources.bundle")],
                 linkerSettings: [
                     .linkedFramework("AVFoundation"),
                     .linkedFramework("Accelerate"),
