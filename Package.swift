@@ -40,7 +40,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "9.13.0")),
-        .package(url: "https://github.com/azerion/improvedigital-sdk-ios", .upToNextMajor(from: "2.0.1")),
+        .package(url: "https://github.com/azerion/improvedigital-sdk-ios", .upToNextMajor(from: "2.0.2-preview.1")),
     ],
     targets: [
         .target(name: "BlueStackDFPAdapterTarget",
@@ -127,6 +127,8 @@ let package = Package(
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackSDKWrapper",
+                exclude: ["../BlueStack-SDK.podspec", "../README.md"],
+                resources: [.copy("Resources/BlueStackSDKResources.bundle")],
                 linkerSettings: [
                     .linkedFramework("AVFoundation"),
                     .linkedFramework("Accelerate"),
