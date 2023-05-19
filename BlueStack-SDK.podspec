@@ -102,7 +102,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   
   spec.subspec 'ImproveDigital' do |impDigital|
       impDigital.vendored_frameworks = 'BlueStackImproveAdapter.xcframework'
-      impDigital.dependency                'ImproveDigital','2.0.1'
+      impDigital.dependency                'ImproveDigital','2.0.2-preview.1'
       impDigital.dependency                'BlueStack-SDK/Core'
   end
 
