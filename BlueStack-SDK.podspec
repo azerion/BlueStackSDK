@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "4.2.6-preview.2"
+  spec.version          = "4.2.6"
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
                        BlueStack by Azerion provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack SDK is a library that allow you to handle the following Ads servers with the easy way :
@@ -78,7 +78,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
   spec.subspec 'MAdvertiseLocation' do |mlo|
       mlo.vendored_frameworks = 'BlueStackLocationAdapter.xcframework'
-      mlo.dependency 'MAdvertiseLocation', '3.1.7.preview.1'
+      mlo.dependency 'MAdvertiseLocation', '3.1.7'
       mlo.dependency 'BlueStack-SDK/Core'
   end
 
@@ -102,7 +102,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   
   spec.subspec 'ImproveDigital' do |impDigital|
       impDigital.vendored_frameworks = 'BlueStackImproveAdapter.xcframework'
-      impDigital.dependency                'ImproveDigital','2.0.2-preview.1'
+      impDigital.dependency                'ImproveDigital','2.0.2'
       impDigital.dependency                'BlueStack-SDK/Core'
   end
 
