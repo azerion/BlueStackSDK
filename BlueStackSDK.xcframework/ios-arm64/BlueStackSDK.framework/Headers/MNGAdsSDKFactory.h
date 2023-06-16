@@ -8,43 +8,10 @@
 //
 
 #import "MNGAdsAdapter.h"
+#import "BlueStackInitializationStatus.h"
+#import "MNGAdsSDKFactoryDelegate.h"
 
 void DebugLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
-
-/**
- Enumeration that define the type of error incase an ad fails to load
- */
-
-
-typedef enum
-{
-    BlueStackAdapterInitializationStateReady = 1,
-    BlueStackAdapterInitializationStateNotReady = 0,
-    BlueStackAdapterInitializationStateUnknown = 2
-} BlueStackAdapterInitializationState;
-
-
-@interface BlueStackAdapterStatus : NSObject
-
-@property BlueStackAdapterInitializationState state;
-@property NSString* provider;
-@property NSString* descriptionStatus;
-
-@end
-
-@interface BlueStackInitializationStatus : NSObject
-
-@property NSArray<BlueStackAdapterStatus *> *adaptersStatus;
-
-@end
-
-@protocol MNGAdsSDKFactoryDelegate <NSObject>
-
-@optional
--(void)MNGAdsSDKFactoryDidFinishInitializing;
--(void)MNGAdsSDKFactoryDidFinishAdaptersInitializing:(BlueStackInitializationStatus*)blueStackInitializationStatus;
--(void)MNGAdsSDKFactoryDidFailInitializationWithError:(NSError*) error;
-@end
 
 @interface MNGAdsSDKFactory : MNGAdsAdapter<MNGAdsAdapterBannerDelegate,MNGAdsAdapterInterstitialDelegate,MNGAdsAdapterNativeDelegate,MNGClickDelegate, MNGAdsAdapterInfeedDelegate,MNGAdsAdapterRefreshDelegate,MAdvertiseAdapterRewardedVideoAdDelegate,BluestackThumbnailAdDelegate>
 

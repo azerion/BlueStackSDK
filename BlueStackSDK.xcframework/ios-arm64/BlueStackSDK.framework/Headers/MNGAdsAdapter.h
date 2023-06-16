@@ -10,6 +10,7 @@
 #import "MNGPreference.h"
 #import "Protocols.h"
 #import "MAdvertiseInfeedFrame.h"
+#import "BlueStackAdapterStatus.h"
 /**
  Enumeration that define the type of requested ad
  */

@@ -24,6 +24,14 @@
 		<data>
 		Cj+ZoAR/savNNd49CqzNC9yem2Q=
 		</data>
+		<key>Headers/BlueStackAdapterStatus.h</key>
+		<data>
+		mlPa/zmd4OOaDXVLVz7dUkT3Dag=
+		</data>
+		<key>Headers/BlueStackInitializationStatus.h</key>
+		<data>
+		FMQB1m4wwz9Ye1UZQaZLklOzVog=
+		</data>
 		<key>Headers/BlueStackSDK.h</key>
 		<data>
 		29rDBDYDXiPX5DNqITMeP2LjgHY=
@@ -42,11 +50,15 @@
 		</data>
 		<key>Headers/MNGAdsAdapter.h</key>
 		<data>
-		1OigdcvcU2qbuxU4cFAOS1wG9YE=
+		hfawE+hUcRnvEjCrs1z0dHES3Wc=
 		</data>
 		<key>Headers/MNGAdsSDKFactory.h</key>
 		<data>
-		ZGTzS7FXuatYen19xgZKwXjdnbg=
+		yvL6k4awXgRSPgpICh4/uTGaWbM=
+		</data>
+		<key>Headers/MNGAdsSDKFactoryDelegate.h</key>
+		<data>
+		aQBGJWjVcVtQSFSfCnQPgIvF+1g=
 		</data>
 		<key>Headers/MNGNAtiveObject.h</key>
 		<data>
@@ -67,10 +79,6 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		HV44fVPaGGxiBxIo5oZc+SZlzIQ=
-		</data>
-		<key>example.json</key>
-		<data>
-		yKDwU2nIjg9z+NV9iPjuHwvNWpI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -130,6 +138,28 @@
 			/dHx+ZqhZ0h0JFGUjI/q1tOayBBwAdWQuc1H/mslwKo=
 			</data>
 		</dict>
+		<key>Headers/BlueStackAdapterStatus.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mlPa/zmd4OOaDXVLVz7dUkT3Dag=
+			</data>
+			<key>hash2</key>
+			<data>
+			QPZpw4DeSjr8T9N4jLwqFeBs8+66ZO0/44gA9oVIcI4=
+			</data>
+		</dict>
+		<key>Headers/BlueStackInitializationStatus.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FMQB1m4wwz9Ye1UZQaZLklOzVog=
+			</data>
+			<key>hash2</key>
+			<data>
+			LAJLQLbWuEbtggKrfR6qQfqfnjIwtNP7PxgOao/mo5A=
+			</data>
+		</dict>
 		<key>Headers/BlueStackSDK.h</key>
 		<dict>
 			<key>hash</key>
@@ -178,22 +208,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1OigdcvcU2qbuxU4cFAOS1wG9YE=
+			hfawE+hUcRnvEjCrs1z0dHES3Wc=
 			</data>
 			<key>hash2</key>
 			<data>
-			hB3fFiWdB1tEUhohPGxyzDJhbqfx+AdxH1fkh5+XPj0=
+			hDQKEx4bdz+vGlgPvknymbbR+SWdTveJQWbITIKAbKc=
 			</data>
 		</dict>
 		<key>Headers/MNGAdsSDKFactory.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZGTzS7FXuatYen19xgZKwXjdnbg=
+			yvL6k4awXgRSPgpICh4/uTGaWbM=
 			</data>
 			<key>hash2</key>
 			<data>
-			sgHARnUypSc7T7zQP561QIMdeQVjJM8T8gdT1KTtv14=
+			zJbp1pLV0hbN/six5y8zePfhUQiRjLUXJyVYzffS9Qw=
+			</data>
+		</dict>
+		<key>Headers/MNGAdsSDKFactoryDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aQBGJWjVcVtQSFSfCnQPgIvF+1g=
+			</data>
+			<key>hash2</key>
+			<data>
+			BtM3pfbWmKG98Ux2To0VwTrvcWWNvSH5pSw112dZ53I=
 			</data>
 		</dict>
 		<key>Headers/MNGNAtiveObject.h</key>
@@ -238,17 +279,6 @@
 			<key>hash2</key>
 			<data>
 			/XUceiv6Of41iPnFvFIQ9Qlzsp1oXBhJ1/0Wy0sAew0=
-			</data>
-		</dict>
-		<key>example.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yKDwU2nIjg9z+NV9iPjuHwvNWpI=
-			</data>
-			<key>hash2</key>
-			<data>
-			7WMchTVfIuU37m7W+Qlbp1nV5rJZ4mgoFw2PtJy0VWo=
 			</data>
 		</dict>
 	</dict>
