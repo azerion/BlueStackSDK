@@ -40,7 +40,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "9.13.0")),
-        .package(url: "https://github.com/azerion/improvedigital-sdk-ios", .upToNextMajor(from: "3.0.0-preview.1")),
+        .package(url: "https://github.com/azerion/improvedigital-sdk-ios", .upToNextMajor(from: "3.0.0")),
     ],
     targets: [
         .target(name: "BlueStackDFPAdapterTarget",
