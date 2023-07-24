@@ -6,15 +6,15 @@
 	<dict>
 		<key>BlueStackSDKResources.bundle/BlueStackSDKResources</key>
 		<data>
-		LVOYqfuo1SWa8bGPVO8ZgaY/6Ko=
+		hUNNtvN+pV2us08Kn8QRzpaND6w=
 		</data>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
 		<data>
-		20oXhTQuMEeJLmbU5KqrfCqlrVE=
+		LBlfHPddVTwN3AhxuCn5LEfLBU8=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		nBjyCrXNdHk8ioy/ExklFLcWPt0=
+		QwYnsg0ETGiYF5zk0PuhXFd8q2E=
 		</data>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
 		<data>
@@ -72,9 +72,13 @@
 		<data>
 		0KtM04G9z0dO6iy0x+ZAMQKE86c=
 		</data>
+		<key>Headers/UIView+SubParent.h</key>
+		<data>
+		0fPcK7kBzFEe2QlZaMVXGpTSHtk=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		W8TLrhk8xtdXg1TWX4KTeeTWsc4=
+		lwqRAVKX6t1jQfxtndXeLiffrUk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -87,33 +91,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LVOYqfuo1SWa8bGPVO8ZgaY/6Ko=
+			hUNNtvN+pV2us08Kn8QRzpaND6w=
 			</data>
 			<key>hash2</key>
 			<data>
-			VhIY/YYn+x290hZo+pV3j+limTWEb/1GB/J3petDNGU=
+			8wdTTdb+9QNzInhytMAUxVgzL4PMgRmSerinagjO8cI=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			20oXhTQuMEeJLmbU5KqrfCqlrVE=
+			LBlfHPddVTwN3AhxuCn5LEfLBU8=
 			</data>
 			<key>hash2</key>
 			<data>
-			l1+gXu+Zw2r0LhFUisrvnVd3GuoE81XLnE7GoDmpSho=
+			2RhfDt4V7m+Zp2MACHj6Q7qxLXH1IDC/DcWDWnHwnC4=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nBjyCrXNdHk8ioy/ExklFLcWPt0=
+			QwYnsg0ETGiYF5zk0PuhXFd8q2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			fCULFR0WfCF4UNa/WQbQ5n3aKov7A9d0X28ZXm2H/qY=
+			OxLyZ6cmSOeON3f9LaglAEUl0EICWnDyfILvmTbDSv4=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
@@ -268,6 +272,17 @@
 			<key>hash2</key>
 			<data>
 			yEuryEcTQkOANGLm28A6FCLJTFkmLLVK00uPvxwmles=
+			</data>
+		</dict>
+		<key>Headers/UIView+SubParent.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0fPcK7kBzFEe2QlZaMVXGpTSHtk=
+			</data>
+			<key>hash2</key>
+			<data>
+			HmWLfwU/ZOp5hXvZOS0RdFWjfVHv2nuH+l7b8MYbiMM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
