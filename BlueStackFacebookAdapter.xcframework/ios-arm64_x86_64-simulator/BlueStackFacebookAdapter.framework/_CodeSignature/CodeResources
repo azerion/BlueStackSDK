@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		B420ezJPwEcPYuM6X+SSDDBUhHU=
+		gjn8uHg3+KQtYsKdVb+xl/JaGxg=
 		</data>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fQeBnAyjjIOxu8B/sJJfiLn1/Sk=
+		DKXpig94rtirg2BNqYy6y0uWIkk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,10 +65,6 @@
 	<dict>
 		<key>Headers/BlueStackFacebookAdapter-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rY9jraDQxavbBKb+TNK1Hnoz9eQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			8yEdFRIEbOlERCoULZhAfm501EYCehwxULcQiR/pJPA=
@@ -76,10 +72,6 @@
 		</dict>
 		<key>Headers/BlueStackFacebookAdapter.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Gk+7SwY4w1tdVhBBQ7HBC7IvRCQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			cB3H39HvMUlYLiiKElkURPiM57X0eE/FV6Xz5++gJ8s=
@@ -87,10 +79,6 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lvTS+h1BfhgSBuFZzo5TPAPwYVA=
-			</data>
 			<key>hash2</key>
 			<data>
 			dF1Lpl7cWb4WmdunF+F8mZRYs9yrAn6A1ml5jzb8/QU=
@@ -98,10 +86,6 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			C/zvFSIlqh3yAEZ0pOxCzt6bHpE=
-			</data>
 			<key>hash2</key>
 			<data>
 			zS+eE+SarE+nkDRanTB2Wql3f7l8rfBr/2iErZBaM4M=
@@ -109,10 +93,6 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			kfpo95FzARYXos9R+t+uczAIXEE=
-			</data>
 			<key>hash2</key>
 			<data>
 			vZlnBlGa054mlLjSPi7Gb9NA7drlyZOl+54hAtqUGe4=
@@ -120,10 +100,6 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			C/zvFSIlqh3yAEZ0pOxCzt6bHpE=
-			</data>
 			<key>hash2</key>
 			<data>
 			zS+eE+SarE+nkDRanTB2Wql3f7l8rfBr/2iErZBaM4M=
@@ -131,21 +107,13 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			B420ezJPwEcPYuM6X+SSDDBUhHU=
-			</data>
 			<key>hash2</key>
 			<data>
-			qbQ5EBg2HZHNxOdIo4/6eGQjHq19DFA9/Gik/ictEPc=
+			gniYphUnLfcQaXmUp5FTjtHJM38yW7+1amMhqFY/Xkc=
 			</data>
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lvTS+h1BfhgSBuFZzo5TPAPwYVA=
-			</data>
 			<key>hash2</key>
 			<data>
 			dF1Lpl7cWb4WmdunF+F8mZRYs9yrAn6A1ml5jzb8/QU=
@@ -153,10 +121,6 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3YZQyfpxhmMymDetnsAITZYqiN8=
-			</data>
 			<key>hash2</key>
 			<data>
 			5sMHdrkyGhkwkbkRG9IIZz+VxGRHXqD83i/i8kmY6T0=
@@ -164,10 +128,6 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			iENcwm6FepRW5whrHyaymhfjLtU=
-			</data>
 			<key>hash2</key>
 			<data>
 			jm0OuXQ35htoli1+sf+ChnK7+xoxugjiUWEYdqUuo+0=
@@ -175,10 +135,6 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3YZQyfpxhmMymDetnsAITZYqiN8=
-			</data>
 			<key>hash2</key>
 			<data>
 			5sMHdrkyGhkwkbkRG9IIZz+VxGRHXqD83i/i8kmY6T0=
@@ -186,21 +142,13 @@
 		</dict>
 		<key>Modules/BlueStackFacebookAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			fQeBnAyjjIOxu8B/sJJfiLn1/Sk=
-			</data>
 			<key>hash2</key>
 			<data>
-			LTW3SC0uJbY3+6l8BeHSZHC/TqNhJ39paqnvYjNNm5w=
+			OU3qRGxS+zu0l6LCDZ/OOcIMH0nJEQkayEzLMN7sjuA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2EJHIhm5nEWvzBEcJK1wVm9/m1E=
-			</data>
 			<key>hash2</key>
 			<data>
 			tsVHKF5fAcuDpDD+4RsAUBO337NFeiWVCg3uUhxn6Jc=

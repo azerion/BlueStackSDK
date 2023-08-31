@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cpdyF5j9JaR4mkTT+2smyhtnM2U=
+		Dg5CwYYG8JMAGRT6qCQg8C1hL58=
 		</data>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		66OAgBrxbPecnjrHCIJ7ZDtVPcg=
+		wUxxdYtYIkBh6pwIZktNrrxBxb0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,10 +65,6 @@
 	<dict>
 		<key>Headers/BlueStackOguryAdapter-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Wvgameb2Wijd0R1KxuqwSdGrAEI=
-			</data>
 			<key>hash2</key>
 			<data>
 			wA+VgOOU9TNXPsdNCz0fX1t6ZhamD1cXa0Exw3Tw5So=
@@ -76,10 +72,6 @@
 		</dict>
 		<key>Headers/BlueStackOguryAdapter.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			16kkspUikfYLuoiV9aZsdBCX+qw=
-			</data>
 			<key>hash2</key>
 			<data>
 			sESwI64qGAzvfsJlDxw87Sq1iaKu6t7Rfbsz1is/pUo=
@@ -87,10 +79,6 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			YTXohpS14Q08rlfhsPJ+BgNq3Gk=
-			</data>
 			<key>hash2</key>
 			<data>
 			f5sd8dJD6qOW5kFVx2tVJk1+6EAiZj3/DhB/Qriqask=
@@ -98,10 +86,6 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			O2lS2HhzQIwy+6LQFe/KMHrMnus=
-			</data>
 			<key>hash2</key>
 			<data>
 			vpM2PddUZxkjgxyn0apvBaIWnSj4XBDWd2fkrdzAUO0=
@@ -109,10 +93,6 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ptikpyFNFFRRY8V22Zs8dd86Low=
-			</data>
 			<key>hash2</key>
 			<data>
 			Lilvz5smzOeUU47ZnhAJR/z88YDry4+BPLIt4gZuIB4=
@@ -120,10 +100,6 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			O2lS2HhzQIwy+6LQFe/KMHrMnus=
-			</data>
 			<key>hash2</key>
 			<data>
 			vpM2PddUZxkjgxyn0apvBaIWnSj4XBDWd2fkrdzAUO0=
@@ -131,21 +107,13 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cpdyF5j9JaR4mkTT+2smyhtnM2U=
-			</data>
 			<key>hash2</key>
 			<data>
-			S/ijk9xVN0Jqi68dIDTkgrcc0bw/J6ZdTJs5q89dr1c=
+			EBopr6G1vVer5IIP67IvfnGqvhbpLUUjDhUM0f1z9Us=
 			</data>
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			YTXohpS14Q08rlfhsPJ+BgNq3Gk=
-			</data>
 			<key>hash2</key>
 			<data>
 			f5sd8dJD6qOW5kFVx2tVJk1+6EAiZj3/DhB/Qriqask=
@@ -153,10 +121,6 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4FipHKnIc4FN0vYY+c2XOZnmUs4=
-			</data>
 			<key>hash2</key>
 			<data>
 			3UEudqMv3iVX2j7foNqOnQE2G4RWyHC9qJoN76Csl3o=
@@ -164,10 +128,6 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			UsEYVGzkJeQ9SPDfqqhFHp06bWI=
-			</data>
 			<key>hash2</key>
 			<data>
 			lSyCGMB35MuQvlusx8blfZfOzKOuQ4Im5hrxE58XUQE=
@@ -175,10 +135,6 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4FipHKnIc4FN0vYY+c2XOZnmUs4=
-			</data>
 			<key>hash2</key>
 			<data>
 			3UEudqMv3iVX2j7foNqOnQE2G4RWyHC9qJoN76Csl3o=
@@ -186,21 +142,13 @@
 		</dict>
 		<key>Modules/BlueStackOguryAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			66OAgBrxbPecnjrHCIJ7ZDtVPcg=
-			</data>
 			<key>hash2</key>
 			<data>
-			O2p5YIqWu+3tVhiP1beE2nIVRtukpzxLd9mnWz8hMiA=
+			fuQwr6bWFF0YGman3fId6OkF0wNEaqKcMbtMewM/jkA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/uFeLsWHD5sFvzGvtPeYE6yPUEs=
-			</data>
 			<key>hash2</key>
 			<data>
 			478Yg3f6cywnP7aF5IFbjigwxNwfo68NxqZAbMYNLuo=
