@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eK/uzumx6Gmtt+TN6jln9Vjgvxc=
+		k1UHIj4/IW3y0KHI7PGl3atPTME=
 		</data>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jPo7glvjrg3FlQGwKtWVBpecm2U=
+		daiw2UE/RjUn9NljSmNEqz+BvhU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,6 +65,10 @@
 	<dict>
 		<key>Headers/BluestackAmazonPublisherServicesAdapter-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			BBff/A7OfIVi4QAyIMMWEkunD/o=
+			</data>
 			<key>hash2</key>
 			<data>
 			oiJwhFt5cRY9ZMbW3377zxXhccnWgk4OZohDpYy+sP4=
@@ -72,6 +76,10 @@
 		</dict>
 		<key>Headers/BluestackAmazonPublisherServicesAdapter.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			19qaWkVfraDIsrxtOHN//ISQPcY=
+			</data>
 			<key>hash2</key>
 			<data>
 			EFk3GnO8+hgxeMKI7grAxSXxpygbZ6DuxQiJkXkNBVI=
@@ -79,6 +87,10 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ex7bp0uV+BW/ev5Y+L+cKID3Ti4=
+			</data>
 			<key>hash2</key>
 			<data>
 			MEcIs6qGCJuojFeGjdI3cXQg1ZaymOlS3kIX0Kf+/HA=
@@ -86,6 +98,10 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			AW5FQdxc6PcinUychCWi3QJShkA=
+			</data>
 			<key>hash2</key>
 			<data>
 			F8f+bqhqSNggSRgZdqlUTrS777XHCtLB1130Omld158=
@@ -93,6 +109,10 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			j07exKq2tccSe3f8JJzLCscjXOE=
+			</data>
 			<key>hash2</key>
 			<data>
 			SGDOFE+2Z2/rN3vu8WvNrtoAxaXB+5hzsY8JjcTWWLE=
@@ -100,6 +120,10 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			AW5FQdxc6PcinUychCWi3QJShkA=
+			</data>
 			<key>hash2</key>
 			<data>
 			F8f+bqhqSNggSRgZdqlUTrS777XHCtLB1130Omld158=
@@ -107,13 +131,21 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			k1UHIj4/IW3y0KHI7PGl3atPTME=
+			</data>
 			<key>hash2</key>
 			<data>
-			G+/YZqCZXjqTBeObTfeddQG4EBnQXfdwlRc6DxnMC5c=
+			OcUc41r1DvBTAAJmVrWurVcMtQ+ab6sP+CP3grBRMAQ=
 			</data>
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ex7bp0uV+BW/ev5Y+L+cKID3Ti4=
+			</data>
 			<key>hash2</key>
 			<data>
 			MEcIs6qGCJuojFeGjdI3cXQg1ZaymOlS3kIX0Kf+/HA=
@@ -121,6 +153,10 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			87jlSrppsU15LiZ6UlWWA9GJdxI=
+			</data>
 			<key>hash2</key>
 			<data>
 			0Y3KXS8V8mC2EGL3PCSXJCstBWBOyjZnwMHimTX3ilY=
@@ -128,6 +164,10 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			NSDgf7UjGD5XOK3CedjBOB/W7HY=
+			</data>
 			<key>hash2</key>
 			<data>
 			vzAGfVIPpg9wAQzNbj0MaGXD/mJoB+DJsn96hUwHOhQ=
@@ -135,6 +175,10 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			87jlSrppsU15LiZ6UlWWA9GJdxI=
+			</data>
 			<key>hash2</key>
 			<data>
 			0Y3KXS8V8mC2EGL3PCSXJCstBWBOyjZnwMHimTX3ilY=
@@ -142,13 +186,21 @@
 		</dict>
 		<key>Modules/BluestackAmazonPublisherServicesAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			daiw2UE/RjUn9NljSmNEqz+BvhU=
+			</data>
 			<key>hash2</key>
 			<data>
-			AkdIpgQiayemXOpXhRMkr1WJmvyemfYLdKC5X2iZjNk=
+			zFlBWxIALQ0qHEJ58Dh5CcgRjpnjcplLW7mraQwAo9s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			jDHFH2FDnD7joqNfn6AnZxCl3oE=
+			</data>
 			<key>hash2</key>
 			<data>
 			2yZFFB0JDbYT7gnLcorHOgxJwx7JdnVKY5Hxz2U3+Yo=
