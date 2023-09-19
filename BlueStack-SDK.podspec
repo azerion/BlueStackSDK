@@ -59,7 +59,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   spec.subspec 'Google-Mobile-Ads-SDK' do |dfp|
       dfp.vendored_frameworks = 'BlueStackDFPAdapter.xcframework'
       dfp.dependency 'BlueStack-SDK/Core'
-      dfp.dependency 'Google-Mobile-Ads-SDK','9.13.0'
+      dfp.dependency 'Google-Mobile-Ads-SDK','10.10.0'
   end
 
   spec.subspec 'Smart-Display-SDK' do |sas|
