@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
 spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git", :tag => "#{spec.version}" }
   
 
-spec.xcconfig        =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/../../BlueStack-SDK"' , 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/../../BlueStack-SDK"' }
+spec.xcconfig        =  { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/BlueStack-SDK"' }
 
   spec.platform = :ios
   spec.swift_version = "5"
