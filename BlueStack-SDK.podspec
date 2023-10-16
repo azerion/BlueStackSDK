@@ -1,7 +1,8 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "4.3.0-preview.3"
+  spec.version          = "4.3.0-preview.4"
+  spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
                        BlueStack by Azerion provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack SDK is a library that allow you to handle the following Ads servers with the easy way :
@@ -90,7 +91,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
  spec.subspec 'CriteoPublisherSdk' do |criteo|
        criteo.vendored_frameworks = 'BluestackCriteoAdapter.xcframework'
-       criteo.dependency               'CriteoPublisherSdk', '4.5.0'
+       criteo.dependency               'CriteoPublisherSdk', '5.0.3'
        criteo.dependency               'BlueStack-SDK/Core'
   end
 

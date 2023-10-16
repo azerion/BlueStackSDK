@@ -1,0 +1,164 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CriteoPublisherSdk
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import CriteoPublisherSdk
+import Foundation
+import SafariServices
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var isVisibleToUser: Swift.Bool {
+    get
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func cr_parentViewController() -> UIKit.UIViewController?
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func cr_rootViewController() -> UIKit.UIViewController?
+}
+extension Swift.Bool {
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public protocol CRFulllScreenContainerDelegate : AnyObject {
+  func didExitFullScreen(webView: WebKit.WKWebView)
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class CRFulllScreenContainer : UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) public init(with webView: WebKit.WKWebView, size: CoreFoundation.CGSize, dismissCompletion: CriteoPublisherSdk.VoidCompletion?)
+  @objc @_Concurrency.MainActor(unsafe) public func close(with completion: CriteoPublisherSdk.VoidCompletion?)
+  @objc deinit
+}
+public enum MRAIDState : Swift.String, Swift.Decodable {
+  case loading
+  case `default`
+  case expanded
+  case hidden
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol MRAIDMessageHandlerDelegate : AnyObject {
+  func didReceive(expand action: CriteoPublisherSdk.MRAIDExpandMessage)
+  func didReceiveCloseAction()
+}
+public struct MRAIDMessageHandler {
+  weak public var delegate: CriteoPublisherSdk.MRAIDMessageHandlerDelegate?
+  public init(logHandler: CriteoPublisherSdk.MRAIDLogHandler, urlHandler: CriteoPublisherSdk.MRAIDURLHandler)
+  public func handle(message: Any)
+}
+public struct MRAIDExpandMessage : Swift.Decodable {
+  public let action: CriteoPublisherSdk.Action
+  public let width: Swift.Int
+  public let height: Swift.Int
+  public let url: Foundation.URL?
+  public init(from decoder: Swift.Decoder) throws
+}
+public typealias VoidCompletion = () -> Swift.Void
+@objc public protocol CRMRAIDHandlerDelegate {
+  @objc optional func expand(width: Swift.Int, height: Swift.Int, url: Foundation.URL?, completion: CriteoPublisherSdk.VoidCompletion?)
+  @objc func close(completion: CriteoPublisherSdk.VoidCompletion?)
+}
+@objc public class CRMRAIDHandler : ObjectiveC.NSObject {
+  @objc public init(with webView: WebKit.WKWebView, criteoLogger: CriteoPublisherSdk.CRMRAIDLogger, urlOpener: CriteoPublisherSdk.CRExternalURLOpener, delegate: CriteoPublisherSdk.CRMRAIDHandlerDelegate?)
+  @objc public func onAdLoad(with placementType: Swift.String)
+  @objc public func send(error: Swift.String, action: Swift.String)
+  @objc public func startViabilityNotifier()
+  @objc deinit
+  @objc public func canLoadAd() -> Swift.Bool
+  @objc public func isExpanded() -> Swift.Bool
+  @objc public func onSuccessClose()
+  @objc public func inject(into html: Swift.String) -> Swift.String
+  @objc public func injectMRAID()
+  @objc public func updateMraid(bundle: Foundation.Bundle?)
+}
+extension CriteoPublisherSdk.CRMRAIDHandler : WebKit.WKScriptMessageHandler {
+  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension CriteoPublisherSdk.CRMRAIDHandler : CriteoPublisherSdk.MRAIDMessageHandlerDelegate {
+  public func didReceive(expand action: CriteoPublisherSdk.MRAIDExpandMessage)
+  public func didReceiveCloseAction()
+}
+@objc public protocol CRMRAIDLogger {
+  @objc func mraidLog(error: Swift.String)
+  @objc func mraidLog(warning: Swift.String)
+  @objc func mraidLog(debug: Swift.String)
+  @objc func mraidLog(info: Swift.String)
+}
+@objc public class MRAIDLogHandler : ObjectiveC.NSObject {
+  public init(criteoLogger: CriteoPublisherSdk.CRMRAIDLogger)
+  @objc deinit
+}
+public enum LogLevel : Swift.String, Swift.Decodable {
+  case debug
+  case info
+  case warning
+  case error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc extension CriteoPublisherSdk.CRSKAdNetworkInfo {
+  @objc public static let CriteoId: Swift.String
+  @objc dynamic public class func hasCriteoId() -> Swift.Bool
+  @objc dynamic public class func skAdNetworkIds() -> [Swift.String]
+}
+@_inheritsConvenienceInitializers @objc public class CRMRAIDUtils : ObjectiveC.NSObject {
+  @objc public static func loadMraid(from bundle: Foundation.Bundle?) -> Swift.String?
+  @objc public static func build(html: Swift.String, from bundle: Foundation.Bundle?) -> Swift.String
+  @objc public static func mraidResourceBundle() -> Foundation.Bundle?
+  @objc public static func mraidTestResourceBundle() -> Foundation.Bundle?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct MRAIDActionMessage : CriteoPublisherSdk.ActionRepresentable, Swift.Decodable {
+  public let action: CriteoPublisherSdk.Action
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MRAIDLog : CriteoPublisherSdk.ActionRepresentable, Swift.Decodable {
+  public let logId: Swift.String?
+  public let message: Swift.String
+  public let logLevel: CriteoPublisherSdk.LogLevel
+  public let action: CriteoPublisherSdk.Action
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc public protocol CRExternalURLOpener {
+  @objc func open(url: Foundation.URL)
+}
+public protocol MRAIDURLHandler {
+  func handle(data: Foundation.Data)
+}
+final public class CRMRAIDURLHandler : CriteoPublisherSdk.MRAIDURLHandler {
+  public init(with logger: CriteoPublisherSdk.CRMRAIDLogger, urlOpener: CriteoPublisherSdk.CRExternalURLOpener)
+  final public func handle(data: Foundation.Data)
+  @objc deinit
+}
+public protocol ActionRepresentable {
+  var action: CriteoPublisherSdk.Action { get }
+}
+public enum Action : Swift.String, Swift.Decodable {
+  case log
+  case open
+  case expand
+  case close
+  case none
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CriteoPublisherSdk.MRAIDState : Swift.Equatable {}
+extension CriteoPublisherSdk.MRAIDState : Swift.Hashable {}
+extension CriteoPublisherSdk.MRAIDState : Swift.RawRepresentable {}
+extension CriteoPublisherSdk.LogLevel : Swift.Equatable {}
+extension CriteoPublisherSdk.LogLevel : Swift.Hashable {}
+extension CriteoPublisherSdk.LogLevel : Swift.RawRepresentable {}
+extension CriteoPublisherSdk.Action : Swift.Equatable {}
+extension CriteoPublisherSdk.Action : Swift.Hashable {}
+extension CriteoPublisherSdk.Action : Swift.RawRepresentable {}
