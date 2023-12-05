@@ -112,7 +112,6 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
      inApp.dependency            'BlueStack-SDK/Smart-Display-SDK'
      inApp.dependency            'BlueStack-SDK/AmazonPublisherServicesSDK'
      inApp.dependency            'BlueStack-SDK/Core'
-     inApp.dependency            'BlueStack-SDK/FBAudienceNetwork'
   end
 
   spec.subspec 'Full' do |full|
