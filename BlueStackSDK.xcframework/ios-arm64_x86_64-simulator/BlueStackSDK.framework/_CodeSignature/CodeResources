@@ -6,15 +6,15 @@
 	<dict>
 		<key>BlueStackSDKResources.bundle/BlueStackSDKResources</key>
 		<data>
-		hUNNtvN+pV2us08Kn8QRzpaND6w=
+		gO0/fMj89QYRoDKYNHahrR0eoP8=
 		</data>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
 		<data>
-		LBlfHPddVTwN3AhxuCn5LEfLBU8=
+		utlYN/PZ7kkMlivGJjOGg9YtNpc=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		QwYnsg0ETGiYF5zk0PuhXFd8q2E=
+		NuEty62Qr50oOBWFsRScrVXLplQ=
 		</data>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
 		<data>
@@ -62,7 +62,11 @@
 		</data>
 		<key>Headers/MNGNAtiveObject.h</key>
 		<data>
-		fUdyzsOyJPLIfhypj/pQqbOzuoc=
+		jaz3GO8QMI/ZvzQggboYB0azTJs=
+		</data>
+		<key>Headers/MNGNativeAdImpressionListener.h</key>
+		<data>
+		k9za0ct6r41zIh/qNe2ys1K3ZmM=
 		</data>
 		<key>Headers/MNGPreference.h</key>
 		<data>
@@ -78,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lwqRAVKX6t1jQfxtndXeLiffrUk=
+		S2pu4zgT0Um+Lx43v8iSzyCYeCg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -91,33 +95,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hUNNtvN+pV2us08Kn8QRzpaND6w=
+			gO0/fMj89QYRoDKYNHahrR0eoP8=
 			</data>
 			<key>hash2</key>
 			<data>
-			8wdTTdb+9QNzInhytMAUxVgzL4PMgRmSerinagjO8cI=
+			gg6/ilk5+N79fhaCE2kwJfXsxT/au2dQYgTCs1Sq8JI=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LBlfHPddVTwN3AhxuCn5LEfLBU8=
+			utlYN/PZ7kkMlivGJjOGg9YtNpc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2RhfDt4V7m+Zp2MACHj6Q7qxLXH1IDC/DcWDWnHwnC4=
+			qPrF5CZZwToh7whr3fkrJct2+aoqFM+Vq9f6aiNMamo=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QwYnsg0ETGiYF5zk0PuhXFd8q2E=
+			NuEty62Qr50oOBWFsRScrVXLplQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			OxLyZ6cmSOeON3f9LaglAEUl0EICWnDyfILvmTbDSv4=
+			KQb6jRtpVi06XGNPRsg4TcPTHTsCEdLH95b1BobdQKU=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
@@ -245,11 +249,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fUdyzsOyJPLIfhypj/pQqbOzuoc=
+			jaz3GO8QMI/ZvzQggboYB0azTJs=
 			</data>
 			<key>hash2</key>
 			<data>
-			OC5Tj81geCiNoa5dY0fh3Pyp1k5ASqSk1vkJHU0SEXo=
+			ITRmUbVZmUDazUUjvQEhjB9Du44d0FDK5/hRnjPFMpc=
+			</data>
+		</dict>
+		<key>Headers/MNGNativeAdImpressionListener.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k9za0ct6r41zIh/qNe2ys1K3ZmM=
+			</data>
+			<key>hash2</key>
+			<data>
+			FotzNleVD1Ap8xUAQrwpHqUsN4oRNtVWuIAe0px+K6c=
 			</data>
 		</dict>
 		<key>Headers/MNGPreference.h</key>
