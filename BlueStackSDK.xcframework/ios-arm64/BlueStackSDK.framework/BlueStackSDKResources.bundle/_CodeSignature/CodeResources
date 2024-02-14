@@ -8,6 +8,10 @@
 		<data>
 		cKTRWla39CzqS8bQ9UvEst4+qNw=
 		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		3e50rdSHj+JBgN8PbUDfMi5CB+w=
+		</data>
 		<key>omsdk-v1.js</key>
 		<data>
 		E7MaMysIYUJIR1I6oEdA8pZyRuA=
@@ -19,6 +23,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8+9lcDNZlefxJSAhlMwL1DuzLEkTjtwes9FYxa8bY8A=
+			</data>
+		</dict>
 		<key>omsdk-v1.js</key>
 		<dict>
 			<key>hash2</key>

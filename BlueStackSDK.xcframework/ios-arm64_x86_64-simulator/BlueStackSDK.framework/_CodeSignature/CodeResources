@@ -6,15 +6,19 @@
 	<dict>
 		<key>BlueStackSDKResources.bundle/BlueStackSDKResources</key>
 		<data>
-		Op9yKqUezmom8VFcaAoq23hAghs=
+		MPKMhiaZowMwhbVDxrE4rpngxr0=
 		</data>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
 		<data>
 		GML6rkUO7I2X8uC5s4EOLJBbWxY=
 		</data>
+		<key>BlueStackSDKResources.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		3e50rdSHj+JBgN8PbUDfMi5CB+w=
+		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		C+mYBfS7ycbRcs1URtDCXnvZikc=
+		aCYW08hHrgv2DmC4eD8wcfJTHv0=
 		</data>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
 		<data>
@@ -139,11 +143,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Op9yKqUezmom8VFcaAoq23hAghs=
+			MPKMhiaZowMwhbVDxrE4rpngxr0=
 			</data>
 			<key>hash2</key>
 			<data>
-			EQ/zgexOMqe1+XXSyrIWOilurLyGdC6SXrgzrR0H4hQ=
+			yITgDDQmnqNtUp885IKTdae1EXSjjmMCb1OnbGQqwHQ=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
@@ -157,15 +161,26 @@
 			adaZ9Tqlc6GooU8GiHbHyu97EAlAT92+u0CZOAJ1e8I=
 			</data>
 		</dict>
+		<key>BlueStackSDKResources.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3e50rdSHj+JBgN8PbUDfMi5CB+w=
+			</data>
+			<key>hash2</key>
+			<data>
+			8+9lcDNZlefxJSAhlMwL1DuzLEkTjtwes9FYxa8bY8A=
+			</data>
+		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			C+mYBfS7ycbRcs1URtDCXnvZikc=
+			aCYW08hHrgv2DmC4eD8wcfJTHv0=
 			</data>
 			<key>hash2</key>
 			<data>
-			z5OAHNjgHQ69syB0uRn9HVxg55ertwdoXU+Z1p4vmbI=
+			8Qn3MxhNaGA7attmMn60rcYJ3jBaQrSyjUKD4oGNxRg=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
