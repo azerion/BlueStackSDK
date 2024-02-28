@@ -128,7 +128,11 @@ let package = Package(
                 ],
                 path: "BlueStackSDKWrapper",
                 exclude: ["../BlueStack-SDK.podspec", "../README.md"],
-                resources: [.process("Resources/BlueStackSDKResources.bundle")],
+                resources: [
+                    .process("Resources/omsdk-v1.js"),
+                    .process("Resources/synccoreBluestack.js"),
+                    .process("Resources/PrivacyInfo.xcprivacy")
+                ],
                 linkerSettings: [
                     .linkedFramework("AVFoundation"),
                     .linkedFramework("Accelerate"),
