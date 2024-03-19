@@ -39,7 +39,7 @@ let package = Package(
             targets: ["BlueStackOguryAdapterTarget"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "10.10.0")),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", .upToNextMajor(from: "11.0.0")),
         .package(url: "https://github.com/azerion/improvedigital-sdk-ios", .upToNextMajor(from: "3.0.0")),
     ],
     targets: [
