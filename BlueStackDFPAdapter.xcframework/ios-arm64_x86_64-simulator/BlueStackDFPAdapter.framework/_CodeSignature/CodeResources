@@ -4,6 +4,14 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>GoogleMobileAdsResources.bundle/Info.plist</key>
+		<data>
+		0WSuTSBsRhmC2PT9gsqNXzBc6WE=
+		</data>
+		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		VWCA3MeaiPMoOAS1uOteTSLX8js=
+		</data>
 		<key>Headers/BlueStackDFPAdapter-Swift.h</key>
 		<data>
 		vs7XIoXRFCAucpUUIwlj7KV5pKw=
@@ -14,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CKJM3o3nHb0VZxUEN2S8HtRCBCg=
+		23BViOh90LUXVyEUSCzeBglB3Ys=
 		</data>
 		<key>Modules/BlueStackDFPAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -34,7 +42,7 @@
 		</data>
 		<key>Modules/BlueStackDFPAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dHJF5YIYOUruPsevGRFqp8HHUQM=
+		I+xyiQ54e8mqrGB9fgEZzyEHbbA=
 		</data>
 		<key>Modules/BlueStackDFPAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,15 +62,45 @@
 		</data>
 		<key>Modules/BlueStackDFPAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		A2G4peOtUrWcBqQmJ7jsHF7Nazg=
+		66J1FJ7c7hnz9iH0gTjcNGnxUZ8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		wzEQ1cgEdEYPlH/nfAdLYsu+0Mc=
 		</data>
+		<key>UserMessagingPlatformResources.bundle/Info.plist</key>
+		<data>
+		/a2WUk0bAKNw7LczOYD9wUPqw9g=
+		</data>
+		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		k9OFlDPBRWfteJ+bfG12WAoBuls=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>GoogleMobileAdsResources.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0WSuTSBsRhmC2PT9gsqNXzBc6WE=
+			</data>
+			<key>hash2</key>
+			<data>
+			7bnJpAbB7KODwV0OFYLe7fmGvYsgYuVMO5dGVZ8i+j0=
+			</data>
+		</dict>
+		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VWCA3MeaiPMoOAS1uOteTSLX8js=
+			</data>
+			<key>hash2</key>
+			<data>
+			afsRJYL8I/wGxjXJYdJio/e0tWVNKEeHSR3jAA2t+dI=
+			</data>
+		</dict>
 		<key>Headers/BlueStackDFPAdapter-Swift.h</key>
 		<dict>
 			<key>hash</key>
@@ -133,11 +171,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dHJF5YIYOUruPsevGRFqp8HHUQM=
+			I+xyiQ54e8mqrGB9fgEZzyEHbbA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ba7D7DkvNaillsOYnkMJCWeHWivoIuoaDNcw1dCETYY=
+			N/rYZ3Z35HSbQJx49qM+Q8jGDMzhv1s6ZGwPoFIrpx0=
 			</data>
 		</dict>
 		<key>Modules/BlueStackDFPAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -188,11 +226,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A2G4peOtUrWcBqQmJ7jsHF7Nazg=
+			66J1FJ7c7hnz9iH0gTjcNGnxUZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			10frXxHNNhPjZEWclBTuVwhYYXxYsg9eoWeqbCaFnew=
+			fuRC3OaA3Jc03wizTTlQi/yiQw0RvYnVffrLLd7MqHQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -204,6 +242,28 @@
 			<key>hash2</key>
 			<data>
 			nK4e9j3gMkrcm7G2XRfmCYJzBB93robpk2U6joFwkP4=
+			</data>
+		</dict>
+		<key>UserMessagingPlatformResources.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/a2WUk0bAKNw7LczOYD9wUPqw9g=
+			</data>
+			<key>hash2</key>
+			<data>
+			InAe1AKO/jxnWIMjeS24O9jtmUuEwsnxWwIJUg3ErrU=
+			</data>
+		</dict>
+		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k9OFlDPBRWfteJ+bfG12WAoBuls=
+			</data>
+			<key>hash2</key>
+			<data>
+			RbetuZ/NLZYqHIAPv8wTJbV6f6QWX0FhgjI7tf/pyQA=
 			</data>
 		</dict>
 	</dict>
