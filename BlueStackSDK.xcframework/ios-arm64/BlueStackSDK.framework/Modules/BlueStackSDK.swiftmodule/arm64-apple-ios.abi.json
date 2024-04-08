@@ -130,6 +130,32 @@
               "ObjC"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserAgentProvider",
+                "printedName": "BlueStackSDK.UserAgentProvider",
+                "usr": "c:@M@BlueStackSDK@objc(cs)UserAgentProvider"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueStackSDK@objc(cs)UserAgentProvider(im)init",
+            "mangledName": "$s12BlueStackSDK17UserAgentProviderCACycfc",
+            "moduleName": "BlueStackSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
@@ -141,7 +167,6 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
-        "hasMissingDesignatedInitializers": true,
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
