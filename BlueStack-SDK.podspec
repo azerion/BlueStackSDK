@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "4.4.3"
+  spec.version          = "4.4.4"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
@@ -60,7 +60,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   spec.subspec 'Google-Mobile-Ads-SDK' do |dfp|
       dfp.vendored_frameworks = 'BlueStackDFPAdapter.xcframework'
       dfp.dependency 'BlueStack-SDK/Core'
-      dfp.dependency 'Google-Mobile-Ads-SDK','10.10.0'
+      dfp.dependency 'Google-Mobile-Ads-SDK','11.2.0'
   end
 
   spec.subspec 'Smart-Display-SDK' do |sas|
