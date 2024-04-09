@@ -108,7 +108,6 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   end
 
   spec.subspec 'In-App-Bidding' do |inApp|
-     inApp.dependency            'BlueStack-SDK/CriteoPublisherSdk'
      inApp.dependency            'BlueStack-SDK/Smart-Display-SDK'
      inApp.dependency            'BlueStack-SDK/AmazonPublisherServicesSDK'
      inApp.dependency            'BlueStack-SDK/Core'
