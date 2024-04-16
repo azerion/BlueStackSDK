@@ -4,8 +4,3 @@ framework module BlueStackSDK {
 
   module * { export * }
 }
-
-module BlueStackSDK.Swift {
-  header "BlueStackSDK-Swift.h"
-  requires objc
-}
