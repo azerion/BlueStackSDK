@@ -93,6 +93,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
        criteo.vendored_frameworks = 'BlueStackCriteoAdapter.xcframework'
        criteo.dependency               'CriteoPublisherSdk', '5.0.3'
        criteo.dependency               'BlueStack-SDK/Core'
+       criteo.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
   end
 
   spec.subspec 'OguryAds' do |og|
