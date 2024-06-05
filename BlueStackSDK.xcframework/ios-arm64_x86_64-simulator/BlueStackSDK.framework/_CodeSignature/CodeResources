@@ -14,7 +14,7 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		dnsIKPnbR3Rkbm/xzSDmh4RhfuY=
+		7+Y4PmzFVbxiRSzyGjrog1II2U0=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		ymE3V3KNl9x2OjoDufKYKaLGtpo=
+		0SD08/U66eZJtNHIzyj3NfucUKg=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		pFXUwV/WSBQOu2gRhAcCUuCRJOY=
+		AfZpqE3JNIeN3TCjqPPufN5F9yo=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
 		<data>
-		E7MaMysIYUJIR1I6oEdA8pZyRuA=
+		xFoo41tIvFKNNRq9NwW500wQtM8=
 		</data>
 		<key>BlueStackSDKResources.bundle/synccoreBluestack.js</key>
 		<data>
@@ -63,10 +63,6 @@
 		<key>Headers/BluestackBiddingCrypto.h</key>
 		<data>
 		Vyx2emTha9oK5a1KWX6sc4KGG6Q=
-		</data>
-		<key>Headers/ImproveDigitalInitParam.h</key>
-		<data>
-		ez5/FJ1gF4fWM2kgiUYGG8Q3Gcw=
 		</data>
 		<key>Headers/MAdvertiseInfeedFrame.h</key>
 		<data>
@@ -149,11 +145,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dnsIKPnbR3Rkbm/xzSDmh4RhfuY=
+			7+Y4PmzFVbxiRSzyGjrog1II2U0=
 			</data>
 			<key>hash2</key>
 			<data>
-			J5VgC0Fp6uHGgC9aRuOxJY2hOUP+/i+oZlSKDi5juTU=
+			m1kC2yUlx1NrWC9+8FkVWAhDzugxEehorFkA3tQ4NIE=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -171,22 +167,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ymE3V3KNl9x2OjoDufKYKaLGtpo=
+			0SD08/U66eZJtNHIzyj3NfucUKg=
 			</data>
 			<key>hash2</key>
 			<data>
-			C/Bea0+J/4DWVmLHw3egcnl8QxW1N0RdVhX9B/nqJnE=
+			M+PoDRLScn/YLQb0akHTHyGjxY5zZ0AzoA25FyIN8G0=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pFXUwV/WSBQOu2gRhAcCUuCRJOY=
+			AfZpqE3JNIeN3TCjqPPufN5F9yo=
 			</data>
 			<key>hash2</key>
 			<data>
-			kIC8QdFEaROCFyGKGbUBZgqijsg/O5V2psyrN3hPEvo=
+			8+a5Cy4FT5j4fccXyOHICjPanP1RskCXYuO9YeQZO4A=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeSignature</key>
@@ -204,11 +200,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E7MaMysIYUJIR1I6oEdA8pZyRuA=
+			xFoo41tIvFKNNRq9NwW500wQtM8=
 			</data>
 			<key>hash2</key>
 			<data>
-			+eokvE4izsT4Wmq6lRBaQkhS0u3hALJiYPGijPAIzNU=
+			iWz5BbK1YoGNpY4Z4ltSUIPxhjj2ubDXxq6kEamQdYU=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/synccoreBluestack.js</key>
@@ -286,17 +282,6 @@
 			<key>hash2</key>
 			<data>
 			7yzcsDK0UMzj+xNdZf5AR1Lp73qdtuNAKZLbDtMjLuU=
-			</data>
-		</dict>
-		<key>Headers/ImproveDigitalInitParam.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ez5/FJ1gF4fWM2kgiUYGG8Q3Gcw=
-			</data>
-			<key>hash2</key>
-			<data>
-			rQeL4akONSPaKJYAY4MZnVEt+rq8LdqOwj3KvBe2S68=
 			</data>
 		</dict>
 		<key>Headers/MAdvertiseInfeedFrame.h</key>

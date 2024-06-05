@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "4.4.6"
+  spec.version          = "4.4.7"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
@@ -90,7 +90,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   end
 
  spec.subspec 'CriteoPublisherSdk' do |criteo|
-       criteo.vendored_frameworks = 'BluestackCriteoAdapter.xcframework'
+       criteo.vendored_frameworks = 'BlueStackCriteoAdapter.xcframework'
        criteo.dependency               'CriteoPublisherSdk', '5.0.3'
        criteo.dependency               'BlueStack-SDK/Core'
   end

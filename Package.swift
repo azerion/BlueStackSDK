@@ -26,8 +26,8 @@ let package = Package(
             name: "BlueStackAdColonyAdapter",
             targets: ["BlueStackAdColonyAdapterTarget"]),
         .library(
-            name: "BluestackCriteoAdapter",
-            targets: ["BluestackCriteoAdapterTarget"]),
+            name: "BlueStackCriteoAdapter",
+            targets: ["BlueStackCriteoAdapterTarget"]),
         .library(
             name: "BlueStackLocationAdapter",
             targets: ["BlueStackLocationAdapterTarget"]),
@@ -85,12 +85,12 @@ let package = Package(
                 path: "BlueStackAdColonyAdapterWrapper"
         ),
         
-        .target(name: "BluestackCriteoAdapterTarget",
+        .target(name: "BlueStackCriteoAdapterTarget",
                 dependencies: [
-                    .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
+                    .target(name: "BlueStackCriteoAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "CriteoPublisherSdk", condition: .when(platforms: [.iOS])),
                 ],
-                path: "BluestackCriteoAdapterWrapper"
+                path: "BlueStackCriteoAdapterWrapper"
         ),
         
         .target(name: "BlueStackLocationAdapterTarget",
@@ -164,7 +164,7 @@ let package = Package(
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
         //criteo
-        .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
+        .binaryTarget(name: "BlueStackCriteoAdapter", path: "BlueStackCriteoAdapter.xcframework"),
         .binaryTarget(name: "CriteoPublisherSdk", path: "Dependencies/CriteoPublisherSdk.xcframework"),
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
