@@ -10,12 +10,10 @@ Pod::Spec.new do |spec|
   FBAudienceNetwork
   Google-Mobile-Ads-SDK
   AmazonPublisherServicesSDK
-  CriteoPublisherSdk
   OguryAds
   FlurryAds
   mopub-ios-sdk
   AdColony
-  ImproveDigital
    DESC
   spec.homepage         = "https://developers.bluestack.app/"
   spec.license          = 'Commercial'
@@ -89,23 +87,10 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
       amazon.dependency               'AmazonPublisherServicesSDK',  '4.5.5'
   end
 
- spec.subspec 'CriteoPublisherSdk' do |criteo|
-       criteo.vendored_frameworks = 'BlueStackCriteoAdapter.xcframework'
-       criteo.dependency               'CriteoPublisherSdk', '5.0.3'
-       criteo.dependency               'BlueStack-SDK/Core'
-       criteo.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
-  end
-
   spec.subspec 'OguryAds' do |og|
       og.vendored_frameworks = 'BlueStackOguryAdapter.xcframework'
       og.dependency                'OgurySdk','4.0.0'
       og.dependency                'BlueStack-SDK/Core'
-  end
-  
-  spec.subspec 'ImproveDigital' do |impDigital|
-      impDigital.vendored_frameworks = 'BlueStackImproveAdapter.xcframework'
-      impDigital.dependency                'ImproveDigital','3.0.0'
-      impDigital.dependency                'BlueStack-SDK/Core'
   end
 
   spec.subspec 'In-App-Bidding' do |inApp|
@@ -120,7 +105,6 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
     full.dependency              'BlueStack-SDK/Smart-Display-SDK'
     full.dependency              'BlueStack-SDK/OguryAds'
     full.dependency              'BlueStack-SDK/In-App-Bidding'
-    full.dependency              'BlueStack-SDK/ImproveDigital'
   end
 
 end
