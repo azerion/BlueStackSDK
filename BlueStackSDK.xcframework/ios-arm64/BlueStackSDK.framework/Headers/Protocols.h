@@ -266,14 +266,6 @@
 
 @end
 
-@protocol BluestackCriteoDelegate <NSObject>
-
-@optional
-
--(void)blueStackCriteoDidLoad:(NSString*)keyword WithAdType:( int)typeAd;
--(void)blueStackCriteoDidFail:(NSError*)error WithAdType:( int) typeAd;
-@end
-
 @protocol BluestackBiddingHBAmazonAPSDelegate <NSObject>
 
 @optional
