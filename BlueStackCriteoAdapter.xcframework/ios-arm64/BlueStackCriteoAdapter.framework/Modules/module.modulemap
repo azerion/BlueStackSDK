@@ -1,9 +1,0 @@
-framework module BlueStackCriteoAdapter {
-  umbrella header "BlueStackCriteoAdapter.h"
-
-  export *
-  module * { export * }
-
-  link framework "Foundation"
-  link framework "UIKit"
-}

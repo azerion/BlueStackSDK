@@ -26,21 +26,14 @@ let package = Package(
             name: "BlueStackAdColonyAdapter",
             targets: ["BlueStackAdColonyAdapterTarget"]),
         .library(
-            name: "BlueStackCriteoAdapter",
-            targets: ["BlueStackCriteoAdapterTarget"]),
-        .library(
             name: "BlueStackLocationAdapter",
             targets: ["BlueStackLocationAdapterTarget"]),
-        .library(
-            name: "BlueStackImproveAdapter",
-            targets: ["BlueStackImproveAdapterTarget"]),
         .library(
             name: "BlueStackOguryAdapter",
             targets: ["BlueStackOguryAdapterTarget"]),
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", exact: "11.2.0"),
-        .package(url: "https://github.com/azerion/improvedigital-sdk-ios", .upToNextMajor(from: "3.0.0")),
     ],
     targets: [
         .target(name: "BlueStackDFPAdapterTarget",
@@ -85,28 +78,12 @@ let package = Package(
                 path: "BlueStackAdColonyAdapterWrapper"
         ),
         
-        .target(name: "BlueStackCriteoAdapterTarget",
-                dependencies: [
-                    .target(name: "BlueStackCriteoAdapter", condition: .when(platforms: [.iOS])),
-                    .target(name: "CriteoPublisherSdk", condition: .when(platforms: [.iOS])),
-                ],
-                path: "BlueStackCriteoAdapterWrapper"
-        ),
-        
         .target(name: "BlueStackLocationAdapterTarget",
                 dependencies: [
                     .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackLocationAdapterWrapper"
-        ),
-        
-        .target(name: "BlueStackImproveAdapterTarget",
-                dependencies: [
-                    .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
-                    .product(name: "ImproveDigital", package: "improvedigital-sdk-ios"),
-                ],
-                path: "BlueStackImproveAdapterWrapper"
         ),
         
         .target(name: "BlueStackOguryAdapterTarget",
@@ -163,9 +140,6 @@ let package = Package(
         //adcolony
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
-        //criteo
-        .binaryTarget(name: "BlueStackCriteoAdapter", path: "BlueStackCriteoAdapter.xcframework"),
-        .binaryTarget(name: "CriteoPublisherSdk", path: "Dependencies/CriteoPublisherSdk.xcframework"),
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         //fb
@@ -183,8 +157,6 @@ let package = Package(
         .binaryTarget(name: "OMSDK_Ogury", path: "Dependencies/OMSDK_Ogury.xcframework"),
         //amazon
         .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
-        .binaryTarget(name: "DTBiOSSDK", path: "Dependencies/DTBiOSSDK.xcframework"),
-       //Improve
-        .binaryTarget(name: "BlueStackImproveAdapter", path: "BlueStackImproveAdapter.xcframework")
+        .binaryTarget(name: "DTBiOSSDK", path: "Dependencies/DTBiOSSDK.xcframework")
     ]
 )

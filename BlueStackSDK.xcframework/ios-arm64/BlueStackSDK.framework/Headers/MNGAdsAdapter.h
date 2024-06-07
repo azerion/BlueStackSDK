@@ -107,7 +107,6 @@ extern MNGAdSize const kMNGAdSizeMediumRectangle; //Square Banner 300 x 250
 
 @property (weak) id<MNGClickDelegate> clickDelegate;
 
-@property (weak) id<BluestackCriteoDelegate> bluestackCriteoDelegate;
 @property (weak) id<BluestackBiddingHBAmazonAPSDelegate> bluestackBiddingHBAmazonAPSDelegate;
 @property (weak) id<BluestackBiddingHBSASDelegate> bluestackBiddingHBSASDelegate;
 @property (weak) id<BluestackBiddingAdResponseDelegate> bluestackBiddingAdResponseDelegate;
