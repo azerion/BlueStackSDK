@@ -17,6 +17,9 @@ let package = Package(
             name: "BlueStackSASAdapter",
             targets: ["BlueStackSASAdapterTarget"]),
         .library(
+            name: "BlueStackSASBiddingAdapter",
+            targets: ["BlueStackSASBiddingAdapterTarget"]),
+        .library(
             name: "BlueStackFacebookAdapter",
             targets: ["BlueStackFacebookAdapterTarget"]),
         .library(
@@ -53,6 +56,15 @@ let package = Package(
                 ],
                 path: "BlueStackSASAdapterWrapper"
         ),
+        
+            .target(name: "BlueStackSASBiddingAdapterTarget",
+                    dependencies: [
+                        .target(name: "BlueStackSASBiddingAdapter", condition: .when(platforms: [.iOS])),
+                        .target(name: "SASDisplayKit", condition: .when(platforms: [.iOS])),
+                        .target(name: "SCSCoreKit", condition: .when(platforms: [.iOS])),
+                    ],
+                    path: "BlueStackSASBiddingAdapterWrapper"
+            ),
         
         .target(name: "BlueStackFacebookAdapterTarget",
                 dependencies: [
@@ -135,6 +147,7 @@ let package = Package(
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         //smart
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
+        .binaryTarget(name: "BlueStackSASBiddingAdapter", path: "BlueStackSASBiddingAdapter.xcframework"),
         .binaryTarget(name: "SASDisplayKit", path: "Dependencies/SASDisplayKit.xcframework"),
         .binaryTarget(name: "SCSCoreKit", path: "Dependencies/SCSCoreKit.xcframework"),
         //adcolony
