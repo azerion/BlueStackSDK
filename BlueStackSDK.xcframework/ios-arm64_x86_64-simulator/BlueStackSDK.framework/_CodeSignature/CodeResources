@@ -46,7 +46,11 @@
 		</data>
 		<key>Headers/BlueStackAdapterInitializable.h</key>
 		<data>
-		znvFFV/s8W0QfokMMQb/mlE2HEM=
+		X1pxCCAkvKU+/+oZ8AI3QOgW2BE=
+		</data>
+		<key>Headers/BlueStackAdapterInitializationStatus.h</key>
+		<data>
+		Nbto2PQh1ytave0SBVUed0VCHWE=
 		</data>
 		<key>Headers/BlueStackAdapterStatus.h</key>
 		<data>
@@ -68,6 +72,10 @@
 		<data>
 		OAbh3GUlFEbZyFBgjjydCK/ycLY=
 		</data>
+		<key>Headers/MAdvertiseRegistration.h</key>
+		<data>
+		LxMjraF0KSz/Br+hp5uI/F14gYo=
+		</data>
 		<key>Headers/MAdvertiseReward.h</key>
 		<data>
 		dy2iDFKW2csX13GVKjzTpbIEfKc=
@@ -76,9 +84,13 @@
 		<data>
 		KSMyCNitErhL6WFgTJi7uXkk2zY=
 		</data>
+		<key>Headers/MAdvertiseUtilities.h</key>
+		<data>
+		4LsbLTMjkQ+lh9aOnM9AD0W8N3o=
+		</data>
 		<key>Headers/MNGAdsAdapter.h</key>
 		<data>
-		7pzDGhm9/g41kXK/ivloEUnHyKA=
+		B8wVh5Clj8g5cX3BzMoQZ81Wsyg=
 		</data>
 		<key>Headers/MNGAdsSDKFactory.h</key>
 		<data>
@@ -88,6 +100,10 @@
 		<data>
 		aQBGJWjVcVtQSFSfCnQPgIvF+1g=
 		</data>
+		<key>Headers/MNGCrossPlatformNativeAd.h</key>
+		<data>
+		BE90lCDFeti9iS22M7n8ljj1UyY=
+		</data>
 		<key>Headers/MNGNAtiveObject.h</key>
 		<data>
 		jaz3GO8QMI/ZvzQggboYB0azTJs=
@@ -96,13 +112,17 @@
 		<data>
 		k9za0ct6r41zIh/qNe2ys1K3ZmM=
 		</data>
+		<key>Headers/MNGNativeObject+Internal.h</key>
+		<data>
+		+y3y78VL5LUTG5+Er9KYjy10FUQ=
+		</data>
 		<key>Headers/MNGPreference.h</key>
 		<data>
 		9AmLlecZkwdsdpO9sQBkMN5+nbo=
 		</data>
 		<key>Headers/Protocols.h</key>
 		<data>
-		txNgjcF0r08Egl2zQScuWUGeoOI=
+		NWaWH4fMFFSbXarZy/siMFpMPQ4=
 		</data>
 		<key>Headers/UIView+SubParent.h</key>
 		<data>
@@ -233,11 +253,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			znvFFV/s8W0QfokMMQb/mlE2HEM=
+			X1pxCCAkvKU+/+oZ8AI3QOgW2BE=
 			</data>
 			<key>hash2</key>
 			<data>
-			SI4Oyp3cxCozJ02yka014zWvmJP3qSfPpziMsEZDmyg=
+			vS/wGzG5YXSORqXsAhN+OmFmXTOvo2KTj9ViaE0dmEU=
+			</data>
+		</dict>
+		<key>Headers/BlueStackAdapterInitializationStatus.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Nbto2PQh1ytave0SBVUed0VCHWE=
+			</data>
+			<key>hash2</key>
+			<data>
+			NP4M911zQrhV8lo+tTd+mZ5nenWoTXd9SZ1Ts1iOpDk=
 			</data>
 		</dict>
 		<key>Headers/BlueStackAdapterStatus.h</key>
@@ -295,6 +326,17 @@
 			PYyAkzrs7RlEiVW/LlocGjD9NJj8y1k5QG1hctWScRs=
 			</data>
 		</dict>
+		<key>Headers/MAdvertiseRegistration.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LxMjraF0KSz/Br+hp5uI/F14gYo=
+			</data>
+			<key>hash2</key>
+			<data>
+			fAQpapZHiFoMlUZW4bhlN4iU5m3tqJsyO5ErvIGbJiw=
+			</data>
+		</dict>
 		<key>Headers/MAdvertiseReward.h</key>
 		<dict>
 			<key>hash</key>
@@ -317,15 +359,26 @@
 			KgKhMHJ4zJXogJuec8Avwe2SE4kqO/KONWnsgIPd0+M=
 			</data>
 		</dict>
+		<key>Headers/MAdvertiseUtilities.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4LsbLTMjkQ+lh9aOnM9AD0W8N3o=
+			</data>
+			<key>hash2</key>
+			<data>
+			AxDD+1ere9KqgbJuSdd1r7mPlbuh/vYuZ1rEKTiGiGc=
+			</data>
+		</dict>
 		<key>Headers/MNGAdsAdapter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7pzDGhm9/g41kXK/ivloEUnHyKA=
+			B8wVh5Clj8g5cX3BzMoQZ81Wsyg=
 			</data>
 			<key>hash2</key>
 			<data>
-			bKVo/y+AyCLTjjtT+DmaIBJUvvYz1jz9S3phH+4edho=
+			UEzbw+b+GRKZ8pe9F2x5ProfkzOoVoB3A05MKE3wMf8=
 			</data>
 		</dict>
 		<key>Headers/MNGAdsSDKFactory.h</key>
@@ -350,6 +403,17 @@
 			BtM3pfbWmKG98Ux2To0VwTrvcWWNvSH5pSw112dZ53I=
 			</data>
 		</dict>
+		<key>Headers/MNGCrossPlatformNativeAd.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BE90lCDFeti9iS22M7n8ljj1UyY=
+			</data>
+			<key>hash2</key>
+			<data>
+			hZG/I4ZTK2CXfn04567Gk7wpGGXE8Ejd2sj0XC5MBB0=
+			</data>
+		</dict>
 		<key>Headers/MNGNAtiveObject.h</key>
 		<dict>
 			<key>hash</key>
@@ -372,6 +436,17 @@
 			FotzNleVD1Ap8xUAQrwpHqUsN4oRNtVWuIAe0px+K6c=
 			</data>
 		</dict>
+		<key>Headers/MNGNativeObject+Internal.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+y3y78VL5LUTG5+Er9KYjy10FUQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			IWCVRMajaMzMsMsOLmCGuk5opNwzoro4IJNurlSyKYg=
+			</data>
+		</dict>
 		<key>Headers/MNGPreference.h</key>
 		<dict>
 			<key>hash</key>
@@ -387,11 +462,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			txNgjcF0r08Egl2zQScuWUGeoOI=
+			NWaWH4fMFFSbXarZy/siMFpMPQ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Kv7I/gGx5r68qMt7+d3x7bTqV68pB1ZjgFaXfEvSwqQ=
+			KtAN5ZEpvFunXTWAr69lOXS68OmgBIga4AQ6W0coFco=
 			</data>
 		</dict>
 		<key>Headers/UIView+SubParent.h</key>

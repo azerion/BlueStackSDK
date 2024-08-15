@@ -69,7 +69,7 @@ extern MNGAdSize const kMNGAdSizeMediumRectangle; //Square Banner 300 x 250
 @property NSTimeInterval timeout;
 
 
-
+@property (nonatomic, strong, nullable) NSString *supplyChainObject;
 
 /**
  *Delegates
@@ -113,8 +113,6 @@ extern MNGAdSize const kMNGAdSizeMediumRectangle; //Square Banner 300 x 250
 
 
 @property (weak) id<BluestackBiddingSASReawardDelegate> bluestackBiddingSASRewardDelegate;
-
-@property (weak) id<BluestackBiddingHBFBDelegate> bluestackBiddingHBFBDelegate;
 
 @property (weak) id<BluestackThumbnailAdDelegate> thumbnailAdDelegate;
 
