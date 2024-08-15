@@ -64,11 +64,17 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   spec.subspec 'Smart-Display-SDK' do |sas|
       sas.vendored_frameworks = 'BlueStackSASAdapter.xcframework'
       sas.dependency 'BlueStack-SDK/Core'
-      sas.dependency 'Smart-Display-SDK',  '7.21.0'
-      sas.dependency 'Smart-Core-SDK',  '7.21.0'
-
+      sas.dependency 'Smart-Display-SDK',  '7.23.4'
+      sas.dependency 'Smart-Core-SDK',  '7.22.0'
   end
 
+  spec.subspec 'Smart-Display-SDK-Bidding' do |sasb|
+      sasb.vendored_frameworks = 'BlueStackSASBiddingAdapter.xcframework'
+      sasb.dependency 'BlueStack-SDK/Core'
+      sasb.dependency 'Smart-Display-SDK',  '7.23.4'
+      sasb.dependency 'Smart-Core-SDK',  '7.22.0'
+  end
+  
   spec.subspec 'AdColony' do |ac|
       ac.vendored_frameworks = 'BlueStackAdColonyAdapter.xcframework'
       ac.dependency 'AdColony', '4.8.0'
@@ -94,7 +100,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   end
 
   spec.subspec 'In-App-Bidding' do |inApp|
-     inApp.dependency            'BlueStack-SDK/Smart-Display-SDK'
+     inApp.dependency            'BlueStack-SDK/Smart-Display-SDK-Bidding'
      inApp.dependency            'BlueStack-SDK/AmazonPublisherServicesSDK'
      inApp.dependency            'BlueStack-SDK/Core'
   end
