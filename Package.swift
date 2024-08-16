@@ -11,8 +11,8 @@ let package = Package(
             name: "BlueStackSDK",
             targets: ["BlueStackSDKTarget"]),
         .library(
-            name: "BlueStackDFPAdapter",
-            targets: ["BlueStackDFPAdapterTarget"]),
+            name: "BlueStackGMAAdapter",
+            targets: ["BlueStackGMAAdapterTarget"]),
         .library(
             name: "BlueStackSASAdapter",
             targets: ["BlueStackSASAdapterTarget"]),
@@ -39,12 +39,12 @@ let package = Package(
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", exact: "11.2.0"),
     ],
     targets: [
-        .target(name: "BlueStackDFPAdapterTarget",
+        .target(name: "BlueStackGMAAdapterTarget",
                 dependencies: [
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
-                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+                    .target(name: "BlueStackGMAAdapter", condition: .when(platforms: [.iOS])),
                 ],
-                path: "BlueStackDFPAdapterWrapper",
+                path: "BlueStackGMAAdapterWrapper",
                 linkerSettings: [.linkedFramework("JavaScriptCore")]
         ),
         
@@ -153,8 +153,8 @@ let package = Package(
         //adcolony
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
-        //dfp
-        .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
+        //GMA
+        .binaryTarget(name: "BlueStackGMAAdapter", path: "BlueStackGMAAdapter.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
