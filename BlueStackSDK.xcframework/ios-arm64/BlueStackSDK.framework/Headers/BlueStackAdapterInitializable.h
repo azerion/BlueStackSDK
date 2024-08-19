@@ -6,16 +6,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BlueStackAdapterStatus.h"
+#import "BlueStackAdapterInitializationStatus.h"
 
 @protocol BlueStackAdapterInitializationDelegate <NSObject>
 
-- (void)didFinishWithStatus:(BlueStackAdapterStatus *)status;
+- (void)didFinishWithStatus:(BlueStackAdapterInitializationStatus *_Nonnull)status;
 
 @end
 
 @protocol BlueStackAdapterInitializable <NSObject>
 
-- (void)initializeWithConfig:(NSDictionary *)adapterInitConfig withDelegate:(id<BlueStackAdapterInitializationDelegate>)delegate;
+- (void)initializeWithConfig:(NSDictionary * _Nullable)adapterInitConfig withDelegate:(id<BlueStackAdapterInitializationDelegate> _Nullable)delegate;
 
 @end

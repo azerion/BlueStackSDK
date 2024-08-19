@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "4.4.8"
+  spec.version          = "4.4.9"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
@@ -55,20 +55,25 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   end
 
 
-  spec.subspec 'Google-Mobile-Ads-SDK' do |dfp|
-      dfp.vendored_frameworks = 'BlueStackDFPAdapter.xcframework'
-      dfp.dependency 'BlueStack-SDK/Core'
-      dfp.dependency 'Google-Mobile-Ads-SDK','11.2.0'
+  spec.subspec 'Google-Mobile-Ads-SDK' do |gma|
+      gma.vendored_frameworks = 'BlueStackGMAAdapter.xcframework'
+      gma.dependency 'BlueStack-SDK/Core'
+      gma.dependency 'Google-Mobile-Ads-SDK','11.2.0'
   end
 
   spec.subspec 'Smart-Display-SDK' do |sas|
       sas.vendored_frameworks = 'BlueStackSASAdapter.xcframework'
       sas.dependency 'BlueStack-SDK/Core'
-      sas.dependency 'Smart-Display-SDK',  '7.21.0'
-      sas.dependency 'Smart-Core-SDK',  '7.21.0'
-
+      sas.dependency 'Smart-Display-SDK',  '7.23.4'
+      sas.dependency 'Smart-Core-SDK',  '7.22.0'
   end
 
+  spec.subspec 'Smart-Display-SDK-Bidding' do |sasb|
+      sasb.vendored_frameworks = 'BlueStackSASBiddingAdapter.xcframework'
+      sasb.dependency 'Smart-Display-SDK',  '7.23.4'
+      sasb.dependency 'Smart-Core-SDK',  '7.22.0'
+  end
+  
   spec.subspec 'AdColony' do |ac|
       ac.vendored_frameworks = 'BlueStackAdColonyAdapter.xcframework'
       ac.dependency 'AdColony', '4.8.0'
@@ -83,7 +88,6 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
   spec.subspec 'AmazonPublisherServicesSDK' do |amazon|
       amazon.vendored_frameworks = 'BluestackAmazonPublisherServicesAdapter.xcframework'
-      amazon.dependency               'BlueStack-SDK/Core'
       amazon.dependency               'AmazonPublisherServicesSDK',  '4.5.5'
   end
 
@@ -94,9 +98,8 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   end
 
   spec.subspec 'In-App-Bidding' do |inApp|
-     inApp.dependency            'BlueStack-SDK/Smart-Display-SDK'
+     inApp.dependency            'BlueStack-SDK/Smart-Display-SDK-Bidding'
      inApp.dependency            'BlueStack-SDK/AmazonPublisherServicesSDK'
-     inApp.dependency            'BlueStack-SDK/Core'
   end
 
   spec.subspec 'Full' do |full|

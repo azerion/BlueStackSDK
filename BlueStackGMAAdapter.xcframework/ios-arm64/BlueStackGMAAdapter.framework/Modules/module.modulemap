@@ -1,0 +1,12 @@
+framework module BlueStackGMAAdapter {
+  umbrella header "BlueStackGMAAdapter.h"
+
+  export *
+  module * { export * }
+
+  link framework "Foundation"
+  link framework "UIKit"
+
+//  header "MNGDFPAdapter.h"
+//  header "MNGADMobAdapter.h"
+}

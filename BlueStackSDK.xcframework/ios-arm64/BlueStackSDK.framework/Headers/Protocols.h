@@ -294,16 +294,6 @@
 
 @end
 
-
-
-@protocol BluestackBiddingHBFBDelegate <NSObject>
-
-@optional
-
--(void)bluestackBiddingHBFBDidLoad:(NSString*)keyWordFB WithAdType:( int)typeAd;
--(void)bluestackBiddingHBFBDidFail:(NSError*)error WithAdType:( int)typeAd;
-
-@end
 @protocol BluestackBiddingSASReawardDelegate <NSObject>
 
 @optional

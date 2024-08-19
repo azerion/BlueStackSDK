@@ -3,9 +3,7 @@ framework module BlueStackSASAdapter {
 
   export *
   module * { export * }
-}
 
-module BlueStackSASAdapter.Swift {
-  header "BlueStackSASAdapter-Swift.h"
-  requires objc
+  link framework "Foundation"
+  link framework "UIKit"
 }
