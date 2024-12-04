@@ -10,8 +10,7 @@
 #import "MNGAdsAdapter.h"
 #import "BlueStackInitializationStatus.h"
 #import "MNGAdsSDKFactoryDelegate.h"
-
-void DebugLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
+#import "BlueStackConfig.h"
 
 @interface MNGAdsSDKFactory : MNGAdsAdapter<MNGAdsAdapterBannerDelegate,MNGAdsAdapterInterstitialDelegate,MNGAdsAdapterNativeDelegate,MNGClickDelegate, MNGAdsAdapterInfeedDelegate,MNGAdsAdapterRefreshDelegate,MAdvertiseAdapterRewardedVideoAdDelegate,BluestackThumbnailAdDelegate>
 
@@ -19,6 +18,8 @@ void DebugLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 + (BOOL)isInitialized;
 + (void)setDelegate:(id<MNGAdsSDKFactoryDelegate>)delegate;
 + (void)initMAdvertiseDataAfterInitialisedWithOptions:(NSDictionary *)launchOptions;
++ (BlueStackConfig *)getBlueStackConfig;
+
 @property NSString *placementId;
 @property (readonly,getter=isBusy) BOOL busy;
 

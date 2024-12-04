@@ -1,0 +1,222 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BlueStackSDK
+@_exported import BlueStackSDK
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@objc @_hasMissingDesignatedInitializers @objcMembers public class Reward : ObjectiveC.NSObject {
+  @objc final public let currency: Swift.String?
+  @objc final public let amount: Foundation.NSNumber?
+  @objc deinit
+}
+@objc public protocol InterstitialAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(didLoadInterstitialAd:) func onAdLoaded(_ ad: BlueStackSDK.InterstitialAd)
+  @objc(interstitialAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.InterstitialAd, _ error: any Swift.Error)
+}
+@objc public enum AdapterState : Swift.Int {
+  case ready
+  case notReady
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class AdapterStatus : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String
+  @objc final public let state: BlueStackSDK.AdapterState
+  @objc final public let statusDescription: Swift.String?
+  @objc deinit
+}
+@objc public enum AdSize : Swift.Int {
+  case banner
+  case largeBanner
+  case mediumRectangle
+  case fullBanner
+  case leaderboard
+  case dynamicBanner
+  case dynamicLeaderboardBanner
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol LoggerType : ObjectiveC.NSObjectProtocol {
+  @objc func verbose(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
+  @objc func debug(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
+  @objc func info(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
+  @objc func warn(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
+  @objc func error(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class BannerView : UIKit.UIView {
+  @objc deinit
+  @objc @_Concurrency.MainActor(unsafe) public var adSize: BlueStackSDK.AdSize
+  @objc @_Concurrency.MainActor(unsafe) public var placementID: Swift.String?
+  @objc @_Concurrency.MainActor(unsafe) public var viewController: UIKit.UIViewController?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var delegate: (any BlueStackSDK.BannerViewDelegate)?
+  @objc @_Concurrency.MainActor(unsafe) public init(adSize: BlueStackSDK.AdSize)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor(unsafe) public func load(requestOptions: BlueStackSDK.RequestOptions?)
+  @objc @_Concurrency.MainActor(unsafe) public func load()
+  @objc @_Concurrency.MainActor(unsafe) public func startAutoRefresh()
+  @objc @_Concurrency.MainActor(unsafe) public func stopAutoRefresh()
+}
+@objc public protocol FullScreenDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(didClickAd:) optional func onAdClicked(_ ad: any BlueStackSDK.FullScreenDisplayableAd)
+  @objc(didDismissAd:) optional func onAdDismissed(_ ad: any BlueStackSDK.FullScreenDisplayableAd)
+  @objc(ad:didFailedToDisplayWithError:) optional func onAdFailedToDisplay(_ ad: any BlueStackSDK.FullScreenDisplayableAd, _ error: any Swift.Error)
+  @objc(didDisplayAd:) optional func onAdDisplayed(_ ad: any BlueStackSDK.FullScreenDisplayableAd)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class RequestOptionsToPreferenceTransformer : ObjectiveC.NSObject {
+  @objc public func transform(_ requestOptions: BlueStackSDK.RequestOptions?) -> BlueStackSDK.MNGPreference?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class RewardedAd : ObjectiveC.NSObject, BlueStackSDK.FullScreenDisplayableAd {
+  @objc final public var isReady: Swift.Bool {
+    @objc get
+  }
+  @objc final public var placementID: Swift.String {
+    get
+  }
+  @objc final public var viewController: UIKit.UIViewController?
+  @objc final public var delegate: (any BlueStackSDK.RewardedAdDelegate)?
+  @objc final public var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)?
+  @objc convenience public init(placementID: Swift.String)
+  @objc final public func load(requestOptions: BlueStackSDK.RequestOptions?)
+  @objc final public func load()
+  @objc final public func show(fromRootViewController rootViewController: UIKit.UIViewController?)
+  @objc deinit
+}
+@objc public enum Gender : Swift.Int {
+  case unknown
+  case male
+  case female
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers public class RequestOptions : ObjectiveC.NSObject {
+  public var age: Swift.Int?
+  @objc public var location: CoreLocation.CLLocation?
+  public var gender: BlueStackSDK.Gender?
+  @objc public var keyword: Swift.String?
+  @objc public var contentUrl: Swift.String?
+  public init(age: Swift.Int? = nil, location: CoreLocation.CLLocation? = nil, gender: BlueStackSDK.Gender? = nil, keyword: Swift.String? = nil, contentUrl: Swift.String? = nil)
+  @objc public init(age: Foundation.NSNumber?, location: CoreLocation.CLLocation?, gender: BlueStackSDK.Gender, keyword: Swift.String?, contentUrl: Swift.String?)
+  @objc deinit
+}
+public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationStatus) -> Swift.Void
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class BlueStack : ObjectiveC.NSObject {
+  @objc public static func sharedInstance() -> BlueStackSDK.BlueStack
+  @objc final public func getVersion() -> Swift.String
+  @objc final public var initializationStatus: BlueStackSDK.InitializationStatus {
+    @objc get
+  }
+  @objc final public func initialize(appID: Swift.String, completion: @escaping BlueStackSDK.InitializationCompletionHandler)
+  @objc final public func isInitialized() -> Swift.Bool
+  @objc(setDebugModeEnabled:) final public func setDebugMode(enabled: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class Logger : ObjectiveC.NSObject, BlueStackSDK.LoggerType {
+  @objc public static var logLevel: BlueStackSDK.LogLevel
+  @objc public func verbose(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public func debug(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public func info(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public func warn(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public func error(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
+  @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
+  @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension BlueStackSDK.Logger {
+  @objc public static func isDebugModeEnabled() -> Swift.Bool
+  @objc public static func isEventDebugEnabled() -> Swift.Bool
+  @objc public static func verbose(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public static func debug(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public static func debugLog(_ message: Swift.String)
+  @objc public static func info(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public static func warn(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  @objc public static func error(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class InterstitialAd : ObjectiveC.NSObject, BlueStackSDK.FullScreenDisplayableAd {
+  @objc final public var isReady: Swift.Bool {
+    @objc get
+  }
+  @objc final public var placementID: Swift.String {
+    get
+  }
+  @objc final public var viewController: UIKit.UIViewController?
+  @objc final public var delegate: (any BlueStackSDK.InterstitialAdDelegate)?
+  @objc final public var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)?
+  @objc convenience public init(placementID: Swift.String)
+  @objc final public func load(requestOptions: BlueStackSDK.RequestOptions?)
+  @objc final public func load()
+  @objc final public func show(fromRootViewController rootViewController: UIKit.UIViewController?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class InitializationStatus : ObjectiveC.NSObject {
+  @objc final public var adapterStatuses: [Swift.String : BlueStackSDK.AdapterStatus]
+  @objc deinit
+}
+@objc public protocol LogMessage : ObjectiveC.NSObjectProtocol {
+  @objc var logDescription: Swift.String { get }
+  @objc var category: Swift.String { get }
+}
+@objc public protocol FullScreenDisplayableAd : ObjectiveC.NSObjectProtocol {
+  @objc var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)? { get set }
+}
+@objc public protocol RewardedAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(didLoadRewardedAd:) func onAdLoaded(_ ad: BlueStackSDK.RewardedAd)
+  @objc(rewardedAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.RewardedAd, _ error: any Swift.Error)
+  @objc(rewardedAd:didEarnedReward:) func onRewardEarned(_ ad: BlueStackSDK.RewardedAd, _ reward: BlueStackSDK.Reward?)
+}
+@objc public protocol BannerViewDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(bannerView:didLoadWithPreferredHeight:) func onLoad(_ bannerView: BlueStackSDK.BannerView, _ preferredHeight: CoreFoundation.CGFloat)
+  @objc(bannerView:didFailedToLoadWithError:) func onFailedToLoad(_ bannerView: BlueStackSDK.BannerView, _ error: any Swift.Error)
+  @objc(didClick:) optional func onClick(_ bannerView: BlueStackSDK.BannerView)
+  @objc(didRefreshBannerView:) func onRefresh(_ bannerView: BlueStackSDK.BannerView)
+  @objc(bannerView:didFailedToRefreshWithError:) func onFailedToRefresh(_ bannerView: BlueStackSDK.BannerView, _ error: any Swift.Error)
+  @objc(bannerView:didResizedToSize:) optional func onResize(_ bannerView: BlueStackSDK.BannerView, _ size: CoreFoundation.CGSize)
+}
+@objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
+  case debug = 0
+  case info = 1
+  case warn = 2
+  case error = 3
+  case verbose = 4
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [BlueStackSDK.LogLevel]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [BlueStackSDK.LogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension BlueStackSDK.AdapterState : Swift.Equatable {}
+extension BlueStackSDK.AdapterState : Swift.Hashable {}
+extension BlueStackSDK.AdapterState : Swift.RawRepresentable {}
+extension BlueStackSDK.AdSize : Swift.Equatable {}
+extension BlueStackSDK.AdSize : Swift.Hashable {}
+extension BlueStackSDK.AdSize : Swift.RawRepresentable {}
+extension BlueStackSDK.Gender : Swift.Equatable {}
+extension BlueStackSDK.Gender : Swift.Hashable {}
+extension BlueStackSDK.Gender : Swift.RawRepresentable {}
+extension BlueStackSDK.LogLevel : Swift.Equatable {}
+extension BlueStackSDK.LogLevel : Swift.Hashable {}
+extension BlueStackSDK.LogLevel : Swift.RawRepresentable {}
