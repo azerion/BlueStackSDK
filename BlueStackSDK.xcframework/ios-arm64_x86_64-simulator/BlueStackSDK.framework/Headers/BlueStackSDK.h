@@ -23,3 +23,5 @@ FOUNDATION_EXPORT const unsigned char BlueStackSDKVersionString[];
 #import <BlueStackSDK/MNGPreference.h>
 #import <BlueStackSDK/Protocols.h>
 #import <BlueStackSDK/MNGNAtiveObject.h>
+#import <BlueStackSDK/BlueStackErrorCode.h>
+#import <BlueStackSDK/BlueStackError.h>
