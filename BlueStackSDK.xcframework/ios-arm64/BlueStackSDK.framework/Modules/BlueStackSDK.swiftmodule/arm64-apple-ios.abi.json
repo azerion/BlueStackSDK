@@ -862,6 +862,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "AdSize",
         "printedName": "AdSize",
@@ -1274,6 +1284,23 @@
             "mangledName": "$sSY"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK"
       },
       {
         "kind": "Import",
@@ -1724,8 +1751,8 @@
               "HasStorage",
               "Custom",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -1827,8 +1854,8 @@
               "HasStorage",
               "Custom",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -1946,8 +1973,8 @@
               "HasStorage",
               "Custom",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -2058,8 +2085,8 @@
               "ReferenceOwnership",
               "AccessControl",
               "IBOutlet",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "ownership": 1,
             "hasStorage": true,
@@ -2283,12 +2310,11 @@
             "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)loadWithRequestOptions:",
             "mangledName": "$s12BlueStackSDK10BannerViewC4load14requestOptionsyAA07RequestH0CSg_tF",
             "moduleName": "BlueStackSDK",
-            "objc_name": "loadWithRequestOptions:",
             "declAttributes": [
               "Custom",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2310,8 +2336,8 @@
             "declAttributes": [
               "Custom",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2333,8 +2359,8 @@
             "declAttributes": [
               "Custom",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2356,8 +2382,8 @@
             "declAttributes": [
               "Custom",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -2643,11 +2669,173 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "BlueStackPrivacySettings",
+        "printedName": "BlueStackPrivacySettings",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setUserOptout",
+            "printedName": "setUserOptout(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BlueStackPrivacySettings(cm)setUserOptout:",
+            "mangledName": "$s12BlueStackSDK0aB15PrivacySettingsC13setUserOptoutyySbFZ",
+            "moduleName": "BlueStackSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setIsAgeRestrictedUser",
+            "printedName": "setIsAgeRestrictedUser(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BlueStackPrivacySettings(cm)setIsAgeRestrictedUser:",
+            "mangledName": "$s12BlueStackSDK0aB15PrivacySettingsC22setIsAgeRestrictedUseryySbFZ",
+            "moduleName": "BlueStackSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BlueStackPrivacySettings",
+                "printedName": "BlueStackSDK.BlueStackPrivacySettings",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BlueStackPrivacySettings"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BlueStackPrivacySettings(im)init",
+            "mangledName": "$s12BlueStackSDK0aB15PrivacySettingsCACycfc",
+            "moduleName": "BlueStackSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@BlueStackSDK@objc(cs)BlueStackPrivacySettings",
+        "mangledName": "$s12BlueStackSDK0aB15PrivacySettingsC",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "BlueStackSDK"
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -2799,6 +2987,16 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -3391,8 +3589,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4372,9 +4570,102 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "consentFlag",
+            "printedName": "consentFlag",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueStackSDK@objc(cs)RequestOptions(py)consentFlag",
+            "mangledName": "$s12BlueStackSDK14RequestOptionsC11consentFlagSivp",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(cs)RequestOptions(im)consentFlag",
+                "mangledName": "$s12BlueStackSDK14RequestOptionsC11consentFlagSivg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(cs)RequestOptions(im)setConsentFlag:",
+                "mangledName": "$s12BlueStackSDK14RequestOptionsC11consentFlagSivs",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK14RequestOptionsC11consentFlagSivM",
+                "mangledName": "$s12BlueStackSDK14RequestOptionsC11consentFlagSivM",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(age:location:gender:keyword:contentUrl:)",
+            "printedName": "init(age:location:gender:keyword:contentUrl:consentFlag:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4456,11 +4747,18 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12BlueStackSDK14RequestOptionsC3age8location6gender7keyword10contentUrlACSiSg_So10CLLocationCSgAA6GenderOSgSSSgAPtcfc",
-            "mangledName": "$s12BlueStackSDK14RequestOptionsC3age8location6gender7keyword10contentUrlACSiSg_So10CLLocationCSgAA6GenderOSgSSSgAPtcfc",
+            "usr": "s:12BlueStackSDK14RequestOptionsC3age8location6gender7keyword10contentUrl11consentFlagACSiSg_So10CLLocationCSgAA6GenderOSgSSSgAQSitcfc",
+            "mangledName": "$s12BlueStackSDK14RequestOptionsC3age8location6gender7keyword10contentUrl11consentFlagACSiSg_So10CLLocationCSgAA6GenderOSgSSSgAQSitcfc",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
               "AccessControl",
@@ -4682,8 +4980,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4706,8 +5004,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4797,12 +5095,11 @@
             "usr": "c:@M@BlueStackSDK@objc(cs)BlueStack(im)initializeWithAppID:completion:",
             "mangledName": "$s12BlueStackSDK0aB0C10initialize5appID10completionySS_yAA20InitializationStatusCctF",
             "moduleName": "BlueStackSDK",
-            "objc_name": "initializeWithAppID:completion:",
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4825,8 +5122,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4926,6 +5223,16 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -6644,8 +6951,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -7333,6 +7640,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "RewardedAdDelegate",
         "printedName": "RewardedAdDelegate",
@@ -7474,6 +7791,61 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Darwin",
+        "printedName": "Darwin",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AppTrackingTransparency",
+        "printedName": "AppTrackingTransparency",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK"
       },
       {
         "kind": "Import",
@@ -8224,23 +8596,44 @@
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Public\/AdapterStatus.swift",
       "kind": "IntegerLiteral",
-      "offset": 216,
+      "offset": 215,
       "length": 8,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Public\/AdapterStatus.swift",
       "kind": "IntegerLiteral",
-      "offset": 216,
+      "offset": 215,
       "length": 8,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Public\/AdapterStatus.swift",
       "kind": "StringLiteral",
-      "offset": 303,
+      "offset": 301,
       "length": 13,
       "value": "\"BlueStackSDK.AdapterStatus\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/UserDefaultsPrivacyStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 223,
+      "length": 25,
+      "value": "\"com.bluestacksdk.optout\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/UserDefaultsPrivacyStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 288,
+      "length": 32,
+      "value": "\"com.bluestacksdk.ageRestricted\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/UserDefaultsPrivacyStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 131,
+      "length": 26,
+      "value": "\"BlueStackSDK.UserDefaultsPrivacyStorage\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/SupportedAdNetworks.swift",
@@ -8350,72 +8743,107 @@
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/BannerAdsSDKFactoryHandler.swift",
       "kind": "StringLiteral",
-      "offset": 416,
+      "offset": 427,
       "length": 26,
       "value": "\"BlueStackSDK.BannerAdsSDKFactoryHandler\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Interstitial\/InterstitialAdsSDKFactoryHandler.swift",
       "kind": "StringLiteral",
-      "offset": 381,
+      "offset": 392,
       "length": 32,
       "value": "\"BlueStackSDK.InterstitialAdsSDKFactoryHandler\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/RewardedAd\/RewardedAdsSDKFactoryHandler.swift",
       "kind": "StringLiteral",
-      "offset": 358,
+      "offset": 350,
       "length": 28,
       "value": "\"BlueStackSDK.RewardedAdsSDKFactoryHandler\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/RewardedAd\/RewardedAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 4319,
+      "offset": 4450,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/RewardedAd\/RewardedAd.swift",
       "kind": "StringLiteral",
-      "offset": 370,
+      "offset": 368,
       "length": 10,
       "value": "\"BlueStackSDK.RewardedAd\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
-      "offset": 255,
+      "offset": 254,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
-      "offset": 269,
+      "offset": 268,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
-      "offset": 255,
+      "offset": 254,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
-      "offset": 269,
+      "offset": 268,
       "length": 6,
       "value": "2"
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 611,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1110,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "StringLiteral",
-      "offset": 391,
+      "offset": 390,
       "length": 14,
       "value": "\"BlueStackSDK.RequestOptions\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 198,
+      "length": 17,
+      "value": "\"IABTCF_TCString\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 253,
+      "length": 20,
+      "value": "\"IABTCF_gdprApplies\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 315,
+      "length": 24,
+      "value": "\"IABTCF_PurposeConsents\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
@@ -8427,63 +8855,77 @@
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "BooleanLiteral",
-      "offset": 282,
+      "offset": 281,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 2122,
+      "offset": 2677,
       "length": 14,
       "value": "\"BlueStackSDK\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "BooleanLiteral",
-      "offset": 2226,
+      "offset": 2781,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 5127,
+      "offset": 6344,
       "length": 7,
       "value": "\"debug\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 5027,
+      "offset": 6244,
       "length": 12,
       "value": "\"BlueStackSDK.DebugMessage\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Interstitial\/InterstitialAd.swift",
       "kind": "StringLiteral",
-      "offset": 564,
+      "offset": 562,
       "length": 14,
       "value": "\"BlueStackSDK.InterstitialAd\""
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Public\/InitializationStatus.swift",
       "kind": "StringLiteral",
-      "offset": 208,
+      "offset": 207,
       "length": 20,
       "value": "\"BlueStackSDK.InitializationStatus\""
     },
     {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/Initializer.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/PrivacySettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 318,
+      "offset": 218,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/PrivacySettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 367,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/Initializer.swift",
       "kind": "BooleanLiteral",
-      "offset": 357,
+      "offset": 323,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/Initializer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 362,
       "length": 5,
       "value": "false"
     },
