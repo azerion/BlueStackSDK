@@ -1,10 +1,14 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
 // swift-module-flags: -target arm64-apple-ios12.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BlueStackSDK
+import AdSupport
+import AppTrackingTransparency
 @_exported import BlueStackSDK
+import Darwin
 import Foundation
 import Swift
 import UIKit
+import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -74,6 +78,12 @@ import os
   @objc(ad:didFailedToDisplayWithError:) optional func onAdFailedToDisplay(_ ad: any BlueStackSDK.FullScreenDisplayableAd, _ error: any Swift.Error)
   @objc(didDisplayAd:) optional func onAdDisplayed(_ ad: any BlueStackSDK.FullScreenDisplayableAd)
 }
+@objc @_inheritsConvenienceInitializers @objcMembers final public class BlueStackPrivacySettings : ObjectiveC.NSObject {
+  @objc public static func setUserOptout(_ isOptout: Swift.Bool)
+  @objc public static func setIsAgeRestrictedUser(_ enabled: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @objcMembers public class RequestOptionsToPreferenceTransformer : ObjectiveC.NSObject {
   @objc public func transform(_ requestOptions: BlueStackSDK.RequestOptions?) -> BlueStackSDK.MNGPreference?
   @objc override dynamic public init()
@@ -111,7 +121,8 @@ import os
   public var gender: BlueStackSDK.Gender?
   @objc public var keyword: Swift.String?
   @objc public var contentUrl: Swift.String?
-  public init(age: Swift.Int? = nil, location: CoreLocation.CLLocation? = nil, gender: BlueStackSDK.Gender? = nil, keyword: Swift.String? = nil, contentUrl: Swift.String? = nil)
+  @objc public var consentFlag: Swift.Int
+  public init(age: Swift.Int? = nil, location: CoreLocation.CLLocation? = nil, gender: BlueStackSDK.Gender? = nil, keyword: Swift.String? = nil, contentUrl: Swift.String? = nil, consentFlag: Swift.Int = 0)
   @objc public init(age: Foundation.NSNumber?, location: CoreLocation.CLLocation?, gender: BlueStackSDK.Gender, keyword: Swift.String?, contentUrl: Swift.String?)
   @objc deinit
 }

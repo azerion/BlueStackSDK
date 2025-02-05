@@ -20,9 +20,6 @@ let package = Package(
             name: "BlueStackSASBiddingAdapter",
             targets: ["BlueStackSASBiddingAdapterTarget"]),
         .library(
-            name: "BlueStackFacebookAdapter",
-            targets: ["BlueStackFacebookAdapterTarget"]),
-        .library(
             name: "BluestackAmazonPublisherServicesAdapter",
             targets: ["BluestackAmazonPublisherServicesAdapterTarget"]),
         .library(
@@ -65,14 +62,6 @@ let package = Package(
                     ],
                     path: "BlueStackSASBiddingAdapterWrapper"
             ),
-        
-        .target(name: "BlueStackFacebookAdapterTarget",
-                dependencies: [
-                    .target(name: "BlueStackFacebookAdapter",condition: .when(platforms: [.iOS])),
-                    .target(name: "FBAudienceNetwork",condition: .when(platforms: [.iOS])),
-                ],
-                path: "BlueStackFacebookAdapterWrapper"
-        ),
         
         .target(name: "BluestackAmazonPublisherServicesAdapterTarget",
                 dependencies: [
@@ -155,9 +144,6 @@ let package = Package(
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
         //GMA
         .binaryTarget(name: "BlueStackGMAAdapter", path: "BlueStackGMAAdapter.xcframework"),
-        //fb
-        .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
-        .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
         //location
         .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
         .binaryTarget(name: "MAdvertiseLocation", path: "Dependencies/MAdvertiseLocation.xcframework"),

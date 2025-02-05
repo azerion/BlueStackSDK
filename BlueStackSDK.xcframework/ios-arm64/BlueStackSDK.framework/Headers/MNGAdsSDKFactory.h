@@ -34,7 +34,6 @@
 +(NSString *)getVersionCacheKey:(NSString* )key;
 +(NSString *)getAppId;
 +(NSString *)getIdfa;
-+(NSString *)getIdfaMD5;
 +(NSString *)getVendorId;
 
 //DEBUG

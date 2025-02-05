@@ -449,6 +449,20 @@ SWIFT_CLASS("_TtC12BlueStackSDK9BlueStack")
 @end
 
 
+
+SWIFT_CLASS("_TtC12BlueStackSDK24BlueStackPrivacySettings")
+@interface BlueStackPrivacySettings : NSObject
+/// If a user does opt-out of interest-based advertising, set the opt-out value using this method.
+/// \param isOptout Boolean value representing the opt-out state.
+///
++ (void)setUserOptout:(BOOL)isOptout;
+/// Set the value to comply with COPPA
+/// \param enabled Set the value to true if the user qualifies as a “child” under applicable laws.
+///
++ (void)setIsAgeRestrictedUser:(BOOL)enabled;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @protocol FullScreenDisplayableAd;
 
 /// Delegate methods for receiving callbacks about presenting and dismissal of full screen ads. Full screen ads covers your application’s content.
@@ -611,6 +625,7 @@ SWIFT_CLASS("_TtC12BlueStackSDK14RequestOptions")
 @property (nonatomic, strong) CLLocation * _Nullable location;
 @property (nonatomic, copy) NSString * _Nullable keyword;
 @property (nonatomic, copy) NSString * _Nullable contentUrl;
+@property (nonatomic) NSInteger consentFlag;
 /// Initialize <code>RequestOptions</code>. Mostly for using in Objective-C
 /// \param age Age
 ///
@@ -1162,6 +1177,20 @@ SWIFT_CLASS("_TtC12BlueStackSDK9BlueStack")
 @end
 
 
+
+SWIFT_CLASS("_TtC12BlueStackSDK24BlueStackPrivacySettings")
+@interface BlueStackPrivacySettings : NSObject
+/// If a user does opt-out of interest-based advertising, set the opt-out value using this method.
+/// \param isOptout Boolean value representing the opt-out state.
+///
++ (void)setUserOptout:(BOOL)isOptout;
+/// Set the value to comply with COPPA
+/// \param enabled Set the value to true if the user qualifies as a “child” under applicable laws.
+///
++ (void)setIsAgeRestrictedUser:(BOOL)enabled;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @protocol FullScreenDisplayableAd;
 
 /// Delegate methods for receiving callbacks about presenting and dismissal of full screen ads. Full screen ads covers your application’s content.
@@ -1324,6 +1353,7 @@ SWIFT_CLASS("_TtC12BlueStackSDK14RequestOptions")
 @property (nonatomic, strong) CLLocation * _Nullable location;
 @property (nonatomic, copy) NSString * _Nullable keyword;
 @property (nonatomic, copy) NSString * _Nullable contentUrl;
+@property (nonatomic) NSInteger consentFlag;
 /// Initialize <code>RequestOptions</code>. Mostly for using in Objective-C
 /// \param age Age
 ///
