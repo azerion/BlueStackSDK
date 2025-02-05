@@ -1,18 +1,15 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "5.0.2-aws"
+  spec.version          = "5.1.0"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
                        BlueStack by Azerion provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack SDK is a library that allow you to handle the following Ads servers with the easy way :
   Smart-Display-SDK
-  FBAudienceNetwork
   Google-Mobile-Ads-SDK
   AmazonPublisherServicesSDK
   OguryAds
-  FlurryAds
-  mopub-ios-sdk
   AdColony
    DESC
   spec.homepage         = "https://developers.bluestack.app/"
@@ -47,13 +44,6 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   spec.subspec 'Core' do |mng|
     mng.vendored_frameworks = 'BlueStackSDK.xcframework'
   end
-
-  spec.subspec 'FBAudienceNetwork' do |fb|
-      fb.vendored_frameworks = 'BlueStackFacebookAdapter.xcframework'
-      fb.dependency 'FBAudienceNetwork', '6.9.0'
-      fb.dependency 'BlueStack-SDK/Core'
-  end
-
 
   spec.subspec 'Google-Mobile-Ads-SDK' do |gma|
       gma.vendored_frameworks = 'BlueStackGMAAdapter.xcframework'
