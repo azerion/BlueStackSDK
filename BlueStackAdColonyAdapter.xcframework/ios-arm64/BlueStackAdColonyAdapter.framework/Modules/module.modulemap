@@ -1,0 +1,11 @@
+framework module BlueStackAdColonyAdapter {
+  umbrella header "BlueStackAdColonyAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackAdColonyAdapter.Swift {
+  header "BlueStackAdColonyAdapter-Swift.h"
+  requires objc
+}
