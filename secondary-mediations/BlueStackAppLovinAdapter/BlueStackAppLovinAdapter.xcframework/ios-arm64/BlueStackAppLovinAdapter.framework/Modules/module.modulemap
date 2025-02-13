@@ -1,0 +1,11 @@
+framework module BlueStackAppLovinAdapter {
+  umbrella header "BlueStackAppLovinAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackAppLovinAdapter.Swift {
+  header "BlueStackAppLovinAdapter-Swift.h"
+  requires objc
+}
