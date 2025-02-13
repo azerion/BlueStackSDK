@@ -1,0 +1,11 @@
+framework module BlueStackDFPMediationAdapter {
+  umbrella header "BlueStackDFPMediationAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueStackDFPMediationAdapter.Swift {
+  header "BlueStackDFPMediationAdapter-Swift.h"
+  requires objc
+}
