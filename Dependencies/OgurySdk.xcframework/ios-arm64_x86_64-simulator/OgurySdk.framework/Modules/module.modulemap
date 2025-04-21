@@ -1,3 +1,0 @@
-framework module OgurySdk {
-    umbrella header "Ogury.h"
-}

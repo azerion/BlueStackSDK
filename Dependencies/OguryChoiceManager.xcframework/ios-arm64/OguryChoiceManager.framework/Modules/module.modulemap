@@ -1,6 +1,0 @@
-framework module OguryChoiceManager {
-  umbrella header "OguryChoiceManager.h"
-
-  export *
-  module * { export * }
-}

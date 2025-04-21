@@ -1,6 +1,0 @@
-framework module OguryCore {
-  umbrella header "OguryCore.h"
-
-  export *
-  module * { export * }
-}
