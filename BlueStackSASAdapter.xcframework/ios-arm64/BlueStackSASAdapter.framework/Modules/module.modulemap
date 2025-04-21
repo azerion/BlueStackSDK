@@ -1,9 +1,0 @@
-framework module BlueStackSASAdapter {
-  umbrella header "BlueStackSASAdapter.h"
-
-  export *
-  module * { export * }
-
-  link framework "Foundation"
-  link framework "UIKit"
-}

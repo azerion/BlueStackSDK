@@ -1,9 +1,0 @@
-framework module BlueStackSASBiddingAdapter {
-  umbrella header "BlueStackSASBiddingAdapter.h"
-
-  export *
-  module * { export * }
-
-  link framework "Foundation"
-  link framework "UIKit"
-}
