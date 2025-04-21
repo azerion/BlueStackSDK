@@ -6,11 +6,7 @@ Pod::Spec.new do |spec|
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
                        BlueStack by Azerion provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack SDK is a library that allow you to handle the following Ads servers with the easy way :
-  Smart-Display-SDK
-  Google-Mobile-Ads-SDK
   AmazonPublisherServicesSDK
-  OguryAds
-  AdColony
    DESC
   spec.homepage         = "https://developers.bluestack.app/"
   spec.license          = 'Commercial'
@@ -58,15 +54,12 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   end
 
   spec.subspec 'In-App-Bidding' do |inApp|
-    inApp.dependency           'BlueStackEquativAdapter'
     inApp.dependency            'BlueStack-SDK/AmazonPublisherServicesSDK'
     inApp.dependency            'BlueStack-SDK/Core'
   end
 
   spec.subspec 'Full' do |full|
     full.dependency              'BlueStack-SDK/Core'
-    full.dependency              'BlueStackGoogleAdapter'
-    full.dependency              'BlueStackEquativAdapter'
     full.dependency              'BlueStack-SDK/In-App-Bidding'
   end
 
