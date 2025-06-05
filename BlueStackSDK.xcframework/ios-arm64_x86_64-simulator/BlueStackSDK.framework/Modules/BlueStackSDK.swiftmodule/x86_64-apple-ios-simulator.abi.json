@@ -8924,238 +8924,238 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Public\/AdapterStatus.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Public\/AdapterStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 215,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/UserDefaultsPrivacyStorage.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/UserDefaultsPrivacyStorage.swift",
       "kind": "StringLiteral",
       "offset": 223,
       "length": 25,
       "value": "\"com.bluestacksdk.optout\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/UserDefaultsPrivacyStorage.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/UserDefaultsPrivacyStorage.swift",
       "kind": "StringLiteral",
       "offset": 288,
       "length": 32,
       "value": "\"com.bluestacksdk.ageRestricted\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/SupportedAdNetworks.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/SupportedAdNetworks.swift",
       "kind": "StringLiteral",
       "offset": 174,
       "length": 9,
       "value": "\"mngPerf\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/SupportedAdNetworks.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/SupportedAdNetworks.swift",
       "kind": "StringLiteral",
       "offset": 207,
       "length": 7,
       "value": "\"adMob\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/SupportedAdNetworks.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/SupportedAdNetworks.swift",
       "kind": "StringLiteral",
       "offset": 239,
       "length": 8,
       "value": "\"criteo\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
       "kind": "IntegerLiteral",
       "offset": 818,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
       "kind": "IntegerLiteral",
       "offset": 840,
       "length": 15,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
       "kind": "IntegerLiteral",
       "offset": 866,
       "length": 10,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
       "kind": "IntegerLiteral",
       "offset": 887,
       "length": 11,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
       "kind": "IntegerLiteral",
       "offset": 909,
       "length": 13,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/BannerAd\/Public\/AdSize.swift",
       "kind": "IntegerLiteral",
       "offset": 933,
       "length": 24,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/RewardedAd\/RewardedAd.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/RewardedAd\/RewardedAd.swift",
       "kind": "BooleanLiteral",
       "offset": 4450,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
       "offset": 254,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
       "offset": 268,
       "length": 6,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
       "offset": 611,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/RequestOptions.swift",
       "kind": "IntegerLiteral",
       "offset": 1110,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
       "kind": "StringLiteral",
       "offset": 198,
       "length": 17,
       "value": "\"IABTCF_TCString\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
       "kind": "StringLiteral",
       "offset": 253,
       "length": 20,
       "value": "\"IABTCF_gdprApplies\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/IDFAProvider.swift",
       "kind": "StringLiteral",
       "offset": 315,
       "length": 24,
       "value": "\"IABTCF_PurposeConsents\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "BooleanLiteral",
       "offset": 227,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "BooleanLiteral",
       "offset": 281,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 2677,
       "length": 14,
       "value": "\"BlueStackSDK\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "BooleanLiteral",
       "offset": 2781,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 6344,
       "length": 7,
       "value": "\"debug\""
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/PrivacySettings.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/PrivacySettings.swift",
       "kind": "BooleanLiteral",
       "offset": 218,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/PrivacySettings.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Privacy\/PrivacySettings.swift",
       "kind": "BooleanLiteral",
       "offset": 367,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/Initializer.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/Initializer.swift",
       "kind": "BooleanLiteral",
       "offset": 323,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/Initializer.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Initialization\/Internal\/Initializer.swift",
       "kind": "BooleanLiteral",
       "offset": 362,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 223,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 241,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 259,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 278,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/bishnu\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Logger\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 299,
       "length": 1,
