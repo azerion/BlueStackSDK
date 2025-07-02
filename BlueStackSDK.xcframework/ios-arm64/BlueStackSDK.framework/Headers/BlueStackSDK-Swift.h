@@ -454,6 +454,8 @@ SWIFT_CLASS("_TtC12BlueStackSDK9BlueStack")
 
 
 
+
+
 SWIFT_CLASS("_TtC12BlueStackSDK24BlueStackPrivacySettings")
 @interface BlueStackPrivacySettings : NSObject
 /// If a user does opt-out of interest-based advertising, set the opt-out value using this method.
@@ -575,33 +577,8 @@ typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
 };
 
 
-SWIFT_PROTOCOL("_TtP12BlueStackSDK10LogMessage_")
-@protocol LogMessage <NSObject>
-@property (nonatomic, readonly, copy) NSString * _Nonnull logDescription;
-@property (nonatomic, readonly, copy) NSString * _Nonnull category;
-@end
-
-
-SWIFT_PROTOCOL("_TtP12BlueStackSDK10LoggerType_")
-@protocol LoggerType <NSObject>
-- (void)verbose:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)debug:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)info:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)warn:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)error:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nonnull)fileName functionName:(NSString * _Nonnull)functionName line:(NSUInteger)line;
-@end
-
-
 SWIFT_CLASS("_TtC12BlueStackSDK6Logger")
-@interface Logger : NSObject <LoggerType>
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum LogLevel logLevel;)
-+ (enum LogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
-+ (void)setLogLevel:(enum LogLevel)value;
-- (void)verbose:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)debug:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)info:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)warn:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-- (void)error:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nonnull)fileName functionName:(NSString * _Nonnull)functionName line:(NSUInteger)line;
+@interface Logger : NSObject
 + (void)setEventDebugEnabled:(BOOL)enabled;
 + (void)setDebugModeEnabled:(BOOL)enabled;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -611,14 +588,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum LogLevel logLevel;)
 @interface Logger (SWIFT_EXTENSION(BlueStackSDK))
 + (BOOL)isDebugModeEnabled SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isEventDebugEnabled SWIFT_WARN_UNUSED_RESULT;
-+ (void)verbose:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-+ (void)debug:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-+ (void)debugLog:(NSString * _Nonnull)message;
-+ (void)info:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-+ (void)warn:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nullable)fileName functionName:(NSString * _Nullable)functionName line:(NSUInteger)line;
-+ (void)error:(SWIFT_NOESCAPE id <LogMessage> _Nonnull (^ _Nonnull)(void))message fileName:(NSString * _Nonnull)fileName functionName:(NSString * _Nonnull)functionName line:(NSUInteger)line;
 @end
-
 
 @class CLLocation;
 @class NSNumber;

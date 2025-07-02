@@ -24,7 +24,8 @@ typedef NS_ENUM(NSInteger, BlueStackErrorCode) {
     BlueStackErrorAlreadyShownInterstitial, //Other Interstitial is shown
     BlueStackErrorRequestTimedOut,
     BlueStackErrorMissingViewController, //Factory's viewController was not assigned
-    BlueStackErrorUnableToDisplayAd
+    BlueStackErrorUnableToDisplayAd,
+    BlueStackErrorAdExpired
 };
 
 #endif /* BlueStackErrorCode_h */

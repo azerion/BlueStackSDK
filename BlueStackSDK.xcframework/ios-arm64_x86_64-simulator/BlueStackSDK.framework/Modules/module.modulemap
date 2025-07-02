@@ -1,8 +1,21 @@
-framework module BlueStackSDK {
-  umbrella header "BlueStackSDK.h"
-  export *
+//
+//  BlueStackSDK.modulemap
+//  BlueStackSDK
+//
+//  Created by Nagib Bin Azad on 17/6/25.
+//
 
-  module * { export * }
+framework module BlueStackSDK {
+    umbrella header "BlueStackSDK.h"
+
+    export *
+    module * { export * }
+
+      // Private submodule
+      module Internal {
+        header "MNGError.h"
+        export *
+      }
 }
 
 module BlueStackSDK.Swift {
