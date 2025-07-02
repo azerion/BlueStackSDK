@@ -7,6 +7,7 @@ import AppTrackingTransparency
 @_exported import BlueStackSDK
 import Darwin
 import Foundation
+import BlueStackSDK.Internal
 import Swift
 import UIKit
 import WebKit
@@ -51,13 +52,6 @@ import os
   public var rawValue: Swift.Int {
     get
   }
-}
-@objc public protocol LoggerType : ObjectiveC.NSObjectProtocol {
-  @objc func verbose(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
-  @objc func debug(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
-  @objc func info(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
-  @objc func warn(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
-  @objc func error(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class BannerView : UIKit.UIView {
   @objc deinit
@@ -139,13 +133,7 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
   @objc(setDebugModeEnabled:) final public func setDebugMode(enabled: Swift.Bool)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class Logger : ObjectiveC.NSObject, BlueStackSDK.LoggerType {
-  @objc public static var logLevel: BlueStackSDK.LogLevel
-  @objc public func verbose(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public func debug(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public func info(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public func warn(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public func error(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
+@_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject {
   @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
   @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
   @objc override dynamic public init()
@@ -154,12 +142,6 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
 extension BlueStackSDK.Logger {
   @objc public static func isDebugModeEnabled() -> Swift.Bool
   @objc public static func isEventDebugEnabled() -> Swift.Bool
-  @objc public static func verbose(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public static func debug(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public static func debugLog(_ message: Swift.String)
-  @objc public static func info(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public static func warn(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  @objc public static func error(_ message: @autoclosure () -> any BlueStackSDK.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class InterstitialAd : ObjectiveC.NSObject, BlueStackSDK.FullScreenDisplayableAd {
   @objc final public var isReady: Swift.Bool {
@@ -180,10 +162,6 @@ extension BlueStackSDK.Logger {
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class InitializationStatus : ObjectiveC.NSObject {
   @objc final public var adapterStatuses: [Swift.String : BlueStackSDK.AdapterStatus]
   @objc deinit
-}
-@objc public protocol LogMessage : ObjectiveC.NSObjectProtocol {
-  @objc var logDescription: Swift.String { get }
-  @objc var category: Swift.String { get }
 }
 @objc public protocol FullScreenDisplayableAd : ObjectiveC.NSObjectProtocol {
   @objc var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)? { get set }
