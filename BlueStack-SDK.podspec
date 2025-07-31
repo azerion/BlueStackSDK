@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "5.2.0"
+  spec.version          = "5.2.1"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
@@ -47,14 +47,14 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
     mlo.dependency 'BlueStack-SDK/Core'
   end
 
-  spec.subspec 'AmazonPublisherServicesSDK' do |amazon|
+  spec.subspec 'BluestackAmazonPublisherServicesAdapter' do |amazon|
     amazon.vendored_frameworks = 'BluestackAmazonPublisherServicesAdapter.xcframework'
     amazon.dependency               'BlueStack-SDK/Core'
     amazon.dependency               'AmazonPublisherServicesSDK',  '4.5.5'
   end
 
   spec.subspec 'In-App-Bidding' do |inApp|
-    inApp.dependency            'BlueStack-SDK/AmazonPublisherServicesSDK'
+    inApp.dependency            'BlueStack-SDK/BluestackAmazonPublisherServicesAdapter'
     inApp.dependency            'BlueStack-SDK/Core'
   end
 
