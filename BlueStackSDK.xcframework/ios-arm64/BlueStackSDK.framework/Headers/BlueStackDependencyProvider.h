@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class BlueStackConfig;
+@class DispatcherConfiguration;
 @class PrivacySettings;
 @class IDFAProvider;
 
@@ -20,7 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)new NS_UNAVAILABLE;
 
-@property(nonatomic, strong, nullable) BlueStackConfig *blueStackConfig;
+@property(nonatomic, strong, nullable) DispatcherConfiguration *blueStackConfig;
+@property (nonatomic, assign) BOOL debugEnabled;
 
 - (PrivacySettings *)getPrivacySettings;
 - (IDFAProvider *)getIDFAProvider;
