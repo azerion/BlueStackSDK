@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "5.2.1"
+  spec.version          = "5.3.0"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
@@ -39,6 +39,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
   spec.subspec 'Core' do |mng|
     mng.vendored_frameworks = 'BlueStackSDK.xcframework'
+    mng.dependency	'BlueStack-SDK/Utilities'
   end
 
   spec.subspec 'MAdvertiseLocation' do |mlo|
@@ -61,6 +62,11 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   spec.subspec 'Full' do |full|
     full.dependency              'BlueStack-SDK/Core'
     full.dependency              'BlueStack-SDK/In-App-Bidding'
+  end
+
+
+  spec.subspec 'Utilities' do |utilities|
+    utilities.vendored_frameworks = 'BlueStackUtilities.xcframework'
   end
 
 end

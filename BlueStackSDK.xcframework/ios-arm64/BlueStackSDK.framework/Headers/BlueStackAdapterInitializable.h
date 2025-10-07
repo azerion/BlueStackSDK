@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BlueStackAdapterInitializationStatus.h"
+
+@class BlueStackAdapterInitializationStatus;
 
 @protocol BlueStackAdapterInitializationDelegate <NSObject>
 

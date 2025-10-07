@@ -7,15 +7,10 @@
 
 framework module BlueStackSDK {
     umbrella header "BlueStackSDK.h"
-
+    
     export *
     module * { export * }
 
-      // Private submodule
-      module Internal {
-        header "MNGError.h"
-        export *
-      }
 }
 
 module BlueStackSDK.Swift {

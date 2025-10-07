@@ -38,6 +38,7 @@ let package = Package(
         .target(name: "BlueStackSDKTarget",
                 dependencies: [
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
+                    .target(name: "BlueStackUtilities", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackSDKWrapper",
                 exclude: ["../BlueStack-SDK.podspec", "../README.md"],
@@ -69,6 +70,8 @@ let package = Package(
                ),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
+        //utility
+        .binaryTarget(name: "BlueStackUtilities", path: "BlueStackUtilities.xcframework"),
         //location
         .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
         .binaryTarget(name: "MAdvertiseLocation", path: "Dependencies/MAdvertiseLocation.xcframework"),

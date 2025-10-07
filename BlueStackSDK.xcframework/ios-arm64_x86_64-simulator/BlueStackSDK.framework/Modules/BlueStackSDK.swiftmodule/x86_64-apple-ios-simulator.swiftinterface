@@ -1,20 +1,20 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BlueStackSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AdSupport
 import AppTrackingTransparency
 @_exported import BlueStackSDK
+import BlueStackSDK_Private
+import BlueStackUtilities
 import Darwin
 import Foundation
-import BlueStackSDK.Internal
 import Swift
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-import os
 @objc @_hasMissingDesignatedInitializers @objcMembers public class Reward : ObjectiveC.NSObject {
   @objc final public let currency: Swift.String?
   @objc final public let amount: Foundation.NSNumber?
@@ -67,6 +67,27 @@ import os
   @objc @_Concurrency.MainActor @preconcurrency public func startAutoRefresh()
   @objc @_Concurrency.MainActor @preconcurrency public func stopAutoRefresh()
 }
+@objc public enum BlueStackConfigParserErrorCode : Swift.Int {
+  case invalidData = 1
+  case decodingError = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class BlueStackConfigParserError : Foundation.NSError {
+  @objc public static let domain: Swift.String
+  @objc public static func error(code: BlueStackSDK.BlueStackConfigParserErrorCode, underlying: (any Swift.Error)? = nil) -> BlueStackSDK.BlueStackConfigParserError
+  @objc override dynamic public init(domain: Swift.String, code: Swift.Int, userInfo dict: [Swift.String : Any]? = nil)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class BlueStackConfigParser : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func parse(_ data: Foundation.Data) throws -> BlueStackSDK.DispatcherConfiguration
+  @objc deinit
+}
 @objc public protocol FullScreenDelegate : ObjectiveC.NSObjectProtocol {
   @objc(didClickAd:) optional func onAdClicked(_ ad: any BlueStackSDK.FullScreenDisplayableAd)
   @objc(didDismissAd:) optional func onAdDismissed(_ ad: any BlueStackSDK.FullScreenDisplayableAd)
@@ -79,9 +100,39 @@ import os
   @objc override dynamic public init()
   @objc deinit
 }
+@objc @_hasMissingDesignatedInitializers @objcMembers public class HeaderBidderConfig : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let name: Swift.String
+  @objc final public let adapter: Swift.String
+  final public let priority: Swift.Int?
+  convenience public init(adapter: Swift.String, name: Swift.String, priority: Swift.Int? = nil, params: [Swift.String : Any]? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension BlueStackSDK.HeaderBidderConfig {
+  @objc dynamic public func bidderParams() -> [Swift.String : Any]?
+}
 @objc @_inheritsConvenienceInitializers @objcMembers public class RequestOptionsToPreferenceTransformer : ObjectiveC.NSObject {
   @objc public func transform(_ requestOptions: BlueStackSDK.RequestOptions?) -> BlueStackSDK.MNGPreference?
   @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum BlueStackAdapterInitializationState : Swift.Int {
+  case ready = 1
+  case notReady = 0
+  case unknown = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class BlueStackAdapterStatus : ObjectiveC.NSObject {
+  @objc public var state: BlueStackSDK.BlueStackAdapterInitializationState
+  @objc public var provider: Swift.String
+  @objc public var descriptionStatus: Swift.String
+  @objc override dynamic public init()
+  @objc public init(state: BlueStackSDK.BlueStackAdapterInitializationState, provider: Swift.String, descriptionStatus: Swift.String)
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class RewardedAd : ObjectiveC.NSObject, BlueStackSDK.FullScreenDisplayableAd {
@@ -133,16 +184,6 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
   @objc(setDebugModeEnabled:) final public func setDebugMode(enabled: Swift.Bool)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject {
-  @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
-  @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
-  @objc override dynamic public init()
-  @objc deinit
-}
-extension BlueStackSDK.Logger {
-  @objc public static func isDebugModeEnabled() -> Swift.Bool
-  @objc public static func isEventDebugEnabled() -> Swift.Bool
-}
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class InterstitialAd : ObjectiveC.NSObject, BlueStackSDK.FullScreenDisplayableAd {
   @objc final public var isReady: Swift.Bool {
     @objc get
@@ -166,10 +207,98 @@ extension BlueStackSDK.Logger {
 @objc public protocol FullScreenDisplayableAd : ObjectiveC.NSObjectProtocol {
   @objc var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)? { get set }
 }
+@objc public protocol PlacementTimeoutDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(onTimeout) func onTimeout()
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class PlacementTimeoutController : ObjectiveC.NSObject {
+  @objc convenience public init(placement: BlueStackSDK.Placement, delegate: (any BlueStackSDK.PlacementTimeoutDelegate)? = nil)
+  @objc public func start()
+  @objc public func stop()
+  @objc public func isTimeout() -> Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class Placement : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let keywords: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension BlueStackSDK.Placement {
+  @objc(timeoutInMillis) dynamic public var __timeoutInMillis: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc(refreshRate) dynamic public var __refreshRate: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc dynamic public func getSortedAdserverList() -> [BlueStackSDK.AdServer]?
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class BlueStackAdapterInitializationStatus : ObjectiveC.NSObject {
+  @objc public var mediationAdapters: [BlueStackSDK.BlueStackAdapterStatus]
+  @objc override dynamic public init()
+  @objc public init(mediationAdapters: [BlueStackSDK.BlueStackAdapterStatus])
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class AdServer : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let priority: Swift.Int
+  @objc final public let adapter: Swift.String
+  @objc final public let name: Swift.String
+  @objc final public let headerBidderConfigs: [BlueStackSDK.HeaderBidderConfig]?
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension BlueStackSDK.AdServer {
+  @objc dynamic public func serverParams() -> [Swift.String : Any]?
+}
 @objc public protocol RewardedAdDelegate : ObjectiveC.NSObjectProtocol {
   @objc(didLoadRewardedAd:) func onAdLoaded(_ ad: BlueStackSDK.RewardedAd)
   @objc(rewardedAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.RewardedAd, _ error: any Swift.Error)
   @objc(rewardedAd:didEarnedReward:) func onRewardEarned(_ ad: BlueStackSDK.RewardedAd, _ reward: BlueStackSDK.Reward?)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class DispatcherConfiguration : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let appid: Swift.Int
+  @objc final public let schain: Swift.String?
+  @objc final public let storeId: Swift.String?
+  @objc final public let placements: [BlueStackSDK.Placement]?
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc public func getAdapterWaitList() -> [Swift.String]
+  @objc public func getPlacement(for placementId: Swift.String) -> BlueStackSDK.Placement?
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+extension BlueStackSDK.DispatcherConfiguration {
+  @objc dynamic public var adapterInitConfigs: [BlueStackSDK.AdapterInitConfig]? {
+    @objc get
+  }
+  @objc(gdpr) dynamic public var __gdpr: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc dynamic public func isEventDebugEnabled() -> Swift.Bool
+  @objc dynamic public func isExpired() -> Swift.Bool
+  @objc dynamic public func isInAll() -> Swift.Bool
+}
+extension BlueStackSDK.DispatcherConfiguration : BlueStackUtilities.HTTPResponseBody {
+}
+extension BlueStackSDK.DispatcherConfiguration {
+  @objc convenience dynamic public init(appId: Swift.Int, expireDate: Foundation.Date? = nil, adapterInitConfigs: [BlueStackSDK.AdapterInitConfig]? = nil)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class CappingState : ObjectiveC.NSObject, Swift.Codable {
+  @objc(cappingPeriodDelay) public var __cappingPeriodDelay: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc public var currentCapping: Swift.Int {
+    get
+  }
+  @objc public var currentCappingShift: Swift.Int {
+    get
+  }
+  @objc public var shouldUsePeriodicCapping: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol BannerViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc(bannerView:didLoadWithPreferredHeight:) func onLoad(_ bannerView: BlueStackSDK.BannerView, _ preferredHeight: CoreFoundation.CGFloat)
@@ -179,24 +308,14 @@ extension BlueStackSDK.Logger {
   @objc(bannerView:didFailedToRefreshWithError:) func onFailedToRefresh(_ bannerView: BlueStackSDK.BannerView, _ error: any Swift.Error)
   @objc(bannerView:didResizedToSize:) optional func onResize(_ bannerView: BlueStackSDK.BannerView, _ size: CoreFoundation.CGSize)
 }
-@objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
-  case debug = 0
-  case info = 1
-  case warn = 2
-  case error = 3
-  case verbose = 4
-  public var description: Swift.String {
-    get
+@objc @_hasMissingDesignatedInitializers @objcMembers public class AdapterInitConfig : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let name: Swift.String
+  @objc public var params: [Swift.String : Any]? {
+    @objc get
   }
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [BlueStackSDK.LogLevel]
-  public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [BlueStackSDK.LogLevel] {
-    get
-  }
-  public var rawValue: Swift.Int {
-    get
-  }
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
 }
 extension BlueStackSDK.AdapterState : Swift.Equatable {}
 extension BlueStackSDK.AdapterState : Swift.Hashable {}
@@ -204,9 +323,12 @@ extension BlueStackSDK.AdapterState : Swift.RawRepresentable {}
 extension BlueStackSDK.AdSize : Swift.Equatable {}
 extension BlueStackSDK.AdSize : Swift.Hashable {}
 extension BlueStackSDK.AdSize : Swift.RawRepresentable {}
+extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.Equatable {}
+extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.Hashable {}
+extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.RawRepresentable {}
+extension BlueStackSDK.BlueStackAdapterInitializationState : Swift.Equatable {}
+extension BlueStackSDK.BlueStackAdapterInitializationState : Swift.Hashable {}
+extension BlueStackSDK.BlueStackAdapterInitializationState : Swift.RawRepresentable {}
 extension BlueStackSDK.Gender : Swift.Equatable {}
 extension BlueStackSDK.Gender : Swift.Hashable {}
 extension BlueStackSDK.Gender : Swift.RawRepresentable {}
-extension BlueStackSDK.LogLevel : Swift.Equatable {}
-extension BlueStackSDK.LogLevel : Swift.Hashable {}
-extension BlueStackSDK.LogLevel : Swift.RawRepresentable {}

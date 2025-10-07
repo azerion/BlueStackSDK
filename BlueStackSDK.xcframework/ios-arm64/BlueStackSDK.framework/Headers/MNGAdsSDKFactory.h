@@ -10,18 +10,20 @@
 #import "MNGAdsAdapter.h"
 #import "BlueStackInitializationStatus.h"
 #import "MNGAdsSDKFactoryDelegate.h"
-#import "BlueStackConfig.h"
 
-@interface MNGAdsSDKFactory : MNGAdsAdapter<MNGAdsAdapterBannerDelegate,MNGAdsAdapterInterstitialDelegate,MNGAdsAdapterNativeDelegate,MNGClickDelegate, MNGAdsAdapterInfeedDelegate,MNGAdsAdapterRefreshDelegate,MAdvertiseAdapterRewardedVideoAdDelegate,BluestackThumbnailAdDelegate>
+@class DispatcherConfiguration;
+@class PlacementTimeoutController;
+@protocol PlacementTimeoutDelegate;
+
+@interface MNGAdsSDKFactory : MNGAdsAdapter<MNGAdsAdapterBannerDelegate,MNGAdsAdapterInterstitialDelegate,MNGAdsAdapterNativeDelegate,MNGClickDelegate, MNGAdsAdapterInfeedDelegate,MNGAdsAdapterRefreshDelegate,MAdvertiseAdapterRewardedVideoAdDelegate,BluestackThumbnailAdDelegate, PlacementTimeoutDelegate>
 
 + (void)initWithAppId:(NSString*)appId;
-+ (BOOL)isInitialized;
 + (void)setDelegate:(id<MNGAdsSDKFactoryDelegate>)delegate;
-+ (void)initMAdvertiseDataAfterInitialisedWithOptions:(NSDictionary *)launchOptions;
-+ (BlueStackConfig *)getBlueStackConfig;
++ (DispatcherConfiguration *)getBlueStackConfig;
 
 @property NSString *placementId;
 @property (readonly,getter=isBusy) BOOL busy;
+@property (nonatomic, strong) PlacementTimeoutController *placementTimeoutController;
 
 
 @property (weak) id<MNGAdsAdapterNativeCollectionDelegate> nativeCollectionDelegate;
@@ -32,7 +34,6 @@
 
 +(NSString *)getVersion;
 +(NSString *)getVersionCacheKey:(NSString* )key;
-+(NSString *)getAppId;
 +(NSString *)getIdfa;
 +(NSString *)getVendorId;
 
