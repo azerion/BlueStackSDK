@@ -15,6 +15,1486 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "HTTPRequestBody",
+        "printedName": "HTTPRequestBody",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "content",
+            "printedName": "content",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(key: Swift.String, value: Swift.String?)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: Swift.String, value: Swift.String?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvp",
+            "mangledName": "$s18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvp",
+            "moduleName": "BlueStackUtilities",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(key: Swift.String, value: Swift.String?)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(key: Swift.String, value: Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvg",
+                "mangledName": "$s18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvg",
+                "moduleName": "BlueStackUtilities",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.HTTPRequestBody>",
+                "sugared_genericSig": "<Self where Self : BlueStackUtilities.HTTPRequestBody>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18BlueStackUtilities15HTTPRequestBodyP",
+        "mangledName": "$s18BlueStackUtilities15HTTPRequestBodyP",
+        "moduleName": "BlueStackUtilities",
+        "genericSig": "<τ_0_0 : Swift.Encodable>",
+        "sugared_genericSig": "<Self : Swift.Encodable>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HTTPRequest",
+        "printedName": "HTTPRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "method",
+            "printedName": "method",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Method",
+                "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvp",
+            "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvp",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Method",
+                    "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                    "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvg",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvg",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Method",
+                    "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                    "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvs",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvs",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvM",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvM",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "path",
+            "printedName": "path",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPRequestPath",
+                "printedName": "any BlueStackUtilities.HTTPRequestPath",
+                "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvp",
+            "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvp",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPRequestPath",
+                    "printedName": "any BlueStackUtilities.HTTPRequestPath",
+                    "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvg",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvg",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPRequestPath",
+                    "printedName": "any BlueStackUtilities.HTTPRequestPath",
+                    "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvs",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvs",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvM",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvM",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "headers",
+            "printedName": "headers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvp",
+            "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvp",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvg",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvg",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvs",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvs",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvM",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvM",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(method:requestPath:headers:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPRequest",
+                "printedName": "BlueStackUtilities.HTTPRequest",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Method",
+                "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPRequestPath",
+                "printedName": "any BlueStackUtilities.HTTPRequestPath",
+                "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18BlueStackUtilities11HTTPRequestV6method11requestPath7headersA2C6MethodO_AA0dG0_pSDyS2SGSgtcfc",
+            "mangledName": "$s18BlueStackUtilities11HTTPRequestV6method11requestPath7headersA2C6MethodO_AA0dG0_pSDyS2SGSgtcfc",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Method",
+            "printedName": "Method",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "get",
+                "printedName": "get",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPRequest.Method.Type) -> BlueStackUtilities.HTTPRequest.Method",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Method",
+                        "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                        "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPRequest.Method.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Method",
+                            "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO3getyA2EmF",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO3getyA2EmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Var",
+                "name": "post",
+                "printedName": "post",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPRequest.Method.Type) -> (any BlueStackUtilities.HTTPRequestBody) -> BlueStackUtilities.HTTPRequest.Method",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(any BlueStackUtilities.HTTPRequestBody) -> BlueStackUtilities.HTTPRequest.Method",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Method",
+                            "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HTTPRequestBody",
+                            "printedName": "any BlueStackUtilities.HTTPRequestBody",
+                            "usr": "s:18BlueStackUtilities15HTTPRequestBodyP"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPRequest.Method.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Method",
+                            "printedName": "BlueStackUtilities.HTTPRequest.Method",
+                            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO4postyAeA0D4Body_pcAEmF",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO4postyAeA0D4Body_pcAEmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Var",
+                "name": "httpMethod",
+                "printedName": "httpMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvp",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvp",
+                "moduleName": "BlueStackUtilities",
+                "isFromExtension": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvg",
+                    "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvg",
+                    "moduleName": "BlueStackUtilities",
+                    "isFromExtension": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO",
+            "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO",
+            "moduleName": "BlueStackUtilities",
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requestBody",
+            "printedName": "requestBody",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BlueStackUtilities.HTTPRequestBody)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPRequestBody",
+                    "printedName": "any BlueStackUtilities.HTTPRequestBody",
+                    "usr": "s:18BlueStackUtilities15HTTPRequestBodyP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvp",
+            "mangledName": "$s18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvp",
+            "moduleName": "BlueStackUtilities",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackUtilities.HTTPRequestBody)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPRequestBody",
+                        "printedName": "any BlueStackUtilities.HTTPRequestBody",
+                        "usr": "s:18BlueStackUtilities15HTTPRequestBodyP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvg",
+                "mangledName": "$s18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvg",
+                "moduleName": "BlueStackUtilities",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18BlueStackUtilities11HTTPRequestV",
+        "mangledName": "$s18BlueStackUtilities11HTTPRequestV",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HTTPClient",
+        "printedName": "HTTPClient",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(requestTimeout:session:operationDispatcher:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPClient",
+                "printedName": "BlueStackUtilities.HTTPClient",
+                "usr": "s:18BlueStackUtilities10HTTPClientC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSession",
+                "printedName": "Foundation.URLSession",
+                "usr": "c:objc(cs)NSURLSession"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OperationDispatcher",
+                "printedName": "BlueStackUtilities.OperationDispatcher",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18BlueStackUtilities10HTTPClientC14requestTimeout7session19operationDispatcherACSd_So12NSURLSessionCAA09OperationI0Ctcfc",
+            "mangledName": "$s18BlueStackUtilities10HTTPClientC14requestTimeout7session19operationDispatcherACSd_So12NSURLSessionCAA09OperationI0Ctcfc",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(requestTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPClient",
+                "printedName": "BlueStackUtilities.HTTPClient",
+                "usr": "s:18BlueStackUtilities10HTTPClientC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18BlueStackUtilities10HTTPClientC14requestTimeoutACSd_tcfc",
+            "mangledName": "$s18BlueStackUtilities10HTTPClientC14requestTimeoutACSd_tcfc",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPRequest",
+                "printedName": "BlueStackUtilities.HTTPRequest",
+                "usr": "s:18BlueStackUtilities11HTTPRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<BlueStackUtilities.HTTPResponse<τ_0_0>, BlueStackUtilities.NetworkError>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<BlueStackUtilities.HTTPResponse<τ_0_0>, BlueStackUtilities.NetworkError>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<BlueStackUtilities.HTTPResponse<τ_0_0>, BlueStackUtilities.NetworkError>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HTTPResponse",
+                            "printedName": "BlueStackUtilities.HTTPResponse<τ_0_0>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_0"
+                              }
+                            ],
+                            "usr": "s:18BlueStackUtilities12HTTPResponseV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NetworkError",
+                            "printedName": "BlueStackUtilities.NetworkError",
+                            "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities10HTTPClientC4send_10completionyAA11HTTPRequestV_ys6ResultOyAA12HTTPResponseVyxGAA12NetworkErrorOGcSgtAA0I4BodyRzlF",
+            "mangledName": "$s18BlueStackUtilities10HTTPClientC4send_10completionyAA11HTTPRequestV_ys6ResultOyAA12HTTPResponseVyxGAA12NetworkErrorOGcSgtAA0I4BodyRzlF",
+            "moduleName": "BlueStackUtilities",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.HTTPResponseBody>",
+            "sugared_genericSig": "<Value where Value : BlueStackUtilities.HTTPResponseBody>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "RequestHeader",
+            "printedName": "RequestHeader",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "userAgent",
+                "printedName": "userAgent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPClient.RequestHeader.Type) -> BlueStackUtilities.HTTPClient.RequestHeader",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RequestHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RequestHeader",
+                            "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
+                            "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO9userAgentyA2EmF",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO9userAgentyA2EmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Var",
+                "name": "expire",
+                "printedName": "expire",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPClient.RequestHeader.Type) -> BlueStackUtilities.HTTPClient.RequestHeader",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RequestHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RequestHeader",
+                            "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
+                            "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO6expireyA2EmF",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO6expireyA2EmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "BlueStackUtilities.HTTPClient.RequestHeader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RequestHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueAESgSS_tcfc",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueAESgSS_tcfc",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvp",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvp",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvg",
+                    "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvg",
+                    "moduleName": "BlueStackUtilities",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO",
+            "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO",
+            "moduleName": "BlueStackUtilities",
+            "isFromExtension": true,
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ResponseHeader",
+            "printedName": "ResponseHeader",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "date",
+                "printedName": "date",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ResponseHeader",
+                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO4dateyA2EmF",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO4dateyA2EmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Var",
+                "name": "expire",
+                "printedName": "expire",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ResponseHeader",
+                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO6expireyA2EmF",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO6expireyA2EmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Var",
+                "name": "contentType",
+                "printedName": "contentType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ResponseHeader",
+                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO11contentTypeyA2EmF",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO11contentTypeyA2EmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Var",
+                "name": "lastModified",
+                "printedName": "lastModified",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ResponseHeader",
+                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO12lastModifiedyA2EmF",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO12lastModifiedyA2EmF",
+                "moduleName": "BlueStackUtilities"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseHeader",
+                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
+                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueAESgSS_tcfc",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueAESgSS_tcfc",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvp",
+                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvp",
+                "moduleName": "BlueStackUtilities",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvg",
+                    "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvg",
+                    "moduleName": "BlueStackUtilities",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO",
+            "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO",
+            "moduleName": "BlueStackUtilities",
+            "isFromExtension": true,
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18BlueStackUtilities10HTTPClientC",
+        "mangledName": "$s18BlueStackUtilities10HTTPClientC",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -4507,66 +5987,37 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
-        "name": "HTTPRequestBody",
-        "printedName": "HTTPRequestBody",
+        "name": "Result",
+        "printedName": "Result",
         "children": [
           {
             "kind": "Var",
-            "name": "content",
-            "printedName": "content",
+            "name": "value",
+            "printedName": "value",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[(key: Swift.String, value: Swift.String?)]",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(key: Swift.String, value: Swift.String?)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.String?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
                   }
                 ],
-                "usr": "s:Sa"
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvp",
-            "mangledName": "$s18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvp",
+            "usr": "s:s6ResultO18BlueStackUtilitiesE5valuexSgvp",
+            "mangledName": "$ss6ResultO18BlueStackUtilitiesE5valuexSgvp",
             "moduleName": "BlueStackUtilities",
-            "protocolReq": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -4575,62 +6026,99 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[(key: Swift.String, value: Swift.String?)]",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(key: Swift.String, value: Swift.String?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "Swift.String?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "String",
-                                "printedName": "Swift.String",
-                                "usr": "s:SS"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
                       }
                     ],
-                    "usr": "s:Sa"
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvg",
-                "mangledName": "$s18BlueStackUtilities15HTTPRequestBodyP7contentSaySS3key_SSSg5valuetGvg",
+                "usr": "s:s6ResultO18BlueStackUtilitiesE5valuexSgvg",
+                "mangledName": "$ss6ResultO18BlueStackUtilitiesE5valuexSgvg",
                 "moduleName": "BlueStackUtilities",
-                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.HTTPRequestBody>",
-                "sugared_genericSig": "<Self where Self : BlueStackUtilities.HTTPRequestBody>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error>",
+                "sugared_genericSig": "<Success, Failure where Failure : Swift.Error>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:s6ResultO18BlueStackUtilitiesE5errorq_Sgvp",
+            "mangledName": "$ss6ResultO18BlueStackUtilitiesE5errorq_Sgvp",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_1?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:s6ResultO18BlueStackUtilitiesE5errorq_Sgvg",
+                "mangledName": "$ss6ResultO18BlueStackUtilitiesE5errorq_Sgvg",
+                "moduleName": "BlueStackUtilities",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error>",
+                "sugared_genericSig": "<Success, Failure where Failure : Swift.Error>",
+                "isFromExtension": true,
                 "accessorKind": "get"
               }
             ]
           }
         ],
-        "declKind": "Protocol",
-        "usr": "s:18BlueStackUtilities15HTTPRequestBodyP",
-        "mangledName": "$s18BlueStackUtilities15HTTPRequestBodyP",
-        "moduleName": "BlueStackUtilities",
-        "genericSig": "<τ_0_0 : Swift.Encodable>",
-        "sugared_genericSig": "<Self : Swift.Encodable>",
+        "declKind": "Enum",
+        "usr": "s:s6ResultO",
+        "mangledName": "$ss6ResultO",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error, τ_0_0 : ~Copyable>",
+        "sugared_genericSig": "<Success, Failure where Failure : Swift.Error, Success : ~Copyable>",
         "declAttributes": [
-          "AccessControl"
+          "Frozen"
         ],
+        "isExternal": true,
+        "isEnumExhaustive": true,
         "conformances": [
           {
             "kind": "Conformance",
@@ -4648,1306 +6136,71 @@
           },
           {
             "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
         "kind": "TypeDecl",
-        "name": "HTTPRequest",
-        "printedName": "HTTPRequest",
+        "name": "UserDefaults",
+        "printedName": "UserDefaults",
         "children": [
-          {
-            "kind": "Var",
-            "name": "method",
-            "printedName": "method",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Method",
-                "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvp",
-            "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvp",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Method",
-                    "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                    "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvg",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvg",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Method",
-                    "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                    "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvs",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvs",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvM",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6methodAC6MethodOvM",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "path",
-            "printedName": "path",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "HTTPRequestPath",
-                "printedName": "any BlueStackUtilities.HTTPRequestPath",
-                "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvp",
-            "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvp",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPRequestPath",
-                    "printedName": "any BlueStackUtilities.HTTPRequestPath",
-                    "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvg",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvg",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPRequestPath",
-                    "printedName": "any BlueStackUtilities.HTTPRequestPath",
-                    "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvs",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvs",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvM",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV4pathAA0D4Path_pvM",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "headers",
-            "printedName": "headers",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvp",
-            "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvp",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String : Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Dictionary",
-                        "printedName": "[Swift.String : Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:SD"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvg",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvg",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String : Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Dictionary",
-                        "printedName": "[Swift.String : Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:SD"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvs",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvs",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvM",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV7headersSDyS2SGSgvM",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(method:requestPath:headers:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "HTTPRequest",
-                "printedName": "BlueStackUtilities.HTTPRequest",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Method",
-                "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "HTTPRequestPath",
-                "printedName": "any BlueStackUtilities.HTTPRequestPath",
-                "usr": "s:18BlueStackUtilities15HTTPRequestPathP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:18BlueStackUtilities11HTTPRequestV6method11requestPath7headersA2C6MethodO_AA0dG0_pSDyS2SGSgtcfc",
-            "mangledName": "$s18BlueStackUtilities11HTTPRequestV6method11requestPath7headersA2C6MethodO_AA0dG0_pSDyS2SGSgtcfc",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "TypeDecl",
-            "name": "Method",
-            "printedName": "Method",
-            "children": [
-              {
-                "kind": "Var",
-                "name": "get",
-                "printedName": "get",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPRequest.Method.Type) -> BlueStackUtilities.HTTPRequest.Method",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Method",
-                        "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                        "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPRequest.Method.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Method",
-                            "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO3getyA2EmF",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO3getyA2EmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Var",
-                "name": "post",
-                "printedName": "post",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPRequest.Method.Type) -> (any BlueStackUtilities.HTTPRequestBody) -> BlueStackUtilities.HTTPRequest.Method",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(any BlueStackUtilities.HTTPRequestBody) -> BlueStackUtilities.HTTPRequest.Method",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Method",
-                            "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "HTTPRequestBody",
-                            "printedName": "any BlueStackUtilities.HTTPRequestBody",
-                            "usr": "s:18BlueStackUtilities15HTTPRequestBodyP"
-                          }
-                        ]
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPRequest.Method.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Method",
-                            "printedName": "BlueStackUtilities.HTTPRequest.Method",
-                            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO4postyAeA0D4Body_pcAEmF",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO4postyAeA0D4Body_pcAEmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Var",
-                "name": "httpMethod",
-                "printedName": "httpMethod",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvp",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvp",
-                "moduleName": "BlueStackUtilities",
-                "isFromExtension": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvg",
-                    "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO04httpE0SSvg",
-                    "moduleName": "BlueStackUtilities",
-                    "isFromExtension": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Enum",
-            "usr": "s:18BlueStackUtilities11HTTPRequestV6MethodO",
-            "mangledName": "$s18BlueStackUtilities11HTTPRequestV6MethodO",
-            "moduleName": "BlueStackUtilities",
-            "isFromExtension": true,
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "requestBody",
-            "printedName": "requestBody",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any BlueStackUtilities.HTTPRequestBody)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPRequestBody",
-                    "printedName": "any BlueStackUtilities.HTTPRequestBody",
-                    "usr": "s:18BlueStackUtilities15HTTPRequestBodyP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvp",
-            "mangledName": "$s18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvp",
-            "moduleName": "BlueStackUtilities",
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any BlueStackUtilities.HTTPRequestBody)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPRequestBody",
-                        "printedName": "any BlueStackUtilities.HTTPRequestBody",
-                        "usr": "s:18BlueStackUtilities15HTTPRequestBodyP"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvg",
-                "mangledName": "$s18BlueStackUtilities11HTTPRequestV11requestBodyAA0dF0_pSgvg",
-                "moduleName": "BlueStackUtilities",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:18BlueStackUtilities11HTTPRequestV",
-        "mangledName": "$s18BlueStackUtilities11HTTPRequestV",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "HTTPClient",
-        "printedName": "HTTPClient",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(requestTimeout:session:operationDispatcher:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "HTTPClient",
-                "printedName": "BlueStackUtilities.HTTPClient",
-                "usr": "s:18BlueStackUtilities10HTTPClientC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OperationDispatcher",
-                "printedName": "BlueStackUtilities.OperationDispatcher",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:18BlueStackUtilities10HTTPClientC14requestTimeout7session19operationDispatcherACSd_So12NSURLSessionCAA09OperationI0Ctcfc",
-            "mangledName": "$s18BlueStackUtilities10HTTPClientC14requestTimeout7session19operationDispatcherACSd_So12NSURLSessionCAA09OperationI0Ctcfc",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(requestTimeout:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "HTTPClient",
-                "printedName": "BlueStackUtilities.HTTPClient",
-                "usr": "s:18BlueStackUtilities10HTTPClientC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:18BlueStackUtilities10HTTPClientC14requestTimeoutACSd_tcfc",
-            "mangledName": "$s18BlueStackUtilities10HTTPClientC14requestTimeoutACSd_tcfc",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "Convenience",
-              "AccessControl"
-            ],
-            "init_kind": "Convenience"
-          },
           {
             "kind": "Function",
-            "name": "send",
-            "printedName": "send(_:completion:)",
+            "name": "managed",
+            "printedName": "managed()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "HTTPRequest",
-                "printedName": "BlueStackUtilities.HTTPRequest",
-                "usr": "s:18BlueStackUtilities11HTTPRequestV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.Result<BlueStackUtilities.HTTPResponse<τ_0_0>, BlueStackUtilities.NetworkError>) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Result<BlueStackUtilities.HTTPResponse<τ_0_0>, BlueStackUtilities.NetworkError>) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Result",
-                        "printedName": "Swift.Result<BlueStackUtilities.HTTPResponse<τ_0_0>, BlueStackUtilities.NetworkError>",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "HTTPResponse",
-                            "printedName": "BlueStackUtilities.HTTPResponse<τ_0_0>",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "GenericTypeParam",
-                                "printedName": "τ_0_0"
-                              }
-                            ],
-                            "usr": "s:18BlueStackUtilities12HTTPResponseV"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "NetworkError",
-                            "printedName": "BlueStackUtilities.NetworkError",
-                            "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                          }
-                        ],
-                        "usr": "s:s6ResultO"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "usr": "c:objc(cs)NSUserDefaults"
               }
             ],
             "declKind": "Func",
-            "usr": "s:18BlueStackUtilities10HTTPClientC4send_10completionyAA11HTTPRequestV_ys6ResultOyAA12HTTPResponseVyxGAA12NetworkErrorOGcSgtAA0I4BodyRzlF",
-            "mangledName": "$s18BlueStackUtilities10HTTPClientC4send_10completionyAA11HTTPRequestV_ys6ResultOyAA12HTTPResponseVyxGAA12NetworkErrorOGcSgtAA0I4BodyRzlF",
+            "usr": "s:So14NSUserDefaultsC18BlueStackUtilitiesE7managedAByFZ",
+            "mangledName": "$sSo14NSUserDefaultsC18BlueStackUtilitiesE7managedAByFZ",
             "moduleName": "BlueStackUtilities",
-            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.HTTPResponseBody>",
-            "sugared_genericSig": "<Value where Value : BlueStackUtilities.HTTPResponseBody>",
+            "static": true,
             "declAttributes": [
-              "AccessControl"
+              "Final"
             ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "TypeDecl",
-            "name": "RequestHeader",
-            "printedName": "RequestHeader",
-            "children": [
-              {
-                "kind": "Var",
-                "name": "userAgent",
-                "printedName": "userAgent",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPClient.RequestHeader.Type) -> BlueStackUtilities.HTTPClient.RequestHeader",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RequestHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "RequestHeader",
-                            "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
-                            "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO9userAgentyA2EmF",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO9userAgentyA2EmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Var",
-                "name": "expire",
-                "printedName": "expire",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPClient.RequestHeader.Type) -> BlueStackUtilities.HTTPClient.RequestHeader",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RequestHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "RequestHeader",
-                            "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
-                            "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO6expireyA2EmF",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO6expireyA2EmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Constructor",
-                "name": "init",
-                "printedName": "init(rawValue:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "BlueStackUtilities.HTTPClient.RequestHeader?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RequestHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.RequestHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Constructor",
-                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueAESgSS_tcfc",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueAESgSS_tcfc",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "init_kind": "Designated"
-              },
-              {
-                "kind": "Var",
-                "name": "rawValue",
-                "printedName": "rawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvp",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvp",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvg",
-                    "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO8rawValueSSvg",
-                    "moduleName": "BlueStackUtilities",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Enum",
-            "usr": "s:18BlueStackUtilities10HTTPClientC13RequestHeaderO",
-            "mangledName": "$s18BlueStackUtilities10HTTPClientC13RequestHeaderO",
-            "moduleName": "BlueStackUtilities",
-            "isFromExtension": true,
-            "enumRawTypeName": "String",
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Equatable",
-                "printedName": "Equatable",
-                "usr": "s:SQ",
-                "mangledName": "$sSQ"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Hashable",
-                "printedName": "Hashable",
-                "usr": "s:SH",
-                "mangledName": "$sSH"
-              },
-              {
-                "kind": "Conformance",
-                "name": "RawRepresentable",
-                "printedName": "RawRepresentable",
-                "children": [
-                  {
-                    "kind": "TypeWitness",
-                    "name": "RawValue",
-                    "printedName": "RawValue",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:SY",
-                "mangledName": "$sSY"
-              }
-            ]
-          },
-          {
-            "kind": "TypeDecl",
-            "name": "ResponseHeader",
-            "printedName": "ResponseHeader",
-            "children": [
-              {
-                "kind": "Var",
-                "name": "date",
-                "printedName": "date",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ResponseHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ResponseHeader",
-                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO4dateyA2EmF",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO4dateyA2EmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Var",
-                "name": "expire",
-                "printedName": "expire",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ResponseHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ResponseHeader",
-                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO6expireyA2EmF",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO6expireyA2EmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Var",
-                "name": "contentType",
-                "printedName": "contentType",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ResponseHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ResponseHeader",
-                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO11contentTypeyA2EmF",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO11contentTypeyA2EmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Var",
-                "name": "lastModified",
-                "printedName": "lastModified",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.HTTPClient.ResponseHeader.Type) -> BlueStackUtilities.HTTPClient.ResponseHeader",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ResponseHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ResponseHeader",
-                            "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO12lastModifiedyA2EmF",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO12lastModifiedyA2EmF",
-                "moduleName": "BlueStackUtilities"
-              },
-              {
-                "kind": "Constructor",
-                "name": "init",
-                "printedName": "init(rawValue:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ResponseHeader",
-                        "printedName": "BlueStackUtilities.HTTPClient.ResponseHeader",
-                        "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Constructor",
-                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueAESgSS_tcfc",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueAESgSS_tcfc",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "init_kind": "Designated"
-              },
-              {
-                "kind": "Var",
-                "name": "rawValue",
-                "printedName": "rawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvp",
-                "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvp",
-                "moduleName": "BlueStackUtilities",
-                "implicit": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvg",
-                    "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO8rawValueSSvg",
-                    "moduleName": "BlueStackUtilities",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Enum",
-            "usr": "s:18BlueStackUtilities10HTTPClientC14ResponseHeaderO",
-            "mangledName": "$s18BlueStackUtilities10HTTPClientC14ResponseHeaderO",
-            "moduleName": "BlueStackUtilities",
-            "isFromExtension": true,
-            "enumRawTypeName": "String",
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Equatable",
-                "printedName": "Equatable",
-                "usr": "s:SQ",
-                "mangledName": "$sSQ"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Hashable",
-                "printedName": "Hashable",
-                "usr": "s:SH",
-                "mangledName": "$sSH"
-              },
-              {
-                "kind": "Conformance",
-                "name": "RawRepresentable",
-                "printedName": "RawRepresentable",
-                "children": [
-                  {
-                    "kind": "TypeWitness",
-                    "name": "RawValue",
-                    "printedName": "RawValue",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:SY",
-                "mangledName": "$sSY"
-              }
-            ]
           }
         ],
         "declKind": "Class",
-        "usr": "s:18BlueStackUtilities10HTTPClientC",
-        "mangledName": "$s18BlueStackUtilities10HTTPClientC",
-        "moduleName": "BlueStackUtilities",
+        "usr": "c:objc(cs)NSUserDefaults",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSUserDefaults",
         "declAttributes": [
-          "AccessControl"
+          "ObjC",
+          "NonSendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -5963,27 +6216,56 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -6618,177 +6900,6 @@
             "printedName": "CVarArg",
             "usr": "s:s7CVarArgP",
             "mangledName": "$ss7CVarArgP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "Result",
-        "printedName": "Result",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "value",
-            "printedName": "value",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "τ_0_0?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GenericTypeParam",
-                    "printedName": "τ_0_0"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:s6ResultO18BlueStackUtilitiesE5valuexSgvp",
-            "mangledName": "$ss6ResultO18BlueStackUtilitiesE5valuexSgvp",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "τ_0_0?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GenericTypeParam",
-                        "printedName": "τ_0_0"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:s6ResultO18BlueStackUtilitiesE5valuexSgvg",
-                "mangledName": "$ss6ResultO18BlueStackUtilitiesE5valuexSgvg",
-                "moduleName": "BlueStackUtilities",
-                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error>",
-                "sugared_genericSig": "<Success, Failure where Failure : Swift.Error>",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "error",
-            "printedName": "error",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "τ_0_1?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GenericTypeParam",
-                    "printedName": "τ_0_1"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:s6ResultO18BlueStackUtilitiesE5errorq_Sgvp",
-            "mangledName": "$ss6ResultO18BlueStackUtilitiesE5errorq_Sgvp",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "τ_0_1?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GenericTypeParam",
-                        "printedName": "τ_0_1"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:s6ResultO18BlueStackUtilitiesE5errorq_Sgvg",
-                "mangledName": "$ss6ResultO18BlueStackUtilitiesE5errorq_Sgvg",
-                "moduleName": "BlueStackUtilities",
-                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error>",
-                "sugared_genericSig": "<Success, Failure where Failure : Swift.Error>",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:s6ResultO",
-        "mangledName": "$ss6ResultO",
-        "moduleName": "Swift",
-        "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error, τ_0_0 : ~Copyable>",
-        "sugared_genericSig": "<Success, Failure where Failure : Swift.Error, Success : ~Copyable>",
-        "declAttributes": [
-          "Frozen"
-        ],
-        "isExternal": true,
-        "isEnumExhaustive": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
           }
         ]
       },
@@ -8471,122 +8582,67 @@
             "mangledName": "$s18BlueStackUtilities16HTTPResponseTypeP"
           }
         ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "UserDefaults",
-        "printedName": "UserDefaults",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "managed",
-            "printedName": "managed()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UserDefaults",
-                "printedName": "Foundation.UserDefaults",
-                "usr": "c:objc(cs)NSUserDefaults"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:So14NSUserDefaultsC18BlueStackUtilitiesE7managedAByFZ",
-            "mangledName": "$sSo14NSUserDefaultsC18BlueStackUtilitiesE7managedAByFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:objc(cs)NSUserDefaults",
-        "moduleName": "Foundation",
-        "isOpen": true,
-        "objc_name": "NSUserDefaults",
-        "declAttributes": [
-          "ObjC",
-          "NonSendable",
-          "Dynamic"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "isExternal": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
+      "kind": "Dictionary",
+      "offset": 532,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
+      "kind": "StringLiteral",
+      "offset": 3902,
+      "length": 12,
+      "value": "\"User-Agent\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
+      "kind": "StringLiteral",
+      "offset": 3937,
+      "length": 9,
+      "value": "\"Expires\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4008,
+      "length": 6,
+      "value": "\"Date\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4037,
+      "length": 9,
+      "value": "\"Expires\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4074,
+      "length": 14,
+      "value": "\"Content-Type\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4117,
+      "length": 15,
+      "value": "\"Last-Modified\""
+    },
+    {
+      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/FoundationExtensions\/UserDefaults+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 190,
+      "length": 34,
+      "value": "\"app.bluestack.user_defaults_suit\""
+    },
     {
       "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/ErrorResponse.swift",
       "kind": "IntegerLiteral",
@@ -8719,62 +8775,6 @@
       "offset": 1612,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
-      "kind": "Dictionary",
-      "offset": 532,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
-      "kind": "StringLiteral",
-      "offset": 3902,
-      "length": 12,
-      "value": "\"User-Agent\""
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
-      "kind": "StringLiteral",
-      "offset": 3937,
-      "length": 9,
-      "value": "\"Expires\""
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
-      "kind": "StringLiteral",
-      "offset": 4008,
-      "length": 6,
-      "value": "\"Date\""
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
-      "kind": "StringLiteral",
-      "offset": 4037,
-      "length": 9,
-      "value": "\"Expires\""
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
-      "kind": "StringLiteral",
-      "offset": 4074,
-      "length": 14,
-      "value": "\"Content-Type\""
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/HTTPClient.swift",
-      "kind": "StringLiteral",
-      "offset": 4117,
-      "length": 15,
-      "value": "\"Last-Modified\""
-    },
-    {
-      "filePath": "\/Volumes\/Development\/BlueStack\/bluestack-sdk-ios\/BlueStackUtilities\/FoundationExtensions\/UserDefaults+Extensions.swift",
-      "kind": "StringLiteral",
-      "offset": 190,
-      "length": 34,
-      "value": "\"app.bluestack.user_defaults_suit\""
     }
   ]
 }

@@ -10,6 +10,66 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+public protocol HTTPRequestBody : Swift.Encodable {
+  var content: [(key: Swift.String, value: Swift.String?)] { get }
+}
+public struct HTTPRequest {
+  public typealias Headers = [Swift.String : Swift.String]
+  public var method: BlueStackUtilities.HTTPRequest.Method
+  public var path: any BlueStackUtilities.HTTPRequestPath
+  public var headers: BlueStackUtilities.HTTPRequest.Headers?
+  public init(method: BlueStackUtilities.HTTPRequest.Method, requestPath: any BlueStackUtilities.HTTPRequestPath, headers: BlueStackUtilities.HTTPRequest.Headers? = nil)
+}
+extension BlueStackUtilities.HTTPRequest {
+  public enum Method {
+    case get
+    case post(any BlueStackUtilities.HTTPRequestBody)
+  }
+}
+extension BlueStackUtilities.HTTPRequest {
+  public var requestBody: (any BlueStackUtilities.HTTPRequestBody)? {
+    get
+  }
+}
+extension BlueStackUtilities.HTTPRequest.Method {
+  public var httpMethod: Swift.String {
+    get
+  }
+}
+public class HTTPClient {
+  public typealias RequestHeaders = BlueStackUtilities.HTTPRequest.Headers
+  public typealias ResponseHeaders = BlueStackUtilities.HTTPResponse<BlueStackUtilities.HTTPEmptyResponseBody>.Headers
+  public typealias Completion<Value> = (BlueStackUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : BlueStackUtilities.HTTPResponseBody
+  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: BlueStackUtilities.OperationDispatcher)
+  convenience public init(requestTimeout: Foundation.TimeInterval)
+  public func send<Value>(_ request: BlueStackUtilities.HTTPRequest, completion: BlueStackUtilities.HTTPClient.Completion<Value>?) where Value : BlueStackUtilities.HTTPResponseBody
+  @objc deinit
+}
+extension BlueStackUtilities.HTTPClient {
+  public enum RequestHeader : Swift.String {
+    case userAgent
+    case expire
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ResponseHeader : Swift.String {
+    case date
+    case expire
+    case contentType
+    case lastModified
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension Foundation.UserDefaults {
+  public static func managed() -> Foundation.UserDefaults
+}
 extension Swift.String {
   public var trimmingWhitespacesAndNewLines: Swift.String {
     get
@@ -190,72 +250,12 @@ extension BlueStackUtilities.HTTPRequestPath {
     get
   }
 }
-public protocol HTTPRequestBody : Swift.Encodable {
-  var content: [(key: Swift.String, value: Swift.String?)] { get }
-}
-public struct HTTPRequest {
-  public typealias Headers = [Swift.String : Swift.String]
-  public var method: BlueStackUtilities.HTTPRequest.Method
-  public var path: any BlueStackUtilities.HTTPRequestPath
-  public var headers: BlueStackUtilities.HTTPRequest.Headers?
-  public init(method: BlueStackUtilities.HTTPRequest.Method, requestPath: any BlueStackUtilities.HTTPRequestPath, headers: BlueStackUtilities.HTTPRequest.Headers? = nil)
-}
-extension BlueStackUtilities.HTTPRequest {
-  public enum Method {
-    case get
-    case post(any BlueStackUtilities.HTTPRequestBody)
-  }
-}
-extension BlueStackUtilities.HTTPRequest {
-  public var requestBody: (any BlueStackUtilities.HTTPRequestBody)? {
-    get
-  }
-}
-extension BlueStackUtilities.HTTPRequest.Method {
-  public var httpMethod: Swift.String {
-    get
-  }
-}
-public class HTTPClient {
-  public typealias RequestHeaders = BlueStackUtilities.HTTPRequest.Headers
-  public typealias ResponseHeaders = BlueStackUtilities.HTTPResponse<BlueStackUtilities.HTTPEmptyResponseBody>.Headers
-  public typealias Completion<Value> = (BlueStackUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : BlueStackUtilities.HTTPResponseBody
-  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: BlueStackUtilities.OperationDispatcher)
-  convenience public init(requestTimeout: Foundation.TimeInterval)
-  public func send<Value>(_ request: BlueStackUtilities.HTTPRequest, completion: BlueStackUtilities.HTTPClient.Completion<Value>?) where Value : BlueStackUtilities.HTTPResponseBody
-  @objc deinit
-}
-extension BlueStackUtilities.HTTPClient {
-  public enum RequestHeader : Swift.String {
-    case userAgent
-    case expire
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ResponseHeader : Swift.String {
-    case date
-    case expire
-    case contentType
-    case lastModified
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-extension Foundation.UserDefaults {
-  public static func managed() -> Foundation.UserDefaults
-}
-extension BlueStackUtilities.LogLevel : Swift.Equatable {}
-extension BlueStackUtilities.LogLevel : Swift.Hashable {}
-extension BlueStackUtilities.LogLevel : Swift.RawRepresentable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Equatable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Hashable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.RawRepresentable {}
 extension BlueStackUtilities.HTTPClient.ResponseHeader : Swift.Equatable {}
 extension BlueStackUtilities.HTTPClient.ResponseHeader : Swift.Hashable {}
 extension BlueStackUtilities.HTTPClient.ResponseHeader : Swift.RawRepresentable {}
+extension BlueStackUtilities.LogLevel : Swift.Equatable {}
+extension BlueStackUtilities.LogLevel : Swift.Hashable {}
+extension BlueStackUtilities.LogLevel : Swift.RawRepresentable {}
