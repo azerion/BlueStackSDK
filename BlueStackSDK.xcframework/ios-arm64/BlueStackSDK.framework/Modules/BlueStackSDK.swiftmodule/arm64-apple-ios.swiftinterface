@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
 // swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AdSupport
 import AppTrackingTransparency
 @_exported import BlueStackSDK
@@ -53,7 +53,7 @@ import _SwiftConcurrencyShims
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class BannerView : UIKit.UIView {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(BLSBannerView) @_Concurrency.MainActor @preconcurrency public class BannerView : UIKit.UIView {
   @objc deinit
   @objc @_Concurrency.MainActor @preconcurrency public var adSize: BlueStackSDK.AdSize
   @objc @_Concurrency.MainActor @preconcurrency public var placementID: Swift.String?
@@ -300,6 +300,81 @@ extension BlueStackSDK.DispatcherConfiguration {
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
+public enum BiddingAdType {
+  case banner
+  case interstitial
+  case rewarded
+  public static func == (a: BlueStackSDK.BiddingAdType, b: BlueStackSDK.BiddingAdType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol BiddingBannerAd : BlueStackSDK.BiddingAd {
+  @objc var delegate: (any BlueStackSDK.BiddingBannerAdDelegate)? { get set }
+  @objc init(frame: CoreFoundation.CGRect)
+  @objc func getBannerView() -> UIKit.UIView?
+}
+@objc public protocol BiddingBannerAdDelegate {
+  @objc(onLoadBiddingBannerAd:) func onLoadAd(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
+  @objc(onFailToLoadBiddingBannerAd:error:) func onFailToLoad(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd, _ error: any Swift.Error)
+  @objc(onClickBiddingBannerAd:) @_Concurrency.MainActor func onClick(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
+}
+@objc public protocol BiddingInterstitialAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
+  @objc var delegate: (any BlueStackSDK.BiddingInterstitialAdDelegate)? { get set }
+  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
+}
+@objc public protocol BiddingInterstitialAdDelegate {
+  @objc(onLoadBiddingInterstitialAd:) func onLoadAd(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
+  @objc(onFailToLoadBiddingInterstitialAd:error:) func onFailToLoad(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd, _ error: any Swift.Error)
+  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
+}
+@objc public protocol BiddingRewardedAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
+  @objc var delegate: (any BlueStackSDK.BiddingRewardedAdDelegate)? { get set }
+  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
+}
+@objc public protocol BiddingRewardedAdDelegate {
+  @objc(onLoadBiddingRewardedAd:) func onLoadAd(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
+  @objc(onFailToLoadBiddingRewardedAd:error:) func onFailToLoad(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ error: any Swift.Error)
+  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
+  @objc(onRewardEarnedWithBiddingRewardedAd:rewardInfo:) @_Concurrency.MainActor func onRewardEarned(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ rewardInfo: [Swift.String : Any])
+}
+@objc public class BidRequest : ObjectiveC.NSObject {
+  final public let placementID: Swift.String
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let params: [Swift.String : Any]?
+  public init(placementID: Swift.String, adType: BlueStackSDK.BiddingAdType, params: [Swift.String : Any]? = nil)
+  @objc deinit
+}
+@objc(BLSBidResponse) public class BidResponse : ObjectiveC.NSObject {
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let networkBidResponse: Swift.AnyObject?
+  final public let cpm: Swift.Float
+  public init(adType: BlueStackSDK.BiddingAdType, cpm: Swift.Float, networkBidResponse: Swift.AnyObject? = nil)
+  @objc deinit
+}
+@objc public protocol FullScreenBiddingAdDelegate {
+  @objc(onDisplayFullScreenBiddingAd:) @_Concurrency.MainActor func onDisplay(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+  @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
+  @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+}
+@objc public protocol FullScreenPresentableBiddingAd {
+  @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
+  @objc(presentFromRootViewController:) @_Concurrency.MainActor func present(from rootViewController: UIKit.UIViewController)
+}
+@objc public protocol Bidder {
+  @objc var delegate: (any BlueStackSDK.BidderDelegate)? { get set }
+  @objc init(parameters: [Swift.String : Any])
+  @objc func fetchBid(_ bidRequest: BlueStackSDK.BidRequest)
+  @objc func destroy()
+}
+@objc public protocol BidderDelegate {
+  @objc func onSuccess(_ bidResponse: BlueStackSDK.BidResponse, _ biddingAd: any BlueStackSDK.BiddingAd)
+  @objc func onFailure(_ error: any Swift.Error)
+}
+@objc public protocol BiddingAd {
+  @objc func loadAd(_ bidResponse: BlueStackSDK.BidResponse)
+}
 @objc public protocol BannerViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc(bannerView:didLoadWithPreferredHeight:) func onLoad(_ bannerView: BlueStackSDK.BannerView, _ preferredHeight: CoreFoundation.CGFloat)
   @objc(bannerView:didFailedToLoadWithError:) func onFailedToLoad(_ bannerView: BlueStackSDK.BannerView, _ error: any Swift.Error)
@@ -332,3 +407,5 @@ extension BlueStackSDK.BlueStackAdapterInitializationState : Swift.RawRepresenta
 extension BlueStackSDK.Gender : Swift.Equatable {}
 extension BlueStackSDK.Gender : Swift.Hashable {}
 extension BlueStackSDK.Gender : Swift.RawRepresentable {}
+extension BlueStackSDK.BiddingAdType : Swift.Equatable {}
+extension BlueStackSDK.BiddingAdType : Swift.Hashable {}

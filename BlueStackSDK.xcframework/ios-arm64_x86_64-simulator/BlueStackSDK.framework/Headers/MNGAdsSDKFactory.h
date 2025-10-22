@@ -15,7 +15,7 @@
 @class PlacementTimeoutController;
 @protocol PlacementTimeoutDelegate;
 
-@interface MNGAdsSDKFactory : MNGAdsAdapter<MNGAdsAdapterBannerDelegate,MNGAdsAdapterInterstitialDelegate,MNGAdsAdapterNativeDelegate,MNGClickDelegate, MNGAdsAdapterInfeedDelegate,MNGAdsAdapterRefreshDelegate,MAdvertiseAdapterRewardedVideoAdDelegate,BluestackThumbnailAdDelegate, PlacementTimeoutDelegate>
+@interface MNGAdsSDKFactory : MNGAdsAdapter<MNGAdsAdapterBannerDelegate,MNGAdsAdapterInterstitialDelegate,MNGAdsAdapterNativeDelegate,MNGClickDelegate, MNGAdsAdapterInfeedDelegate,MNGAdsAdapterRefreshDelegate,MAdvertiseAdapterRewardedVideoAdDelegate,BluestackThumbnailAdDelegate, BlueStackImpressionDelegate, PlacementTimeoutDelegate>
 
 + (void)initWithAppId:(NSString*)appId;
 + (void)setDelegate:(id<MNGAdsSDKFactoryDelegate>)delegate;

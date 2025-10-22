@@ -404,3 +404,16 @@
 -(void)adsAdapterThumbnailAdAdClicked:(MNGAdsAdapter *)adsAdapter;
 @end
 
+@protocol BlueStackImpressionDelegate <NSObject>
+
+@optional
+
+/** Notifies the delegate with list of URLs to send impression log
+ 
+ @param impressionURLStrings An array containing the impression URL string
+ 
+ */
+
+- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter onImpression:(NSArray<NSString *> *)impressionURLStrings;
+
+@end

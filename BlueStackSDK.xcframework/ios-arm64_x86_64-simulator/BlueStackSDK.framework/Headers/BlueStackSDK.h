@@ -29,3 +29,13 @@ FOUNDATION_EXPORT const unsigned char BlueStackSDKVersionString[];
 #import <BlueStackSDK/VersionUtils.h>
 #import <BlueStackSDK/BlueStackInitializationStatus.h>
 #import <BlueStackSDK/BlueStackAdapterInitializable.h>
+#import <BlueStackSDK/MNGBannerView.h>
+#import <BlueStackSDK/MNGAdLoader.h>
+#import <BlueStackSDK/MNGAdRequest.h>
+#import <BlueStackSDK/MNGInterstitialViewController.h>
+#import <BlueStackSDK/ExpirableAd.h>
+#import <BlueStackSDK/MNGInfeedView.h>
+#import <BlueStackSDK/MNGRewardedVideoAd.h>
+#import <BlueStackSDK/BluestackBiddingCrypto.h>
+#import <BlueStackSDK/BLSLogger.h>
+#import <BlueStackSDK/BlueStackVideoReward.h>
