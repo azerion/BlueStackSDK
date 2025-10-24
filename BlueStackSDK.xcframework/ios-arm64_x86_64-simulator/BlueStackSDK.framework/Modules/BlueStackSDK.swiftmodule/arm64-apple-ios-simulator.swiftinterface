@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AdSupport
 import AppTrackingTransparency
 @_exported import BlueStackSDK
@@ -207,53 +207,24 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
 @objc public protocol FullScreenDisplayableAd : ObjectiveC.NSObjectProtocol {
   @objc var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)? { get set }
 }
-@objc public protocol PlacementTimeoutDelegate : ObjectiveC.NSObjectProtocol {
-  @objc(onTimeout) func onTimeout()
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class PlacementTimeoutController : ObjectiveC.NSObject {
-  @objc convenience public init(placement: BlueStackSDK.Placement, delegate: (any BlueStackSDK.PlacementTimeoutDelegate)? = nil)
-  @objc public func start()
-  @objc public func stop()
-  @objc public func isTimeout() -> Swift.Bool
+@objc public class BidRequest : ObjectiveC.NSObject {
+  final public let placementID: Swift.String
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let params: [Swift.String : Any]?
+  public init(placementID: Swift.String, adType: BlueStackSDK.BiddingAdType, params: [Swift.String : Any]? = nil)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class Placement : ObjectiveC.NSObject, Swift.Codable {
-  @objc final public let keywords: Swift.String?
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-extension BlueStackSDK.Placement {
-  @objc(timeoutInMillis) dynamic public var __timeoutInMillis: Foundation.NSNumber? {
-    @objc get
-  }
-  @objc(refreshRate) dynamic public var __refreshRate: Foundation.NSNumber? {
-    @objc get
-  }
-  @objc dynamic public func getSortedAdserverList() -> [BlueStackSDK.AdServer]?
-}
-@objc @_inheritsConvenienceInitializers @objcMembers public class BlueStackAdapterInitializationStatus : ObjectiveC.NSObject {
-  @objc public var mediationAdapters: [BlueStackSDK.BlueStackAdapterStatus]
-  @objc override dynamic public init()
-  @objc public init(mediationAdapters: [BlueStackSDK.BlueStackAdapterStatus])
+@objc(BLSBidResponse) public class BidResponse : ObjectiveC.NSObject {
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let networkBidResponse: Swift.AnyObject?
+  final public let cpm: Swift.Float
+  public init(adType: BlueStackSDK.BiddingAdType, cpm: Swift.Float, networkBidResponse: Swift.AnyObject? = nil)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AdServer : ObjectiveC.NSObject, Swift.Codable {
-  @objc final public let priority: Swift.Int
-  @objc final public let adapter: Swift.String
-  @objc final public let name: Swift.String
-  @objc final public let headerBidderConfigs: [BlueStackSDK.HeaderBidderConfig]?
-  required public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-  @objc deinit
-}
-extension BlueStackSDK.AdServer {
-  @objc dynamic public func serverParams() -> [Swift.String : Any]?
-}
-@objc public protocol RewardedAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc(didLoadRewardedAd:) func onAdLoaded(_ ad: BlueStackSDK.RewardedAd)
-  @objc(rewardedAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.RewardedAd, _ error: any Swift.Error)
-  @objc(rewardedAd:didEarnedReward:) func onRewardEarned(_ ad: BlueStackSDK.RewardedAd, _ reward: BlueStackSDK.Reward?)
+@objc public protocol FullScreenBiddingAdDelegate {
+  @objc(onDisplayFullScreenBiddingAd:) @_Concurrency.MainActor func onDisplay(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+  @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
+  @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
 }
 @objc public protocol FullScreenPresentableBiddingAd {
   @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
@@ -311,24 +282,53 @@ public enum BiddingAdType {
   @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
   @objc(onRewardEarnedWithBiddingRewardedAd:rewardInfo:) @_Concurrency.MainActor func onRewardEarned(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ rewardInfo: [Swift.String : Any])
 }
-@objc public class BidRequest : ObjectiveC.NSObject {
-  final public let placementID: Swift.String
-  final public let adType: BlueStackSDK.BiddingAdType
-  final public let params: [Swift.String : Any]?
-  public init(placementID: Swift.String, adType: BlueStackSDK.BiddingAdType, params: [Swift.String : Any]? = nil)
+@objc public protocol PlacementTimeoutDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(onTimeout) func onTimeout()
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class PlacementTimeoutController : ObjectiveC.NSObject {
+  @objc convenience public init(placement: BlueStackSDK.Placement, delegate: (any BlueStackSDK.PlacementTimeoutDelegate)? = nil)
+  @objc public func start()
+  @objc public func stop()
+  @objc public func isTimeout() -> Swift.Bool
   @objc deinit
 }
-@objc(BLSBidResponse) public class BidResponse : ObjectiveC.NSObject {
-  final public let adType: BlueStackSDK.BiddingAdType
-  final public let networkBidResponse: Swift.AnyObject?
-  final public let cpm: Swift.Float
-  public init(adType: BlueStackSDK.BiddingAdType, cpm: Swift.Float, networkBidResponse: Swift.AnyObject? = nil)
+@objc @_hasMissingDesignatedInitializers @objcMembers public class Placement : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let keywords: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension BlueStackSDK.Placement {
+  @objc(timeoutInMillis) dynamic public var __timeoutInMillis: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc(refreshRate) dynamic public var __refreshRate: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc dynamic public func getSortedAdserverList() -> [BlueStackSDK.AdServer]?
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class BlueStackAdapterInitializationStatus : ObjectiveC.NSObject {
+  @objc public var mediationAdapters: [BlueStackSDK.BlueStackAdapterStatus]
+  @objc override dynamic public init()
+  @objc public init(mediationAdapters: [BlueStackSDK.BlueStackAdapterStatus])
   @objc deinit
 }
-@objc public protocol FullScreenBiddingAdDelegate {
-  @objc(onDisplayFullScreenBiddingAd:) @_Concurrency.MainActor func onDisplay(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
-  @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
-  @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+@objc @_hasMissingDesignatedInitializers @objcMembers public class AdServer : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let priority: Swift.Int
+  @objc final public let adapter: Swift.String
+  @objc final public let name: Swift.String
+  @objc final public let headerBidderConfigs: [BlueStackSDK.HeaderBidderConfig]?
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension BlueStackSDK.AdServer {
+  @objc dynamic public func serverParams() -> [Swift.String : Any]?
+}
+@objc public protocol RewardedAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(didLoadRewardedAd:) func onAdLoaded(_ ad: BlueStackSDK.RewardedAd)
+  @objc(rewardedAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.RewardedAd, _ error: any Swift.Error)
+  @objc(rewardedAd:didEarnedReward:) func onRewardEarned(_ ad: BlueStackSDK.RewardedAd, _ reward: BlueStackSDK.Reward?)
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class DispatcherConfiguration : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let appid: Swift.Int
