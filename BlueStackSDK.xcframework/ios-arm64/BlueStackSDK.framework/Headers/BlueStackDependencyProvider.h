@@ -10,6 +10,7 @@
 @class DispatcherConfiguration;
 @class PrivacySettings;
 @class IDFAProvider;
+@class Initializer;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (PrivacySettings *)getPrivacySettings;
 - (IDFAProvider *)getIDFAProvider;
+- (Initializer *)getInitializer;
 - (BOOL)isLogDisabled;
 
 @end

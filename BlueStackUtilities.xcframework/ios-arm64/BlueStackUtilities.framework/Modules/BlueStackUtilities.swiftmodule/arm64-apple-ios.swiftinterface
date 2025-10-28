@@ -10,6 +10,43 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+public protocol HTTPResponseType {
+  associatedtype Body : BlueStackUtilities.HTTPResponseBody
+  typealias Result = Swift.Result<Self, BlueStackUtilities.NetworkError>
+  typealias Headers = [Swift.AnyHashable : Any]
+  var httpStatusCode: BlueStackUtilities.HTTPStatusCode { get }
+  var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders { get }
+  var body: Self.Body { get }
+}
+public struct HTTPResponse<Body> : BlueStackUtilities.HTTPResponseType where Body : BlueStackUtilities.HTTPResponseBody {
+  public var body: Body
+  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode
+  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders
+}
+extension Foundation.HTTPURLResponse : BlueStackUtilities.HTTPResponseType {
+  public typealias Body = Foundation.Data?
+  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode {
+    get
+  }
+  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders {
+    get
+  }
+  public var body: Foundation.Data? {
+    get
+  }
+}
+public protocol HTTPRequestPath {
+  static var serverHostUrl: Foundation.URL { get }
+  var relativePath: Swift.String { get }
+}
+extension BlueStackUtilities.HTTPRequestPath {
+  public var url: Foundation.URL? {
+    get
+  }
+}
+public protocol HTTPRequestBody : Swift.Encodable {
+  var content: [(key: Swift.String, value: Swift.String?)] { get }
+}
 extension Foundation.UserDefaults {
   public static func managed() -> Foundation.UserDefaults
 }
@@ -83,6 +120,11 @@ extension Swift.Result {
     get
   }
 }
+public protocol Validator {
+  func validate()
+  func isValid() -> Swift.Bool
+  func errors() -> [BlueStackUtilities.ValidationError]
+}
 public struct ErrorResponse {
 }
 public class ValidationError : Swift.AnyObject {
@@ -135,11 +177,6 @@ extension Foundation.JSONDecoder {
   public var rawValue: Swift.Int {
     get
   }
-}
-public protocol Validator {
-  func validate()
-  func isValid() -> Swift.Bool
-  func errors() -> [BlueStackUtilities.ValidationError]
 }
 public protocol LoggerType : ObjectiveC.NSObjectProtocol {
   func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
@@ -217,43 +254,6 @@ extension Swift.Decodable {
 }
 extension Swift.Optional : BlueStackUtilities.HTTPResponseBody where Wrapped : BlueStackUtilities.HTTPResponseBody {
   public static func create(using data: Foundation.Data) throws -> Wrapped?
-}
-public protocol HTTPResponseType {
-  associatedtype Body : BlueStackUtilities.HTTPResponseBody
-  typealias Result = Swift.Result<Self, BlueStackUtilities.NetworkError>
-  typealias Headers = [Swift.AnyHashable : Any]
-  var httpStatusCode: BlueStackUtilities.HTTPStatusCode { get }
-  var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders { get }
-  var body: Self.Body { get }
-}
-public struct HTTPResponse<Body> : BlueStackUtilities.HTTPResponseType where Body : BlueStackUtilities.HTTPResponseBody {
-  public var body: Body
-  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode
-  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders
-}
-extension Foundation.HTTPURLResponse : BlueStackUtilities.HTTPResponseType {
-  public typealias Body = Foundation.Data?
-  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode {
-    get
-  }
-  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders {
-    get
-  }
-  public var body: Foundation.Data? {
-    get
-  }
-}
-public protocol HTTPRequestPath {
-  static var serverHostUrl: Foundation.URL { get }
-  var relativePath: Swift.String { get }
-}
-extension BlueStackUtilities.HTTPRequestPath {
-  public var url: Foundation.URL? {
-    get
-  }
-}
-public protocol HTTPRequestBody : Swift.Encodable {
-  var content: [(key: Swift.String, value: Swift.String?)] { get }
 }
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Equatable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Hashable {}

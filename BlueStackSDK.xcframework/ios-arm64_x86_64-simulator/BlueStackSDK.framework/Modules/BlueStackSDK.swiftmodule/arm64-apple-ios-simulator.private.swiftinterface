@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
 // swift-module-flags: -target arm64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AdSupport
 import AppTrackingTransparency
 @_exported import BlueStackSDK
@@ -207,29 +207,6 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
 @objc public protocol FullScreenDisplayableAd : ObjectiveC.NSObjectProtocol {
   @objc var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)? { get set }
 }
-@objc public class BidRequest : ObjectiveC.NSObject {
-  final public let placementID: Swift.String
-  final public let adType: BlueStackSDK.BiddingAdType
-  final public let params: [Swift.String : Any]?
-  public init(placementID: Swift.String, adType: BlueStackSDK.BiddingAdType, params: [Swift.String : Any]? = nil)
-  @objc deinit
-}
-@objc(BLSBidResponse) public class BidResponse : ObjectiveC.NSObject {
-  final public let adType: BlueStackSDK.BiddingAdType
-  final public let networkBidResponse: Swift.AnyObject?
-  final public let cpm: Swift.Float
-  public init(adType: BlueStackSDK.BiddingAdType, cpm: Swift.Float, networkBidResponse: Swift.AnyObject? = nil)
-  @objc deinit
-}
-@objc public protocol FullScreenBiddingAdDelegate {
-  @objc(onDisplayFullScreenBiddingAd:) @_Concurrency.MainActor func onDisplay(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
-  @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
-  @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
-}
-@objc public protocol FullScreenPresentableBiddingAd {
-  @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
-  @objc(presentFromRootViewController:) @_Concurrency.MainActor func present(from rootViewController: UIKit.UIViewController)
-}
 @objc public protocol Bidder {
   @objc var delegate: (any BlueStackSDK.BidderDelegate)? { get set }
   @objc init(parameters: [Swift.String : Any])
@@ -281,6 +258,29 @@ public enum BiddingAdType {
   @objc(onFailToLoadBiddingRewardedAd:error:) func onFailToLoad(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ error: any Swift.Error)
   @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
   @objc(onRewardEarnedWithBiddingRewardedAd:rewardInfo:) @_Concurrency.MainActor func onRewardEarned(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ rewardInfo: [Swift.String : Any])
+}
+@objc public class BidRequest : ObjectiveC.NSObject {
+  final public let placementID: Swift.String
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let params: [Swift.String : Any]?
+  public init(placementID: Swift.String, adType: BlueStackSDK.BiddingAdType, params: [Swift.String : Any]? = nil)
+  @objc deinit
+}
+@objc(BLSBidResponse) public class BidResponse : ObjectiveC.NSObject {
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let networkBidResponse: Swift.AnyObject?
+  final public let cpm: Swift.Float
+  public init(adType: BlueStackSDK.BiddingAdType, cpm: Swift.Float, networkBidResponse: Swift.AnyObject? = nil)
+  @objc deinit
+}
+@objc public protocol FullScreenBiddingAdDelegate {
+  @objc(onDisplayFullScreenBiddingAd:) @_Concurrency.MainActor func onDisplay(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+  @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
+  @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+}
+@objc public protocol FullScreenPresentableBiddingAd {
+  @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
+  @objc(presentFromRootViewController:) @_Concurrency.MainActor func present(from rootViewController: UIKit.UIViewController)
 }
 @objc public protocol PlacementTimeoutDelegate : ObjectiveC.NSObjectProtocol {
   @objc(onTimeout) func onTimeout()

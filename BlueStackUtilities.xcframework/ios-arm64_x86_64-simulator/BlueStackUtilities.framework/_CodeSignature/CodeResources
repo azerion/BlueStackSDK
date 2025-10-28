@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		U0lfbG4Kyo5m2wi5cuSAvgBkZLI=
+		fKGRZwZkcnKY6h6zyRGSWQSI+28=
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ug+snbTo0Mp5QzSKw15VbyAzgMk=
+		f+G/oUjGpDsbDbKMdV2w/3wusrM=
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ug+snbTo0Mp5QzSKw15VbyAzgMk=
+		f+G/oUjGpDsbDbKMdV2w/3wusrM=
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		H0UxuW/yq8dwCHNBvdnItbphvvw=
+		Oklw5lggMDWFj5ccQki60n57IIo=
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		U0lfbG4Kyo5m2wi5cuSAvgBkZLI=
+		fKGRZwZkcnKY6h6zyRGSWQSI+28=
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		LQlrkge6TnKizM3NFscjHIOrJTY=
+		vFjMjk2GbkTkDU6MQTiB/GdhuUQ=
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LQlrkge6TnKizM3NFscjHIOrJTY=
+		vFjMjk2GbkTkDU6MQTiB/GdhuUQ=
 		</data>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		s5c6uIoJ2NKU3Of3sAy77bCYh+U=
+		kzNiShiyrnuUEMGqaUrTJDFo0h4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,22 +74,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			U0lfbG4Kyo5m2wi5cuSAvgBkZLI=
+			fKGRZwZkcnKY6h6zyRGSWQSI+28=
 			</data>
 			<key>hash2</key>
 			<data>
-			G4dhUL6sG0YWo/yF2tklK49uOcC0He6OibIJi0DbNNw=
+			iC2OKzXMBl5yzEDgWghuQrepswTrwh/qjoT8OtbC1BY=
 			</data>
 		</dict>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ug+snbTo0Mp5QzSKw15VbyAzgMk=
+			f+G/oUjGpDsbDbKMdV2w/3wusrM=
 			</data>
 			<key>hash2</key>
 			<data>
-			B+QAFLxVoNjhei/tWh/OJ49PGnDpk/rkOANDnl01aBE=
+			IQBsTGhwLsThZu/TrQVB/ouz19eUaO4HsYKGXEEqxg0=
 			</data>
 		</dict>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -107,44 +107,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ug+snbTo0Mp5QzSKw15VbyAzgMk=
+			f+G/oUjGpDsbDbKMdV2w/3wusrM=
 			</data>
 			<key>hash2</key>
 			<data>
-			B+QAFLxVoNjhei/tWh/OJ49PGnDpk/rkOANDnl01aBE=
+			IQBsTGhwLsThZu/TrQVB/ouz19eUaO4HsYKGXEEqxg0=
 			</data>
 		</dict>
 		<key>Modules/BlueStackUtilities.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H0UxuW/yq8dwCHNBvdnItbphvvw=
+			Oklw5lggMDWFj5ccQki60n57IIo=
 			</data>
 			<key>hash2</key>
 			<data>
-			IZ4vjmladac81PsWIsivCuJcCmTQSrQcCFwKjscnOIE=
+			p4P73e3aHPV/Pv969SoVptfHavRR/5nUrnbGC4FStRc=
 			</data>
 		</dict>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U0lfbG4Kyo5m2wi5cuSAvgBkZLI=
+			fKGRZwZkcnKY6h6zyRGSWQSI+28=
 			</data>
 			<key>hash2</key>
 			<data>
-			G4dhUL6sG0YWo/yF2tklK49uOcC0He6OibIJi0DbNNw=
+			iC2OKzXMBl5yzEDgWghuQrepswTrwh/qjoT8OtbC1BY=
 			</data>
 		</dict>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LQlrkge6TnKizM3NFscjHIOrJTY=
+			vFjMjk2GbkTkDU6MQTiB/GdhuUQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			6z6v2p2UwYwEofI3g34Q5mQ0pDUzzJURmohKzSBto5w=
+			NtcbrquMXBvXWUTf6YZRh480UMKpAc3T8c5DkCUGZeQ=
 			</data>
 		</dict>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -162,22 +162,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LQlrkge6TnKizM3NFscjHIOrJTY=
+			vFjMjk2GbkTkDU6MQTiB/GdhuUQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			6z6v2p2UwYwEofI3g34Q5mQ0pDUzzJURmohKzSBto5w=
+			NtcbrquMXBvXWUTf6YZRh480UMKpAc3T8c5DkCUGZeQ=
 			</data>
 		</dict>
 		<key>Modules/BlueStackUtilities.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s5c6uIoJ2NKU3Of3sAy77bCYh+U=
+			kzNiShiyrnuUEMGqaUrTJDFo0h4=
 			</data>
 			<key>hash2</key>
 			<data>
-			WPRym8TEZIWUAkoLDF4yaODjrsoEL1AzUMWVFZkaO6A=
+			uQObubbwLMnGAmpg1NyFPkUJdMd/xIImnh4JEDUfGB0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
