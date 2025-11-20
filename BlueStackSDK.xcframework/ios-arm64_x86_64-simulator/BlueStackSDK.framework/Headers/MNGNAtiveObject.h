@@ -41,7 +41,8 @@ typedef NS_ENUM(NSInteger, MAdvertiseAssetType) {
 
 @property (nonatomic, copy, readonly, nullable) NSString *iconUrl;
 @property (nonatomic, copy, readonly, nullable) NSString *coverImageUrl;
-
+@property (nonatomic, copy, readonly, nullable) NSDecimalNumber *starRating;
+@property (nonatomic, assign, readonly) BOOL hasVideoContent;
 
 - (void)registerViewForInteraction:(nonnull UIView *)view
                      withMediaView:(nullable UIView *)mediaView
@@ -54,5 +55,7 @@ typedef NS_ENUM(NSInteger, MAdvertiseAssetType) {
 - (void)performClick:(nonnull NSDictionary *)args;
 
 - (void)setNativeAdImpressionListener:(nullable id<MNGNativeAdImpressionListener>)impressionDelegate;
+
+- (nullable UIView *)getMediaView;
 
 @end
