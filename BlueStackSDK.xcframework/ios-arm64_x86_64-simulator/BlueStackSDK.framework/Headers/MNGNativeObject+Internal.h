@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "MNGNAtiveObject.h"
 #import "MNGCrossPlatformNativeAd.h"
+#import "MNGNativeAdViewProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,12 +27,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString *iconUrl;
 @property (nonatomic, copy, nullable) NSString *coverImageUrl;
 
+@property (nonatomic, strong) NSDecimalNumber *starRating;
+@property (nonatomic, assign) BOOL hasVideoContent;
+
 @property (nonatomic, weak) id<MNGCrossPlatformNativeAd> delegate;
+@property (nonatomic, weak, nullable) id<MNGNativeAdViewProvider> nativeAdViewProvider;
 @property (nonatomic, assign) BOOL cutomizableBadge;
 @property (nonatomic, copy) void (^registreBlock)(UIView *view, UIViewController *viewController, UIView *clickableView);
 @property (nonatomic, copy) void (^registerViewForInteraction)(UIView *view, UIView *mediaView, UIImageView *iconImageView, UIViewController *viewController, UIView *clickableView);
 
 -(BOOL)updateBadgeTitle:(NSString*)newTitle;
+
+- (nullable UIView *)getMediaView;
 
 @end
 
