@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackUtilities
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
 @_exported import BlueStackUtilities
 import Foundation
 import Swift
@@ -10,41 +10,6 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-public enum NetworkError : Swift.Error {
-  case networkError(Foundation.NSError)
-  case unexpectedResponse(Foundation.URLResponse?)
-  case decoding(Foundation.NSError)
-  case unableToCreateRequest(path: Swift.String)
-  case errorResponse(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)
-}
-extension BlueStackUtilities.NetworkError : Swift.CustomStringConvertible {
-  public var description: Swift.String {
-    get
-  }
-}
-@_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject, BlueStackUtilities.LoggerType {
-  public func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public func debug(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
-  @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
-  @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
-  @objc override dynamic public init()
-  @objc deinit
-}
-extension BlueStackUtilities.Logger {
-  @objc public static var framework: Swift.String
-  @objc public static var versionString: Swift.String
-  @objc public static func isDebugModeEnabled() -> Swift.Bool
-  @objc public static func isEventDebugEnabled() -> Swift.Bool
-  public static func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public static func debug(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public static func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public static func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
-  public static func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
-  public static func error(_ message: @autoclosure () -> Swift.String, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
-}
 public enum HTTPStatusCode {
   case success
   case notModified
@@ -100,9 +65,6 @@ extension Foundation.HTTPURLResponse : BlueStackUtilities.HTTPResponseType {
     get
   }
 }
-extension Foundation.UserDefaults {
-  public static func managed() -> Foundation.UserDefaults
-}
 public protocol HTTPRequestPath {
   static var serverHostUrl: Foundation.URL { get }
   var relativePath: Swift.String { get }
@@ -112,22 +74,17 @@ extension BlueStackUtilities.HTTPRequestPath {
     get
   }
 }
+extension Foundation.UserDefaults {
+  public static func managed() -> Foundation.UserDefaults
+}
+public protocol HTTPRequestBody : Swift.Encodable {
+  var content: [(key: Swift.String, value: Swift.String?)] { get }
+}
 extension Swift.String {
   public var trimmingWhitespacesAndNewLines: Swift.String {
     get
   }
   public var trimmedAndEscaped: Swift.String {
-    get
-  }
-}
-public protocol HTTPRequestBody : Swift.Encodable {
-  var content: [(key: Swift.String, value: Swift.String?)] { get }
-}
-extension Swift.Result {
-  public var value: Success? {
-    get
-  }
-  public var error: Failure? {
     get
   }
 }
@@ -151,6 +108,14 @@ extension BlueStackUtilities.HTTPRequest {
 }
 extension BlueStackUtilities.HTTPRequest.Method {
   public var httpMethod: Swift.String {
+    get
+  }
+}
+extension Swift.Result {
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
     get
   }
 }
@@ -185,42 +150,9 @@ extension BlueStackUtilities.HTTPClient {
     }
   }
 }
-extension Foundation.Date {
-  public func expireHeaderFormated() -> Swift.String
-  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
-}
-public struct ErrorResponse {
-}
-extension Foundation.JSONEncoder {
-  public static let `default`: Foundation.JSONEncoder
-  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
-}
-extension Foundation.JSONDecoder {
-  public static let `default`: Foundation.JSONDecoder
-  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
-}
 public protocol LogMessage : Swift.CustomStringConvertible {
   var description: Swift.String { get }
   var category: Swift.String { get }
-}
-@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
-  public protocol Task {
-    func run()
-  }
-  public protocol Job {
-    var isActive: Swift.Bool { get }
-    func stop()
-    func start()
-  }
-  public static let `default`: BlueStackUtilities.OperationDispatcher
-  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any BlueStackUtilities.OperationDispatcher.Task) -> any BlueStackUtilities.OperationDispatcher.Job
-  @objc deinit
-}
-public class UserAgentUtils {
-  public init()
-  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
-  public func getUserAgentFromSystemInfo() -> Swift.String
-  @objc deinit
 }
 @objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
   case debug = 0
@@ -241,7 +173,11 @@ public class UserAgentUtils {
     get
   }
 }
-public enum Strings {
+public struct ErrorResponse {
+}
+extension Foundation.Date {
+  public func expireHeaderFormated() -> Swift.String
+  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
 }
 public protocol LoggerType : ObjectiveC.NSObjectProtocol {
   func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
@@ -249,6 +185,70 @@ public protocol LoggerType : ObjectiveC.NSObjectProtocol {
   func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
   func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
   func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt)
+}
+extension Foundation.JSONEncoder {
+  public static let `default`: Foundation.JSONEncoder
+  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
+}
+extension Foundation.JSONDecoder {
+  public static let `default`: Foundation.JSONDecoder
+  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
+}
+@_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject, BlueStackUtilities.LoggerType {
+  public func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public func debug(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
+  @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
+  @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension BlueStackUtilities.Logger {
+  @objc public static var framework: Swift.String
+  @objc public static var versionString: Swift.String
+  @objc public static func isDebugModeEnabled() -> Swift.Bool
+  @objc public static func isEventDebugEnabled() -> Swift.Bool
+  public static func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public static func debug(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public static func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public static func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
+  public static func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
+  public static func error(_ message: @autoclosure () -> Swift.String, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
+}
+public class UserAgentUtils {
+  public init()
+  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  public func getUserAgentFromSystemInfo() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
+  public protocol Task {
+    func run()
+  }
+  public protocol Job {
+    var isActive: Swift.Bool { get }
+    func stop()
+    func start()
+  }
+  public static let `default`: BlueStackUtilities.OperationDispatcher
+  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any BlueStackUtilities.OperationDispatcher.Task) -> any BlueStackUtilities.OperationDispatcher.Job
+  @objc deinit
+}
+public enum Strings {
+}
+public enum NetworkError : Swift.Error {
+  case networkError(Foundation.NSError)
+  case unexpectedResponse(Foundation.URLResponse?)
+  case decoding(Foundation.NSError)
+  case unableToCreateRequest(path: Swift.String)
+  case errorResponse(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)
+}
+extension BlueStackUtilities.NetworkError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
 }
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Equatable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Hashable {}

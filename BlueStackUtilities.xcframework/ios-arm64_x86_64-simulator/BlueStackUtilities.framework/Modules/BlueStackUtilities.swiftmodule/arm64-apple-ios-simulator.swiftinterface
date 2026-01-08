@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackUtilities
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
 @_exported import BlueStackUtilities
 import Foundation
 import Swift
@@ -10,9 +10,59 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-extension Foundation.Date {
-  public func expireHeaderFormated() -> Swift.String
-  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
+public protocol LogMessage : Swift.CustomStringConvertible {
+  var description: Swift.String { get }
+  var category: Swift.String { get }
+}
+public class HTTPClient {
+  public typealias RequestHeaders = BlueStackUtilities.HTTPRequest.Headers
+  public typealias ResponseHeaders = BlueStackUtilities.HTTPResponse<BlueStackUtilities.HTTPEmptyResponseBody>.Headers
+  public typealias Completion<Value> = (BlueStackUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : BlueStackUtilities.HTTPResponseBody
+  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: BlueStackUtilities.OperationDispatcher)
+  convenience public init(requestTimeout: Foundation.TimeInterval)
+  public func send<Value>(_ request: BlueStackUtilities.HTTPRequest, completion: BlueStackUtilities.HTTPClient.Completion<Value>?) where Value : BlueStackUtilities.HTTPResponseBody
+  @objc deinit
+}
+extension BlueStackUtilities.HTTPClient {
+  public enum RequestHeader : Swift.String {
+    case userAgent
+    case expire
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ResponseHeader : Swift.String {
+    case date
+    case expire
+    case contentType
+    case lastModified
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+@objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
+  case debug = 0
+  case info = 1
+  case warn = 2
+  case error = 3
+  case verbose = 4
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [BlueStackUtilities.LogLevel]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [BlueStackUtilities.LogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public protocol LoggerType : ObjectiveC.NSObjectProtocol {
   func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
@@ -21,13 +71,7 @@ public protocol LoggerType : ObjectiveC.NSObjectProtocol {
   func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt)
   func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt)
 }
-extension Foundation.JSONEncoder {
-  public static let `default`: Foundation.JSONEncoder
-  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
-}
-extension Foundation.JSONDecoder {
-  public static let `default`: Foundation.JSONDecoder
-  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
+public struct ErrorResponse {
 }
 @_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject, BlueStackUtilities.LoggerType {
   public func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
@@ -51,6 +95,21 @@ extension BlueStackUtilities.Logger {
   public static func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line)
   public static func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
   public static func error(_ message: @autoclosure () -> Swift.String, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line)
+}
+public enum Strings {
+}
+public class UserAgentUtils {
+  public init()
+  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  public func getUserAgentFromSystemInfo() -> Swift.String
+  @objc deinit
+}
+extension Foundation.UserDefaults {
+  public static func managed() -> Foundation.UserDefaults
+}
+extension Foundation.Date {
+  public func expireHeaderFormated() -> Swift.String
+  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
 }
 public enum NetworkError : Swift.Error {
   case networkError(Foundation.NSError)
@@ -79,18 +138,21 @@ extension BlueStackUtilities.HTTPStatusCode : Swift.RawRepresentable {
 }
 extension BlueStackUtilities.HTTPStatusCode : Swift.Hashable {
 }
-@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
-  public protocol Task {
-    func run()
+extension Foundation.JSONEncoder {
+  public static let `default`: Foundation.JSONEncoder
+  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
+}
+extension Foundation.JSONDecoder {
+  public static let `default`: Foundation.JSONDecoder
+  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
+}
+extension Swift.String {
+  public var trimmingWhitespacesAndNewLines: Swift.String {
+    get
   }
-  public protocol Job {
-    var isActive: Swift.Bool { get }
-    func stop()
-    func start()
+  public var trimmedAndEscaped: Swift.String {
+    get
   }
-  public static let `default`: BlueStackUtilities.OperationDispatcher
-  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any BlueStackUtilities.OperationDispatcher.Task) -> any BlueStackUtilities.OperationDispatcher.Job
-  @objc deinit
 }
 public protocol HTTPResponseBody {
   static func create(using data: Foundation.Data) throws -> Self
@@ -106,8 +168,6 @@ extension Swift.Decodable {
 }
 extension Swift.Optional : BlueStackUtilities.HTTPResponseBody where Wrapped : BlueStackUtilities.HTTPResponseBody {
   public static func create(using data: Foundation.Data) throws -> Wrapped?
-}
-public enum Strings {
 }
 public protocol HTTPResponseType {
   associatedtype Body : BlueStackUtilities.HTTPResponseBody
@@ -146,6 +206,27 @@ extension BlueStackUtilities.HTTPRequestPath {
 public protocol HTTPRequestBody : Swift.Encodable {
   var content: [(key: Swift.String, value: Swift.String?)] { get }
 }
+@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
+  public protocol Task {
+    func run()
+  }
+  public protocol Job {
+    var isActive: Swift.Bool { get }
+    func stop()
+    func start()
+  }
+  public static let `default`: BlueStackUtilities.OperationDispatcher
+  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any BlueStackUtilities.OperationDispatcher.Task) -> any BlueStackUtilities.OperationDispatcher.Job
+  @objc deinit
+}
+extension Swift.Result {
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
+    get
+  }
+}
 public struct HTTPRequest {
   public typealias Headers = [Swift.String : Swift.String]
   public var method: BlueStackUtilities.HTTPRequest.Method
@@ -166,87 +247,6 @@ extension BlueStackUtilities.HTTPRequest {
 }
 extension BlueStackUtilities.HTTPRequest.Method {
   public var httpMethod: Swift.String {
-    get
-  }
-}
-public class HTTPClient {
-  public typealias RequestHeaders = BlueStackUtilities.HTTPRequest.Headers
-  public typealias ResponseHeaders = BlueStackUtilities.HTTPResponse<BlueStackUtilities.HTTPEmptyResponseBody>.Headers
-  public typealias Completion<Value> = (BlueStackUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : BlueStackUtilities.HTTPResponseBody
-  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: BlueStackUtilities.OperationDispatcher)
-  convenience public init(requestTimeout: Foundation.TimeInterval)
-  public func send<Value>(_ request: BlueStackUtilities.HTTPRequest, completion: BlueStackUtilities.HTTPClient.Completion<Value>?) where Value : BlueStackUtilities.HTTPResponseBody
-  @objc deinit
-}
-extension BlueStackUtilities.HTTPClient {
-  public enum RequestHeader : Swift.String {
-    case userAgent
-    case expire
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ResponseHeader : Swift.String {
-    case date
-    case expire
-    case contentType
-    case lastModified
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-extension Foundation.UserDefaults {
-  public static func managed() -> Foundation.UserDefaults
-}
-extension Swift.String {
-  public var trimmingWhitespacesAndNewLines: Swift.String {
-    get
-  }
-  public var trimmedAndEscaped: Swift.String {
-    get
-  }
-}
-public struct ErrorResponse {
-}
-extension Swift.Result {
-  public var value: Success? {
-    get
-  }
-  public var error: Failure? {
-    get
-  }
-}
-public protocol LogMessage : Swift.CustomStringConvertible {
-  var description: Swift.String { get }
-  var category: Swift.String { get }
-}
-public class UserAgentUtils {
-  public init()
-  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
-  public func getUserAgentFromSystemInfo() -> Swift.String
-  @objc deinit
-}
-@objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
-  case debug = 0
-  case info = 1
-  case warn = 2
-  case error = 3
-  case verbose = 4
-  public var description: Swift.String {
-    get
-  }
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [BlueStackUtilities.LogLevel]
-  public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [BlueStackUtilities.LogLevel] {
-    get
-  }
-  public var rawValue: Swift.Int {
     get
   }
 }

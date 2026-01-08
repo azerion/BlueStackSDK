@@ -16,1684 +16,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "NetworkError",
-        "printedName": "NetworkError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "networkError",
-            "printedName": "networkError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Foundation.NSError) -> BlueStackUtilities.NetworkError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Foundation.NSError) -> BlueStackUtilities.NetworkError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NSError",
-                        "printedName": "Foundation.NSError",
-                        "usr": "c:objc(cs)NSError"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BlueStackUtilities.NetworkError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18BlueStackUtilities12NetworkErrorO07networkE0yACSo7NSErrorCcACmF",
-            "mangledName": "$s18BlueStackUtilities12NetworkErrorO07networkE0yACSo7NSErrorCcACmF",
-            "moduleName": "BlueStackUtilities"
-          },
-          {
-            "kind": "Var",
-            "name": "unexpectedResponse",
-            "printedName": "unexpectedResponse",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Foundation.URLResponse?) -> BlueStackUtilities.NetworkError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Foundation.URLResponse?) -> BlueStackUtilities.NetworkError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Foundation.URLResponse?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "URLResponse",
-                            "printedName": "Foundation.URLResponse",
-                            "usr": "c:objc(cs)NSURLResponse"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BlueStackUtilities.NetworkError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18BlueStackUtilities12NetworkErrorO18unexpectedResponseyACSo13NSURLResponseCSgcACmF",
-            "mangledName": "$s18BlueStackUtilities12NetworkErrorO18unexpectedResponseyACSo13NSURLResponseCSgcACmF",
-            "moduleName": "BlueStackUtilities"
-          },
-          {
-            "kind": "Var",
-            "name": "decoding",
-            "printedName": "decoding",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Foundation.NSError) -> BlueStackUtilities.NetworkError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Foundation.NSError) -> BlueStackUtilities.NetworkError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NSError",
-                        "printedName": "Foundation.NSError",
-                        "usr": "c:objc(cs)NSError"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BlueStackUtilities.NetworkError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18BlueStackUtilities12NetworkErrorO8decodingyACSo7NSErrorCcACmF",
-            "mangledName": "$s18BlueStackUtilities12NetworkErrorO8decodingyACSo7NSErrorCcACmF",
-            "moduleName": "BlueStackUtilities"
-          },
-          {
-            "kind": "Var",
-            "name": "unableToCreateRequest",
-            "printedName": "unableToCreateRequest",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Swift.String) -> BlueStackUtilities.NetworkError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String) -> BlueStackUtilities.NetworkError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(path: Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BlueStackUtilities.NetworkError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18BlueStackUtilities12NetworkErrorO21unableToCreateRequestyACSS_tcACmF",
-            "mangledName": "$s18BlueStackUtilities12NetworkErrorO21unableToCreateRequestyACSS_tcACmF",
-            "moduleName": "BlueStackUtilities"
-          },
-          {
-            "kind": "Var",
-            "name": "errorResponse",
-            "printedName": "errorResponse",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode) -> BlueStackUtilities.NetworkError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode) -> BlueStackUtilities.NetworkError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ErrorResponse",
-                            "printedName": "BlueStackUtilities.ErrorResponse",
-                            "usr": "s:18BlueStackUtilities13ErrorResponseV"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "HTTPStatusCode",
-                            "printedName": "BlueStackUtilities.HTTPStatusCode",
-                            "usr": "s:18BlueStackUtilities14HTTPStatusCodeO"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BlueStackUtilities.NetworkError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NetworkError",
-                        "printedName": "BlueStackUtilities.NetworkError",
-                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18BlueStackUtilities12NetworkErrorO13errorResponseyAcA0eG0V_AA14HTTPStatusCodeOtcACmF",
-            "mangledName": "$s18BlueStackUtilities12NetworkErrorO13errorResponseyAcA0eG0V_AA14HTTPStatusCodeOtcACmF",
-            "moduleName": "BlueStackUtilities"
-          },
-          {
-            "kind": "Var",
-            "name": "description",
-            "printedName": "description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:18BlueStackUtilities12NetworkErrorO11descriptionSSvp",
-            "mangledName": "$s18BlueStackUtilities12NetworkErrorO11descriptionSSvp",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities12NetworkErrorO11descriptionSSvg",
-                "mangledName": "$s18BlueStackUtilities12NetworkErrorO11descriptionSSvg",
-                "moduleName": "BlueStackUtilities",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:18BlueStackUtilities12NetworkErrorO",
-        "mangledName": "$s18BlueStackUtilities12NetworkErrorO",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "os",
-        "printedName": "os",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "Logger",
-        "printedName": "Logger",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "verbose",
-            "printedName": "verbose(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "mangledName": "$s18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "debug",
-            "printedName": "debug(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "mangledName": "$s18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "info",
-            "printedName": "info(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "mangledName": "$s18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "warn",
-            "printedName": "warn(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "mangledName": "$s18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "error",
-            "printedName": "error(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutF",
-            "mangledName": "$s18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setEventDebug",
-            "printedName": "setEventDebug(enabled:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueStackUtilities@objc(cs)Logger(cm)setEventDebugEnabled:",
-            "mangledName": "$s18BlueStackUtilities6LoggerC13setEventDebug7enabledySb_tFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "objc_name": "setEventDebugEnabled:",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setDebugMode",
-            "printedName": "setDebugMode(enabled:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueStackUtilities@objc(cs)Logger(cm)setDebugModeEnabled:",
-            "mangledName": "$s18BlueStackUtilities6LoggerC12setDebugMode7enabledySb_tFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "objc_name": "setDebugModeEnabled:",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Logger",
-                "printedName": "BlueStackUtilities.Logger",
-                "usr": "c:@M@BlueStackUtilities@objc(cs)Logger"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@BlueStackUtilities@objc(cs)Logger(im)init",
-            "mangledName": "$s18BlueStackUtilities6LoggerCACycfc",
-            "moduleName": "BlueStackUtilities",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "framework",
-            "printedName": "framework",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cpy)framework",
-            "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvpZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)framework",
-                "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvgZ",
-                "moduleName": "BlueStackUtilities",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC",
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)setFramework:",
-                "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvsZ",
-                "moduleName": "BlueStackUtilities",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC",
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities6LoggerC9frameworkSSvMZ",
-                "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvMZ",
-                "moduleName": "BlueStackUtilities",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "versionString",
-            "printedName": "versionString",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cpy)versionString",
-            "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvpZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)versionString",
-                "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvgZ",
-                "moduleName": "BlueStackUtilities",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC",
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)setVersionString:",
-                "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvsZ",
-                "moduleName": "BlueStackUtilities",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC",
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities6LoggerC13versionStringSSvMZ",
-                "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvMZ",
-                "moduleName": "BlueStackUtilities",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "isDebugModeEnabled",
-            "printedName": "isDebugModeEnabled()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)isDebugModeEnabled",
-            "mangledName": "$s18BlueStackUtilities6LoggerC18isDebugModeEnabledSbyFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "isEventDebugEnabled",
-            "printedName": "isEventDebugEnabled()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)isEventDebugEnabled",
-            "mangledName": "$s18BlueStackUtilities6LoggerC19isEventDebugEnabledSbyFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "verbose",
-            "printedName": "verbose(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "mangledName": "$s18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "debug",
-            "printedName": "debug(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "mangledName": "$s18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "info",
-            "printedName": "info(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "mangledName": "$s18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "warn",
-            "printedName": "warn(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "mangledName": "$s18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "error",
-            "printedName": "error(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> any BlueStackUtilities.LogMessage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogMessage",
-                    "printedName": "any BlueStackUtilities.LogMessage",
-                    "usr": "s:18BlueStackUtilities10LogMessageP"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutFZ",
-            "mangledName": "$s18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "error",
-            "printedName": "error(_:fileName:functionName:line:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> Swift.String",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "hasDefaultArg": true,
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineySSyXK_S2SSutFZ",
-            "mangledName": "$s18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineySSyXK_S2SSutFZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@BlueStackUtilities@objc(cs)Logger",
-        "mangledName": "$s18BlueStackUtilities6LoggerC",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "LoggerType",
-            "printedName": "LoggerType",
-            "usr": "s:18BlueStackUtilities10LoggerTypeP",
-            "mangledName": "$s18BlueStackUtilities10LoggerTypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "HTTPStatusCode",
         "printedName": "HTTPStatusCode",
         "children": [
@@ -1987,6 +309,16 @@
             "usr": "s:SQ",
             "mangledName": "$sSQ"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -2686,16 +1018,6 @@
             "usr": "s:18BlueStackUtilities16HTTPResponseTypeP",
             "mangledName": "$s18BlueStackUtilities16HTTPResponseTypeP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -4392,74 +2714,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ErrorResponse",
-        "printedName": "ErrorResponse",
-        "declKind": "Struct",
-        "usr": "s:18BlueStackUtilities13ErrorResponseV",
-        "mangledName": "$s18BlueStackUtilities13ErrorResponseV",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "LogMessage",
         "printedName": "LogMessage",
@@ -4594,288 +2848,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "OperationDispatcher",
-        "printedName": "OperationDispatcher",
-        "children": [
-          {
-            "kind": "TypeDecl",
-            "name": "Task",
-            "printedName": "Task",
-            "children": [
-              {
-                "kind": "Function",
-                "name": "run",
-                "printedName": "run()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC4TaskP3runyyF",
-                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC4TaskP3runyyF",
-                "moduleName": "BlueStackUtilities",
-                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Task>",
-                "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Task>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "funcSelfKind": "NonMutating"
-              }
-            ],
-            "declKind": "Protocol",
-            "usr": "s:18BlueStackUtilities19OperationDispatcherC4TaskP",
-            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC4TaskP",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              }
-            ]
-          },
-          {
-            "kind": "TypeDecl",
-            "name": "Job",
-            "printedName": "Job",
-            "children": [
-              {
-                "kind": "Var",
-                "name": "isActive",
-                "printedName": "isActive",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvp",
-                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvp",
-                "moduleName": "BlueStackUtilities",
-                "protocolReq": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvg",
-                    "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvg",
-                    "moduleName": "BlueStackUtilities",
-                    "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Job>",
-                    "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Job>",
-                    "protocolReq": true,
-                    "reqNewWitnessTableEntry": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Function",
-                "name": "stop",
-                "printedName": "stop()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP4stopyyF",
-                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP4stopyyF",
-                "moduleName": "BlueStackUtilities",
-                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Job>",
-                "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Job>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "funcSelfKind": "NonMutating"
-              },
-              {
-                "kind": "Function",
-                "name": "start",
-                "printedName": "start()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP5startyyF",
-                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP5startyyF",
-                "moduleName": "BlueStackUtilities",
-                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Job>",
-                "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Job>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "funcSelfKind": "NonMutating"
-              }
-            ],
-            "declKind": "Protocol",
-            "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP",
-            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "default",
-            "printedName": "default",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OperationDispatcher",
-                "printedName": "BlueStackUtilities.OperationDispatcher",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:18BlueStackUtilities19OperationDispatcherC7defaultACvpZ",
-            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC7defaultACvpZ",
-            "moduleName": "BlueStackUtilities",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OperationDispatcher",
-                    "printedName": "BlueStackUtilities.OperationDispatcher",
-                    "usr": "s:18BlueStackUtilities19OperationDispatcherC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC7defaultACvgZ",
-                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC7defaultACvgZ",
-                "moduleName": "BlueStackUtilities",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "dispatchOnWorkerThread",
-            "printedName": "dispatchOnWorkerThread(after:task:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Job",
-                "printedName": "any BlueStackUtilities.OperationDispatcher.Job",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Task",
-                "printedName": "any BlueStackUtilities.OperationDispatcher.Task",
-                "usr": "s:18BlueStackUtilities19OperationDispatcherC4TaskP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities19OperationDispatcherC22dispatchOnWorkerThread5after4taskAC3Job_pSd_AC4Task_ptF",
-            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC22dispatchOnWorkerThread5after4taskAC3Job_pSd_AC4Task_ptF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:18BlueStackUtilities19OperationDispatcherC",
-        "mangledName": "$s18BlueStackUtilities19OperationDispatcherC",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "AccessControl",
-          "ObjCMembers"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -4883,137 +2855,6 @@
         "moduleName": "BlueStackUtilities",
         "declAttributes": [
           "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
-        "declKind": "Import",
-        "moduleName": "BlueStackUtilities"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "UserAgentUtils",
-        "printedName": "UserAgentUtils",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UserAgentUtils",
-                "printedName": "BlueStackUtilities.UserAgentUtils",
-                "usr": "s:18BlueStackUtilities14UserAgentUtilsC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:18BlueStackUtilities14UserAgentUtilsCACycfc",
-            "mangledName": "$s18BlueStackUtilities14UserAgentUtilsCACycfc",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "getUserAgent",
-            "printedName": "getUserAgent(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<Swift.String, any Swift.Error>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<Swift.String, any Swift.Error>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "any Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities14UserAgentUtilsC03getdE010completionyys6ResultOySSs5Error_pGc_tF",
-            "mangledName": "$s18BlueStackUtilities14UserAgentUtilsC03getdE010completionyys6ResultOySSs5Error_pGc_tF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getUserAgentFromSystemInfo",
-            "printedName": "getUserAgentFromSystemInfo()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18BlueStackUtilities14UserAgentUtilsC03getdE14FromSystemInfoSSyF",
-            "mangledName": "$s18BlueStackUtilities14UserAgentUtilsC03getdE14FromSystemInfoSSyF",
-            "moduleName": "BlueStackUtilities",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:18BlueStackUtilities14UserAgentUtilsC",
-        "mangledName": "$s18BlueStackUtilities14UserAgentUtilsC",
-        "moduleName": "BlueStackUtilities",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -5534,11 +3375,11 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "Strings",
-        "printedName": "Strings",
-        "declKind": "Enum",
-        "usr": "s:18BlueStackUtilities7StringsO",
-        "mangledName": "$s18BlueStackUtilities7StringsO",
+        "name": "ErrorResponse",
+        "printedName": "ErrorResponse",
+        "declKind": "Struct",
+        "usr": "s:18BlueStackUtilities13ErrorResponseV",
+        "mangledName": "$s18BlueStackUtilities13ErrorResponseV",
         "moduleName": "BlueStackUtilities",
         "declAttributes": [
           "AccessControl"
@@ -5973,6 +3814,2165 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Logger",
+        "printedName": "Logger",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "verbose",
+            "printedName": "verbose(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "mangledName": "$s18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debug",
+            "printedName": "debug(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "mangledName": "$s18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "info",
+            "printedName": "info(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "mangledName": "$s18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "warn",
+            "printedName": "warn(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "mangledName": "$s18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "error",
+            "printedName": "error(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutF",
+            "mangledName": "$s18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setEventDebug",
+            "printedName": "setEventDebug(enabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackUtilities@objc(cs)Logger(cm)setEventDebugEnabled:",
+            "mangledName": "$s18BlueStackUtilities6LoggerC13setEventDebug7enabledySb_tFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "objc_name": "setEventDebugEnabled:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setDebugMode",
+            "printedName": "setDebugMode(enabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackUtilities@objc(cs)Logger(cm)setDebugModeEnabled:",
+            "mangledName": "$s18BlueStackUtilities6LoggerC12setDebugMode7enabledySb_tFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "objc_name": "setDebugModeEnabled:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "BlueStackUtilities.Logger",
+                "usr": "c:@M@BlueStackUtilities@objc(cs)Logger"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueStackUtilities@objc(cs)Logger(im)init",
+            "mangledName": "$s18BlueStackUtilities6LoggerCACycfc",
+            "moduleName": "BlueStackUtilities",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "framework",
+            "printedName": "framework",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cpy)framework",
+            "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvpZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)framework",
+                "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvgZ",
+                "moduleName": "BlueStackUtilities",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC",
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)setFramework:",
+                "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvsZ",
+                "moduleName": "BlueStackUtilities",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC",
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities6LoggerC9frameworkSSvMZ",
+                "mangledName": "$s18BlueStackUtilities6LoggerC9frameworkSSvMZ",
+                "moduleName": "BlueStackUtilities",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "versionString",
+            "printedName": "versionString",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cpy)versionString",
+            "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvpZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)versionString",
+                "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvgZ",
+                "moduleName": "BlueStackUtilities",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC",
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)setVersionString:",
+                "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvsZ",
+                "moduleName": "BlueStackUtilities",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC",
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities6LoggerC13versionStringSSvMZ",
+                "mangledName": "$s18BlueStackUtilities6LoggerC13versionStringSSvMZ",
+                "moduleName": "BlueStackUtilities",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "isDebugModeEnabled",
+            "printedName": "isDebugModeEnabled()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)isDebugModeEnabled",
+            "mangledName": "$s18BlueStackUtilities6LoggerC18isDebugModeEnabledSbyFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isEventDebugEnabled",
+            "printedName": "isEventDebugEnabled()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@BlueStackUtilities@objc(cs)Logger(cm)isEventDebugEnabled",
+            "mangledName": "$s18BlueStackUtilities6LoggerC19isEventDebugEnabledSbyFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "verbose",
+            "printedName": "verbose(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "mangledName": "$s18BlueStackUtilities6LoggerC7verbose_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debug",
+            "printedName": "debug(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "mangledName": "$s18BlueStackUtilities6LoggerC5debug_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "info",
+            "printedName": "info(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "mangledName": "$s18BlueStackUtilities6LoggerC4info_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "warn",
+            "printedName": "warn(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "mangledName": "$s18BlueStackUtilities6LoggerC4warn_8fileName08functionG04lineyAA10LogMessage_pyXK_SSSgAISutFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "error",
+            "printedName": "error(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any BlueStackUtilities.LogMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogMessage",
+                    "printedName": "any BlueStackUtilities.LogMessage",
+                    "usr": "s:18BlueStackUtilities10LogMessageP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutFZ",
+            "mangledName": "$s18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineyAA10LogMessage_pyXK_S2SSutFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "error",
+            "printedName": "error(_:fileName:functionName:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> Swift.String",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineySSyXK_S2SSutFZ",
+            "mangledName": "$s18BlueStackUtilities6LoggerC5error_8fileName08functionG04lineySSyXK_S2SSutFZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@BlueStackUtilities@objc(cs)Logger",
+        "mangledName": "$s18BlueStackUtilities6LoggerC",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LoggerType",
+            "printedName": "LoggerType",
+            "usr": "s:18BlueStackUtilities10LoggerTypeP",
+            "mangledName": "$s18BlueStackUtilities10LoggerTypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UserAgentUtils",
+        "printedName": "UserAgentUtils",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserAgentUtils",
+                "printedName": "BlueStackUtilities.UserAgentUtils",
+                "usr": "s:18BlueStackUtilities14UserAgentUtilsC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18BlueStackUtilities14UserAgentUtilsCACycfc",
+            "mangledName": "$s18BlueStackUtilities14UserAgentUtilsCACycfc",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getUserAgent",
+            "printedName": "getUserAgent(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<Swift.String, any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<Swift.String, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities14UserAgentUtilsC03getdE010completionyys6ResultOySSs5Error_pGc_tF",
+            "mangledName": "$s18BlueStackUtilities14UserAgentUtilsC03getdE010completionyys6ResultOySSs5Error_pGc_tF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUserAgentFromSystemInfo",
+            "printedName": "getUserAgentFromSystemInfo()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities14UserAgentUtilsC03getdE14FromSystemInfoSSyF",
+            "mangledName": "$s18BlueStackUtilities14UserAgentUtilsC03getdE14FromSystemInfoSSyF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18BlueStackUtilities14UserAgentUtilsC",
+        "mangledName": "$s18BlueStackUtilities14UserAgentUtilsC",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OperationDispatcher",
+        "printedName": "OperationDispatcher",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Task",
+            "printedName": "Task",
+            "children": [
+              {
+                "kind": "Function",
+                "name": "run",
+                "printedName": "run()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC4TaskP3runyyF",
+                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC4TaskP3runyyF",
+                "moduleName": "BlueStackUtilities",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Task>",
+                "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Task>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Protocol",
+            "usr": "s:18BlueStackUtilities19OperationDispatcherC4TaskP",
+            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC4TaskP",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Job",
+            "printedName": "Job",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "isActive",
+                "printedName": "isActive",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvp",
+                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvp",
+                "moduleName": "BlueStackUtilities",
+                "protocolReq": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvg",
+                    "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP8isActiveSbvg",
+                    "moduleName": "BlueStackUtilities",
+                    "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Job>",
+                    "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Job>",
+                    "protocolReq": true,
+                    "reqNewWitnessTableEntry": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "stop",
+                "printedName": "stop()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP4stopyyF",
+                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP4stopyyF",
+                "moduleName": "BlueStackUtilities",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Job>",
+                "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Job>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "start",
+                "printedName": "start()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP5startyyF",
+                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP5startyyF",
+                "moduleName": "BlueStackUtilities",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackUtilities.OperationDispatcher.Job>",
+                "sugared_genericSig": "<Self where Self : BlueStackUtilities.OperationDispatcher.Job>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Protocol",
+            "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP",
+            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC3JobP",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OperationDispatcher",
+                "printedName": "BlueStackUtilities.OperationDispatcher",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18BlueStackUtilities19OperationDispatcherC7defaultACvpZ",
+            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC7defaultACvpZ",
+            "moduleName": "BlueStackUtilities",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationDispatcher",
+                    "printedName": "BlueStackUtilities.OperationDispatcher",
+                    "usr": "s:18BlueStackUtilities19OperationDispatcherC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC7defaultACvgZ",
+                "mangledName": "$s18BlueStackUtilities19OperationDispatcherC7defaultACvgZ",
+                "moduleName": "BlueStackUtilities",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "dispatchOnWorkerThread",
+            "printedName": "dispatchOnWorkerThread(after:task:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Job",
+                "printedName": "any BlueStackUtilities.OperationDispatcher.Job",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC3JobP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Task",
+                "printedName": "any BlueStackUtilities.OperationDispatcher.Task",
+                "usr": "s:18BlueStackUtilities19OperationDispatcherC4TaskP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18BlueStackUtilities19OperationDispatcherC22dispatchOnWorkerThread5after4taskAC3Job_pSd_AC4Task_ptF",
+            "mangledName": "$s18BlueStackUtilities19OperationDispatcherC22dispatchOnWorkerThread5after4taskAC3Job_pSd_AC4Task_ptF",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18BlueStackUtilities19OperationDispatcherC",
+        "mangledName": "$s18BlueStackUtilities19OperationDispatcherC",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Strings",
+        "printedName": "Strings",
+        "declKind": "Enum",
+        "usr": "s:18BlueStackUtilities7StringsO",
+        "mangledName": "$s18BlueStackUtilities7StringsO",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkError",
+        "printedName": "NetworkError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "networkError",
+            "printedName": "networkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Foundation.NSError) -> BlueStackUtilities.NetworkError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.NSError) -> BlueStackUtilities.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSError",
+                        "printedName": "Foundation.NSError",
+                        "usr": "c:objc(cs)NSError"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackUtilities.NetworkError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18BlueStackUtilities12NetworkErrorO07networkE0yACSo7NSErrorCcACmF",
+            "mangledName": "$s18BlueStackUtilities12NetworkErrorO07networkE0yACSo7NSErrorCcACmF",
+            "moduleName": "BlueStackUtilities"
+          },
+          {
+            "kind": "Var",
+            "name": "unexpectedResponse",
+            "printedName": "unexpectedResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Foundation.URLResponse?) -> BlueStackUtilities.NetworkError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.URLResponse?) -> BlueStackUtilities.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.URLResponse?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLResponse",
+                            "printedName": "Foundation.URLResponse",
+                            "usr": "c:objc(cs)NSURLResponse"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackUtilities.NetworkError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18BlueStackUtilities12NetworkErrorO18unexpectedResponseyACSo13NSURLResponseCSgcACmF",
+            "mangledName": "$s18BlueStackUtilities12NetworkErrorO18unexpectedResponseyACSo13NSURLResponseCSgcACmF",
+            "moduleName": "BlueStackUtilities"
+          },
+          {
+            "kind": "Var",
+            "name": "decoding",
+            "printedName": "decoding",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Foundation.NSError) -> BlueStackUtilities.NetworkError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.NSError) -> BlueStackUtilities.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSError",
+                        "printedName": "Foundation.NSError",
+                        "usr": "c:objc(cs)NSError"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackUtilities.NetworkError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18BlueStackUtilities12NetworkErrorO8decodingyACSo7NSErrorCcACmF",
+            "mangledName": "$s18BlueStackUtilities12NetworkErrorO8decodingyACSo7NSErrorCcACmF",
+            "moduleName": "BlueStackUtilities"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToCreateRequest",
+            "printedName": "unableToCreateRequest",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (Swift.String) -> BlueStackUtilities.NetworkError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> BlueStackUtilities.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(path: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackUtilities.NetworkError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18BlueStackUtilities12NetworkErrorO21unableToCreateRequestyACSS_tcACmF",
+            "mangledName": "$s18BlueStackUtilities12NetworkErrorO21unableToCreateRequestyACSS_tcACmF",
+            "moduleName": "BlueStackUtilities"
+          },
+          {
+            "kind": "Var",
+            "name": "errorResponse",
+            "printedName": "errorResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackUtilities.NetworkError.Type) -> (BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode) -> BlueStackUtilities.NetworkError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode) -> BlueStackUtilities.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ErrorResponse",
+                            "printedName": "BlueStackUtilities.ErrorResponse",
+                            "usr": "s:18BlueStackUtilities13ErrorResponseV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HTTPStatusCode",
+                            "printedName": "BlueStackUtilities.HTTPStatusCode",
+                            "usr": "s:18BlueStackUtilities14HTTPStatusCodeO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackUtilities.NetworkError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "BlueStackUtilities.NetworkError",
+                        "usr": "s:18BlueStackUtilities12NetworkErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18BlueStackUtilities12NetworkErrorO13errorResponseyAcA0eG0V_AA14HTTPStatusCodeOtcACmF",
+            "mangledName": "$s18BlueStackUtilities12NetworkErrorO13errorResponseyAcA0eG0V_AA14HTTPStatusCodeOtcACmF",
+            "moduleName": "BlueStackUtilities"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18BlueStackUtilities12NetworkErrorO11descriptionSSvp",
+            "mangledName": "$s18BlueStackUtilities12NetworkErrorO11descriptionSSvp",
+            "moduleName": "BlueStackUtilities",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18BlueStackUtilities12NetworkErrorO11descriptionSSvg",
+                "mangledName": "$s18BlueStackUtilities12NetworkErrorO11descriptionSSvg",
+                "moduleName": "BlueStackUtilities",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:18BlueStackUtilities12NetworkErrorO",
+        "mangledName": "$s18BlueStackUtilities12NetworkErrorO",
+        "moduleName": "BlueStackUtilities",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
           }
         ]
       },
@@ -6660,6 +6660,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Encodable",
             "printedName": "Encodable",
             "usr": "s:SE",
@@ -6713,13 +6720,6 @@
             "printedName": "CustomReflectable",
             "usr": "s:s17CustomReflectableP",
             "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -8588,48 +8588,6 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 220,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 274,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 2676,
-      "length": 14,
-      "value": "\"BlueStackSDK\""
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 2743,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2835,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 7841,
-      "length": 7,
-      "value": "\"error\""
-    },
-    {
       "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/FoundationExtensions\/UserDefaults+Extensions.swift",
       "kind": "StringLiteral",
       "offset": 190,
@@ -8686,62 +8644,6 @@
       "value": "\"Last-Modified\""
     },
     {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/ErrorResponse.swift",
-      "kind": "IntegerLiteral",
-      "offset": 259,
-      "length": 3,
-      "value": "101"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/ErrorResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 273,
-      "length": 23,
-      "value": "\"Unknown error occured\""
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/FoundationExtensions\/Codable+Extensions.swift",
-      "kind": "BooleanLiteral",
-      "offset": 443,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/FoundationExtensions\/Codable+Extensions.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1025,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
-      "kind": "StringLiteral",
-      "offset": 495,
-      "length": 13,
-      "value": "\"WorkerQueue\""
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1527,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1569,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1612,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 223,
@@ -8775,6 +8677,104 @@
       "offset": 299,
       "length": 1,
       "value": "4"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/ErrorResponse.swift",
+      "kind": "IntegerLiteral",
+      "offset": 259,
+      "length": 3,
+      "value": "101"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Network\/ErrorResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 273,
+      "length": 23,
+      "value": "\"Unknown error occured\""
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/FoundationExtensions\/Codable+Extensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 443,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/FoundationExtensions\/Codable+Extensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1025,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
+      "kind": "BooleanLiteral",
+      "offset": 220,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
+      "kind": "BooleanLiteral",
+      "offset": 274,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 2676,
+      "length": 14,
+      "value": "\"BlueStackSDK\""
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 2743,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2835,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Logger\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 7841,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
+      "kind": "StringLiteral",
+      "offset": 495,
+      "length": 13,
+      "value": "\"WorkerQueue\""
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1527,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1569,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackUtilities\/Concurrency\/OperationDispatcher.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1612,
+      "length": 5,
+      "value": "false"
     }
   ]
 }
