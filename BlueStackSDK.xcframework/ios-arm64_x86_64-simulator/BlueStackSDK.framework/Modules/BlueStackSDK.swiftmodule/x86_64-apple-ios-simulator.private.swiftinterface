@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target x86_64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AdSupport
 import AppTrackingTransparency
 @_exported import BlueStackSDK
@@ -23,6 +23,53 @@ import _SwiftConcurrencyShims
 @objc public protocol InterstitialAdDelegate : ObjectiveC.NSObjectProtocol {
   @objc(didLoadInterstitialAd:) func onAdLoaded(_ ad: BlueStackSDK.InterstitialAd)
   @objc(interstitialAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.InterstitialAd, _ error: any Swift.Error)
+}
+@objc public enum AdapterState : Swift.Int {
+  case ready
+  case notReady
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class AdapterStatus : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String
+  @objc final public let state: BlueStackSDK.AdapterState
+  @objc final public let statusDescription: Swift.String?
+  @objc deinit
+}
+@objc public enum AdSize : Swift.Int {
+  case banner
+  case largeBanner
+  case mediumRectangle
+  case fullBanner
+  case leaderboard
+  case dynamicBanner
+  case dynamicLeaderboardBanner
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol BiddingBannerAdDelegate {
+  @objc(onLoadBiddingBannerAd:) func onLoadAd(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
+  @objc(onFailToLoadBiddingBannerAd:error:) func onFailToLoad(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd, _ error: any Swift.Error)
+  @objc(onClickBiddingBannerAd:) @_Concurrency.MainActor func onClick(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
+}
+@objc public protocol BiddingInterstitialAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
+  @objc var delegate: (any BlueStackSDK.BiddingInterstitialAdDelegate)? { get set }
+  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
+}
+@objc public protocol BiddingInterstitialAdDelegate {
+  @objc(onLoadBiddingInterstitialAd:) func onLoadAd(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
+  @objc(onFailToLoadBiddingInterstitialAd:error:) func onFailToLoad(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd, _ error: any Swift.Error)
+  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
+}
+@objc public protocol BiddingRewardedAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
+  @objc var delegate: (any BlueStackSDK.BiddingRewardedAdDelegate)? { get set }
+  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
 }
 @objc public protocol BiddingRewardedAdDelegate {
   @objc(onLoadBiddingRewardedAd:) func onLoadAd(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
@@ -80,53 +127,6 @@ public enum BiddingAdType {
   @objc var delegate: (any BlueStackSDK.BiddingBannerAdDelegate)? { get set }
   @objc init(frame: CoreFoundation.CGRect)
   @objc func getBannerView() -> UIKit.UIView?
-}
-@objc public protocol BiddingBannerAdDelegate {
-  @objc(onLoadBiddingBannerAd:) func onLoadAd(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
-  @objc(onFailToLoadBiddingBannerAd:error:) func onFailToLoad(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd, _ error: any Swift.Error)
-  @objc(onClickBiddingBannerAd:) @_Concurrency.MainActor func onClick(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
-}
-@objc public protocol BiddingInterstitialAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
-  @objc var delegate: (any BlueStackSDK.BiddingInterstitialAdDelegate)? { get set }
-  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
-}
-@objc public protocol BiddingInterstitialAdDelegate {
-  @objc(onLoadBiddingInterstitialAd:) func onLoadAd(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
-  @objc(onFailToLoadBiddingInterstitialAd:error:) func onFailToLoad(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd, _ error: any Swift.Error)
-  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
-}
-@objc public protocol BiddingRewardedAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
-  @objc var delegate: (any BlueStackSDK.BiddingRewardedAdDelegate)? { get set }
-  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
-}
-@objc public enum AdapterState : Swift.Int {
-  case ready
-  case notReady
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers final public class AdapterStatus : ObjectiveC.NSObject {
-  @objc final public let name: Swift.String
-  @objc final public let state: BlueStackSDK.AdapterState
-  @objc final public let statusDescription: Swift.String?
-  @objc deinit
-}
-@objc public enum AdSize : Swift.Int {
-  case banner
-  case largeBanner
-  case mediumRectangle
-  case fullBanner
-  case leaderboard
-  case dynamicBanner
-  case dynamicLeaderboardBanner
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(BLSBannerView) @_Concurrency.MainActor @preconcurrency public class BannerView : UIKit.UIView {
   @objc deinit
@@ -392,14 +392,14 @@ extension BlueStackSDK.DispatcherConfiguration {
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
-extension BlueStackSDK.BiddingAdType : Swift.Equatable {}
-extension BlueStackSDK.BiddingAdType : Swift.Hashable {}
 extension BlueStackSDK.AdapterState : Swift.Equatable {}
 extension BlueStackSDK.AdapterState : Swift.Hashable {}
 extension BlueStackSDK.AdapterState : Swift.RawRepresentable {}
 extension BlueStackSDK.AdSize : Swift.Equatable {}
 extension BlueStackSDK.AdSize : Swift.Hashable {}
 extension BlueStackSDK.AdSize : Swift.RawRepresentable {}
+extension BlueStackSDK.BiddingAdType : Swift.Equatable {}
+extension BlueStackSDK.BiddingAdType : Swift.Hashable {}
 extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.Equatable {}
 extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.Hashable {}
 extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.RawRepresentable {}
