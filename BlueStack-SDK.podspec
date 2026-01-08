@@ -39,7 +39,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
   spec.subspec 'Core' do |mng|
     mng.vendored_frameworks = 'BlueStackSDK.xcframework'
-    mng.vendored_frameworks = 'BlueStackUtilities.xcframework'
+    mng.dependency	'BlueStack-SDK/Utilities'
   end
 
   spec.subspec 'MAdvertiseLocation' do |mlo|
@@ -52,5 +52,9 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
     amazon.vendored_frameworks = 'BluestackAmazonPublisherServicesAdapter.xcframework'
     amazon.dependency               'BlueStack-SDK/Core'
     amazon.dependency               'AmazonPublisherServicesSDK',  '4.5.5'
+  end
+  
+  spec.subspec 'Utilities' do |utilities|
+    utilities.vendored_frameworks = 'BlueStackUtilities.xcframework'
   end
 end
