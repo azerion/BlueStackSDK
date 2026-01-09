@@ -1426,7 +1426,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(py)adSize",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(py)adSize",
             "mangledName": "$s12BlueStackSDK10BannerViewC6adSizeAA02AdG0Ovp",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
@@ -1435,8 +1435,8 @@
               "Custom",
               "HasStorage",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -1453,7 +1453,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)adSize",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)adSize",
                 "mangledName": "$s12BlueStackSDK10BannerViewC6adSizeAA02AdG0Ovg",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1480,7 +1480,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)setAdSize:",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)setAdSize:",
                 "mangledName": "$s12BlueStackSDK10BannerViewC6adSizeAA02AdG0Ovs",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1530,7 +1530,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(py)placementID",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(py)placementID",
             "mangledName": "$s12BlueStackSDK10BannerViewC11placementIDSSSgvp",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
@@ -1539,8 +1539,8 @@
               "Custom",
               "HasStorage",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -1565,7 +1565,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)placementID",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)placementID",
                 "mangledName": "$s12BlueStackSDK10BannerViewC11placementIDSSSgvg",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1600,7 +1600,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)setPlacementID:",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)setPlacementID:",
                 "mangledName": "$s12BlueStackSDK10BannerViewC11placementIDSSSgvs",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1650,7 +1650,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(py)viewController",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(py)viewController",
             "mangledName": "$s12BlueStackSDK10BannerViewC14viewControllerSo06UIViewG0CSgvp",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
@@ -1659,8 +1659,8 @@
               "Custom",
               "HasStorage",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -1685,7 +1685,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)viewController",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)viewController",
                 "mangledName": "$s12BlueStackSDK10BannerViewC14viewControllerSo06UIViewG0CSgvg",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1720,7 +1720,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)setViewController:",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)setViewController:",
                 "mangledName": "$s12BlueStackSDK10BannerViewC14viewControllerSo06UIViewG0CSgvs",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1761,7 +1761,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(py)delegate",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(py)delegate",
             "mangledName": "$s12BlueStackSDK10BannerViewC8delegateAA0dE8Delegate_pSgvp",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
@@ -1799,7 +1799,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)delegate",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)delegate",
                 "mangledName": "$s12BlueStackSDK10BannerViewC8delegateAA0dE8Delegate_pSgvg",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1834,7 +1834,7 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)setDelegate:",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)setDelegate:",
                 "mangledName": "$s12BlueStackSDK10BannerViewC8delegateAA0dE8Delegate_pSgvs",
                 "moduleName": "BlueStackSDK",
                 "implicit": true,
@@ -1872,7 +1872,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               },
               {
                 "kind": "TypeNominal",
@@ -1882,7 +1882,7 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)initWithAdSize:",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)initWithAdSize:",
             "mangledName": "$s12BlueStackSDK10BannerViewC6adSizeAcA02AdG0O_tcfc",
             "moduleName": "BlueStackSDK",
             "objc_name": "initWithAdSize:",
@@ -1909,7 +1909,7 @@
                     "kind": "TypeNominal",
                     "name": "BannerView",
                     "printedName": "BlueStackSDK.BannerView",
-                    "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                    "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
                   }
                 ],
                 "usr": "s:Sq"
@@ -1922,7 +1922,7 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)initWithCoder:",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)initWithCoder:",
             "mangledName": "$s12BlueStackSDK10BannerViewC5coderACSgSo7NSCoderC_tcfc",
             "moduleName": "BlueStackSDK",
             "overriding": true,
@@ -1946,7 +1946,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               },
               {
                 "kind": "TypeNominal",
@@ -1956,7 +1956,7 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)initWithFrame:",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)initWithFrame:",
             "mangledName": "$s12BlueStackSDK10BannerViewC5frameACSo6CGRectV_tcfc",
             "moduleName": "BlueStackSDK",
             "overriding": true,
@@ -1997,15 +1997,16 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)loadWithRequestOptions:",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)loadWithRequestOptions:",
             "mangledName": "$s12BlueStackSDK10BannerViewC4load14requestOptionsyAA07RequestH0CSg_tF",
             "moduleName": "BlueStackSDK",
+            "objc_name": "loadWithRequestOptions:",
             "declAttributes": [
               "Preconcurrency",
               "Custom",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2021,15 +2022,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)load",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)load",
             "mangledName": "$s12BlueStackSDK10BannerViewC4loadyyF",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
               "Preconcurrency",
               "Custom",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2045,15 +2046,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)startAutoRefresh",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)startAutoRefresh",
             "mangledName": "$s12BlueStackSDK10BannerViewC16startAutoRefreshyyF",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
               "Preconcurrency",
               "Custom",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2069,28 +2070,28 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BlueStackSDK@objc(cs)BannerView(im)stopAutoRefresh",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView(im)stopAutoRefresh",
             "mangledName": "$s12BlueStackSDK10BannerViewC15stopAutoRefreshyyF",
             "moduleName": "BlueStackSDK",
             "declAttributes": [
               "Preconcurrency",
               "Custom",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@BlueStackSDK@objc(cs)BannerView",
+        "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView",
         "mangledName": "$s12BlueStackSDK10BannerViewC",
         "moduleName": "BlueStackSDK",
+        "objc_name": "BLSBannerView",
         "declAttributes": [
           "Preconcurrency",
           "Custom",
           "AccessControl",
-          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)UIView",
@@ -3130,6 +3131,23 @@
       },
       {
         "kind": "Import",
+        "name": "BlueStackUtilities",
+        "printedName": "BlueStackUtilities",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "BlueStackSDK_Private",
         "printedName": "BlueStackSDK_Private",
         "declKind": "Import",
@@ -3315,6 +3333,2820 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingAd",
+        "printedName": "BiddingAd",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "loadAd",
+            "printedName": "loadAd(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BidResponse",
+                "printedName": "BlueStackSDK.BidResponse",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBidResponse"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingAd(im)loadAd:",
+            "mangledName": "$s12BlueStackSDK9BiddingAdP04loadE0yyAA11BidResponseCF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingAd>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingAd>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingAd",
+        "mangledName": "$s12BlueStackSDK9BiddingAdP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingAdType",
+        "printedName": "BiddingAdType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "banner",
+            "printedName": "banner",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackSDK.BiddingAdType.Type) -> BlueStackSDK.BiddingAdType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingAdType",
+                    "printedName": "BlueStackSDK.BiddingAdType",
+                    "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackSDK.BiddingAdType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingAdType",
+                        "printedName": "BlueStackSDK.BiddingAdType",
+                        "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12BlueStackSDK13BiddingAdTypeO6banneryA2CmF",
+            "mangledName": "$s12BlueStackSDK13BiddingAdTypeO6banneryA2CmF",
+            "moduleName": "BlueStackSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "interstitial",
+            "printedName": "interstitial",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackSDK.BiddingAdType.Type) -> BlueStackSDK.BiddingAdType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingAdType",
+                    "printedName": "BlueStackSDK.BiddingAdType",
+                    "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackSDK.BiddingAdType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingAdType",
+                        "printedName": "BlueStackSDK.BiddingAdType",
+                        "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12BlueStackSDK13BiddingAdTypeO12interstitialyA2CmF",
+            "mangledName": "$s12BlueStackSDK13BiddingAdTypeO12interstitialyA2CmF",
+            "moduleName": "BlueStackSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "rewarded",
+            "printedName": "rewarded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueStackSDK.BiddingAdType.Type) -> BlueStackSDK.BiddingAdType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingAdType",
+                    "printedName": "BlueStackSDK.BiddingAdType",
+                    "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueStackSDK.BiddingAdType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingAdType",
+                        "printedName": "BlueStackSDK.BiddingAdType",
+                        "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12BlueStackSDK13BiddingAdTypeO8rewardedyA2CmF",
+            "mangledName": "$s12BlueStackSDK13BiddingAdTypeO8rewardedyA2CmF",
+            "moduleName": "BlueStackSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingAdType",
+                "printedName": "BlueStackSDK.BiddingAdType",
+                "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingAdType",
+                "printedName": "BlueStackSDK.BiddingAdType",
+                "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12BlueStackSDK13BiddingAdTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12BlueStackSDK13BiddingAdTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "BlueStackSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12BlueStackSDK13BiddingAdTypeO9hashValueSivp",
+            "mangledName": "$s12BlueStackSDK13BiddingAdTypeO9hashValueSivp",
+            "moduleName": "BlueStackSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK13BiddingAdTypeO9hashValueSivg",
+                "mangledName": "$s12BlueStackSDK13BiddingAdTypeO9hashValueSivg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12BlueStackSDK13BiddingAdTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12BlueStackSDK13BiddingAdTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "BlueStackSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12BlueStackSDK13BiddingAdTypeO",
+        "mangledName": "$s12BlueStackSDK13BiddingAdTypeO",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingBannerAd",
+        "printedName": "BiddingBannerAd",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BlueStackSDK.BiddingBannerAdDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingBannerAdDelegate",
+                    "printedName": "any BlueStackSDK.BiddingBannerAdDelegate",
+                    "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAdDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd(py)delegate",
+            "mangledName": "$s12BlueStackSDK15BiddingBannerAdP8delegateAA0deF8Delegate_pSgvp",
+            "moduleName": "BlueStackSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BiddingBannerAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingBannerAdDelegate",
+                        "printedName": "any BlueStackSDK.BiddingBannerAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd(im)delegate",
+                "mangledName": "$s12BlueStackSDK15BiddingBannerAdP8delegateAA0deF8Delegate_pSgvg",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingBannerAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingBannerAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BiddingBannerAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingBannerAdDelegate",
+                        "printedName": "any BlueStackSDK.BiddingBannerAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd(im)setDelegate:",
+                "mangledName": "$s12BlueStackSDK15BiddingBannerAdP8delegateAA0deF8Delegate_pSgvs",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingBannerAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingBannerAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd(im)initWithFrame:",
+            "mangledName": "$s12BlueStackSDK15BiddingBannerAdP5framexSo6CGRectV_tcfc",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingBannerAd>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingBannerAd>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getBannerView",
+            "printedName": "getBannerView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd(im)getBannerView",
+            "mangledName": "$s12BlueStackSDK15BiddingBannerAdP03getE4ViewSo6UIViewCSgyF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingBannerAd>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingBannerAd>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd",
+        "mangledName": "$s12BlueStackSDK15BiddingBannerAdP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : BlueStackSDK.BiddingAd>",
+        "sugared_genericSig": "<Self : BlueStackSDK.BiddingAd>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BiddingAd",
+            "printedName": "BiddingAd",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingAd",
+            "mangledName": "$s12BlueStackSDK9BiddingAdP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingBannerAdDelegate",
+        "printedName": "BiddingBannerAdDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onLoadAd",
+            "printedName": "onLoadAd(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingBannerAd",
+                "printedName": "any BlueStackSDK.BiddingBannerAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAdDelegate(im)onLoadBiddingBannerAd:",
+            "mangledName": "$s12BlueStackSDK23BiddingBannerAdDelegateP06onLoadF0yyAA0deF0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingBannerAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingBannerAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onLoadBiddingBannerAd:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onFailToLoad",
+            "printedName": "onFailToLoad(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingBannerAd",
+                "printedName": "any BlueStackSDK.BiddingBannerAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAdDelegate(im)onFailToLoadBiddingBannerAd:error:",
+            "mangledName": "$s12BlueStackSDK23BiddingBannerAdDelegateP12onFailToLoadyyAA0deF0_p_s5Error_ptF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingBannerAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingBannerAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onFailToLoadBiddingBannerAd:error:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClick",
+            "printedName": "onClick(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingBannerAd",
+                "printedName": "any BlueStackSDK.BiddingBannerAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAdDelegate(im)onClickBiddingBannerAd:",
+            "mangledName": "$s12BlueStackSDK23BiddingBannerAdDelegateP7onClickyyAA0deF0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingBannerAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingBannerAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onClickBiddingBannerAd:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingBannerAdDelegate",
+        "mangledName": "$s12BlueStackSDK23BiddingBannerAdDelegateP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingInterstitialAd",
+        "printedName": "BiddingInterstitialAd",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BlueStackSDK.BiddingInterstitialAdDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingInterstitialAdDelegate",
+                    "printedName": "any BlueStackSDK.BiddingInterstitialAdDelegate",
+                    "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAdDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd(py)delegate",
+            "mangledName": "$s12BlueStackSDK21BiddingInterstitialAdP8delegateAA0deF8Delegate_pSgvp",
+            "moduleName": "BlueStackSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BiddingInterstitialAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingInterstitialAdDelegate",
+                        "printedName": "any BlueStackSDK.BiddingInterstitialAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd(im)delegate",
+                "mangledName": "$s12BlueStackSDK21BiddingInterstitialAdP8delegateAA0deF8Delegate_pSgvg",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingInterstitialAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingInterstitialAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BiddingInterstitialAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingInterstitialAdDelegate",
+                        "printedName": "any BlueStackSDK.BiddingInterstitialAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd(im)setDelegate:",
+                "mangledName": "$s12BlueStackSDK21BiddingInterstitialAdP8delegateAA0deF8Delegate_pSgvs",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingInterstitialAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingInterstitialAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd(im)presentFromRootViewController:",
+            "mangledName": "$s12BlueStackSDK21BiddingInterstitialAdP7present4fromySo16UIViewControllerC_tF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingInterstitialAd>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingInterstitialAd>",
+            "protocolReq": true,
+            "overriding": true,
+            "objc_name": "presentFromRootViewController:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd",
+        "mangledName": "$s12BlueStackSDK21BiddingInterstitialAdP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : BlueStackSDK.BiddingAd, τ_0_0 : BlueStackSDK.FullScreenPresentableBiddingAd>",
+        "sugared_genericSig": "<Self : BlueStackSDK.BiddingAd, Self : BlueStackSDK.FullScreenPresentableBiddingAd>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FullScreenPresentableBiddingAd",
+            "printedName": "FullScreenPresentableBiddingAd",
+            "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd",
+            "mangledName": "$s12BlueStackSDK30FullScreenPresentableBiddingAdP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BiddingAd",
+            "printedName": "BiddingAd",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingAd",
+            "mangledName": "$s12BlueStackSDK9BiddingAdP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingInterstitialAdDelegate",
+        "printedName": "BiddingInterstitialAdDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onLoadAd",
+            "printedName": "onLoadAd(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingInterstitialAd",
+                "printedName": "any BlueStackSDK.BiddingInterstitialAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAdDelegate(im)onLoadBiddingInterstitialAd:",
+            "mangledName": "$s12BlueStackSDK29BiddingInterstitialAdDelegateP06onLoadF0yyAA0deF0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingInterstitialAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingInterstitialAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onLoadBiddingInterstitialAd:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onFailToLoad",
+            "printedName": "onFailToLoad(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingInterstitialAd",
+                "printedName": "any BlueStackSDK.BiddingInterstitialAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAdDelegate(im)onFailToLoadBiddingInterstitialAd:error:",
+            "mangledName": "$s12BlueStackSDK29BiddingInterstitialAdDelegateP12onFailToLoadyyAA0deF0_p_s5Error_ptF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingInterstitialAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingInterstitialAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onFailToLoadBiddingInterstitialAd:error:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClick",
+            "printedName": "onClick(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingInterstitialAd",
+                "printedName": "any BlueStackSDK.BiddingInterstitialAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAdDelegate(im)onClickBiddingInterstitialAd:",
+            "mangledName": "$s12BlueStackSDK29BiddingInterstitialAdDelegateP7onClickyyAA0deF0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingInterstitialAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingInterstitialAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onClickBiddingInterstitialAd:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingInterstitialAdDelegate",
+        "mangledName": "$s12BlueStackSDK29BiddingInterstitialAdDelegateP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingRewardedAd",
+        "printedName": "BiddingRewardedAd",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BlueStackSDK.BiddingRewardedAdDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingRewardedAdDelegate",
+                    "printedName": "any BlueStackSDK.BiddingRewardedAdDelegate",
+                    "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd(py)delegate",
+            "mangledName": "$s12BlueStackSDK17BiddingRewardedAdP8delegateAA0deF8Delegate_pSgvp",
+            "moduleName": "BlueStackSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BiddingRewardedAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingRewardedAdDelegate",
+                        "printedName": "any BlueStackSDK.BiddingRewardedAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd(im)delegate",
+                "mangledName": "$s12BlueStackSDK17BiddingRewardedAdP8delegateAA0deF8Delegate_pSgvg",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingRewardedAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingRewardedAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BiddingRewardedAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BiddingRewardedAdDelegate",
+                        "printedName": "any BlueStackSDK.BiddingRewardedAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd(im)setDelegate:",
+                "mangledName": "$s12BlueStackSDK17BiddingRewardedAdP8delegateAA0deF8Delegate_pSgvs",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingRewardedAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingRewardedAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd(im)presentFromRootViewController:",
+            "mangledName": "$s12BlueStackSDK17BiddingRewardedAdP7present4fromySo16UIViewControllerC_tF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingRewardedAd>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingRewardedAd>",
+            "protocolReq": true,
+            "overriding": true,
+            "objc_name": "presentFromRootViewController:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd",
+        "mangledName": "$s12BlueStackSDK17BiddingRewardedAdP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : BlueStackSDK.BiddingAd, τ_0_0 : BlueStackSDK.FullScreenPresentableBiddingAd>",
+        "sugared_genericSig": "<Self : BlueStackSDK.BiddingAd, Self : BlueStackSDK.FullScreenPresentableBiddingAd>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FullScreenPresentableBiddingAd",
+            "printedName": "FullScreenPresentableBiddingAd",
+            "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd",
+            "mangledName": "$s12BlueStackSDK30FullScreenPresentableBiddingAdP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BiddingAd",
+            "printedName": "BiddingAd",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingAd",
+            "mangledName": "$s12BlueStackSDK9BiddingAdP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BiddingRewardedAdDelegate",
+        "printedName": "BiddingRewardedAdDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onLoadAd",
+            "printedName": "onLoadAd(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingRewardedAd",
+                "printedName": "any BlueStackSDK.BiddingRewardedAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate(im)onLoadBiddingRewardedAd:",
+            "mangledName": "$s12BlueStackSDK25BiddingRewardedAdDelegateP06onLoadF0yyAA0deF0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onLoadBiddingRewardedAd:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onFailToLoad",
+            "printedName": "onFailToLoad(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingRewardedAd",
+                "printedName": "any BlueStackSDK.BiddingRewardedAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate(im)onFailToLoadBiddingRewardedAd:error:",
+            "mangledName": "$s12BlueStackSDK25BiddingRewardedAdDelegateP12onFailToLoadyyAA0deF0_p_s5Error_ptF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onFailToLoadBiddingRewardedAd:error:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClick",
+            "printedName": "onClick(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingRewardedAd",
+                "printedName": "any BlueStackSDK.BiddingRewardedAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate(im)onClickBiddingInterstitialAd:",
+            "mangledName": "$s12BlueStackSDK25BiddingRewardedAdDelegateP7onClickyyAA0deF0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onClickBiddingInterstitialAd:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onRewardEarned",
+            "printedName": "onRewardEarned(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingRewardedAd",
+                "printedName": "any BlueStackSDK.BiddingRewardedAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate(im)onRewardEarnedWithBiddingRewardedAd:rewardInfo:",
+            "mangledName": "$s12BlueStackSDK25BiddingRewardedAdDelegateP14onRewardEarnedyyAA0deF0_p_SDySSypGtF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BiddingRewardedAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onRewardEarnedWithBiddingRewardedAd:rewardInfo:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BiddingRewardedAdDelegate",
+        "mangledName": "$s12BlueStackSDK25BiddingRewardedAdDelegateP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BidRequest",
+        "printedName": "BidRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "placementID",
+            "printedName": "placementID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12BlueStackSDK10BidRequestC11placementIDSSvp",
+            "mangledName": "$s12BlueStackSDK10BidRequestC11placementIDSSvp",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK10BidRequestC11placementIDSSvg",
+                "mangledName": "$s12BlueStackSDK10BidRequestC11placementIDSSvg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "adType",
+            "printedName": "adType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingAdType",
+                "printedName": "BlueStackSDK.BiddingAdType",
+                "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12BlueStackSDK10BidRequestC6adTypeAA09BiddingAdG0Ovp",
+            "mangledName": "$s12BlueStackSDK10BidRequestC6adTypeAA09BiddingAdG0Ovp",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingAdType",
+                    "printedName": "BlueStackSDK.BiddingAdType",
+                    "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK10BidRequestC6adTypeAA09BiddingAdG0Ovg",
+                "mangledName": "$s12BlueStackSDK10BidRequestC6adTypeAA09BiddingAdG0Ovg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "params",
+            "printedName": "params",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12BlueStackSDK10BidRequestC6paramsSDySSypGSgvp",
+            "mangledName": "$s12BlueStackSDK10BidRequestC6paramsSDySSypGSgvp",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK10BidRequestC6paramsSDySSypGSgvg",
+                "mangledName": "$s12BlueStackSDK10BidRequestC6paramsSDySSypGSgvg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(placementID:adType:params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BidRequest",
+                "printedName": "BlueStackSDK.BidRequest",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BidRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingAdType",
+                "printedName": "BlueStackSDK.BiddingAdType",
+                "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12BlueStackSDK10BidRequestC11placementID6adType6paramsACSS_AA09BiddingAdI0OSDySSypGSgtcfc",
+            "mangledName": "$s12BlueStackSDK10BidRequestC11placementID6adType6paramsACSS_AA09BiddingAdI0OSDySSypGSgtcfc",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BidRequest",
+                "printedName": "BlueStackSDK.BidRequest",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BidRequest"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BidRequest(im)init",
+            "mangledName": "$s12BlueStackSDK10BidRequestCACycfc",
+            "moduleName": "BlueStackSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@BlueStackSDK@objc(cs)BidRequest",
+        "mangledName": "$s12BlueStackSDK10BidRequestC",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BidResponse",
+        "printedName": "BidResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "adType",
+            "printedName": "adType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingAdType",
+                "printedName": "BlueStackSDK.BiddingAdType",
+                "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12BlueStackSDK11BidResponseC6adTypeAA09BiddingAdG0Ovp",
+            "mangledName": "$s12BlueStackSDK11BidResponseC6adTypeAA09BiddingAdG0Ovp",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BiddingAdType",
+                    "printedName": "BlueStackSDK.BiddingAdType",
+                    "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK11BidResponseC6adTypeAA09BiddingAdG0Ovg",
+                "mangledName": "$s12BlueStackSDK11BidResponseC6adTypeAA09BiddingAdG0Ovg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "networkBidResponse",
+            "printedName": "networkBidResponse",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12BlueStackSDK11BidResponseC07networkdE0yXlSgvp",
+            "mangledName": "$s12BlueStackSDK11BidResponseC07networkdE0yXlSgvp",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AnyObject?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "AnyObject"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK11BidResponseC07networkdE0yXlSgvg",
+                "mangledName": "$s12BlueStackSDK11BidResponseC07networkdE0yXlSgvg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cpm",
+            "printedName": "cpm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12BlueStackSDK11BidResponseC3cpmSfvp",
+            "mangledName": "$s12BlueStackSDK11BidResponseC3cpmSfvp",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12BlueStackSDK11BidResponseC3cpmSfvg",
+                "mangledName": "$s12BlueStackSDK11BidResponseC3cpmSfvg",
+                "moduleName": "BlueStackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(adType:cpm:networkBidResponse:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BidResponse",
+                "printedName": "BlueStackSDK.BidResponse",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBidResponse"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingAdType",
+                "printedName": "BlueStackSDK.BiddingAdType",
+                "usr": "s:12BlueStackSDK13BiddingAdTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12BlueStackSDK11BidResponseC6adType3cpm07networkdE0AcA09BiddingAdG0O_SfyXlSgtcfc",
+            "mangledName": "$s12BlueStackSDK11BidResponseC6adType3cpm07networkdE0AcA09BiddingAdG0O_SfyXlSgtcfc",
+            "moduleName": "BlueStackSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BidResponse",
+                "printedName": "BlueStackSDK.BidResponse",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBidResponse"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueStackSDK@objc(cs)BLSBidResponse(im)init",
+            "mangledName": "$s12BlueStackSDK11BidResponseCACycfc",
+            "moduleName": "BlueStackSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@BlueStackSDK@objc(cs)BLSBidResponse",
+        "mangledName": "$s12BlueStackSDK11BidResponseC",
+        "moduleName": "BlueStackSDK",
+        "objc_name": "BLSBidResponse",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FullScreenBiddingAdDelegate",
+        "printedName": "FullScreenBiddingAdDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onDisplay",
+            "printedName": "onDisplay(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FullScreenPresentableBiddingAd",
+                "printedName": "any BlueStackSDK.FullScreenPresentableBiddingAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenBiddingAdDelegate(im)onDisplayFullScreenBiddingAd:",
+            "mangledName": "$s12BlueStackSDK27FullScreenBiddingAdDelegateP9onDisplayyyAA0de11PresentablefG0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.FullScreenBiddingAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.FullScreenBiddingAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onDisplayFullScreenBiddingAd:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDisplayFailed",
+            "printedName": "onDisplayFailed(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FullScreenPresentableBiddingAd",
+                "printedName": "any BlueStackSDK.FullScreenPresentableBiddingAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenBiddingAdDelegate(im)onDisplayFailedFullScreenBiddingAd:error:",
+            "mangledName": "$s12BlueStackSDK27FullScreenBiddingAdDelegateP15onDisplayFailedyyAA0de11PresentablefG0_p_s5Error_ptF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.FullScreenBiddingAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.FullScreenBiddingAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onDisplayFailedFullScreenBiddingAd:error:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDismiss",
+            "printedName": "onDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FullScreenPresentableBiddingAd",
+                "printedName": "any BlueStackSDK.FullScreenPresentableBiddingAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenBiddingAdDelegate(im)onDismissFullScreenBiddingAd:",
+            "mangledName": "$s12BlueStackSDK27FullScreenBiddingAdDelegateP9onDismissyyAA0de11PresentablefG0_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.FullScreenBiddingAdDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.FullScreenBiddingAdDelegate>",
+            "protocolReq": true,
+            "objc_name": "onDismissFullScreenBiddingAd:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenBiddingAdDelegate",
+        "mangledName": "$s12BlueStackSDK27FullScreenBiddingAdDelegateP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FullScreenPresentableBiddingAd",
+        "printedName": "FullScreenPresentableBiddingAd",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fullscreenDelegate",
+            "printedName": "fullscreenDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BlueStackSDK.FullScreenBiddingAdDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FullScreenBiddingAdDelegate",
+                    "printedName": "any BlueStackSDK.FullScreenBiddingAdDelegate",
+                    "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenBiddingAdDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd(py)fullscreenDelegate",
+            "mangledName": "$s12BlueStackSDK30FullScreenPresentableBiddingAdP18fullscreenDelegateAA0deghJ0_pSgvp",
+            "moduleName": "BlueStackSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.FullScreenBiddingAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FullScreenBiddingAdDelegate",
+                        "printedName": "any BlueStackSDK.FullScreenBiddingAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenBiddingAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd(im)fullscreenDelegate",
+                "mangledName": "$s12BlueStackSDK30FullScreenPresentableBiddingAdP18fullscreenDelegateAA0deghJ0_pSgvg",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.FullScreenPresentableBiddingAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.FullScreenPresentableBiddingAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.FullScreenBiddingAdDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FullScreenBiddingAdDelegate",
+                        "printedName": "any BlueStackSDK.FullScreenBiddingAdDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenBiddingAdDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd(im)setFullscreenDelegate:",
+                "mangledName": "$s12BlueStackSDK30FullScreenPresentableBiddingAdP18fullscreenDelegateAA0deghJ0_pSgvs",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.FullScreenPresentableBiddingAd>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.FullScreenPresentableBiddingAd>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd(im)presentFromRootViewController:",
+            "mangledName": "$s12BlueStackSDK30FullScreenPresentableBiddingAdP7present4fromySo16UIViewControllerC_tF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.FullScreenPresentableBiddingAd>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.FullScreenPresentableBiddingAd>",
+            "protocolReq": true,
+            "objc_name": "presentFromRootViewController:",
+            "declAttributes": [
+              "Custom",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)FullScreenPresentableBiddingAd",
+        "mangledName": "$s12BlueStackSDK30FullScreenPresentableBiddingAdP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Bidder",
+        "printedName": "Bidder",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BlueStackSDK.BidderDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BidderDelegate",
+                    "printedName": "any BlueStackSDK.BidderDelegate",
+                    "usr": "c:@M@BlueStackSDK@objc(pl)BidderDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueStackSDK@objc(pl)Bidder(py)delegate",
+            "mangledName": "$s12BlueStackSDK6BidderP8delegateAA0D8Delegate_pSgvp",
+            "moduleName": "BlueStackSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BidderDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BidderDelegate",
+                        "printedName": "any BlueStackSDK.BidderDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BidderDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)Bidder(im)delegate",
+                "mangledName": "$s12BlueStackSDK6BidderP8delegateAA0D8Delegate_pSgvg",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.Bidder>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.Bidder>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any BlueStackSDK.BidderDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BidderDelegate",
+                        "printedName": "any BlueStackSDK.BidderDelegate",
+                        "usr": "c:@M@BlueStackSDK@objc(pl)BidderDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueStackSDK@objc(pl)Bidder(im)setDelegate:",
+                "mangledName": "$s12BlueStackSDK6BidderP8delegateAA0D8Delegate_pSgvs",
+                "moduleName": "BlueStackSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.Bidder>",
+                "sugared_genericSig": "<Self where Self : BlueStackSDK.Bidder>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(parameters:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueStackSDK@objc(pl)Bidder(im)initWithParameters:",
+            "mangledName": "$s12BlueStackSDK6BidderP10parametersxSDySSypG_tcfc",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.Bidder>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.Bidder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "fetchBid",
+            "printedName": "fetchBid(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BidRequest",
+                "printedName": "BlueStackSDK.BidRequest",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BidRequest"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)Bidder(im)fetchBid:",
+            "mangledName": "$s12BlueStackSDK6BidderP8fetchBidyyAA0F7RequestCF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.Bidder>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.Bidder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "destroy",
+            "printedName": "destroy()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)Bidder(im)destroy",
+            "mangledName": "$s12BlueStackSDK6BidderP7destroyyyF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.Bidder>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.Bidder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)Bidder",
+        "mangledName": "$s12BlueStackSDK6BidderP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BidderDelegate",
+        "printedName": "BidderDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onSuccess",
+            "printedName": "onSuccess(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BidResponse",
+                "printedName": "BlueStackSDK.BidResponse",
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBidResponse"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BiddingAd",
+                "printedName": "any BlueStackSDK.BiddingAd",
+                "usr": "c:@M@BlueStackSDK@objc(pl)BiddingAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BidderDelegate(im)onSuccess::",
+            "mangledName": "$s12BlueStackSDK14BidderDelegateP9onSuccessyyAA11BidResponseC_AA9BiddingAd_ptF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BidderDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BidderDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onFailure",
+            "printedName": "onFailure(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueStackSDK@objc(pl)BidderDelegate(im)onFailure:",
+            "mangledName": "$s12BlueStackSDK14BidderDelegateP9onFailureyys5Error_pF",
+            "moduleName": "BlueStackSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : BlueStackSDK.BidderDelegate>",
+            "sugared_genericSig": "<Self where Self : BlueStackSDK.BidderDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BlueStackSDK@objc(pl)BidderDelegate",
+        "mangledName": "$s12BlueStackSDK14BidderDelegateP",
+        "moduleName": "BlueStackSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           }
         ]
       },
@@ -11385,6 +14217,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueStackSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "BannerViewDelegate",
         "printedName": "BannerViewDelegate",
@@ -11403,7 +14245,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               },
               {
                 "kind": "TypeNominal",
@@ -11441,7 +14283,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               },
               {
                 "kind": "TypeNominal",
@@ -11479,7 +14321,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               }
             ],
             "declKind": "Func",
@@ -11512,7 +14354,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               }
             ],
             "declKind": "Func",
@@ -11544,7 +14386,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               },
               {
                 "kind": "TypeNominal",
@@ -11582,7 +14424,7 @@
                 "kind": "TypeNominal",
                 "name": "BannerView",
                 "printedName": "BlueStackSDK.BannerView",
-                "usr": "c:@M@BlueStackSDK@objc(cs)BannerView"
+                "usr": "c:@M@BlueStackSDK@objc(cs)BLSBannerView"
               },
               {
                 "kind": "TypeNominal",
@@ -12230,6 +15072,20 @@
       "offset": 458,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/Logger+Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 249,
+      "length": 14,
+      "value": "\"BlueStackSDK\""
+    },
+    {
+      "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackSDK\/Core\/Common\/Logger+Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 1984,
+      "length": 7,
+      "value": "\"error\""
     },
     {
       "filePath": "\/Users\/shadman\/Projects\/azerion\/bluestack-sdk-ios\/BlueStackSDK\/Adapters\/Initialization\/BlueStackAdapterStatus.swift",

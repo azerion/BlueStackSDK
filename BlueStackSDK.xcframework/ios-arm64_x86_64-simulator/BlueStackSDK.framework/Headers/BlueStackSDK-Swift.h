@@ -373,8 +373,8 @@ SWIFT_CLASS("_TtC12BlueStackSDK13AdapterStatus")
 @protocol BannerViewDelegate;
 @class NSCoder;
 @class RequestOptions;
-SWIFT_CLASS("_TtC12BlueStackSDK10BannerView")
-@interface BannerView : UIView
+SWIFT_CLASS_NAMED("BannerView")
+@interface BLSBannerView : UIView
 /// The banner ad size
 @property (nonatomic) enum AdSize adSize;
 /// The placement ID.
@@ -409,36 +409,194 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK18BannerViewDelegate_")
 ///
 /// \param preferredHeight Height of the banner ad.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didLoadWithPreferredHeight:(CGFloat)preferredHeight;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didLoadWithPreferredHeight:(CGFloat)preferredHeight;
 /// Called when the banner view fails to load an ad. The error parameter provides details about the failure.
 /// \param bannerView The <code>BannerView</code> object that failed
 ///
 /// \param error The error describing the failure reason.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didFailedToLoadWithError:(NSError * _Nonnull)error;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didFailedToLoadWithError:(NSError * _Nonnull)error;
 @optional
 /// Called when the user clicks on the banner view.
 /// \param bannerView The <code>BannerView</code> class object that has been clicked.
 ///
-- (void)didClick:(BannerView * _Nonnull)bannerView;
+- (void)didClick:(BLSBannerView * _Nonnull)bannerView;
 @required
 /// Called when the BannerView get refreshed with an new ad.
 /// \param bannerView The <code>BannerView</code> object that has refreshed with an ad.
 ///
-- (void)didRefreshBannerView:(BannerView * _Nonnull)bannerView;
+- (void)didRefreshBannerView:(BLSBannerView * _Nonnull)bannerView;
 /// Called when the banner view fails to refresh an ad. The error parameter provides details about the failure.
 /// \param bannerView The <code>BannerView</code> object that failed
 ///
 /// \param error The error describing the failure reason.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didFailedToRefreshWithError:(NSError * _Nonnull)error;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didFailedToRefreshWithError:(NSError * _Nonnull)error;
 @optional
 /// Called when the banner view loads a banner ad of different height on refresh.
 /// \param bannerView The <code>BannerView</code> object
 ///
 /// \param size The size of the newly loaded banner ad. You may adjust your banner view height if necessary.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didResizedToSize:(CGSize)size;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didResizedToSize:(CGSize)size;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK10BidRequest")
+@interface BidRequest : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("BidResponse")
+@interface BLSBidResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol BidderDelegate;
+/// Bidder class is responsible for initiate bidding and return bidding response or to notify bidding failure.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK6Bidder_")
+@protocol Bidder
+/// Delegate object that receives bidding related callbacks
+@property (nonatomic, strong) id <BidderDelegate> _Nullable delegate;
+- (nonnull instancetype)initWithParameters:(NSDictionary<NSString *, id> * _Nonnull)parameters;
+/// Initiate the bid with the given bid request information
+/// \param bidRequest The bid request.
+///
+- (void)fetchBid:(BidRequest * _Nonnull)bidRequest;
+- (void)destroy;
+@end
+
+@protocol BiddingAd;
+/// BidderDelegate is a protocol to listen bidding events
+/// *
+SWIFT_PROTOCOL("_TtP12BlueStackSDK14BidderDelegate_")
+@protocol BidderDelegate
+/// Called when a successful bid occurs.
+/// \param bidResponse Bid information from the bidder.
+///
+/// \param biddingAd The bidding ad.
+///
+- (void)onSuccess:(BLSBidResponse * _Nonnull)bidResponse :(id <BiddingAd> _Nonnull)biddingAd;
+/// Called when the interstitial ad fails to load. The error parameter provides details about the failure.
+/// \param error The error describing the failure reason.
+///
+- (void)onFailure:(NSError * _Nonnull)error;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK9BiddingAd_")
+@protocol BiddingAd
+/// Loads ad with the given bid response.
+/// \param bidResponse The bid response.
+///
+- (void)loadAd:(BLSBidResponse * _Nonnull)bidResponse;
+@end
+
+@protocol BiddingBannerAdDelegate;
+/// Ads that provide banner ad content conform to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK15BiddingBannerAd_")
+@protocol BiddingBannerAd <BiddingAd>
+/// Delegate object that receives banner ad related callbacks
+@property (nonatomic, strong) id <BiddingBannerAdDelegate> _Nullable delegate;
+- (nonnull instancetype)initWithFrame:(CGRect)frame;
+/// Returns the banner view.
+- (UIView * _Nullable)getBannerView SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK23BiddingBannerAdDelegate_")
+@protocol BiddingBannerAdDelegate
+/// Called when bidding ad is loaded.
+/// \param biddingBannerAd Information of the ad
+///
+- (void)onLoadBiddingBannerAd:(id <BiddingBannerAd> _Nonnull)biddingBannerAd;
+/// Called when bidding ad loading is failed.
+/// \param biddingBannerAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onFailToLoadBiddingBannerAd:(id <BiddingBannerAd> _Nonnull)biddingBannerAd error:(NSError * _Nonnull)error;
+/// Called when click event occurs in a bidding banner ad.
+/// \param biddingBannerAd Information of the ad
+///
+- (void)onClickBiddingBannerAd:(id <BiddingBannerAd> _Nonnull)biddingBannerAd;
+@end
+
+@protocol FullScreenBiddingAdDelegate;
+/// Ads that provide presentable ad should conform to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK30FullScreenPresentableBiddingAd_")
+@protocol FullScreenPresentableBiddingAd
+/// Delegate object that receives fullscreen ad related callbacks
+@property (nonatomic, strong) id <FullScreenBiddingAdDelegate> _Nullable fullscreenDelegate;
+/// Presents the fullscreen ad in the given view controller
+/// \param viewController The view controller through which the ad will be presented.
+///
+- (void)presentFromRootViewController:(UIViewController * _Nonnull)rootViewController;
+@end
+
+@protocol BiddingInterstitialAdDelegate;
+/// Ads that present interstitial ad confirms to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK21BiddingInterstitialAd_")
+@protocol BiddingInterstitialAd <BiddingAd, FullScreenPresentableBiddingAd>
+/// Delegate object that receives interstitial ad related callbacks
+@property (nonatomic, strong) id <BiddingInterstitialAdDelegate> _Nullable delegate;
+/// Presents the interstitial ad in the given view controller
+/// \param viewController The view controller through which the ad will be presented.
+///
+- (void)presentFromRootViewController:(UIViewController * _Nonnull)rootViewController;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK29BiddingInterstitialAdDelegate_")
+@protocol BiddingInterstitialAdDelegate
+/// Called when bidding ad is loaded.
+/// \param biddingInterstitialAd Information of the ad
+///
+- (void)onLoadBiddingInterstitialAd:(id <BiddingInterstitialAd> _Nonnull)biddingInterstitialAd;
+/// Called when bidding ad loading is failed.
+/// \param biddingInterstitialAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onFailToLoadBiddingInterstitialAd:(id <BiddingInterstitialAd> _Nonnull)biddingInterstitialAd error:(NSError * _Nonnull)error;
+/// Called when click event occurs in a bidding  ad.
+/// \param biddingInterstitialAd Information of the ad
+///
+- (void)onClickBiddingInterstitialAd:(id <BiddingInterstitialAd> _Nonnull)biddingInterstitialAd;
+@end
+
+@protocol BiddingRewardedAdDelegate;
+/// Ads that present rewarded video ad confirms to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK17BiddingRewardedAd_")
+@protocol BiddingRewardedAd <BiddingAd, FullScreenPresentableBiddingAd>
+/// Delegate object that receives rewarded ad related callbacks
+@property (nonatomic, strong) id <BiddingRewardedAdDelegate> _Nullable delegate;
+/// Presents the rewarded ad in the given view controller
+/// \param viewController The view controller through which the ad will be presented.
+///
+- (void)presentFromRootViewController:(UIViewController * _Nonnull)rootViewController;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK25BiddingRewardedAdDelegate_")
+@protocol BiddingRewardedAdDelegate
+/// Called when bidding ad is loaded.
+/// \param biddingRewardedAd Information of the ad
+///
+- (void)onLoadBiddingRewardedAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd;
+/// Called when bidding ad loading is failed.
+/// \param biddingRewardedAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onFailToLoadBiddingRewardedAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd error:(NSError * _Nonnull)error;
+/// Called when click event occurs in a bidding  ad.
+/// \param biddingRewardedAd Information of the ad
+///
+- (void)onClickBiddingInterstitialAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd;
+/// Called when reward is earned by completing watching the ad.
+/// \param biddingRewardedAd Information of the ad
+///
+/// \param rewardInfo Information of the reward earned
+///
+- (void)onRewardEarnedWithBiddingRewardedAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd rewardInfo:(NSDictionary<NSString *, id> * _Nonnull)rewardInfo;
 @end
 
 @class InitializationStatus;
@@ -568,6 +726,24 @@ SWIFT_CLASS("_TtC12BlueStackSDK23DispatcherConfiguration")
 - (BOOL)isEventDebugEnabled SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)isExpired SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)isInAll SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK27FullScreenBiddingAdDelegate_")
+@protocol FullScreenBiddingAdDelegate
+/// Called when fullscreen ad is displayed.
+/// \param fullScreenBiddingAd Information of the ad
+///
+- (void)onDisplayFullScreenBiddingAd:(id <FullScreenPresentableBiddingAd> _Nonnull)fullScreenBiddingAd;
+/// Called when bidding ad display is failed.
+/// \param fullScreenBiddingAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onDisplayFailedFullScreenBiddingAd:(id <FullScreenPresentableBiddingAd> _Nonnull)fullScreenBiddingAd error:(NSError * _Nonnull)error;
+/// Called when bidding ad is dismissed.
+/// \param fullScreenBiddingAd Information of the ad
+///
+- (void)onDismissFullScreenBiddingAd:(id <FullScreenPresentableBiddingAd> _Nonnull)fullScreenBiddingAd;
 @end
 
 @protocol FullScreenDisplayableAd;
@@ -1181,8 +1357,8 @@ SWIFT_CLASS("_TtC12BlueStackSDK13AdapterStatus")
 @protocol BannerViewDelegate;
 @class NSCoder;
 @class RequestOptions;
-SWIFT_CLASS("_TtC12BlueStackSDK10BannerView")
-@interface BannerView : UIView
+SWIFT_CLASS_NAMED("BannerView")
+@interface BLSBannerView : UIView
 /// The banner ad size
 @property (nonatomic) enum AdSize adSize;
 /// The placement ID.
@@ -1217,36 +1393,194 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK18BannerViewDelegate_")
 ///
 /// \param preferredHeight Height of the banner ad.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didLoadWithPreferredHeight:(CGFloat)preferredHeight;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didLoadWithPreferredHeight:(CGFloat)preferredHeight;
 /// Called when the banner view fails to load an ad. The error parameter provides details about the failure.
 /// \param bannerView The <code>BannerView</code> object that failed
 ///
 /// \param error The error describing the failure reason.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didFailedToLoadWithError:(NSError * _Nonnull)error;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didFailedToLoadWithError:(NSError * _Nonnull)error;
 @optional
 /// Called when the user clicks on the banner view.
 /// \param bannerView The <code>BannerView</code> class object that has been clicked.
 ///
-- (void)didClick:(BannerView * _Nonnull)bannerView;
+- (void)didClick:(BLSBannerView * _Nonnull)bannerView;
 @required
 /// Called when the BannerView get refreshed with an new ad.
 /// \param bannerView The <code>BannerView</code> object that has refreshed with an ad.
 ///
-- (void)didRefreshBannerView:(BannerView * _Nonnull)bannerView;
+- (void)didRefreshBannerView:(BLSBannerView * _Nonnull)bannerView;
 /// Called when the banner view fails to refresh an ad. The error parameter provides details about the failure.
 /// \param bannerView The <code>BannerView</code> object that failed
 ///
 /// \param error The error describing the failure reason.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didFailedToRefreshWithError:(NSError * _Nonnull)error;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didFailedToRefreshWithError:(NSError * _Nonnull)error;
 @optional
 /// Called when the banner view loads a banner ad of different height on refresh.
 /// \param bannerView The <code>BannerView</code> object
 ///
 /// \param size The size of the newly loaded banner ad. You may adjust your banner view height if necessary.
 ///
-- (void)bannerView:(BannerView * _Nonnull)bannerView didResizedToSize:(CGSize)size;
+- (void)bannerView:(BLSBannerView * _Nonnull)bannerView didResizedToSize:(CGSize)size;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK10BidRequest")
+@interface BidRequest : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("BidResponse")
+@interface BLSBidResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol BidderDelegate;
+/// Bidder class is responsible for initiate bidding and return bidding response or to notify bidding failure.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK6Bidder_")
+@protocol Bidder
+/// Delegate object that receives bidding related callbacks
+@property (nonatomic, strong) id <BidderDelegate> _Nullable delegate;
+- (nonnull instancetype)initWithParameters:(NSDictionary<NSString *, id> * _Nonnull)parameters;
+/// Initiate the bid with the given bid request information
+/// \param bidRequest The bid request.
+///
+- (void)fetchBid:(BidRequest * _Nonnull)bidRequest;
+- (void)destroy;
+@end
+
+@protocol BiddingAd;
+/// BidderDelegate is a protocol to listen bidding events
+/// *
+SWIFT_PROTOCOL("_TtP12BlueStackSDK14BidderDelegate_")
+@protocol BidderDelegate
+/// Called when a successful bid occurs.
+/// \param bidResponse Bid information from the bidder.
+///
+/// \param biddingAd The bidding ad.
+///
+- (void)onSuccess:(BLSBidResponse * _Nonnull)bidResponse :(id <BiddingAd> _Nonnull)biddingAd;
+/// Called when the interstitial ad fails to load. The error parameter provides details about the failure.
+/// \param error The error describing the failure reason.
+///
+- (void)onFailure:(NSError * _Nonnull)error;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK9BiddingAd_")
+@protocol BiddingAd
+/// Loads ad with the given bid response.
+/// \param bidResponse The bid response.
+///
+- (void)loadAd:(BLSBidResponse * _Nonnull)bidResponse;
+@end
+
+@protocol BiddingBannerAdDelegate;
+/// Ads that provide banner ad content conform to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK15BiddingBannerAd_")
+@protocol BiddingBannerAd <BiddingAd>
+/// Delegate object that receives banner ad related callbacks
+@property (nonatomic, strong) id <BiddingBannerAdDelegate> _Nullable delegate;
+- (nonnull instancetype)initWithFrame:(CGRect)frame;
+/// Returns the banner view.
+- (UIView * _Nullable)getBannerView SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK23BiddingBannerAdDelegate_")
+@protocol BiddingBannerAdDelegate
+/// Called when bidding ad is loaded.
+/// \param biddingBannerAd Information of the ad
+///
+- (void)onLoadBiddingBannerAd:(id <BiddingBannerAd> _Nonnull)biddingBannerAd;
+/// Called when bidding ad loading is failed.
+/// \param biddingBannerAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onFailToLoadBiddingBannerAd:(id <BiddingBannerAd> _Nonnull)biddingBannerAd error:(NSError * _Nonnull)error;
+/// Called when click event occurs in a bidding banner ad.
+/// \param biddingBannerAd Information of the ad
+///
+- (void)onClickBiddingBannerAd:(id <BiddingBannerAd> _Nonnull)biddingBannerAd;
+@end
+
+@protocol FullScreenBiddingAdDelegate;
+/// Ads that provide presentable ad should conform to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK30FullScreenPresentableBiddingAd_")
+@protocol FullScreenPresentableBiddingAd
+/// Delegate object that receives fullscreen ad related callbacks
+@property (nonatomic, strong) id <FullScreenBiddingAdDelegate> _Nullable fullscreenDelegate;
+/// Presents the fullscreen ad in the given view controller
+/// \param viewController The view controller through which the ad will be presented.
+///
+- (void)presentFromRootViewController:(UIViewController * _Nonnull)rootViewController;
+@end
+
+@protocol BiddingInterstitialAdDelegate;
+/// Ads that present interstitial ad confirms to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK21BiddingInterstitialAd_")
+@protocol BiddingInterstitialAd <BiddingAd, FullScreenPresentableBiddingAd>
+/// Delegate object that receives interstitial ad related callbacks
+@property (nonatomic, strong) id <BiddingInterstitialAdDelegate> _Nullable delegate;
+/// Presents the interstitial ad in the given view controller
+/// \param viewController The view controller through which the ad will be presented.
+///
+- (void)presentFromRootViewController:(UIViewController * _Nonnull)rootViewController;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK29BiddingInterstitialAdDelegate_")
+@protocol BiddingInterstitialAdDelegate
+/// Called when bidding ad is loaded.
+/// \param biddingInterstitialAd Information of the ad
+///
+- (void)onLoadBiddingInterstitialAd:(id <BiddingInterstitialAd> _Nonnull)biddingInterstitialAd;
+/// Called when bidding ad loading is failed.
+/// \param biddingInterstitialAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onFailToLoadBiddingInterstitialAd:(id <BiddingInterstitialAd> _Nonnull)biddingInterstitialAd error:(NSError * _Nonnull)error;
+/// Called when click event occurs in a bidding  ad.
+/// \param biddingInterstitialAd Information of the ad
+///
+- (void)onClickBiddingInterstitialAd:(id <BiddingInterstitialAd> _Nonnull)biddingInterstitialAd;
+@end
+
+@protocol BiddingRewardedAdDelegate;
+/// Ads that present rewarded video ad confirms to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK17BiddingRewardedAd_")
+@protocol BiddingRewardedAd <BiddingAd, FullScreenPresentableBiddingAd>
+/// Delegate object that receives rewarded ad related callbacks
+@property (nonatomic, strong) id <BiddingRewardedAdDelegate> _Nullable delegate;
+/// Presents the rewarded ad in the given view controller
+/// \param viewController The view controller through which the ad will be presented.
+///
+- (void)presentFromRootViewController:(UIViewController * _Nonnull)rootViewController;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK25BiddingRewardedAdDelegate_")
+@protocol BiddingRewardedAdDelegate
+/// Called when bidding ad is loaded.
+/// \param biddingRewardedAd Information of the ad
+///
+- (void)onLoadBiddingRewardedAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd;
+/// Called when bidding ad loading is failed.
+/// \param biddingRewardedAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onFailToLoadBiddingRewardedAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd error:(NSError * _Nonnull)error;
+/// Called when click event occurs in a bidding  ad.
+/// \param biddingRewardedAd Information of the ad
+///
+- (void)onClickBiddingInterstitialAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd;
+/// Called when reward is earned by completing watching the ad.
+/// \param biddingRewardedAd Information of the ad
+///
+/// \param rewardInfo Information of the reward earned
+///
+- (void)onRewardEarnedWithBiddingRewardedAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd rewardInfo:(NSDictionary<NSString *, id> * _Nonnull)rewardInfo;
 @end
 
 @class InitializationStatus;
@@ -1376,6 +1710,24 @@ SWIFT_CLASS("_TtC12BlueStackSDK23DispatcherConfiguration")
 - (BOOL)isEventDebugEnabled SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)isExpired SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)isInAll SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK27FullScreenBiddingAdDelegate_")
+@protocol FullScreenBiddingAdDelegate
+/// Called when fullscreen ad is displayed.
+/// \param fullScreenBiddingAd Information of the ad
+///
+- (void)onDisplayFullScreenBiddingAd:(id <FullScreenPresentableBiddingAd> _Nonnull)fullScreenBiddingAd;
+/// Called when bidding ad display is failed.
+/// \param fullScreenBiddingAd Information of the ad
+///
+/// \param error Reason of failure
+///
+- (void)onDisplayFailedFullScreenBiddingAd:(id <FullScreenPresentableBiddingAd> _Nonnull)fullScreenBiddingAd error:(NSError * _Nonnull)error;
+/// Called when bidding ad is dismissed.
+/// \param fullScreenBiddingAd Information of the ad
+///
+- (void)onDismissFullScreenBiddingAd:(id <FullScreenPresentableBiddingAd> _Nonnull)fullScreenBiddingAd;
 @end
 
 @protocol FullScreenDisplayableAd;

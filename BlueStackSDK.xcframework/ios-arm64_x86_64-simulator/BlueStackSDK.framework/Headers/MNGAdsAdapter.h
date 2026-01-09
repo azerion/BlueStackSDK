@@ -115,6 +115,11 @@ extern MNGAdSize const kMNGAdSizeMediumRectangle; //Square Banner 300 x 250
 
 @property (weak) id<BluestackThumbnailAdDelegate> thumbnailAdDelegate;
 
+/**
+ * used for sending impression data
+ */
+@property (weak) id<BlueStackImpressionDelegate> biddingImpressionDelegate;
+
 /** Init the Ads server
  Any Ads server need some parameters to be inited
  

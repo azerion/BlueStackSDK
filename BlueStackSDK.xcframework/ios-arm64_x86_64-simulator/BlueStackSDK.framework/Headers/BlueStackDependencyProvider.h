@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (PrivacySettings *)getPrivacySettings;
 - (IDFAProvider *)getIDFAProvider;
 - (Initializer *)getInitializer;
+- (BOOL)isLogDisabled;
 
 @end
 
