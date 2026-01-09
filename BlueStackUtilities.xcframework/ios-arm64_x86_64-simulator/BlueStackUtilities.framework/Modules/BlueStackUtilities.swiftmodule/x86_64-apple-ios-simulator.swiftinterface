@@ -10,55 +10,15 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-public protocol HTTPResponseBody {
-  static func create(using data: Foundation.Data) throws -> Self
-}
-public struct HTTPEmptyResponseBody : BlueStackUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> BlueStackUtilities.HTTPEmptyResponseBody
-}
-extension Foundation.Data : BlueStackUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Foundation.Data
-}
-extension Swift.Decodable {
-  public static func create(using data: Foundation.Data) throws -> Self
-}
-extension Swift.Optional : BlueStackUtilities.HTTPResponseBody where Wrapped : BlueStackUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Wrapped?
-}
-public enum HTTPStatusCode {
-  case success
-  case notModified
-  case internalServerError
-  case other(Swift.Int)
-}
-extension BlueStackUtilities.HTTPStatusCode : Swift.RawRepresentable {
-  public typealias RawValue = Swift.Int
-  public init(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension BlueStackUtilities.HTTPStatusCode : Swift.Hashable {
-}
-extension Foundation.Date {
-  public func expireHeaderFormated() -> Swift.String
-  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
-}
 public protocol LogMessage : Swift.CustomStringConvertible {
   var description: Swift.String { get }
   var category: Swift.String { get }
 }
-public enum NetworkError : Swift.Error {
-  case networkError(Foundation.NSError)
-  case unexpectedResponse(Foundation.URLResponse?)
-  case decoding(Foundation.NSError)
-  case unableToCreateRequest(path: Swift.String)
-  case errorResponse(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)
-}
-extension BlueStackUtilities.NetworkError : Swift.CustomStringConvertible {
-  public var description: Swift.String {
-    get
-  }
+public class UserAgentUtils {
+  public init()
+  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  public func getUserAgentFromSystemInfo() -> Swift.String
+  @objc deinit
 }
 extension Foundation.JSONEncoder {
   public static let `default`: Foundation.JSONEncoder
@@ -120,13 +80,91 @@ public protocol LoggerType : ObjectiveC.NSObjectProtocol {
   @objc override dynamic public init()
   @objc deinit
 }
+public enum NetworkError : Swift.Error {
+  case networkError(Foundation.NSError)
+  case unexpectedResponse(Foundation.URLResponse?)
+  case decoding(Foundation.NSError)
+  case unableToCreateRequest(path: Swift.String)
+  case errorResponse(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)
+}
+extension BlueStackUtilities.NetworkError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
 public enum Strings {
 }
-public class UserAgentUtils {
-  public init()
-  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
-  public func getUserAgentFromSystemInfo() -> Swift.String
-  @objc deinit
+public enum HTTPStatusCode {
+  case success
+  case notModified
+  case internalServerError
+  case other(Swift.Int)
+}
+extension BlueStackUtilities.HTTPStatusCode : Swift.RawRepresentable {
+  public typealias RawValue = Swift.Int
+  public init(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension BlueStackUtilities.HTTPStatusCode : Swift.Hashable {
+}
+public protocol HTTPResponseBody {
+  static func create(using data: Foundation.Data) throws -> Self
+}
+public struct HTTPEmptyResponseBody : BlueStackUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> BlueStackUtilities.HTTPEmptyResponseBody
+}
+extension Foundation.Data : BlueStackUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Foundation.Data
+}
+extension Swift.Decodable {
+  public static func create(using data: Foundation.Data) throws -> Self
+}
+extension Swift.Optional : BlueStackUtilities.HTTPResponseBody where Wrapped : BlueStackUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Wrapped?
+}
+public protocol HTTPResponseType {
+  associatedtype Body : BlueStackUtilities.HTTPResponseBody
+  typealias Result = Swift.Result<Self, BlueStackUtilities.NetworkError>
+  typealias Headers = [Swift.AnyHashable : Any]
+  var httpStatusCode: BlueStackUtilities.HTTPStatusCode { get }
+  var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders { get }
+  var body: Self.Body { get }
+}
+public struct HTTPResponse<Body> : BlueStackUtilities.HTTPResponseType where Body : BlueStackUtilities.HTTPResponseBody {
+  public var body: Body
+  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode
+  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders
+}
+extension Foundation.HTTPURLResponse : BlueStackUtilities.HTTPResponseType {
+  public typealias Body = Foundation.Data?
+  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode {
+    get
+  }
+  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders {
+    get
+  }
+  public var body: Foundation.Data? {
+    get
+  }
+}
+public protocol HTTPRequestPath {
+  static var serverHostUrl: Foundation.URL { get }
+  var relativePath: Swift.String { get }
+}
+extension BlueStackUtilities.HTTPRequestPath {
+  public var url: Foundation.URL? {
+    get
+  }
+}
+public protocol Validator {
+  func validate()
+  func isValid() -> Swift.Bool
+  func errors() -> [BlueStackUtilities.ValidationError]
+}
+public protocol HTTPRequestBody : Swift.Encodable {
+  var content: [(key: Swift.String, value: Swift.String?)] { get }
 }
 public class ValidationError : Swift.AnyObject {
   public var field: Swift.String {
@@ -138,12 +176,39 @@ public class ValidationError : Swift.AnyObject {
   public init(field: Swift.String, reason: Swift.String)
   @objc deinit
 }
-public struct ErrorResponse {
+extension Foundation.UserDefaults {
+  public static func managed() -> Foundation.UserDefaults
 }
-public protocol Validator {
-  func validate()
-  func isValid() -> Swift.Bool
-  func errors() -> [BlueStackUtilities.ValidationError]
+public struct HTTPRequest {
+  public typealias Headers = [Swift.String : Swift.String]
+  public var method: BlueStackUtilities.HTTPRequest.Method
+  public var path: any BlueStackUtilities.HTTPRequestPath
+  public var headers: BlueStackUtilities.HTTPRequest.Headers?
+  public init(method: BlueStackUtilities.HTTPRequest.Method, requestPath: any BlueStackUtilities.HTTPRequestPath, headers: BlueStackUtilities.HTTPRequest.Headers? = nil)
+}
+extension BlueStackUtilities.HTTPRequest {
+  public enum Method {
+    case get
+    case post(any BlueStackUtilities.HTTPRequestBody)
+  }
+}
+extension BlueStackUtilities.HTTPRequest {
+  public var requestBody: (any BlueStackUtilities.HTTPRequestBody)? {
+    get
+  }
+}
+extension BlueStackUtilities.HTTPRequest.Method {
+  public var httpMethod: Swift.String {
+    get
+  }
+}
+extension Swift.String {
+  public var trimmingWhitespacesAndNewLines: Swift.String {
+    get
+  }
+  public var trimmedAndEscaped: Swift.String {
+    get
+  }
 }
 public class HTTPClient {
   public typealias RequestHeaders = BlueStackUtilities.HTTPRequest.Headers
@@ -176,52 +241,6 @@ extension BlueStackUtilities.HTTPClient {
     }
   }
 }
-public struct HTTPRequest {
-  public typealias Headers = [Swift.String : Swift.String]
-  public var method: BlueStackUtilities.HTTPRequest.Method
-  public var path: any BlueStackUtilities.HTTPRequestPath
-  public var headers: BlueStackUtilities.HTTPRequest.Headers?
-  public init(method: BlueStackUtilities.HTTPRequest.Method, requestPath: any BlueStackUtilities.HTTPRequestPath, headers: BlueStackUtilities.HTTPRequest.Headers? = nil)
-}
-extension BlueStackUtilities.HTTPRequest {
-  public enum Method {
-    case get
-    case post(any BlueStackUtilities.HTTPRequestBody)
-  }
-}
-extension BlueStackUtilities.HTTPRequest {
-  public var requestBody: (any BlueStackUtilities.HTTPRequestBody)? {
-    get
-  }
-}
-extension BlueStackUtilities.HTTPRequest.Method {
-  public var httpMethod: Swift.String {
-    get
-  }
-}
-extension Foundation.UserDefaults {
-  public static func managed() -> Foundation.UserDefaults
-}
-public protocol HTTPRequestBody : Swift.Encodable {
-  var content: [(key: Swift.String, value: Swift.String?)] { get }
-}
-extension Swift.String {
-  public var trimmingWhitespacesAndNewLines: Swift.String {
-    get
-  }
-  public var trimmedAndEscaped: Swift.String {
-    get
-  }
-}
-public protocol HTTPRequestPath {
-  static var serverHostUrl: Foundation.URL { get }
-  var relativePath: Swift.String { get }
-}
-extension BlueStackUtilities.HTTPRequestPath {
-  public var url: Foundation.URL? {
-    get
-  }
-}
 extension Swift.Result {
   public var value: Success? {
     get
@@ -230,30 +249,11 @@ extension Swift.Result {
     get
   }
 }
-public protocol HTTPResponseType {
-  associatedtype Body : BlueStackUtilities.HTTPResponseBody
-  typealias Result = Swift.Result<Self, BlueStackUtilities.NetworkError>
-  typealias Headers = [Swift.AnyHashable : Any]
-  var httpStatusCode: BlueStackUtilities.HTTPStatusCode { get }
-  var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders { get }
-  var body: Self.Body { get }
+public struct ErrorResponse {
 }
-public struct HTTPResponse<Body> : BlueStackUtilities.HTTPResponseType where Body : BlueStackUtilities.HTTPResponseBody {
-  public var body: Body
-  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode
-  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders
-}
-extension Foundation.HTTPURLResponse : BlueStackUtilities.HTTPResponseType {
-  public typealias Body = Foundation.Data?
-  public var httpStatusCode: BlueStackUtilities.HTTPStatusCode {
-    get
-  }
-  public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders {
-    get
-  }
-  public var body: Foundation.Data? {
-    get
-  }
+extension Foundation.Date {
+  public func expireHeaderFormated() -> Swift.String
+  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
 }
 extension BlueStackUtilities.LogLevel : Swift.Equatable {}
 extension BlueStackUtilities.LogLevel : Swift.Hashable {}
