@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackUtilities
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
 @_exported import BlueStackUtilities
 import Foundation
 import Swift
@@ -10,6 +10,163 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+public class HTTPClient {
+  public typealias RequestHeaders = BlueStackUtilities.HTTPRequest.Headers
+  public typealias ResponseHeaders = BlueStackUtilities.HTTPResponse<BlueStackUtilities.HTTPEmptyResponseBody>.Headers
+  public typealias Completion<Value> = (BlueStackUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : BlueStackUtilities.HTTPResponseBody
+  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: BlueStackUtilities.OperationDispatcher)
+  convenience public init(requestTimeout: Foundation.TimeInterval)
+  public func send<Value>(_ request: BlueStackUtilities.HTTPRequest, completion: BlueStackUtilities.HTTPClient.Completion<Value>?) where Value : BlueStackUtilities.HTTPResponseBody
+  @objc deinit
+}
+extension BlueStackUtilities.HTTPClient {
+  public enum RequestHeader : Swift.String {
+    case userAgent
+    case expire
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ResponseHeader : Swift.String {
+    case date
+    case expire
+    case contentType
+    case lastModified
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public protocol Validator {
+  func validate()
+  func isValid() -> Swift.Bool
+  func errors() -> [BlueStackUtilities.ValidationError]
+}
+extension Foundation.UserDefaults {
+  public static func managed() -> Foundation.UserDefaults
+}
+public struct ErrorResponse {
+}
+public class ValidationError : Swift.AnyObject {
+  public var field: Swift.String {
+    get
+  }
+  public var reason: Swift.String {
+    get
+  }
+  public init(field: Swift.String, reason: Swift.String)
+  @objc deinit
+}
+extension Swift.String {
+  public var trimmingWhitespacesAndNewLines: Swift.String {
+    get
+  }
+  public var trimmedAndEscaped: Swift.String {
+    get
+  }
+}
+extension Swift.Result {
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
+    get
+  }
+}
+public protocol LogMessage : Swift.CustomStringConvertible {
+  var description: Swift.String { get }
+  var category: Swift.String { get }
+}
+public class UserAgentUtils {
+  public init()
+  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  public func getUserAgentFromSystemInfo() -> Swift.String
+  @objc deinit
+}
+extension Foundation.Date {
+  public func expireHeaderFormated() -> Swift.String
+  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
+}
+public enum NetworkError : Swift.Error {
+  case networkError(Foundation.NSError)
+  case unexpectedResponse(Foundation.URLResponse?)
+  case decoding(Foundation.NSError)
+  case unableToCreateRequest(path: Swift.String)
+  case errorResponse(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)
+}
+extension BlueStackUtilities.NetworkError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension Foundation.JSONEncoder {
+  public static let `default`: Foundation.JSONEncoder
+  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
+}
+extension Foundation.JSONDecoder {
+  public static let `default`: Foundation.JSONDecoder
+  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
+}
+@objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
+  case debug = 0
+  case info = 1
+  case warn = 2
+  case error = 3
+  case verbose = 4
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [BlueStackUtilities.LogLevel]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [BlueStackUtilities.LogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum HTTPStatusCode {
+  case success
+  case notModified
+  case internalServerError
+  case other(Swift.Int)
+}
+extension BlueStackUtilities.HTTPStatusCode : Swift.RawRepresentable {
+  public typealias RawValue = Swift.Int
+  public init(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension BlueStackUtilities.HTTPStatusCode : Swift.Hashable {
+}
+public protocol LoggerType : ObjectiveC.NSObjectProtocol {
+  func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func debug(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+}
+public protocol HTTPResponseBody {
+  static func create(using data: Foundation.Data) throws -> Self
+}
+public struct HTTPEmptyResponseBody : BlueStackUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> BlueStackUtilities.HTTPEmptyResponseBody
+}
+extension Foundation.Data : BlueStackUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Foundation.Data
+}
+extension Swift.Decodable {
+  public static func create(using data: Foundation.Data) throws -> Self
+}
+extension Swift.Optional : BlueStackUtilities.HTTPResponseBody where Wrapped : BlueStackUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Wrapped?
+}
 @_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
   public protocol Task {
     func run()
@@ -23,189 +180,18 @@ import os
   public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any BlueStackUtilities.OperationDispatcher.Task) -> any BlueStackUtilities.OperationDispatcher.Job
   @objc deinit
 }
-extension Foundation.JSONEncoder {
-  public static let `default`: Foundation.JSONEncoder
-  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
-}
-extension Foundation.JSONDecoder {
-  public static let `default`: Foundation.JSONDecoder
-  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
-}
-extension Foundation.Date {
-  public func expireHeaderFormated() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
-  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
-  #endif
-}
-#if compiler(>=5.3) && $NonescapableTypes
-extension Swift.Result {
-  public var value: Success? {
-    get
-  }
-  public var error: Failure? {
-    get
-  }
-}
-#endif
-extension Swift.String {
-  public var trimmingWhitespacesAndNewLines: Swift.String {
-    get
-  }
-  public var trimmedAndEscaped: Swift.String {
-    get
-  }
-}
-extension Foundation.UserDefaults {
-  public static func managed() -> Foundation.UserDefaults
-}
-public enum Strings {
-}
 @_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject, BlueStackUtilities.LoggerType {
   @objc public static func isDebugModeEnabled() -> Swift.Bool
   @objc public static func isEventDebugEnabled() -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func debug(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  #endif
   @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
   @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
   @objc override dynamic public init()
   @objc deinit
-}
-public protocol LoggerType : ObjectiveC.NSObjectProtocol {
-  #if compiler(>=5.3) && $NonescapableTypes
-  func verbose(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  func debug(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  func info(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  func warn(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  func error(_ message: @autoclosure () -> any BlueStackUtilities.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  #endif
-}
-@objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
-  case debug = 0
-  case info = 1
-  case warn = 2
-  case error = 3
-  case verbose = 4
-  public var description: Swift.String {
-    get
-  }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias AllCases = [BlueStackUtilities.LogLevel]
-  public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [BlueStackUtilities.LogLevel] {
-    get
-  }
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public protocol LogMessage : Swift.CustomStringConvertible {
-  var description: Swift.String { get }
-  var category: Swift.String { get }
-}
-public struct ErrorResponse {
-}
-public class HTTPClient {
-  public typealias RequestHeaders = BlueStackUtilities.HTTPRequest.Headers
-  public typealias ResponseHeaders = BlueStackUtilities.HTTPResponse<BlueStackUtilities.HTTPEmptyResponseBody>.Headers
-  public typealias Completion<Value> = (BlueStackUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : BlueStackUtilities.HTTPResponseBody
-  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: BlueStackUtilities.OperationDispatcher)
-  convenience public init(requestTimeout: Foundation.TimeInterval)
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func send<Value>(_ request: BlueStackUtilities.HTTPRequest, completion: BlueStackUtilities.HTTPClient.Completion<Value>?) where Value : BlueStackUtilities.HTTPResponseBody
-  #endif
-  @objc deinit
-}
-extension BlueStackUtilities.HTTPClient {
-  public enum RequestHeader : Swift.String {
-    case userAgent
-    case expire
-    #if compiler(>=5.3) && $NonescapableTypes
-    public init?(rawValue: Swift.String)
-    #endif
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ResponseHeader : Swift.String {
-    case date
-    case expire
-    case contentType
-    case lastModified
-    #if compiler(>=5.3) && $NonescapableTypes
-    public init?(rawValue: Swift.String)
-    #endif
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-public struct HTTPRequest {
-  public typealias Headers = [Swift.String : Swift.String]
-  public var method: BlueStackUtilities.HTTPRequest.Method
-  public var path: any BlueStackUtilities.HTTPRequestPath
-  public var headers: BlueStackUtilities.HTTPRequest.Headers?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(method: BlueStackUtilities.HTTPRequest.Method, requestPath: any BlueStackUtilities.HTTPRequestPath, headers: BlueStackUtilities.HTTPRequest.Headers? = nil)
-  #endif
-}
-extension BlueStackUtilities.HTTPRequest {
-  public enum Method {
-    case get
-    case post(any BlueStackUtilities.HTTPRequestBody)
-  }
-}
-extension BlueStackUtilities.HTTPRequest {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public var requestBody: (any BlueStackUtilities.HTTPRequestBody)? {
-    get
-  }
-  #endif
-}
-extension BlueStackUtilities.HTTPRequest.Method {
-  public var httpMethod: Swift.String {
-    get
-  }
-}
-public protocol HTTPRequestBody : Swift.Encodable {
-  #if compiler(>=5.3) && $NonescapableTypes
-  var content: [(key: Swift.String, value: Swift.String?)] { get }
-  #endif
-}
-public protocol HTTPRequestPath {
-  static var serverHostUrl: Foundation.URL { get }
-  var relativePath: Swift.String { get }
-}
-extension BlueStackUtilities.HTTPRequestPath {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public var url: Foundation.URL? {
-    get
-  }
-  #endif
 }
 public protocol HTTPResponseType {
   associatedtype Body : BlueStackUtilities.HTTPResponseBody
@@ -228,85 +214,53 @@ extension Foundation.HTTPURLResponse : BlueStackUtilities.HTTPResponseType {
   public var responseHeaders: BlueStackUtilities.HTTPClient.ResponseHeaders {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var body: Foundation.Data? {
     get
   }
-  #endif
 }
-public protocol HTTPResponseBody {
-  static func create(using data: Foundation.Data) throws -> Self
+public enum Strings {
 }
-public struct HTTPEmptyResponseBody : BlueStackUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> BlueStackUtilities.HTTPEmptyResponseBody
+public protocol HTTPRequestPath {
+  static var serverHostUrl: Foundation.URL { get }
+  var relativePath: Swift.String { get }
 }
-extension Foundation.Data : BlueStackUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Foundation.Data
-}
-extension Swift.Decodable {
-  public static func create(using data: Foundation.Data) throws -> Self
-}
-#if compiler(>=5.3) && $NonescapableTypes
-extension Swift.Optional : BlueStackUtilities.HTTPResponseBody where Wrapped : BlueStackUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Wrapped?
-}
-#endif
-public enum HTTPStatusCode {
-  case success
-  case notModified
-  case internalServerError
-  case other(Swift.Int)
-}
-extension BlueStackUtilities.HTTPStatusCode : Swift.RawRepresentable {
-  public typealias RawValue = Swift.Int
-  public init(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+extension BlueStackUtilities.HTTPRequestPath {
+  public var url: Foundation.URL? {
     get
   }
 }
-extension BlueStackUtilities.HTTPStatusCode : Swift.Hashable {
+public protocol HTTPRequestBody : Swift.Encodable {
+  var content: [(key: Swift.String, value: Swift.String?)] { get }
 }
-public enum NetworkError : Swift.Error {
-  case networkError(Foundation.NSError)
-  case unexpectedResponse(Foundation.URLResponse?)
-  case decoding(Foundation.NSError)
-  case unableToCreateRequest(path: Swift.String)
-  case errorResponse(BlueStackUtilities.ErrorResponse, BlueStackUtilities.HTTPStatusCode)
+public struct HTTPRequest {
+  public typealias Headers = [Swift.String : Swift.String]
+  public var method: BlueStackUtilities.HTTPRequest.Method
+  public var path: any BlueStackUtilities.HTTPRequestPath
+  public var headers: BlueStackUtilities.HTTPRequest.Headers?
+  public init(method: BlueStackUtilities.HTTPRequest.Method, requestPath: any BlueStackUtilities.HTTPRequestPath, headers: BlueStackUtilities.HTTPRequest.Headers? = nil)
 }
-extension BlueStackUtilities.NetworkError : Swift.CustomStringConvertible {
-  public var description: Swift.String {
+extension BlueStackUtilities.HTTPRequest {
+  public enum Method {
+    case get
+    case post(any BlueStackUtilities.HTTPRequestBody)
+  }
+}
+extension BlueStackUtilities.HTTPRequest {
+  public var requestBody: (any BlueStackUtilities.HTTPRequestBody)? {
     get
   }
 }
-public class UserAgentUtils {
-  public init()
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
-  #endif
-  public func getUserAgentFromSystemInfo() -> Swift.String
-  @objc deinit
-}
-public class ValidationError : Swift.AnyObject {
-  public var field: Swift.String {
+extension BlueStackUtilities.HTTPRequest.Method {
+  public var httpMethod: Swift.String {
     get
   }
-  public var reason: Swift.String {
-    get
-  }
-  public init(field: Swift.String, reason: Swift.String)
-  @objc deinit
 }
-public protocol Validator {
-  func validate()
-  func isValid() -> Swift.Bool
-  func errors() -> [BlueStackUtilities.ValidationError]
-}
-extension BlueStackUtilities.LogLevel : Swift.Equatable {}
-extension BlueStackUtilities.LogLevel : Swift.Hashable {}
-extension BlueStackUtilities.LogLevel : Swift.RawRepresentable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Equatable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.Hashable {}
 extension BlueStackUtilities.HTTPClient.RequestHeader : Swift.RawRepresentable {}
 extension BlueStackUtilities.HTTPClient.ResponseHeader : Swift.Equatable {}
 extension BlueStackUtilities.HTTPClient.ResponseHeader : Swift.Hashable {}
 extension BlueStackUtilities.HTTPClient.ResponseHeader : Swift.RawRepresentable {}
+extension BlueStackUtilities.LogLevel : Swift.Equatable {}
+extension BlueStackUtilities.LogLevel : Swift.Hashable {}
+extension BlueStackUtilities.LogLevel : Swift.RawRepresentable {}
