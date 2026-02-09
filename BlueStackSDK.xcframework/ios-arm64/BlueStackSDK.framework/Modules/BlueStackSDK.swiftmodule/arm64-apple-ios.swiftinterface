@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueStackSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AdSupport
 import AppTrackingTransparency
 @_exported import BlueStackSDK
@@ -27,7 +27,9 @@ import _SwiftConcurrencyShims
 @objc public enum AdapterState : Swift.Int {
   case ready
   case notReady
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -47,7 +49,9 @@ import _SwiftConcurrencyShims
   case leaderboard
   case dynamicBanner
   case dynamicLeaderboardBanner
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -60,9 +64,13 @@ import _SwiftConcurrencyShims
   @objc @_Concurrency.MainActor @preconcurrency public var viewController: UIKit.UIViewController?
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var delegate: (any BlueStackSDK.BannerViewDelegate)?
   @objc @_Concurrency.MainActor @preconcurrency public init(adSize: BlueStackSDK.AdSize)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public func load(requestOptions: BlueStackSDK.RequestOptions?)
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency public func load()
   @objc @_Concurrency.MainActor @preconcurrency public func startAutoRefresh()
   @objc @_Concurrency.MainActor @preconcurrency public func stopAutoRefresh()
@@ -70,7 +78,9 @@ import _SwiftConcurrencyShims
 @objc public enum BlueStackConfigParserErrorCode : Swift.Int {
   case invalidData = 1
   case decodingError = 2
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -78,9 +88,15 @@ import _SwiftConcurrencyShims
 }
 @_inheritsConvenienceInitializers @objc public class BlueStackConfigParserError : Foundation.NSError {
   @objc public static let domain: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func error(code: BlueStackSDK.BlueStackConfigParserErrorCode, underlying: (any Swift.Error)? = nil) -> BlueStackSDK.BlueStackConfigParserError
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public init(domain: Swift.String, code: Swift.Int, userInfo dict: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class BlueStackConfigParser : ObjectiveC.NSObject {
@@ -100,95 +116,26 @@ import _SwiftConcurrencyShims
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public protocol BiddingAd {
-  @objc func loadAd(_ bidResponse: BlueStackSDK.BidResponse)
-}
-public enum BiddingAdType {
-  case banner
-  case interstitial
-  case rewarded
-  public static func == (a: BlueStackSDK.BiddingAdType, b: BlueStackSDK.BiddingAdType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@objc public protocol BiddingBannerAd : BlueStackSDK.BiddingAd {
-  @objc var delegate: (any BlueStackSDK.BiddingBannerAdDelegate)? { get set }
-  @objc init(frame: CoreFoundation.CGRect)
-  @objc func getBannerView() -> UIKit.UIView?
-}
-@objc public protocol BiddingBannerAdDelegate {
-  @objc(onLoadBiddingBannerAd:) func onLoadAd(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
-  @objc(onFailToLoadBiddingBannerAd:error:) func onFailToLoad(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd, _ error: any Swift.Error)
-  @objc(onClickBiddingBannerAd:) @_Concurrency.MainActor func onClick(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
-}
-@objc public protocol BiddingInterstitialAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
-  @objc var delegate: (any BlueStackSDK.BiddingInterstitialAdDelegate)? { get set }
-  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
-}
-@objc public protocol BiddingInterstitialAdDelegate {
-  @objc(onLoadBiddingInterstitialAd:) func onLoadAd(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
-  @objc(onFailToLoadBiddingInterstitialAd:error:) func onFailToLoad(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd, _ error: any Swift.Error)
-  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
-}
-@objc public protocol BiddingRewardedAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
-  @objc var delegate: (any BlueStackSDK.BiddingRewardedAdDelegate)? { get set }
-  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
-}
-@objc public protocol BiddingRewardedAdDelegate {
-  @objc(onLoadBiddingRewardedAd:) func onLoadAd(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
-  @objc(onFailToLoadBiddingRewardedAd:error:) func onFailToLoad(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ error: any Swift.Error)
-  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
-  @objc(onRewardEarnedWithBiddingRewardedAd:rewardInfo:) @_Concurrency.MainActor func onRewardEarned(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ rewardInfo: [Swift.String : Any])
-}
-@objc public class BidRequest : ObjectiveC.NSObject {
-  final public let placementID: Swift.String
-  final public let adType: BlueStackSDK.BiddingAdType
-  final public let params: [Swift.String : Any]?
-  public init(placementID: Swift.String, adType: BlueStackSDK.BiddingAdType, params: [Swift.String : Any]? = nil)
-  @objc deinit
-}
-@objc(BLSBidResponse) public class BidResponse : ObjectiveC.NSObject {
-  final public let adType: BlueStackSDK.BiddingAdType
-  final public let networkBidResponse: Swift.AnyObject?
-  final public let cpm: Swift.Float
-  public init(adType: BlueStackSDK.BiddingAdType, cpm: Swift.Float, networkBidResponse: Swift.AnyObject? = nil)
-  @objc deinit
-}
-@objc public protocol FullScreenBiddingAdDelegate {
-  @objc(onDisplayFullScreenBiddingAd:) @_Concurrency.MainActor func onDisplay(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
-  @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
-  @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
-}
-@objc public protocol FullScreenPresentableBiddingAd {
-  @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
-  @objc(presentFromRootViewController:) @_Concurrency.MainActor func present(from rootViewController: UIKit.UIViewController)
-}
-@objc public protocol Bidder {
-  @objc var delegate: (any BlueStackSDK.BidderDelegate)? { get set }
-  @objc init(parameters: [Swift.String : Any])
-  @objc func fetchBid(_ bidRequest: BlueStackSDK.BidRequest)
-  @objc func destroy()
-}
-@objc public protocol BidderDelegate {
-  @objc func onSuccess(_ bidResponse: BlueStackSDK.BidResponse, _ biddingAd: any BlueStackSDK.BiddingAd)
-  @objc func onFailure(_ error: any Swift.Error)
-}
 @objc @_hasMissingDesignatedInitializers @objcMembers public class HeaderBidderConfig : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let name: Swift.String
   @objc final public let adapter: Swift.String
   final public let priority: Swift.Int?
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(adapter: Swift.String, name: Swift.String, priority: Swift.Int? = nil, params: [Swift.String : Any]? = nil)
+  #endif
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 extension BlueStackSDK.HeaderBidderConfig {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func bidderParams() -> [Swift.String : Any]?
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class RequestOptionsToPreferenceTransformer : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func transform(_ requestOptions: BlueStackSDK.RequestOptions?) -> BlueStackSDK.MNGPreference?
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -196,7 +143,9 @@ extension BlueStackSDK.HeaderBidderConfig {
   case ready = 1
   case notReady = 0
   case unknown = 2
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -221,16 +170,22 @@ extension BlueStackSDK.HeaderBidderConfig {
   @objc final public var delegate: (any BlueStackSDK.RewardedAdDelegate)?
   @objc final public var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)?
   @objc convenience public init(placementID: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func load(requestOptions: BlueStackSDK.RequestOptions?)
+  #endif
   @objc final public func load()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func show(fromRootViewController rootViewController: UIKit.UIViewController?)
+  #endif
   @objc deinit
 }
 @objc public enum Gender : Swift.Int {
   case unknown
   case male
   case female
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -238,13 +193,17 @@ extension BlueStackSDK.HeaderBidderConfig {
 }
 @objc @objcMembers public class RequestOptions : ObjectiveC.NSObject {
   public var age: Swift.Int?
-  @objc public var location: CoreLocation.CLLocation?
+  @objc public var location: _LocationEssentials.CLLocation?
   public var gender: BlueStackSDK.Gender?
   @objc public var keyword: Swift.String?
   @objc public var contentUrl: Swift.String?
   @objc public var consentFlag: Swift.Int
-  public init(age: Swift.Int? = nil, location: CoreLocation.CLLocation? = nil, gender: BlueStackSDK.Gender? = nil, keyword: Swift.String? = nil, contentUrl: Swift.String? = nil, consentFlag: Swift.Int = 0)
-  @objc public init(age: Foundation.NSNumber?, location: CoreLocation.CLLocation?, gender: BlueStackSDK.Gender, keyword: Swift.String?, contentUrl: Swift.String?)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(age: Swift.Int? = nil, location: _LocationEssentials.CLLocation? = nil, gender: BlueStackSDK.Gender? = nil, keyword: Swift.String? = nil, contentUrl: Swift.String? = nil, consentFlag: Swift.Int = 0)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(age: Foundation.NSNumber?, location: _LocationEssentials.CLLocation?, gender: BlueStackSDK.Gender, keyword: Swift.String?, contentUrl: Swift.String?)
+  #endif
   @objc deinit
 }
 public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationStatus) -> Swift.Void
@@ -270,9 +229,13 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
   @objc final public var delegate: (any BlueStackSDK.InterstitialAdDelegate)?
   @objc final public var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)?
   @objc convenience public init(placementID: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func load(requestOptions: BlueStackSDK.RequestOptions?)
+  #endif
   @objc final public func load()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func show(fromRootViewController rootViewController: UIKit.UIViewController?)
+  #endif
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class InitializationStatus : ObjectiveC.NSObject {
@@ -280,13 +243,108 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
   @objc deinit
 }
 @objc public protocol FullScreenDisplayableAd : ObjectiveC.NSObjectProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var fullScreenDelegate: (any BlueStackSDK.FullScreenDelegate)? { get set }
+  #endif
+}
+@objc public protocol Bidder {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc var delegate: (any BlueStackSDK.BidderDelegate)? { get set }
+  #endif
+  @objc init(parameters: [Swift.String : Any])
+  @objc func fetchBid(_ bidRequest: BlueStackSDK.BidRequest)
+  @objc func destroy()
+}
+@objc public protocol BidderDelegate {
+  @objc func onSuccess(_ bidResponse: BlueStackSDK.BidResponse, _ biddingAd: any BlueStackSDK.BiddingAd)
+  @objc func onFailure(_ error: any Swift.Error)
+}
+@objc public protocol BiddingAd {
+  @objc func loadAd(_ bidResponse: BlueStackSDK.BidResponse)
+}
+public enum BiddingAdType {
+  case banner
+  case interstitial
+  case rewarded
+  public static func == (a: BlueStackSDK.BiddingAdType, b: BlueStackSDK.BiddingAdType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol BiddingBannerAd : BlueStackSDK.BiddingAd {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc var delegate: (any BlueStackSDK.BiddingBannerAdDelegate)? { get set }
+  #endif
+  @objc init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func getBannerView() -> UIKit.UIView?
+  #endif
+}
+@objc public protocol BiddingBannerAdDelegate {
+  @objc(onLoadBiddingBannerAd:) func onLoadAd(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
+  @objc(onFailToLoadBiddingBannerAd:error:) func onFailToLoad(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd, _ error: any Swift.Error)
+  @objc(onClickBiddingBannerAd:) @_Concurrency.MainActor func onClick(_ biddingBannerAd: any BlueStackSDK.BiddingBannerAd)
+}
+@objc public protocol BiddingInterstitialAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc var delegate: (any BlueStackSDK.BiddingInterstitialAdDelegate)? { get set }
+  #endif
+  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
+}
+@objc public protocol BiddingInterstitialAdDelegate {
+  @objc(onLoadBiddingInterstitialAd:) func onLoadAd(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
+  @objc(onFailToLoadBiddingInterstitialAd:error:) func onFailToLoad(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd, _ error: any Swift.Error)
+  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingInterstitialAd: any BlueStackSDK.BiddingInterstitialAd)
+}
+@objc public protocol BiddingRewardedAd : BlueStackSDK.BiddingAd, BlueStackSDK.FullScreenPresentableBiddingAd {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc var delegate: (any BlueStackSDK.BiddingRewardedAdDelegate)? { get set }
+  #endif
+  @_Concurrency.MainActor @objc func present(from rootViewController: UIKit.UIViewController)
+}
+@objc public protocol BiddingRewardedAdDelegate {
+  @objc(onLoadBiddingRewardedAd:) func onLoadAd(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
+  @objc(onFailToLoadBiddingRewardedAd:error:) func onFailToLoad(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ error: any Swift.Error)
+  @objc(onClickBiddingInterstitialAd:) @_Concurrency.MainActor func onClick(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd)
+  @objc(onRewardEarnedWithBiddingRewardedAd:rewardInfo:) @_Concurrency.MainActor func onRewardEarned(_ biddingRewardedAd: any BlueStackSDK.BiddingRewardedAd, _ rewardInfo: [Swift.String : Any])
+}
+@objc public class BidRequest : ObjectiveC.NSObject {
+  final public let placementID: Swift.String
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let params: [Swift.String : Any]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(placementID: Swift.String, adType: BlueStackSDK.BiddingAdType, params: [Swift.String : Any]? = nil)
+  #endif
+  @objc deinit
+}
+@objc(BLSBidResponse) public class BidResponse : ObjectiveC.NSObject {
+  final public let adType: BlueStackSDK.BiddingAdType
+  final public let networkBidResponse: Swift.AnyObject?
+  final public let cpm: Swift.Float
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(adType: BlueStackSDK.BiddingAdType, cpm: Swift.Float, networkBidResponse: Swift.AnyObject? = nil)
+  #endif
+  @objc deinit
+}
+@objc public protocol FullScreenBiddingAdDelegate {
+  @objc(onDisplayFullScreenBiddingAd:) @_Concurrency.MainActor func onDisplay(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+  @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
+  @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
+}
+@objc public protocol FullScreenPresentableBiddingAd {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
+  #endif
+  @objc(presentFromRootViewController:) @_Concurrency.MainActor func present(from rootViewController: UIKit.UIViewController)
 }
 @objc public protocol PlacementTimeoutDelegate : ObjectiveC.NSObjectProtocol {
   @objc(onTimeout) func onTimeout()
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class PlacementTimeoutController : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc convenience public init(placement: BlueStackSDK.Placement, delegate: (any BlueStackSDK.PlacementTimeoutDelegate)? = nil)
+  #endif
   @objc public func start()
   @objc public func stop()
   @objc public func isTimeout() -> Swift.Bool
@@ -299,13 +357,19 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension BlueStackSDK.Placement {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(timeoutInMillis) dynamic public var __timeoutInMillis: Foundation.NSNumber? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(refreshRate) dynamic public var __refreshRate: Foundation.NSNumber? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func getSortedAdserverList() -> [BlueStackSDK.AdServer]?
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class BlueStackAdapterInitializationStatus : ObjectiveC.NSObject {
   @objc public var mediationAdapters: [BlueStackSDK.BlueStackAdapterStatus]
@@ -323,12 +387,16 @@ extension BlueStackSDK.Placement {
   @objc deinit
 }
 extension BlueStackSDK.AdServer {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func serverParams() -> [Swift.String : Any]?
+  #endif
 }
 @objc public protocol RewardedAdDelegate : ObjectiveC.NSObjectProtocol {
   @objc(didLoadRewardedAd:) func onAdLoaded(_ ad: BlueStackSDK.RewardedAd)
   @objc(rewardedAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.RewardedAd, _ error: any Swift.Error)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(rewardedAd:didEarnedReward:) func onRewardEarned(_ ad: BlueStackSDK.RewardedAd, _ reward: BlueStackSDK.Reward?)
+  #endif
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class DispatcherConfiguration : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let appid: Swift.Int
@@ -338,17 +406,25 @@ extension BlueStackSDK.AdServer {
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   @objc public func getAdapterWaitList() -> [Swift.String]
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getPlacement(for placementId: Swift.String) -> BlueStackSDK.Placement?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
   @objc deinit
 }
 extension BlueStackSDK.DispatcherConfiguration {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var adapterInitConfigs: [BlueStackSDK.AdapterInitConfig]? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(gdpr) dynamic public var __gdpr: Foundation.NSNumber? {
     @objc get
   }
+  #endif
   @objc dynamic public func isEventDebugEnabled() -> Swift.Bool
   @objc dynamic public func isExpired() -> Swift.Bool
   @objc dynamic public func isInAll() -> Swift.Bool
@@ -356,12 +432,16 @@ extension BlueStackSDK.DispatcherConfiguration {
 extension BlueStackSDK.DispatcherConfiguration : BlueStackUtilities.HTTPResponseBody {
 }
 extension BlueStackSDK.DispatcherConfiguration {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc convenience dynamic public init(appId: Swift.Int, expireDate: Foundation.Date? = nil, adapterInitConfigs: [BlueStackSDK.AdapterInitConfig]? = nil)
+  #endif
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class CappingState : ObjectiveC.NSObject, Swift.Codable {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(cappingPeriodDelay) public var __cappingPeriodDelay: Foundation.NSNumber? {
     @objc get
   }
+  #endif
   @objc public var currentCapping: Swift.Int {
     get
   }
@@ -385,9 +465,11 @@ extension BlueStackSDK.DispatcherConfiguration {
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class AdapterInitConfig : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let name: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var params: [Swift.String : Any]? {
     @objc get
   }
+  #endif
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
@@ -401,11 +483,11 @@ extension BlueStackSDK.AdSize : Swift.RawRepresentable {}
 extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.Equatable {}
 extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.Hashable {}
 extension BlueStackSDK.BlueStackConfigParserErrorCode : Swift.RawRepresentable {}
-extension BlueStackSDK.BiddingAdType : Swift.Equatable {}
-extension BlueStackSDK.BiddingAdType : Swift.Hashable {}
 extension BlueStackSDK.BlueStackAdapterInitializationState : Swift.Equatable {}
 extension BlueStackSDK.BlueStackAdapterInitializationState : Swift.Hashable {}
 extension BlueStackSDK.BlueStackAdapterInitializationState : Swift.RawRepresentable {}
 extension BlueStackSDK.Gender : Swift.Equatable {}
 extension BlueStackSDK.Gender : Swift.Hashable {}
 extension BlueStackSDK.Gender : Swift.RawRepresentable {}
+extension BlueStackSDK.BiddingAdType : Swift.Equatable {}
+extension BlueStackSDK.BiddingAdType : Swift.Hashable {}
