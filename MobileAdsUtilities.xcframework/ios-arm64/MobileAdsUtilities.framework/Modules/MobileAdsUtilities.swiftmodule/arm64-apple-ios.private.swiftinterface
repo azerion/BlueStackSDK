@@ -10,19 +10,6 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-public class ErrorResponse {
-  public var code: Swift.Int? {
-    get
-  }
-  public var message: Swift.String? {
-    get
-  }
-  public init(code: Swift.Int? = nil, message: Swift.String? = nil)
-  @objc deinit
-}
-@objc public protocol UserAgentProviderProtocol {
-  @objc func getUserAgent() -> Swift.String
-}
 extension Foundation.Date {
   public func expireHeaderFormated() -> Swift.String
   public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
@@ -297,6 +284,19 @@ extension Swift.Result {
   public var error: Failure? {
     get
   }
+}
+public class ErrorResponse {
+  public var code: Swift.Int? {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public init(code: Swift.Int? = nil, message: Swift.String? = nil)
+  @objc deinit
+}
+@objc public protocol UserAgentProviderProtocol {
+  @objc func getUserAgent() -> Swift.String
 }
 extension MobileAdsUtilities.LogLevel : Swift.Equatable {}
 extension MobileAdsUtilities.LogLevel : Swift.Hashable {}

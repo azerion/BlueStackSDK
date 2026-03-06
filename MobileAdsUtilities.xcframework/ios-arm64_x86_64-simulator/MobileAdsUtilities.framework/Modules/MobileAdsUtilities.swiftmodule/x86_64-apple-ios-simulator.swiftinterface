@@ -10,53 +10,6 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
-public enum Strings {
-}
-public enum HTTPStatusCode {
-  case success
-  case notModified
-  case internalServerError
-  case other(Swift.Int)
-}
-extension MobileAdsUtilities.HTTPStatusCode : Swift.RawRepresentable {
-  public typealias RawValue = Swift.Int
-  public init(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension MobileAdsUtilities.HTTPStatusCode : Swift.Hashable {
-}
-extension Foundation.UserDefaults {
-  public static func managed() -> Foundation.UserDefaults
-}
-public protocol HTTPResponseBody {
-  static func create(using data: Foundation.Data) throws -> Self
-}
-public struct HTTPEmptyResponseBody : MobileAdsUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> MobileAdsUtilities.HTTPEmptyResponseBody
-}
-extension Foundation.Data : MobileAdsUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Foundation.Data
-}
-extension Swift.Decodable {
-  public static func create(using data: Foundation.Data) throws -> Self
-}
-extension Swift.Optional : MobileAdsUtilities.HTTPResponseBody where Wrapped : MobileAdsUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Wrapped?
-}
-extension Swift.String {
-  public var trimmingWhitespacesAndNewLines: Swift.String {
-    get
-  }
-  public var trimmedAndEscaped: Swift.String {
-    get
-  }
-}
-public protocol Validator {
-  associatedtype T
-  func validate(_ value: Self.T) -> MobileAdsUtilities.ValidationResult
-}
 public protocol HTTPResponseType {
   associatedtype Body : MobileAdsUtilities.HTTPResponseBody
   typealias Result = Swift.Result<Self, MobileAdsUtilities.NetworkError>
@@ -79,14 +32,6 @@ extension Foundation.HTTPURLResponse : MobileAdsUtilities.HTTPResponseType {
     get
   }
   public var body: Foundation.Data? {
-    get
-  }
-}
-extension Swift.Result {
-  public var value: Success? {
-    get
-  }
-  public var error: Failure? {
     get
   }
 }
@@ -121,6 +66,9 @@ public protocol HTTPRequestBody : Swift.Encodable {
   @objc override dynamic public init()
   @objc deinit
 }
+extension Foundation.UserDefaults {
+  public static func managed() -> Foundation.UserDefaults
+}
 public struct HTTPRequest {
   public typealias Headers = [Swift.String : Swift.String]
   public var method: MobileAdsUtilities.HTTPRequest.Method
@@ -144,9 +92,13 @@ extension MobileAdsUtilities.HTTPRequest.Method {
     get
   }
 }
-extension Foundation.Date {
-  public func expireHeaderFormated() -> Swift.String
-  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
+extension Swift.String {
+  public var trimmingWhitespacesAndNewLines: Swift.String {
+    get
+  }
+  public var trimmedAndEscaped: Swift.String {
+    get
+  }
 }
 public class HTTPClient {
   public typealias RequestHeaders = MobileAdsUtilities.HTTPRequest.Headers
@@ -179,19 +131,19 @@ extension MobileAdsUtilities.HTTPClient {
     }
   }
 }
-extension Foundation.JSONEncoder {
-  public static let `default`: Foundation.JSONEncoder
-  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
-}
-extension Foundation.JSONDecoder {
-  public static let `default`: Foundation.JSONDecoder
-  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
-}
 public class UserAgentUtils {
   public init()
   public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
   public func getUserAgentFromSystemInfo() -> Swift.String
   @objc deinit
+}
+extension Swift.Result {
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
+    get
+  }
 }
 public class ErrorResponse {
   public var code: Swift.Int? {
@@ -221,6 +173,10 @@ public class ErrorResponse {
 @objc public protocol UserAgentProviderProtocol {
   @objc func getUserAgent() -> Swift.String
 }
+extension Foundation.Date {
+  public func expireHeaderFormated() -> Swift.String
+  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
+}
 public protocol LogMessage : Swift.CustomStringConvertible {
   var description: Swift.String { get }
   var category: Swift.String { get }
@@ -230,6 +186,14 @@ public protocol LogMessage : Swift.CustomStringConvertible {
   @objc convenience public init(userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)?)
   @objc public func get(_ resourceURL: Swift.String?, timeout: Foundation.TimeInterval, completionHandler: @escaping MobileAdsUtilities.ServerResponseCallback)
   @objc deinit
+}
+extension Foundation.JSONEncoder {
+  public static let `default`: Foundation.JSONEncoder
+  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
+}
+extension Foundation.JSONDecoder {
+  public static let `default`: Foundation.JSONDecoder
+  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
 }
 @objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
   case debug = 0
@@ -297,6 +261,42 @@ extension MobileAdsUtilities.NetworkError : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
+}
+public enum Strings {
+}
+public enum HTTPStatusCode {
+  case success
+  case notModified
+  case internalServerError
+  case other(Swift.Int)
+}
+extension MobileAdsUtilities.HTTPStatusCode : Swift.RawRepresentable {
+  public typealias RawValue = Swift.Int
+  public init(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension MobileAdsUtilities.HTTPStatusCode : Swift.Hashable {
+}
+public protocol HTTPResponseBody {
+  static func create(using data: Foundation.Data) throws -> Self
+}
+public struct HTTPEmptyResponseBody : MobileAdsUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> MobileAdsUtilities.HTTPEmptyResponseBody
+}
+extension Foundation.Data : MobileAdsUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Foundation.Data
+}
+extension Swift.Decodable {
+  public static func create(using data: Foundation.Data) throws -> Self
+}
+extension Swift.Optional : MobileAdsUtilities.HTTPResponseBody where Wrapped : MobileAdsUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Wrapped?
+}
+public protocol Validator {
+  associatedtype T
+  func validate(_ value: Self.T) -> MobileAdsUtilities.ValidationResult
 }
 extension MobileAdsUtilities.HTTPClient.RequestHeader : Swift.Equatable {}
 extension MobileAdsUtilities.HTTPClient.RequestHeader : Swift.Hashable {}
