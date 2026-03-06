@@ -1,18 +1,16 @@
 //
-//  BluestackAmazonPublisherServicesAdapter.h
-//  BluestackAmazonPublisherServicesAdapter
+//  BlueStackAmazonPublisherServicesAdapter.h
+//  BlueStackAmazonPublisherServicesAdapter
 //
-//  Created by Yecine Dhouib on 04/06/2021.
+//  Created by Nagib Bin Azad on 31/12/25.
 //
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for BluestackAmazonPublisherServicesAdapter.
-FOUNDATION_EXPORT double BluestackAmazonPublisherServicesAdapterVersionNumber;
+//! Project version number for BlueStackAmazonPublisherServicesAdapter.
+FOUNDATION_EXPORT double BlueStackAmazonPublisherServicesAdapterVersionNumber;
 
-//! Project version string for BluestackAmazonPublisherServicesAdapter.
-FOUNDATION_EXPORT const unsigned char BluestackAmazonPublisherServicesAdapterVersionString[];
+//! Project version string for BlueStackAmazonPublisherServicesAdapter.
+FOUNDATION_EXPORT const unsigned char BlueStackAmazonPublisherServicesAdapterVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <BluestackAmazonPublisherServicesAdapter/PublicHeader.h>
-
-
+// In this header, you should import all the public headers of your framework using statements like #import <BlueStackAmazonPublisherServicesAdapter/PublicHeader.h>
