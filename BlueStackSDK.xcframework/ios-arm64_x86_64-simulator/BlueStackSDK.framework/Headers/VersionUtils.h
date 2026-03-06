@@ -1,6 +1,6 @@
 //
 //  VersionUtils.h
-//  BlueStackSDK
+//
 //
 //  Created by Nagib Bin Azad on 10/3/25.
 //

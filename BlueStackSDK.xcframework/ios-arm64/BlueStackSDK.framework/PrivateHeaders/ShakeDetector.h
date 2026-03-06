@@ -1,6 +1,6 @@
 //
 //  ShakeDetector.h
-//  MngAds
+// 
 //
 //  Created by MacBook Pro on 02/01/2017.
 //  Copyright © 2017 Bensalah Med Amine. All rights reserved.

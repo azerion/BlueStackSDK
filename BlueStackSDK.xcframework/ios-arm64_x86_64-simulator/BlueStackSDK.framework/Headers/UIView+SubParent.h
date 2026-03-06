@@ -1,6 +1,6 @@
 //
 //  UIView+SubParent.h
-//  BlueStackSDK
+//
 //
 //  Created by Nagib Bin Azad on 17/7/23.
 //

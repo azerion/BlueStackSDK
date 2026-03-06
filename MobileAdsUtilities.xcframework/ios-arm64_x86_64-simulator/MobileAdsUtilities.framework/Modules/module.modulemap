@@ -1,0 +1,11 @@
+framework module MobileAdsUtilities {
+  umbrella header "MobileAdsUtilities.h"
+  export *
+
+  module * { export * }
+}
+
+module MobileAdsUtilities.Swift {
+  header "MobileAdsUtilities-Swift.h"
+  requires objc
+}

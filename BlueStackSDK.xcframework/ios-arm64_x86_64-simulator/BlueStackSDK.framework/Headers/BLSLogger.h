@@ -1,6 +1,6 @@
 //
 //  BLSLogger.h
-//  BlueStackSDK
+//
 //
 //  Created by Nagib Bin Azad on 5/11/24.
 //

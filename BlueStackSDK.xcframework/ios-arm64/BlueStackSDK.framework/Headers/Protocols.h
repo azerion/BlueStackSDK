@@ -1,28 +1,28 @@
 //
 //  Protocols.h
-//  MNG-Ads-SDK
+//
 //
 //  Created by Ben Salah Med Amine on 12/9/14.
-//  Copyright (c) 2014 MNG. All rights reserved.
+//  Copyright (c) 2014 All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 
-@class MNGAdsAdapter,MNGNAtiveObject, MAdvertiseReward;
+@class AdsAdapter,NativeObject, AdReward;
 
 /**
  
- The delegate of a MNGAdsAdapter object must adopt the MNGAdsAdapterBannerDelegate protocol.
+ The delegate of a AdsAdapter object must adopt the AdsAdapterBannerDelegate protocol.
  
- Many methods of MNGAdsAdapterBannerDelegate return the ad view sent by the message.
+ Many methods of AdsAdapterBannerDelegate return the ad view sent by the message.
  The protocol methods allow the delegate to be aware of the ad-related events.
  You can use it to handle your app's or the ad's behavior like adapting your viewController's view size depending on the ad being displayed or not.
  
  */
 
 
-@protocol MNGAdsAdapterBannerDelegate <NSObject>
+@protocol AdsAdapterBannerDelegate <NSObject>
 
 @optional
 
@@ -32,20 +32,20 @@
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidLoad:(UIView *)adView preferredHeight:(CGFloat)preferredHeight;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter bannerDidLoad:(UIView *)adView preferredHeight:(CGFloat)preferredHeight;
 
 /** Notifies the delegate that the creative from the banner ad has been failed.
  
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidFailWithError:(NSError *)error;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter bannerDidFailWithError:(NSError *)error;
 
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidChangeFrame:(CGRect)frame;
+-(void)adsAdapter:(AdsAdapter *)adsAdapter bannerDidChangeFrame:(CGRect)frame;
 
 @end
 
-@protocol MNGAdsAdapterInfeedDelegate <NSObject>
+@protocol AdsAdapterInfeedDelegate <NSObject>
 
 @optional
 
@@ -55,22 +55,22 @@
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter infeedDidLoad:(UIView *)adView; __attribute__((deprecated("use adsAdapter:infeedDidLoad:preferredHeight: instead.")));
+- (void)adsAdapter:(AdsAdapter *)adsAdapter infeedDidLoad:(UIView *)adView; __attribute__((deprecated("use adsAdapter:infeedDidLoad:preferredHeight: instead.")));
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter infeedDidLoad:(UIView *)adView preferredHeight:(CGFloat)preferredHeight;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter infeedDidLoad:(UIView *)adView preferredHeight:(CGFloat)preferredHeight;
 
 /** Notifies the delegate that the creative from the banner ad has been failed.
  
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter infeedDidFailWithError:(NSError *)error;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter infeedDidFailWithError:(NSError *)error;
 
 
 
 @end
 
-@protocol MNGAdsAdapterRefreshDelegate <NSObject>
+@protocol AdsAdapterRefreshDelegate <NSObject>
 
 @optional
 
@@ -78,29 +78,29 @@
  
  */
 
-- (void)adsAdapterBannerDidRefresh:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterBannerDidRefresh:(AdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the banner ad has been failed to refresh.
  
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidFailToRefreshWithError:(NSError *)error;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter bannerDidFailToRefreshWithError:(NSError *)error;
 
 @end
 
 /**
  
- The delegate of a MNGAdsAdapter object must adopt the MNGAdsAdapterInterstitialDelegate protocol.
+ The delegate of a AdsAdapter object must adopt the AdsAdapterInterstitialDelegate protocol.
  
- Many methods of MNGAdsAdapterInterstitialDelegate return the ad view sent by the message.
+ Many methods of AdsAdapterInterstitialDelegate return the ad view sent by the message.
  The protocol methods allow the delegate to be aware of the ad-related events.
  You can use it to handle your app's or the ad's behavior like adapting your viewController's view size depending on the ad being displayed or not.
  
  */
 
 
-@protocol MNGAdsAdapterInterstitialDelegate <NSObject>
+@protocol AdsAdapterInterstitialDelegate <NSObject>
 
 @optional
 
@@ -109,21 +109,21 @@
  
  */
 
-- (void)adsAdapterInterstitialDidLoad:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterInterstitialDidLoad:(AdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the interstitial ad has been disappeared.
  
  
  */
 
-- (void)adsAdapterInterstitialDisappear:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterInterstitialDisappear:(AdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the interstitial ad has been failed.
  
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter interstitialDidFailWithError:(NSError *)error;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter interstitialDidFailWithError:(NSError *)error;
 
 
 /** Notifies the delegate that the creative from the interstitial ad has been shown.
@@ -131,22 +131,22 @@
  
  */
 
-- (void)adsAdapterInterstitialDidShown:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterInterstitialDidShown:(AdsAdapter *)adsAdapter;
 
 @end
 
 /**
  
- The delegate of a MNGAdsAdapter object must adopt the MNGAdsAdapterNativeDelegate protocol.
+ The delegate of a AdsAdapter object must adopt the AdsAdapterNativeDelegate protocol.
  
- Many methods of MNGAdsAdapterNativeDelegate return the ad view sent by the message.
+ Many methods of AdsAdapterNativeDelegate return the ad view sent by the message.
  The protocol methods allow the delegate to be aware of the ad-related events.
  You can use it to handle your app's or the ad's behavior like adapting your viewController's view size depending on the ad being displayed or not.
  
  */
 
 
-@protocol MNGAdsAdapterNativeDelegate <NSObject>
+@protocol AdsAdapterNativeDelegate <NSObject>
 
 @optional
 
@@ -156,18 +156,18 @@
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidLoad:(MNGNAtiveObject *)adView;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter nativeObjectDidLoad:(NativeObject *)adView;
 
 /** Notifies the delegate that the creative from the nativeObject ad has been failed.
  
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error withCover:(BOOL)cover;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error withCover:(BOOL)cover;
 
 @end
 
-@protocol MNGAdsAdapterNativeCollectionDelegate <NSObject>
+@protocol AdsAdapterNativeCollectionDelegate <NSObject>
 
 @optional
 
@@ -177,31 +177,31 @@
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeCollectionDidLoad:(NSArray *)adView;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter nativeCollectionDidLoad:(NSArray *)adView;
 
 /** Notifies the delegate that the creative from the nativeCollection ad has been failed.
  
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeCollectionDidFailWithError:(NSError *)error;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter nativeCollectionDidFailWithError:(NSError *)error;
 
-- (void)adsAdapterNativeAdWasClicked:(MNGAdsAdapter *)adsAdapter nativeObjectClicked:(MNGNAtiveObject *)clickedAdView;
+- (void)adsAdapterNativeAdWasClicked:(AdsAdapter *)adsAdapter nativeObjectClicked:(NativeObject *)clickedAdView;
 
 @end
 
 /**
  
- The delegate of a MNGAdsAdapter object must adopt the MNGAdsAdapterInterstitialDelegate protocol.
+ The delegate of a AdsAdapter object must adopt the AdsAdapterInterstitialDelegate protocol.
  
- Many methods of MNGAdsAdapterInterstitialDelegate return the ad view sent by the message.
+ Many methods of AdsAdapterInterstitialDelegate return the ad view sent by the message.
  The protocol methods allow the delegate to be aware of the ad-related events.
  You can use it to handle your app's or the ad's behavior like adapting your viewController's view size depending on the ad being displayed or not.
  
  */
 
 
-@protocol MAdvertiseAdapterRewardedVideoAdDelegate <NSObject>
+@protocol AdsAdapterRewardedVideoAdDelegate <NSObject>
 
 @optional
 
@@ -210,14 +210,14 @@
  
  */
 
-- (void)adsAdapterRewardedVideoAdDidLoad:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterRewardedVideoAdDidLoad:(AdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the interstitial ad has been failed.
  
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter rewardedVideoAdDidFailWithError:(NSError *)error;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter rewardedVideoAdDidFailWithError:(NSError *)error;
 
 
 /** Notifies the delegate that the creative from the interstitial ad has been disappeared.
@@ -225,76 +225,78 @@
  
  */
 
-- (void)adsAdapterRewardedVideoAdDidClose:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterRewardedVideoAdDidClose:(AdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the interstitial ad has been disappeared.
  
  
  */
 
-- (void)adsAdapterRewardedVideoAdDidClick:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterRewardedVideoAdDidClick:(AdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the interstitial ad has been disappeared.
  
  
  */
 
-- (void)adsAdapterRewardedVideoAd:(MNGAdsAdapter *)adsAdapter withReward:(MAdvertiseReward *)reward;
+- (void)adsAdapterRewardedVideoAd:(AdsAdapter *)adsAdapter withReward:(AdReward *)reward;
 
 /** Notifies the delegate that the method  rewardEarnedOnRewardedVideoAd is fired
  
  
  */
-- (void)adsAdapterRewardEarnedOnRewardedVideoAd:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterRewardEarnedOnRewardedVideoAd:(AdsAdapter *)adsAdapter;
 
 /** Notifies the delegate that the creative from the interstitial ad has been disappeared.
  
  
  */
 
-- (void)adsAdapterRewardedVideoAdWillLogImpression:(MNGAdsAdapter *)adsAdapter;
+- (void)adsAdapterRewardedVideoAdWillLogImpression:(AdsAdapter *)adsAdapter;
 
 @end
 
 
-@protocol MNGClickDelegate <NSObject>
+@protocol AdClickDelegate <NSObject>
 
 @optional
 
--(void)adsAdapterAdWasClicked:(MNGAdsAdapter *)adsAdapter;
--(void)adsAdapterNativeAdWasClicked:(MNGAdsAdapter *)adsAdapter nativeObjectClicked:(MNGNAtiveObject *)clickedAdView;
+-(void)adsAdapterAdWasClicked:(AdsAdapter *)adsAdapter;
+-(void)adsAdapterNativeAdWasClicked:(AdsAdapter *)adsAdapter nativeObjectClicked:(NativeObject *)clickedAdView;
 
 @end
 
-@protocol BluestackBiddingHBAmazonAPSDelegate <NSObject>
+@protocol AmazonBiddingDelegate <NSObject>
 
 @optional
 
--(void)bluestackBiddingHBAmazonAPSDidLoad:(NSString*)keyword WithAdType:( int)typeAd;
--(void)bluestackBiddingHBAmazonAPSDidFail:(NSError*)error WithAdType:( int)typeAd;
+-(void)amazonDidReceiveBid:(NSString*)keyword forAdType:(int)typeAd;
+-(void)amazonDidFailToReceiveBidWithError:(NSError*)error forAdType:(int)typeAd;
+
 @end
 
-@protocol BluestackBiddingHBSASDelegate <NSObject>
+@protocol EquativBiddingDelegate <NSObject>
 
 @optional
 
--(void)bluestackBiddingHBSASDidLoad:(NSString*)keyWordSAS WithAdType:( int)typeAd;
--(void)bluestackBiddingHBSASDidFail:(NSError*)error WithAdType:( int)typeAd;
+-(void)equativDidReceiveBid:(NSString*)keyword forAdType:(int)typeAd;
+-(void)equativDidFailToReceiveBidWithError:(NSError*)error forAdType:(int)typeAd;
 
 @end
-@protocol BluestackBiddingAdResponseDelegate <NSObject>
+
+@protocol BiddingAdResponseDelegate <NSObject>
 
 @optional
 
--(void)bluestackBiddingBannerAdResponse:(NSDictionary*)jsonObject;
--(void)bluestackBiddingIntersitialAdResponse:(NSDictionary*)jsonObject;
--(void)bluestackBiddingInfeedAdResponse:(NSDictionary*)jsonObject;
--(void)bluestackBiddingReawardVideoAdResponse:(NSDictionary*)jsonObject;
--(void)bluestackBiddingNativeAdResponse:(NSDictionary*)jsonObject;
+-(void)biddingBannerAdResponse:(NSDictionary*)jsonObject;
+-(void)biddingIntersitialAdResponse:(NSDictionary*)jsonObject;
+-(void)biddingInfeedAdResponse:(NSDictionary*)jsonObject;
+-(void)biddingReawardVideoAdResponse:(NSDictionary*)jsonObject;
+-(void)biddingNativeAdResponse:(NSDictionary*)jsonObject;
 
 @end
 
-@protocol BluestackBiddingSASReawardDelegate <NSObject>
+@protocol EquativBiddingRewardDelegate <NSObject>
 
 @optional
 
@@ -338,7 +340,7 @@
  
  @param reward The reward that has been retrieved.
  */
-- (void)rewardedVideoManagerDidCollectReward:(MAdvertiseReward*)reward;
+- (void)rewardedVideoManagerDidCollectReward:(AdReward*)reward;
 
 /**
  Returns whether the SDK should handle the opening of a given click URL.
@@ -394,17 +396,17 @@
 - (void)rewardedVideoManagerDidLoadEndCardFromViewController:(UIViewController *)viewController;
 @end
 
-@protocol BluestackThumbnailAdDelegate <NSObject>
+@protocol ThumbnailAdDelegate <NSObject>
 @optional
--(void)adsAdapterThumbnailAdAdAvailable:(MNGAdsAdapter *)adsAdapter;
--(void)adsAdapterThumbnailAdAdLoaded:(MNGAdsAdapter *)adsAdapter;
--(void)adsAdapterThumbnailAdAdDisplayed:(MNGAdsAdapter *)adsAdapter;
--(void)adsAdapterThumbnailAdAdClosed:(MNGAdsAdapter *)adsAdapter;
--(void)adsAdapterThumbnailAdAdError:(MNGAdsAdapter *)adsAdapter withError:(NSError *)error;
--(void)adsAdapterThumbnailAdAdClicked:(MNGAdsAdapter *)adsAdapter;
+-(void)adsAdapterThumbnailAdAdAvailable:(AdsAdapter *)adsAdapter;
+-(void)adsAdapterThumbnailAdAdLoaded:(AdsAdapter *)adsAdapter;
+-(void)adsAdapterThumbnailAdAdDisplayed:(AdsAdapter *)adsAdapter;
+-(void)adsAdapterThumbnailAdAdClosed:(AdsAdapter *)adsAdapter;
+-(void)adsAdapterThumbnailAdAdError:(AdsAdapter *)adsAdapter withError:(NSError *)error;
+-(void)adsAdapterThumbnailAdAdClicked:(AdsAdapter *)adsAdapter;
 @end
 
-@protocol BlueStackImpressionDelegate <NSObject>
+@protocol AdImpressionDelegate <NSObject>
 
 @optional
 
@@ -414,6 +416,6 @@
  
  */
 
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter onImpression:(NSArray<NSString *> *)impressionURLStrings;
+- (void)adsAdapter:(AdsAdapter *)adsAdapter onImpression:(NSArray<NSString *> *)impressionURLStrings;
 
 @end
