@@ -4,3 +4,8 @@ framework module BlueStackAmazonPublisherServicesAdapter {
 
   module * { export * }
 }
+
+module BlueStackAmazonPublisherServicesAdapter.Swift {
+  header "BlueStackAmazonPublisherServicesAdapter-Swift.h"
+  requires objc
+}
