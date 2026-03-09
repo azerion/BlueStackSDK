@@ -9,32 +9,10 @@ let package = Package(
     products: [
         .library(
             name: "BlueStackSDK",
-            targets: ["BlueStackSDKTarget"]),
-        .library(
-            name: "BluestackAmazonPublisherServicesAdapter",
-            targets: ["BluestackAmazonPublisherServicesAdapterTarget"]),
-        .library(
-            name: "BlueStackLocationAdapter",
-            targets: ["BlueStackLocationAdapterTarget"]),
+            targets: ["BlueStackSDKTarget"])
     ],
     dependencies: [],
     targets: [
-        .target(name: "BluestackAmazonPublisherServicesAdapterTarget",
-                dependencies: [
-                    .target(name: "BluestackAmazonPublisherServicesAdapter", condition: .when(platforms: [.iOS])),
-                    .target(name: "DTBiOSSDK", condition: .when(platforms: [.iOS])),
-                ],
-                path: "BluestackAmazonPublisherServicesAdapterWrapper"
-        ),
-        
-        .target(name: "BlueStackLocationAdapterTarget",
-                dependencies: [
-                    .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
-                    .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
-                ],
-                path: "BlueStackLocationAdapterWrapper"
-        ),
-        
         .target(name: "BlueStackSDKTarget",
                 dependencies: [
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
@@ -75,11 +53,5 @@ let package = Package(
         .binaryTarget(name: "MobileAdsUtilities", path: "MobileAdsUtilities.xcframework"),
         //renderer
         .binaryTarget(name: "AdRenderKit", path: "AdRenderKit.xcframework"),
-        //location
-        .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
-        .binaryTarget(name: "MAdvertiseLocation", path: "Dependencies/MAdvertiseLocation.xcframework"),
-        //amazon
-        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
-        .binaryTarget(name: "DTBiOSSDK", path: "Dependencies/DTBiOSSDK.xcframework")
     ]
 )

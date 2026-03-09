@@ -42,18 +42,6 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
     core.dependency	'BlueStack-SDK/Utilities'
     core.dependency	'BlueStack-SDK/Renderer'
   end
-
-  spec.subspec 'MAdvertiseLocation' do |mlo|
-    mlo.vendored_frameworks = 'BlueStackLocationAdapter.xcframework'
-    mlo.dependency 'MAdvertiseLocation', '3.1.7'
-    mlo.dependency 'BlueStack-SDK/Core'
-  end
-
-  spec.subspec 'BluestackAmazonPublisherServicesAdapter' do |amazon|
-    amazon.vendored_frameworks = 'BluestackAmazonPublisherServicesAdapter.xcframework'
-    amazon.dependency               'BlueStack-SDK/Core'
-    amazon.dependency               'AmazonPublisherServicesSDK',  '4.5.5'
-  end
   
   spec.subspec 'Utilities' do |utilities|
     utilities.vendored_frameworks = 'MobileAdsUtilities.xcframework'
