@@ -10,6 +10,94 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+public protocol LoggerType : ObjectiveC.NSObjectProtocol {
+  func verbose(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func debug(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func info(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func warn(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+  func error(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
+}
+public typealias ServerResponseCallback = (MobileAdsUtilities.ServerResponse) -> Swift.Void
+@objc public protocol ServerConnectionProtocol {
+  @objc var userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? { get }
+  @objc func get(_ resourceURL: Swift.String?, timeout: Foundation.TimeInterval, completionHandler: @escaping MobileAdsUtilities.ServerResponseCallback)
+}
+@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
+  public protocol Task {
+    func run()
+  }
+  public protocol Job {
+    var isActive: Swift.Bool { get }
+    func stop()
+    func start()
+  }
+  public static let `default`: MobileAdsUtilities.OperationDispatcher
+  @objc public func dispatchOnMainThread(_ block: @escaping @Sendable () -> Swift.Void)
+  @objc public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval = .zero, block: @escaping @Sendable () -> Swift.Void)
+  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any MobileAdsUtilities.OperationDispatcher.Task) -> any MobileAdsUtilities.OperationDispatcher.Job
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject, MobileAdsUtilities.LoggerType {
+  @objc public static func isDebugModeEnabled() -> Swift.Bool
+  @objc public static func isEventDebugEnabled() -> Swift.Bool
+  public func verbose(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
+  public func debug(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
+  public func info(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
+  public func warn(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
+  public func error(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
+  @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
+  @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum NetworkError : Swift.Error {
+  case networkError(Foundation.NSError)
+  case unexpectedResponse(Foundation.URLResponse?)
+  case decoding(Foundation.NSError)
+  case unableToCreateRequest(path: Swift.String)
+  case errorResponse(MobileAdsUtilities.ErrorResponse, MobileAdsUtilities.HTTPStatusCode)
+}
+extension MobileAdsUtilities.NetworkError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum Strings {
+}
+public enum HTTPStatusCode {
+  case success
+  case notModified
+  case internalServerError
+  case other(Swift.Int)
+}
+extension MobileAdsUtilities.HTTPStatusCode : Swift.RawRepresentable {
+  public typealias RawValue = Swift.Int
+  public init(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension MobileAdsUtilities.HTTPStatusCode : Swift.Hashable {
+}
+public protocol HTTPResponseBody {
+  static func create(using data: Foundation.Data) throws -> Self
+}
+public struct HTTPEmptyResponseBody : MobileAdsUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> MobileAdsUtilities.HTTPEmptyResponseBody
+}
+extension Foundation.Data : MobileAdsUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Foundation.Data
+}
+extension Swift.Decodable {
+  public static func create(using data: Foundation.Data) throws -> Self
+}
+extension Swift.Optional : MobileAdsUtilities.HTTPResponseBody where Wrapped : MobileAdsUtilities.HTTPResponseBody {
+  public static func create(using data: Foundation.Data) throws -> Wrapped?
+}
+public protocol Validator {
+  associatedtype T
+  func validate(_ value: Self.T) -> MobileAdsUtilities.ValidationResult
+}
 public protocol HTTPResponseType {
   associatedtype Body : MobileAdsUtilities.HTTPResponseBody
   typealias Result = Swift.Result<Self, MobileAdsUtilities.NetworkError>
@@ -155,21 +243,6 @@ public class ErrorResponse {
   public init(code: Swift.Int? = nil, message: Swift.String? = nil)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
-  public protocol Task {
-    func run()
-  }
-  public protocol Job {
-    var isActive: Swift.Bool { get }
-    func stop()
-    func start()
-  }
-  public static let `default`: MobileAdsUtilities.OperationDispatcher
-  @objc public func dispatchOnMainThread(_ block: @escaping @Sendable () -> Swift.Void)
-  @objc public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval = .zero, block: @escaping @Sendable () -> Swift.Void)
-  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any MobileAdsUtilities.OperationDispatcher.Task) -> any MobileAdsUtilities.OperationDispatcher.Job
-  @objc deinit
-}
 @objc public protocol UserAgentProviderProtocol {
   @objc func getUserAgent() -> Swift.String
 }
@@ -224,79 +297,6 @@ extension Foundation.JSONDecoder {
   @objc public var statusCode: Swift.Int
   @objc override dynamic public init()
   @objc deinit
-}
-public protocol LoggerType : ObjectiveC.NSObjectProtocol {
-  func verbose(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  func debug(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  func info(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  func warn(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String?, functionName: Swift.String?, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-  func error(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String, functionName: Swift.String, line: Swift.UInt, framework: Swift.String?, version: Swift.String?)
-}
-public typealias ServerResponseCallback = (MobileAdsUtilities.ServerResponse) -> Swift.Void
-@objc public protocol ServerConnectionProtocol {
-  @objc var userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? { get }
-  @objc func get(_ resourceURL: Swift.String?, timeout: Foundation.TimeInterval, completionHandler: @escaping MobileAdsUtilities.ServerResponseCallback)
-}
-@_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject, MobileAdsUtilities.LoggerType {
-  @objc public static func isDebugModeEnabled() -> Swift.Bool
-  @objc public static func isEventDebugEnabled() -> Swift.Bool
-  public func verbose(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  public func debug(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  public func info(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  public func warn(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String? = #fileID, functionName: Swift.String? = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  public func error(_ message: @autoclosure () -> any MobileAdsUtilities.LogMessage, fileName: Swift.String = #fileID, functionName: Swift.String = #function, line: Swift.UInt = #line, framework: Swift.String? = nil, version: Swift.String? = nil)
-  @objc(setEventDebugEnabled:) public static func setEventDebug(enabled: Swift.Bool)
-  @objc(setDebugModeEnabled:) public static func setDebugMode(enabled: Swift.Bool)
-  @objc override dynamic public init()
-  @objc deinit
-}
-public enum NetworkError : Swift.Error {
-  case networkError(Foundation.NSError)
-  case unexpectedResponse(Foundation.URLResponse?)
-  case decoding(Foundation.NSError)
-  case unableToCreateRequest(path: Swift.String)
-  case errorResponse(MobileAdsUtilities.ErrorResponse, MobileAdsUtilities.HTTPStatusCode)
-}
-extension MobileAdsUtilities.NetworkError : Swift.CustomStringConvertible {
-  public var description: Swift.String {
-    get
-  }
-}
-public enum Strings {
-}
-public enum HTTPStatusCode {
-  case success
-  case notModified
-  case internalServerError
-  case other(Swift.Int)
-}
-extension MobileAdsUtilities.HTTPStatusCode : Swift.RawRepresentable {
-  public typealias RawValue = Swift.Int
-  public init(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension MobileAdsUtilities.HTTPStatusCode : Swift.Hashable {
-}
-public protocol HTTPResponseBody {
-  static func create(using data: Foundation.Data) throws -> Self
-}
-public struct HTTPEmptyResponseBody : MobileAdsUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> MobileAdsUtilities.HTTPEmptyResponseBody
-}
-extension Foundation.Data : MobileAdsUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Foundation.Data
-}
-extension Swift.Decodable {
-  public static func create(using data: Foundation.Data) throws -> Self
-}
-extension Swift.Optional : MobileAdsUtilities.HTTPResponseBody where Wrapped : MobileAdsUtilities.HTTPResponseBody {
-  public static func create(using data: Foundation.Data) throws -> Wrapped?
-}
-public protocol Validator {
-  associatedtype T
-  func validate(_ value: Self.T) -> MobileAdsUtilities.ValidationResult
 }
 extension MobileAdsUtilities.HTTPClient.RequestHeader : Swift.Equatable {}
 extension MobileAdsUtilities.HTTPClient.RequestHeader : Swift.Hashable {}
