@@ -1,8 +1,8 @@
 
 framework module BlueStackSDK_Private {
-    header "MNGURLConnection.h"
-    header "MNGError.h"
-    header "MNGAnalyticsManager.h"
+    header "ServerURLConnection.h"
+    header "AdServerError.h"
+    header "AnalyticsManager.h"
     header "DebugShakeManager.h"
 }
 

@@ -1,6 +1,6 @@
 //
 //  ExpirableAd.h
-//  BlueStackSDK
+//
 //
 //  Created by Nagib Bin Azad on 16/6/25.
 //

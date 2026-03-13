@@ -6,7 +6,7 @@
 	<dict>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
 		<data>
-		t10Xy2S0itHLnAr+Uh6ifO/+wQk=
+		8Mwwgidcg6relPDI8efZEg9Mn/g=
 		</data>
 		<key>BlueStackSDKResources.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		UNefqDnM+oM1ql2WrTbFvmo4fNc=
+		6XzR21C5Vmr8blPdZ6pBZYen7ho=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		X0WGE8LZhyLFOp7XPZ82UXt1XeQ=
+		/Og7+tPkYZMVb+dlSYpOz++q51E=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		FBNPcl1hrC7aJxTF5fg36YXtUHY=
+		1Sh3KbvC6hwgZ3gT2uzIKu9fSMI=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -34,231 +34,259 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/omsdk-v1.js</key>
 		<data>
-		ooF6nmPFIk7twLDRefviZtdSgKA=
+		RsXiKCm1uWtmsoXXow1urwDnzVk=
 		</data>
-		<key>BlueStackSDKResources.bundle/synccoreBluestack.js</key>
+		<key>BlueStackSDKResources.bundle/synccore.js</key>
 		<data>
 		Cj+ZoAR/savNNd49CqzNC9yem2Q=
 		</data>
+		<key>Headers/AdError.h</key>
+		<data>
+		YSx0sxFAWHB2NaRJUHnymDkjesQ=
+		</data>
+		<key>Headers/AdErrorCode.h</key>
+		<data>
+		Mn7mv/C4jaCy0ybfN4RyGc6CsvY=
+		</data>
+		<key>Headers/AdLoadService.h</key>
+		<data>
+		IDaO/nBFCJUmblsrWm722LIGNVw=
+		</data>
+		<key>Headers/AdRequest.h</key>
+		<data>
+		D5AS8nXBgWJl4XtRYstCZYA3FjQ=
+		</data>
+		<key>Headers/AdReward.h</key>
+		<data>
+		oG3DwZz0mUm3xEOsOdKYQg1HJDU=
+		</data>
+		<key>Headers/AdSDKUtilities.h</key>
+		<data>
+		O4xs8gVH+gY9xytEn8uHeE3y7/M=
+		</data>
+		<key>Headers/AdsAdapter.h</key>
+		<data>
+		Cd1+8uOKI7tAQb3goCxrv0iT5zA=
+		</data>
+		<key>Headers/AdsSDKFactory.h</key>
+		<data>
+		60XuFlERTUTB1b+5aIa5auDpB5E=
+		</data>
+		<key>Headers/AdsSDKFactoryDelegate.h</key>
+		<data>
+		JM2tuhScflPUfV0xfo0kmSShukg=
+		</data>
 		<key>Headers/BLSLogger.h</key>
 		<data>
-		t0vJMtTCVzMLah7RJComPoVPfco=
+		y9GX7MPFDugg89l1BS8900Buxdk=
+		</data>
+		<key>Headers/BannerAdView.h</key>
+		<data>
+		4rKNAMV7NvZmmam/lc2uUqgfOVI=
 		</data>
 		<key>Headers/Base64.h</key>
 		<data>
 		LAfGvOsbBNr+46rESUn30GlogD0=
 		</data>
-		<key>Headers/BlueStackAdapterInitializable.h</key>
+		<key>Headers/BiddingCrypto.h</key>
 		<data>
-		0HrXgu0h8P4u/G7CsfOVrDwEF1M=
-		</data>
-		<key>Headers/BlueStackDependencyProvider.h</key>
-		<data>
-		FFc8IfzTF20/nKRY2QNYZ9+7qHs=
-		</data>
-		<key>Headers/BlueStackError.h</key>
-		<data>
-		niyHclIfQ1Tpt9OY+kH9BpwfhNQ=
-		</data>
-		<key>Headers/BlueStackErrorCode.h</key>
-		<data>
-		pnqP240Qx/1Sw/ncJ3USBMbQcaU=
-		</data>
-		<key>Headers/BlueStackInitializationStatus.h</key>
-		<data>
-		3VPtSyoAKU6LkqnnH87tIZTbdEk=
+		FsY5AifkvPr5mdRM7Y9fHEEhI/I=
 		</data>
 		<key>Headers/BlueStackSDK-Swift.h</key>
 		<data>
-		1+uQ1pZrREe/goUmFaI+yCvJVcU=
+		NrrUins/f2H0GaX+RKCvAWf4Pas=
 		</data>
 		<key>Headers/BlueStackSDK.h</key>
 		<data>
-		6kqqdKzMpGgeaJbqbloZQY65PPs=
+		zXPqsVdnWYIeSRBeUt3nfOLZlYM=
 		</data>
-		<key>Headers/BlueStackVideoReward.h</key>
+		<key>Headers/CrossPlatformNativeAd.h</key>
 		<data>
-		Xc2hMq9RizBv0e2i7Lah4xG9Rlg=
-		</data>
-		<key>Headers/BluestackBiddingCrypto.h</key>
-		<data>
-		Vyx2emTha9oK5a1KWX6sc4KGG6Q=
+		s0jdkmlDheZAUgqhCwNILOn+OJk=
 		</data>
 		<key>Headers/ExpirableAd.h</key>
 		<data>
-		IyPFOEE/aXXFJ0jLzfqfkYO+xdc=
+		z1ogcGPzl5r85AEWdZqvnlBIJmU=
 		</data>
-		<key>Headers/MAdvertiseInfeedFrame.h</key>
+		<key>Headers/InfeedFrame.h</key>
 		<data>
-		OAbh3GUlFEbZyFBgjjydCK/ycLY=
+		LMNkG/OlnBFAppNgg6gxqTiNvBU=
 		</data>
-		<key>Headers/MAdvertiseRegistration.h</key>
+		<key>Headers/InfeedView.h</key>
 		<data>
-		LxMjraF0KSz/Br+hp5uI/F14gYo=
+		MEx9hc6b/eSN4q48BAp5P6h4OyQ=
 		</data>
-		<key>Headers/MAdvertiseReward.h</key>
+		<key>Headers/InterstitialViewController.h</key>
 		<data>
-		dy2iDFKW2csX13GVKjzTpbIEfKc=
+		tZny3Fl9xBIuuQuh9Ie+sjIVcz8=
 		</data>
-		<key>Headers/MAdvertiseRewardedVideoAd.h</key>
+		<key>Headers/MacroSubstitutor.h</key>
 		<data>
-		KSMyCNitErhL6WFgTJi7uXkk2zY=
+		ihtpV0ravfVTZM40O72yJNXg/Rk=
 		</data>
-		<key>Headers/MAdvertiseUtilities.h</key>
+		<key>Headers/MediationAdapterInitializable.h</key>
 		<data>
-		4LsbLTMjkQ+lh9aOnM9AD0W8N3o=
+		wd8/NhOhE4cGG3Etlg2jGHh9iY0=
 		</data>
-		<key>Headers/MNGAdLoader.h</key>
+		<key>Headers/MediationInitializationStatus.h</key>
 		<data>
-		ExTsuWg4iiTiMLXu/R3YqayJ0Aw=
+		zGqo/f3nq3mxB6GwZVlsNhzKxG0=
 		</data>
-		<key>Headers/MNGAdRequest.h</key>
+		<key>Headers/MraidController.h</key>
 		<data>
-		ssjKxoxdR7gc3U0T0w1sPGw1Wgk=
+		gro+VfcZsj4jCwIQC6rtzSgb338=
 		</data>
-		<key>Headers/MNGAdsAdapter.h</key>
+		<key>Headers/MraidUtility.h</key>
 		<data>
-		s9nDB3DzdSWcTwNdfru9IwuS0Zw=
+		0+MN1LbPV3NunLbtO0LI7NkKaWA=
 		</data>
-		<key>Headers/MNGAdsSDKFactory.h</key>
+		<key>Headers/NSDictionary+Parse.h</key>
 		<data>
-		Rd/oYQUUro/NJBepqlCeTySX0kI=
+		9Ei5Ifbq9k6LESJvEtVU9EWfF4Y=
 		</data>
-		<key>Headers/MNGAdsSDKFactoryDelegate.h</key>
+		<key>Headers/NativeAdImpressionListener.h</key>
 		<data>
-		aQBGJWjVcVtQSFSfCnQPgIvF+1g=
+		i5cCfPhStSu1bAtw5Jzo+RG0cEQ=
 		</data>
-		<key>Headers/MNGBannerView.h</key>
+		<key>Headers/NativeAdViewProvider.h</key>
 		<data>
-		tXzm0FPGxuf6U6OgPIO4tFaysxA=
+		+8fl5jL+trUIp6APWx7lyq1iQXc=
 		</data>
-		<key>Headers/MNGCrossPlatformNativeAd.h</key>
+		<key>Headers/NativeObject+Internal.h</key>
 		<data>
-		BE90lCDFeti9iS22M7n8ljj1UyY=
+		ct8W1aflZ5LCWS10NBeRu4DxDs0=
 		</data>
-		<key>Headers/MNGInfeedView.h</key>
+		<key>Headers/NativeObject.h</key>
 		<data>
-		OgzImPi9hwZ+twUl2tPElO3tMrE=
+		r1Sk1nioYeHUchqjP+9R2xP2Qog=
 		</data>
-		<key>Headers/MNGInterstitialViewController.h</key>
+		<key>Headers/OMHandler.h</key>
 		<data>
-		vvN84XRXBLkpau9O4CS9wwg27aQ=
+		KVcIXycz7nalC5B+gTTsOG/sdj8=
 		</data>
-		<key>Headers/MNGNAtiveObject.h</key>
+		<key>Headers/OMHandlerFactory.h</key>
 		<data>
-		xN3a6WKpDfthP+bOLYJgKEZDJxI=
+		yBgEpC071J7/k6y/oRGkR9GMFek=
 		</data>
-		<key>Headers/MNGNativeAdImpressionListener.h</key>
+		<key>Headers/OMRegistration.h</key>
 		<data>
-		k9za0ct6r41zIh/qNe2ys1K3ZmM=
+		uQfOTyoyozI8Z/nqZ4FMbdZxBwo=
 		</data>
-		<key>Headers/MNGNativeObject+Internal.h</key>
+		<key>Headers/Preference.h</key>
 		<data>
-		uPnbgwHfpT52kl9U75V4iYZhewc=
-		</data>
-		<key>Headers/MNGPreference.h</key>
-		<data>
-		9AmLlecZkwdsdpO9sQBkMN5+nbo=
-		</data>
-		<key>Headers/MNGRewardedVideoAd.h</key>
-		<data>
-		XWEQVFBH5ESgr2P+77bftz2U19I=
-		</data>
-		<key>Headers/NSDictionary+ParseBluestack.h</key>
-		<data>
-		6leDZ7D29touzVDMKaSXdVD4Rec=
+		4GzNKgjRC+VQcJXclNH3q0CAcB0=
 		</data>
 		<key>Headers/Protocols.h</key>
 		<data>
-		DQ2Ekzt9y3q/Xh/HbZk1DMFBYnc=
+		Poz4oZ+CiZRp7JfFebxymW74F8g=
+		</data>
+		<key>Headers/RewardedVideoAd.h</key>
+		<data>
+		W9S5o9bpBR1w9XW0NqtZE+FeYGc=
+		</data>
+		<key>Headers/RewardedVideoAdViewController.h</key>
+		<data>
+		xv4voNTcoQuDKoJVgL2AtMOXUsg=
+		</data>
+		<key>Headers/SDKDependencyProvider.h</key>
+		<data>
+		gHSJ317v7dAm+ddU7qQj8xZPkiA=
 		</data>
 		<key>Headers/UIView+SubParent.h</key>
 		<data>
-		0fPcK7kBzFEe2QlZaMVXGpTSHtk=
+		2A7HbFiC+BFOXJ6aZJORaPzXcT4=
 		</data>
 		<key>Headers/VersionUtils.h</key>
 		<data>
-		NjzUOldxQ+k3ZeiJFjiRMc4edO0=
+		j4ptsUwAOwYGC8Th45nvqHMmbEI=
+		</data>
+		<key>Headers/VideoAdReward.h</key>
+		<data>
+		Nj/aJNO6PhDP4nAutnYZgU0aPeg=
+		</data>
+		<key>Headers/WebViewViewController.h</key>
+		<data>
+		t14X0iY+lvH2Nnjva9L/f2QD3hQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dK4HVrctx2CeqK3MWZaKFMuoyvc=
+		/cCaJim7or1vpQXEapuIf8/ssM0=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		smc+9yyaqboHqxlT1W/DFWqrcmM=
+		r21z34/7ZgfWNgCSPXgtQBQz7yY=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		fRa31FIUV9B6x9+MkWR+s7s3bUg=
+		xBHx+PZYuUWhHXAYShOgvb2W7B8=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		myj2E5NwaTBOVGDUbAZZyFSKmQ4=
+		FhBl2gTtJAsxexVvVA5BnNtvCvs=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		fRa31FIUV9B6x9+MkWR+s7s3bUg=
+		xBHx+PZYuUWhHXAYShOgvb2W7B8=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rjfqHWRwDxBLXGPxQhsjQ1rpYNA=
+		7RmD3mylpXRXm66yig1yJwjZcYY=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		smc+9yyaqboHqxlT1W/DFWqrcmM=
+		r21z34/7ZgfWNgCSPXgtQBQz7yY=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		I3PM8CaSg0r861QuZWpozfs+/JA=
+		Cyytz/b8LbmiZ70kYu/catc22sA=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		31Flp19QnqBmgdy509OzAgdNiio=
+		c+SGFs8bAtgRlbRl/fh3H5qf5lQ=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		I3PM8CaSg0r861QuZWpozfs+/JA=
+		Cyytz/b8LbmiZ70kYu/catc22sA=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MdzstKcqL9CQUcTEDpmN6eruBGQ=
+		1HNMake1cwpb1LkWEUZ2nry6uOw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		UVzWFHP0t57P8yhYzkXsjveuuUo=
+		yo5o8UJMJ6CQ3nBAu53hBXa9vIE=
 		</data>
 		<key>Modules/module.private.modulemap</key>
 		<data>
-		0JslnapRD6STLFdRh6pnkVfDJbw=
+		gNFojhKGiQgZKzCPiC1wk1aiV2w=
+		</data>
+		<key>PrivateHeaders/AdServerError.h</key>
+		<data>
+		hwz2D+E1jbPLW6enyN1KnHs+FOQ=
+		</data>
+		<key>PrivateHeaders/AdsSDKFactory+Internals.h</key>
+		<data>
+		w/ngyfYNjQTNbYLhgZHrkS8DCBU=
+		</data>
+		<key>PrivateHeaders/AnalyticsManager.h</key>
+		<data>
+		DOup2Oa5duPex+Ow62ZUWNLfFCc=
 		</data>
 		<key>PrivateHeaders/DebugShakeManager.h</key>
 		<data>
-		ux1FJpTli0tgMPBrsX46+MXsVqQ=
+		6ggQdAbOUhN/tD96AQSBg2YM5GI=
 		</data>
-		<key>PrivateHeaders/MNGAdsSDKFactory+Internals.h</key>
+		<key>PrivateHeaders/ServerURLConnection.h</key>
 		<data>
-		F4zaiKRMTVHckL4oDT+/Ql+dkoQ=
-		</data>
-		<key>PrivateHeaders/MNGAnalyticsManager.h</key>
-		<data>
-		empZIOdskq4HCd6xfI1J9fNWGA4=
-		</data>
-		<key>PrivateHeaders/MNGError.h</key>
-		<data>
-		jgRQCmyswQbT/so1BbotP+o3Irg=
-		</data>
-		<key>PrivateHeaders/MNGURLConnection.h</key>
-		<data>
-		aUK/kgPS6joOmkVbIdT4sMqZPaY=
+		VaQq6brNKS2dqHOrfkVqL4f8Knw=
 		</data>
 		<key>PrivateHeaders/ShakeDetector.h</key>
 		<data>
-		MH64udIHiX0KX5zPLNagKj9GmRo=
+		gRP6nkA6msxmg1nVh8+CTd0MVQw=
 		</data>
 		<key>PrivateHeaders/UserAgentProvider.h</key>
 		<data>
-		atyEG5hAe0kB0H1xD6NUKmHIEWM=
+		i27CZKxIW6BSnq9TDyYwyoMf4Gc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -267,11 +295,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t10Xy2S0itHLnAr+Uh6ifO/+wQk=
+			8Mwwgidcg6relPDI8efZEg9Mn/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			p7Q57dsBmm81Tu/ddTZkVuWTcWjwPsqW1gWhV+fVXrc=
+			WRjBbGbeo4lFymWCewfLDRcePrdPhLjKkT2huRcWna8=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/PrivacyInfo.xcprivacy</key>
@@ -289,11 +317,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UNefqDnM+oM1ql2WrTbFvmo4fNc=
+			6XzR21C5Vmr8blPdZ6pBZYen7ho=
 			</data>
 			<key>hash2</key>
 			<data>
-			pJ+JdZG4wDmYU/DtEosg2FTpXMm9kB5K4ElDeyoad1M=
+			KZdmauC2NWg8VEI0dFqrvZ6dzx9CY6BdjRRq5FpM0Mw=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -311,22 +339,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X0WGE8LZhyLFOp7XPZ82UXt1XeQ=
+			/Og7+tPkYZMVb+dlSYpOz++q51E=
 			</data>
 			<key>hash2</key>
 			<data>
-			zKE/jTIBrUOf/Ts44Md1fkSXaIRmBl41zG/xcEKGyJE=
+			iPd1BsMwqkR+ydFuOlOPv4NdxdD2gQs+nuQhOu0S4YY=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FBNPcl1hrC7aJxTF5fg36YXtUHY=
+			1Sh3KbvC6hwgZ3gT2uzIKu9fSMI=
 			</data>
 			<key>hash2</key>
 			<data>
-			MBeSZIYnIpukkW7Hcrf5gTCMrWNZpUZxtTGi9Pdw110=
+			Zdd864pA1J1LuZfyaosYzZToCp9b6arOP6klHd02isQ=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeSignature</key>
@@ -344,14 +372,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ooF6nmPFIk7twLDRefviZtdSgKA=
+			RsXiKCm1uWtmsoXXow1urwDnzVk=
 			</data>
 			<key>hash2</key>
 			<data>
-			S+wmvZJLmAIoXg3ROfHt+QiEN1FykFILzjidhjY2XSA=
+			iIrbsx0m2lSQK53rESOdEaQAcTlFEttyJXUsv0atlmU=
 			</data>
 		</dict>
-		<key>BlueStackSDKResources.bundle/synccoreBluestack.js</key>
+		<key>BlueStackSDKResources.bundle/synccore.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -362,15 +390,125 @@
 			/dHx+ZqhZ0h0JFGUjI/q1tOayBBwAdWQuc1H/mslwKo=
 			</data>
 		</dict>
+		<key>Headers/AdError.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YSx0sxFAWHB2NaRJUHnymDkjesQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			4vY3UEIBskNX7ZsWMG3F4SWmNvO8U/SsNgDxEfgIEEo=
+			</data>
+		</dict>
+		<key>Headers/AdErrorCode.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Mn7mv/C4jaCy0ybfN4RyGc6CsvY=
+			</data>
+			<key>hash2</key>
+			<data>
+			/GzGDxfX7j3Wmzzx6W2v2oqk7b1ISkx6bxhiqjvpHA8=
+			</data>
+		</dict>
+		<key>Headers/AdLoadService.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IDaO/nBFCJUmblsrWm722LIGNVw=
+			</data>
+			<key>hash2</key>
+			<data>
+			5D8FAV3VtOX4IjZPuDGqhMqcNJB+NdAnxa6Q1cbRR5k=
+			</data>
+		</dict>
+		<key>Headers/AdRequest.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			D5AS8nXBgWJl4XtRYstCZYA3FjQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			o/OldocS8QrBDqsXDOMY6qWxMiD9ENI1xGfWf/eiGWg=
+			</data>
+		</dict>
+		<key>Headers/AdReward.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oG3DwZz0mUm3xEOsOdKYQg1HJDU=
+			</data>
+			<key>hash2</key>
+			<data>
+			l0rFQCGJVBSExRH5uSojbuFSpkX42+KVZI4X0eoabls=
+			</data>
+		</dict>
+		<key>Headers/AdSDKUtilities.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			O4xs8gVH+gY9xytEn8uHeE3y7/M=
+			</data>
+			<key>hash2</key>
+			<data>
+			a74AIfS82D3SGYzgcjUBB3hsb8ZWVj9eBWmbMhZwTRg=
+			</data>
+		</dict>
+		<key>Headers/AdsAdapter.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Cd1+8uOKI7tAQb3goCxrv0iT5zA=
+			</data>
+			<key>hash2</key>
+			<data>
+			gDqTLs/mqfxUSKTQ+tgA4BAlD4MioHQjhjrbM/+xUqk=
+			</data>
+		</dict>
+		<key>Headers/AdsSDKFactory.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			60XuFlERTUTB1b+5aIa5auDpB5E=
+			</data>
+			<key>hash2</key>
+			<data>
+			Y1rQYCkHo/zgnkbXpB65NARDRAGhc8wnQ3fjjxZcpBc=
+			</data>
+		</dict>
+		<key>Headers/AdsSDKFactoryDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JM2tuhScflPUfV0xfo0kmSShukg=
+			</data>
+			<key>hash2</key>
+			<data>
+			Cz4cxwPP66ShWk9rrE24GFPQ5RM7XcbtPcGHrSeF4zw=
+			</data>
+		</dict>
 		<key>Headers/BLSLogger.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t0vJMtTCVzMLah7RJComPoVPfco=
+			y9GX7MPFDugg89l1BS8900Buxdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			j8zh/oqKkK/PyQBnusL0ku7yW0Jayp/zJQoLSmBBCj8=
+			hfrT2dMbU7uUALaoZSyjfawkLjWhxI69nbu65A5cF9g=
+			</data>
+		</dict>
+		<key>Headers/BannerAdView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4rKNAMV7NvZmmam/lc2uUqgfOVI=
+			</data>
+			<key>hash2</key>
+			<data>
+			+QDQQExImirEq6uGXMLx7lFGdBAMyZZZMrZfShY0P34=
 			</data>
 		</dict>
 		<key>Headers/Base64.h</key>
@@ -384,576 +522,543 @@
 			7WoUp4gYRYEeCO7RPIbGL2AfZZX67eElr0FCmZYdpjY=
 			</data>
 		</dict>
-		<key>Headers/BlueStackAdapterInitializable.h</key>
+		<key>Headers/BiddingCrypto.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0HrXgu0h8P4u/G7CsfOVrDwEF1M=
+			FsY5AifkvPr5mdRM7Y9fHEEhI/I=
 			</data>
 			<key>hash2</key>
 			<data>
-			/9iekavseaLFwX9NR7Qb8P+gKx+lD2xVa7deWvL/mmg=
-			</data>
-		</dict>
-		<key>Headers/BlueStackDependencyProvider.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FFc8IfzTF20/nKRY2QNYZ9+7qHs=
-			</data>
-			<key>hash2</key>
-			<data>
-			3fjMmx5SapjBkuRTvuf1DGFnzLdCvEd3tGzYsLlwPKs=
-			</data>
-		</dict>
-		<key>Headers/BlueStackError.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			niyHclIfQ1Tpt9OY+kH9BpwfhNQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			qYZLktujspJROo2ZdBGfTnZXZRZTE3qlrljIMccI/64=
-			</data>
-		</dict>
-		<key>Headers/BlueStackErrorCode.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pnqP240Qx/1Sw/ncJ3USBMbQcaU=
-			</data>
-			<key>hash2</key>
-			<data>
-			xEEbFM47zLa+nRbBOB5C6TSrIlvuxWBvd3KC90FQaj8=
-			</data>
-		</dict>
-		<key>Headers/BlueStackInitializationStatus.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3VPtSyoAKU6LkqnnH87tIZTbdEk=
-			</data>
-			<key>hash2</key>
-			<data>
-			S6M6GzVejhZM9ZFotWUTJoqXeS3407yrD2EgBHycE8I=
+			xU6u5YUL0NFJVjrfNPc676kMJEwLgv+jJFMPChpIiZc=
 			</data>
 		</dict>
 		<key>Headers/BlueStackSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1+uQ1pZrREe/goUmFaI+yCvJVcU=
+			NrrUins/f2H0GaX+RKCvAWf4Pas=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZNZt6Y0h3OgSXdtYQih351sbKScvSdYND924MptN3CM=
+			2WIF7045uL9hMhxSF1t4bfn3/PpIfvRQaM+S5aYeVGY=
 			</data>
 		</dict>
 		<key>Headers/BlueStackSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6kqqdKzMpGgeaJbqbloZQY65PPs=
+			zXPqsVdnWYIeSRBeUt3nfOLZlYM=
 			</data>
 			<key>hash2</key>
 			<data>
-			ai6NCU150u4MKI1rzMeCuqxCn87YwbJhcW2e68BhEfQ=
+			9B/ACMXoRSvwanigELgh4raNFK0KHRnUEFbUK1Zr66I=
 			</data>
 		</dict>
-		<key>Headers/BlueStackVideoReward.h</key>
+		<key>Headers/CrossPlatformNativeAd.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Xc2hMq9RizBv0e2i7Lah4xG9Rlg=
+			s0jdkmlDheZAUgqhCwNILOn+OJk=
 			</data>
 			<key>hash2</key>
 			<data>
-			JcSNSvMWLVhmf2D5PdRom3KamraiTdXFhbQ9LJRWGzc=
-			</data>
-		</dict>
-		<key>Headers/BluestackBiddingCrypto.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Vyx2emTha9oK5a1KWX6sc4KGG6Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			7yzcsDK0UMzj+xNdZf5AR1Lp73qdtuNAKZLbDtMjLuU=
+			Z4S3iaPbbzSnEBtcAvGSzDqhT4ODrTUeDW1TfeEDvgw=
 			</data>
 		</dict>
 		<key>Headers/ExpirableAd.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IyPFOEE/aXXFJ0jLzfqfkYO+xdc=
+			z1ogcGPzl5r85AEWdZqvnlBIJmU=
 			</data>
 			<key>hash2</key>
 			<data>
-			5GtJH9o02AH0XXasQkJydFMpO7PfwevROaX1z8PbffY=
+			fk8OPW2VhtCe0+vjIi+t/uGvTNFPG/IhhTzZvQqYUaI=
 			</data>
 		</dict>
-		<key>Headers/MAdvertiseInfeedFrame.h</key>
+		<key>Headers/InfeedFrame.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OAbh3GUlFEbZyFBgjjydCK/ycLY=
+			LMNkG/OlnBFAppNgg6gxqTiNvBU=
 			</data>
 			<key>hash2</key>
 			<data>
-			PYyAkzrs7RlEiVW/LlocGjD9NJj8y1k5QG1hctWScRs=
+			2GZpM643/jVG/b6zow9LFGj6mGQtP+b1plYxRwnB2ig=
 			</data>
 		</dict>
-		<key>Headers/MAdvertiseRegistration.h</key>
+		<key>Headers/InfeedView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LxMjraF0KSz/Br+hp5uI/F14gYo=
+			MEx9hc6b/eSN4q48BAp5P6h4OyQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			fAQpapZHiFoMlUZW4bhlN4iU5m3tqJsyO5ErvIGbJiw=
+			KSAHDDEEIdF3IjHbPjiSOQlDAecisc6VuA0GwQyiW44=
 			</data>
 		</dict>
-		<key>Headers/MAdvertiseReward.h</key>
+		<key>Headers/InterstitialViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dy2iDFKW2csX13GVKjzTpbIEfKc=
+			tZny3Fl9xBIuuQuh9Ie+sjIVcz8=
 			</data>
 			<key>hash2</key>
 			<data>
-			J561N5PKwOlvLuNQwQ5EOdx92OwnP5eq2w98bOOJcU8=
+			Qr2LHDInI+nRwvdlH8i4+vnnlx45NZYNnm9cuTi2z8k=
 			</data>
 		</dict>
-		<key>Headers/MAdvertiseRewardedVideoAd.h</key>
+		<key>Headers/MacroSubstitutor.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KSMyCNitErhL6WFgTJi7uXkk2zY=
+			ihtpV0ravfVTZM40O72yJNXg/Rk=
 			</data>
 			<key>hash2</key>
 			<data>
-			KgKhMHJ4zJXogJuec8Avwe2SE4kqO/KONWnsgIPd0+M=
+			hePlH6vBqwWginDGsy76OYu29m3gTN+yqOYLkvQ/ROc=
 			</data>
 		</dict>
-		<key>Headers/MAdvertiseUtilities.h</key>
+		<key>Headers/MediationAdapterInitializable.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4LsbLTMjkQ+lh9aOnM9AD0W8N3o=
+			wd8/NhOhE4cGG3Etlg2jGHh9iY0=
 			</data>
 			<key>hash2</key>
 			<data>
-			AxDD+1ere9KqgbJuSdd1r7mPlbuh/vYuZ1rEKTiGiGc=
+			dhfHieB3vuRyrl4fnzUz58WnYu4YX30T2PquefLEaxU=
 			</data>
 		</dict>
-		<key>Headers/MNGAdLoader.h</key>
+		<key>Headers/MediationInitializationStatus.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ExTsuWg4iiTiMLXu/R3YqayJ0Aw=
+			zGqo/f3nq3mxB6GwZVlsNhzKxG0=
 			</data>
 			<key>hash2</key>
 			<data>
-			t5JPJD9pVYrIZYFiRXKLyXUrVc238BzPWnrUE0qp8LI=
+			a1NXHwJTQNV/+v5i1YEXuE7zRp+F3vJE/reHxJNMd1k=
 			</data>
 		</dict>
-		<key>Headers/MNGAdRequest.h</key>
+		<key>Headers/MraidController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ssjKxoxdR7gc3U0T0w1sPGw1Wgk=
+			gro+VfcZsj4jCwIQC6rtzSgb338=
 			</data>
 			<key>hash2</key>
 			<data>
-			C87jV1456ju9H94wHty2gUzhPoftg/YHAHas7MQrqm8=
+			MduFsvl3N1QMi6zss+h4aJfnXq5vrjayJ0cstJg/yHc=
 			</data>
 		</dict>
-		<key>Headers/MNGAdsAdapter.h</key>
+		<key>Headers/MraidUtility.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s9nDB3DzdSWcTwNdfru9IwuS0Zw=
+			0+MN1LbPV3NunLbtO0LI7NkKaWA=
 			</data>
 			<key>hash2</key>
 			<data>
-			IVwpX9gTgNv8EAwVZjmd2GKy5/h/MhCdK69m/YwTKiA=
+			+cB89tVwQLTDJl785ftkkKZG1Dgz+KtDtQtSvFzgJCw=
 			</data>
 		</dict>
-		<key>Headers/MNGAdsSDKFactory.h</key>
+		<key>Headers/NSDictionary+Parse.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Rd/oYQUUro/NJBepqlCeTySX0kI=
+			9Ei5Ifbq9k6LESJvEtVU9EWfF4Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZQAkKBBjxzXr4PN5WGTNwhUX59/iiRv8Pa/IjIZulDE=
+			v983oPnHVVrNeYw3ejJ9VQ8LaR3WkVSQdSuPT5XLHL4=
 			</data>
 		</dict>
-		<key>Headers/MNGAdsSDKFactoryDelegate.h</key>
+		<key>Headers/NativeAdImpressionListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aQBGJWjVcVtQSFSfCnQPgIvF+1g=
+			i5cCfPhStSu1bAtw5Jzo+RG0cEQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			BtM3pfbWmKG98Ux2To0VwTrvcWWNvSH5pSw112dZ53I=
+			iwTo6K9QA/TXJWtkeWIiH2AxY9qZ0hnCaRJJrSCEcos=
 			</data>
 		</dict>
-		<key>Headers/MNGBannerView.h</key>
+		<key>Headers/NativeAdViewProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tXzm0FPGxuf6U6OgPIO4tFaysxA=
+			+8fl5jL+trUIp6APWx7lyq1iQXc=
 			</data>
 			<key>hash2</key>
 			<data>
-			MXlzlST1fvd6CLnOd5E3BsGWZ9NpqosfVmir3gYFsp4=
+			BjzvWWGE+hefrhLWVz8bkQeyxQ55ieADFGeJOHd1HvI=
 			</data>
 		</dict>
-		<key>Headers/MNGCrossPlatformNativeAd.h</key>
+		<key>Headers/NativeObject+Internal.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BE90lCDFeti9iS22M7n8ljj1UyY=
+			ct8W1aflZ5LCWS10NBeRu4DxDs0=
 			</data>
 			<key>hash2</key>
 			<data>
-			hZG/I4ZTK2CXfn04567Gk7wpGGXE8Ejd2sj0XC5MBB0=
+			2WFstX4ijLVbq/FOtI0+6jVpyuXTxN3lCA8HKWlyRkw=
 			</data>
 		</dict>
-		<key>Headers/MNGInfeedView.h</key>
+		<key>Headers/NativeObject.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OgzImPi9hwZ+twUl2tPElO3tMrE=
+			r1Sk1nioYeHUchqjP+9R2xP2Qog=
 			</data>
 			<key>hash2</key>
 			<data>
-			ITMiDL3aOS9iafRuOfrnUvmrAUA+8ZgSaWozkh0XA/I=
+			D7p6mViMRyM5/WuH8FSFwQ3hBo/SHpJ1DfAtvABgCO4=
 			</data>
 		</dict>
-		<key>Headers/MNGInterstitialViewController.h</key>
+		<key>Headers/OMHandler.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vvN84XRXBLkpau9O4CS9wwg27aQ=
+			KVcIXycz7nalC5B+gTTsOG/sdj8=
 			</data>
 			<key>hash2</key>
 			<data>
-			CSOHjnD38jI9BrLnY61yOGVW3JPz9ZsBNJCrqF/G/8g=
+			OVFwMguk9vBTyTFaI+jFjOnXBdY0lYg+BUkpIqwCQgQ=
 			</data>
 		</dict>
-		<key>Headers/MNGNAtiveObject.h</key>
+		<key>Headers/OMHandlerFactory.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xN3a6WKpDfthP+bOLYJgKEZDJxI=
+			yBgEpC071J7/k6y/oRGkR9GMFek=
 			</data>
 			<key>hash2</key>
 			<data>
-			nokzuRfHAgxBvG/b9qPegLHLSwxYPSSs5mkMXyeCfoM=
+			c1kceGc6WJZcw3hIzoyz20xjgSOFrHSg3gFMyyohhwk=
 			</data>
 		</dict>
-		<key>Headers/MNGNativeAdImpressionListener.h</key>
+		<key>Headers/OMRegistration.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			k9za0ct6r41zIh/qNe2ys1K3ZmM=
+			uQfOTyoyozI8Z/nqZ4FMbdZxBwo=
 			</data>
 			<key>hash2</key>
 			<data>
-			FotzNleVD1Ap8xUAQrwpHqUsN4oRNtVWuIAe0px+K6c=
+			ecdXylAhV1oMDdVD04BoV22hYuZZlTY3AyaPPZuf6io=
 			</data>
 		</dict>
-		<key>Headers/MNGNativeObject+Internal.h</key>
+		<key>Headers/Preference.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uPnbgwHfpT52kl9U75V4iYZhewc=
+			4GzNKgjRC+VQcJXclNH3q0CAcB0=
 			</data>
 			<key>hash2</key>
 			<data>
-			DNbAD9eKZbwTec3mRABmvMxiUYT/Vx8hjsTb3HTnPnc=
-			</data>
-		</dict>
-		<key>Headers/MNGPreference.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9AmLlecZkwdsdpO9sQBkMN5+nbo=
-			</data>
-			<key>hash2</key>
-			<data>
-			PIFUvZxnxxMDV7raAX4HMRPsJo7iNyewwOnFOdI8HKw=
-			</data>
-		</dict>
-		<key>Headers/MNGRewardedVideoAd.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			XWEQVFBH5ESgr2P+77bftz2U19I=
-			</data>
-			<key>hash2</key>
-			<data>
-			BQJ0x4xZODwipMSPaoFCaXvEbmmf38g2JLAIfelnuxU=
-			</data>
-		</dict>
-		<key>Headers/NSDictionary+ParseBluestack.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6leDZ7D29touzVDMKaSXdVD4Rec=
-			</data>
-			<key>hash2</key>
-			<data>
-			mNIM1ddHioXoa4sijVTQPFA41h19JbfDBURIk2osuLY=
+			I5ToNbUtFK0kwX/nCE9DMOuQnEVDcN9HXlp1I5B7GPY=
 			</data>
 		</dict>
 		<key>Headers/Protocols.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DQ2Ekzt9y3q/Xh/HbZk1DMFBYnc=
+			Poz4oZ+CiZRp7JfFebxymW74F8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			ya2272ImR4+0v05fPaAzNxJOQQE4B5wX9WSY8tjApJY=
+			r23+E9Ijvv088JF7AXl02iDiR4Mipo2gTpI3tJxXV5w=
+			</data>
+		</dict>
+		<key>Headers/RewardedVideoAd.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			W9S5o9bpBR1w9XW0NqtZE+FeYGc=
+			</data>
+			<key>hash2</key>
+			<data>
+			KcDGpsjxBYm/mzrxBjCJeVAxYgnXLCUEzZi//4JgopY=
+			</data>
+		</dict>
+		<key>Headers/RewardedVideoAdViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xv4voNTcoQuDKoJVgL2AtMOXUsg=
+			</data>
+			<key>hash2</key>
+			<data>
+			etunPqiB/V596qKaMct+3+Tpg6YtvntDRFAnGT4HW6E=
+			</data>
+		</dict>
+		<key>Headers/SDKDependencyProvider.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gHSJ317v7dAm+ddU7qQj8xZPkiA=
+			</data>
+			<key>hash2</key>
+			<data>
+			h1jPCi3dhfv1k5IjSQghGgChBtKyalugN+bElbXuLM0=
 			</data>
 		</dict>
 		<key>Headers/UIView+SubParent.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0fPcK7kBzFEe2QlZaMVXGpTSHtk=
+			2A7HbFiC+BFOXJ6aZJORaPzXcT4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HmWLfwU/ZOp5hXvZOS0RdFWjfVHv2nuH+l7b8MYbiMM=
+			D9+RrtLf/orK2ZVBQAzhx3MJXZfeYnZyJw9KbyEf7uw=
 			</data>
 		</dict>
 		<key>Headers/VersionUtils.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NjzUOldxQ+k3ZeiJFjiRMc4edO0=
+			j4ptsUwAOwYGC8Th45nvqHMmbEI=
 			</data>
 			<key>hash2</key>
 			<data>
-			9urCcTwN94qMR3gsA59aijY1lB5o3nmdXkrkTB1IA5Q=
+			53BEZrTfVTnA0VnWga1d2gwAZC3vvHr56MtgvNP7UsE=
+			</data>
+		</dict>
+		<key>Headers/VideoAdReward.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Nj/aJNO6PhDP4nAutnYZgU0aPeg=
+			</data>
+			<key>hash2</key>
+			<data>
+			KL7VFY5kPSX4GeW/3jOzPtr06eg6P8PVDI30V1EcQPA=
+			</data>
+		</dict>
+		<key>Headers/WebViewViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			t14X0iY+lvH2Nnjva9L/f2QD3hQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			pTKY4JUDU34ySp1507fb6UitaVz3glLGRLt5lx8Vfqo=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			smc+9yyaqboHqxlT1W/DFWqrcmM=
+			r21z34/7ZgfWNgCSPXgtQBQz7yY=
 			</data>
 			<key>hash2</key>
 			<data>
-			fXwyZyQYaIWNm6pn26TH68opg5sWzsPqzQVh6t2JJHk=
+			RVI8fYvW8DNtAch3caphykCR2LfS4ixUzQE4OPN4Pyk=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fRa31FIUV9B6x9+MkWR+s7s3bUg=
+			xBHx+PZYuUWhHXAYShOgvb2W7B8=
 			</data>
 			<key>hash2</key>
 			<data>
-			xcRcrgjDePS+9GbRTZzd5fgZK2uvm78mpKLUInFdorE=
+			RwGG5xvmxQ43kr9ULW7O3PKmm7JUHVjoLKnohVMvHP8=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			myj2E5NwaTBOVGDUbAZZyFSKmQ4=
+			FhBl2gTtJAsxexVvVA5BnNtvCvs=
 			</data>
 			<key>hash2</key>
 			<data>
-			aDVK7fGRMzD9ZWlpwZ5iwDoqoJdSGy0QhoapF3gdCns=
+			4zK+8T2o/Xg8ZojX/HVM59fyLllO8iIPrgp5FnAjgX8=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fRa31FIUV9B6x9+MkWR+s7s3bUg=
+			xBHx+PZYuUWhHXAYShOgvb2W7B8=
 			</data>
 			<key>hash2</key>
 			<data>
-			xcRcrgjDePS+9GbRTZzd5fgZK2uvm78mpKLUInFdorE=
+			RwGG5xvmxQ43kr9ULW7O3PKmm7JUHVjoLKnohVMvHP8=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rjfqHWRwDxBLXGPxQhsjQ1rpYNA=
+			7RmD3mylpXRXm66yig1yJwjZcYY=
 			</data>
 			<key>hash2</key>
 			<data>
-			GUrE2K9cZUd0s4NkrUeMXEQiD3IHt43kGHh/PJ+fhV8=
+			Hj7gBh0TmXbtInamyyW62FK4SlvDtaQlnZZnZ4kqGvU=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			smc+9yyaqboHqxlT1W/DFWqrcmM=
+			r21z34/7ZgfWNgCSPXgtQBQz7yY=
 			</data>
 			<key>hash2</key>
 			<data>
-			fXwyZyQYaIWNm6pn26TH68opg5sWzsPqzQVh6t2JJHk=
+			RVI8fYvW8DNtAch3caphykCR2LfS4ixUzQE4OPN4Pyk=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I3PM8CaSg0r861QuZWpozfs+/JA=
+			Cyytz/b8LbmiZ70kYu/catc22sA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BJhDmwzaksIAIxUQQVU7xIl/lITdLC4dC3yph+1oy1A=
+			CqQZpcNkZ5n18jGmLcwhfxVb86YbrkVmsiC7gzAILYU=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			31Flp19QnqBmgdy509OzAgdNiio=
+			c+SGFs8bAtgRlbRl/fh3H5qf5lQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			WyebBoGkQ8oeSuV/Ercg6J3SUGOOLDnIPWXnrLjj6ko=
+			LmATuSiXONUvZAQ+vYdxze7Kw3cRMlAx3cXG9rrFBTQ=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I3PM8CaSg0r861QuZWpozfs+/JA=
+			Cyytz/b8LbmiZ70kYu/catc22sA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BJhDmwzaksIAIxUQQVU7xIl/lITdLC4dC3yph+1oy1A=
+			CqQZpcNkZ5n18jGmLcwhfxVb86YbrkVmsiC7gzAILYU=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MdzstKcqL9CQUcTEDpmN6eruBGQ=
+			1HNMake1cwpb1LkWEUZ2nry6uOw=
 			</data>
 			<key>hash2</key>
 			<data>
-			9Sq9ZdefVfPVos9CQNrvdC9F5r+JguOWWOMsRh6Sh8c=
+			4Iv/gQoIHVmTT82C9EP1oaN+bKPCfrMpUL0wvju+H+o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UVzWFHP0t57P8yhYzkXsjveuuUo=
+			yo5o8UJMJ6CQ3nBAu53hBXa9vIE=
 			</data>
 			<key>hash2</key>
 			<data>
-			EEQbQPKcoDK/hGu+xs2mfmilaxaOXx5lg1K4Rjg5jGM=
+			oOOpXrOA/kKH59D6cRIHhpOnkyzxK1ctLxmseBCXe1M=
 			</data>
 		</dict>
 		<key>Modules/module.private.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0JslnapRD6STLFdRh6pnkVfDJbw=
+			gNFojhKGiQgZKzCPiC1wk1aiV2w=
 			</data>
 			<key>hash2</key>
 			<data>
-			USvdz/IHoj6/i4SmrDbFn0ywI56alyWi902TLizKy0Q=
+			ggIMoK6zWR9p4GameyR99K5fqf3gSb7wBdLmtFF/C/o=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AdServerError.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hwz2D+E1jbPLW6enyN1KnHs+FOQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			tvzDAGA0QrUX1T47KDb8j5+7DtXPE2XVVfRiE2uQ9+8=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AdsSDKFactory+Internals.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			w/ngyfYNjQTNbYLhgZHrkS8DCBU=
+			</data>
+			<key>hash2</key>
+			<data>
+			nJJB1jSbIlTHz/ilMhZxeJUSpjhcXImH+W+iJew3Zgc=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AnalyticsManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DOup2Oa5duPex+Ow62ZUWNLfFCc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Fsdl+zegQr4h+A+q+Ot3MDm1y+MK2jSwJTwQ3VBu10E=
 			</data>
 		</dict>
 		<key>PrivateHeaders/DebugShakeManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ux1FJpTli0tgMPBrsX46+MXsVqQ=
+			6ggQdAbOUhN/tD96AQSBg2YM5GI=
 			</data>
 			<key>hash2</key>
 			<data>
-			oHr9oqmtHnGjcap6YxW/6EYbpuaTa05UQPbEGC8Zcqo=
+			BoHwl1e+vdfIjlFSTsx743XAv1Gmt9yyB9svX7yE4vE=
 			</data>
 		</dict>
-		<key>PrivateHeaders/MNGAdsSDKFactory+Internals.h</key>
+		<key>PrivateHeaders/ServerURLConnection.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			F4zaiKRMTVHckL4oDT+/Ql+dkoQ=
+			VaQq6brNKS2dqHOrfkVqL4f8Knw=
 			</data>
 			<key>hash2</key>
 			<data>
-			pJPcSqiXSCYd1x9XbZKwbvEAOE9sfsMksQ+U2E3DAQA=
-			</data>
-		</dict>
-		<key>PrivateHeaders/MNGAnalyticsManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			empZIOdskq4HCd6xfI1J9fNWGA4=
-			</data>
-			<key>hash2</key>
-			<data>
-			jdl1C1kIYoFdGaKBkhzsGKnjht7Qm8dz4JjppK8c82I=
-			</data>
-		</dict>
-		<key>PrivateHeaders/MNGError.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jgRQCmyswQbT/so1BbotP+o3Irg=
-			</data>
-			<key>hash2</key>
-			<data>
-			cgK45GCwfnHO3GEylEUUyaoF5FJZIixf9wKeJ2COOuc=
-			</data>
-		</dict>
-		<key>PrivateHeaders/MNGURLConnection.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			aUK/kgPS6joOmkVbIdT4sMqZPaY=
-			</data>
-			<key>hash2</key>
-			<data>
-			pG8d6RL//QRRkOp1RzOYCcIoKsDnrY9jb23raWEyALQ=
+			lrucCD4IwgDB3SmMn7b9f7uGtaxUmQrS4tFT0i4UqMg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/ShakeDetector.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MH64udIHiX0KX5zPLNagKj9GmRo=
+			gRP6nkA6msxmg1nVh8+CTd0MVQw=
 			</data>
 			<key>hash2</key>
 			<data>
-			PDKoyvxp7nrHkfvPd2KHajm06yjy0+zp7nuJ/do5roo=
+			xgjRSJ3NUHs315Fd9klAPYJRMnw/rGJXfgwoc56Fljc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/UserAgentProvider.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			atyEG5hAe0kB0H1xD6NUKmHIEWM=
+			i27CZKxIW6BSnq9TDyYwyoMf4Gc=
 			</data>
 			<key>hash2</key>
 			<data>
-			1iK0XV683CD9E04TYoNJPfgCkAE14Kn0Tykfkhj2lAU=
+			Q0ajzcCDAs4UWuYjI7/smdzFfO8v8zxKAsznAaR6HjU=
 			</data>
 		</dict>
 	</dict>

@@ -281,11 +281,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AdRenderKit;
+@import BlueStackSDK_Private;
 @import CoreFoundation;
 @import Foundation;
+@import MobileAdsUtilities;
 @import ObjectiveC;
 @import UIKit;
 #endif
+
+#import <BlueStackSDK/BlueStackSDK.h>
 
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -323,6 +328,34 @@ SWIFT_CLASS("_TtC12BlueStackSDK8AdServer")
 - (NSDictionary<NSString *, id> * _Nullable)serverParams SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS("_TtC12BlueStackSDK14AdSessionEvent")
+@interface AdSessionEvent : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK22AdSessionEventDelegate_")
+@protocol AdSessionEventDelegate <NSObject>
+- (void)didReceiveAdSessionEvent:(AdSessionEvent * _Nonnull)event;
+@end
+
+@class Preference;
+SWIFT_CLASS("_TtC12BlueStackSDK18AdSessionInitEvent")
+@interface AdSessionInitEvent : AdSessionEvent
+@property (nonatomic, readonly, copy) NSString * _Nonnull placementId;
+@property (nonatomic, readonly) AdsType adType;
+@property (nonatomic, readonly, strong) Preference * _Nullable preference;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK23AdSessionLoadErrorEvent")
+@interface AdSessionLoadErrorEvent : AdSessionEvent
+@property (nonatomic, readonly, copy) NSString * _Nonnull placementId;
+@property (nonatomic, readonly) NSError * _Nonnull error;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 /// The ad sizes of the Banner Ad.
 /// AdSize  | Size in dp (WxH) | Description
 /// —————–– | ——— | ——————————————
@@ -343,10 +376,58 @@ typedef SWIFT_ENUM(NSInteger, AdSize, open) {
   AdSizeDynamicLeaderboardBanner = 6,
 };
 
+typedef SWIFT_ENUM(NSInteger, AdType, open) {
+  AdTypeBanner = 0,
+  AdTypeInterstitial = 1,
+  AdTypeNative = 2,
+  AdTypeInfeed = 3,
+  AdTypeThumbnail = 4,
+  AdTypeAppopen = 5,
+};
+
+SWIFT_CLASS("_TtC12BlueStackSDK23AdapterAdLoadErrorEvent")
+@interface AdapterAdLoadErrorEvent : AdSessionEvent
+@property (nonatomic, readonly, copy) NSString * _Nonnull adServerName;
+@property (nonatomic, readonly) NSError * _Nonnull error;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK23AdapterAdLoadStartEvent")
+@interface AdapterAdLoadStartEvent : AdSessionEvent
+@property (nonatomic, readonly, copy) NSString * _Nonnull adServerName;
+@property (nonatomic, readonly) NSInteger adSeverTimeOut;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK25AdapterAdLoadSuccessEvent")
+@interface AdapterAdLoadSuccessEvent : AdSessionEvent
+@property (nonatomic, readonly, copy) NSString * _Nonnull adServerName;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK23AdapterCreateErrorEvent")
+@interface AdapterCreateErrorEvent : AdSessionEvent
+@property (nonatomic, readonly, copy) NSString * _Nonnull adServerName;
+@property (nonatomic, readonly) NSError * _Nonnull error;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS("_TtC12BlueStackSDK17AdapterInitConfig")
 @interface AdapterInitConfig : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nullable params;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK23AdapterSessionInitEvent")
+@interface AdapterSessionInitEvent : AdSessionEvent
+@property (nonatomic, readonly, copy) NSString * _Nonnull adServerName;
+@property (nonatomic, readonly) NSInteger priority;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -369,10 +450,64 @@ SWIFT_CLASS("_TtC12BlueStackSDK13AdapterStatus")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@protocol FullScreenDelegate;
+/// Ads that present full screen content confirms to this protocol.
+SWIFT_PROTOCOL("_TtP12BlueStackSDK23FullScreenDisplayableAd_")
+@protocol FullScreenDisplayableAd <NSObject>
+/// Delegate object that receives full screen related callbacks
+@property (nonatomic, strong) id <FullScreenDelegate> _Nullable fullScreenDelegate;
+@end
+
 @class UIViewController;
-@protocol BannerViewDelegate;
-@class NSCoder;
+@protocol BLSAppOpenAdDelegate;
 @class RequestOptions;
+/// The AppOpenAd class is responsible for managing the lifecycle and display of app open advertisements in your application. AppOpenAd ads are full-screen ads that cover the interface of their host app and can be closed by the users at any time. They are typically displayed when users bring your app to the foreground.
+SWIFT_CLASS_NAMED("AppOpenAd")
+@interface BLSAppOpenAd : NSObject <FullScreenDisplayableAd>
+/// Returns whether the app open ad is ready to be displayed.
+@property (nonatomic, readonly) BOOL isReady;
+/// The placement ID.
+@property (nonatomic, readonly, copy) NSString * _Nonnull placementID;
+/// View controller from which ad will present full screen content after user interacts with the ad.
+@property (nonatomic, strong) UIViewController * _Nullable viewController;
+/// An optional delegate object that receives notifications about the ad’s lifecycle events, such as when the ad is loaded or failed to load.
+@property (nonatomic, weak) id <BLSAppOpenAdDelegate> _Nullable delegate;
+/// An optional delegate object that receives notifications about the ad’s full screen content, such as when the ad presented, failed to present or dismissed.
+@property (nonatomic, weak) id <FullScreenDelegate> _Nullable fullScreenDelegate;
+/// Initializes a new instance of the <code>AppOpenAd</code> class with the specified placement ID.
+/// \param placementID The placement ID of your app open ad.
+///
+- (nonnull instancetype)initWithPlacementID:(NSString * _Nonnull)placementID OBJC_DESIGNATED_INITIALIZER;
+/// Request to load an AppOpenAd.
+/// \param requestOptions The <code>RequestOptions</code> object for supplying targeting information.
+///
+- (void)loadWithRequestOptions:(RequestOptions * _Nullable)requestOptions;
+/// Request to load an AppOpenAd.
+- (void)load;
+/// Present the app open ad on top of the provided view controller. Must be called on the main thread.
+/// \param rootViewController An optional view controller to present the ad. If not given ad will be presented from key UIWindow’s top most view controller.
+///
+- (void)showFromRootViewController:(UIViewController * _Nullable)rootViewController;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_PROTOCOL_NAMED("AppOpenAdDelegate")
+@protocol BLSAppOpenAdDelegate <NSObject>
+/// Called when the app ppen ad has successfully loaded.
+/// \param ad The <code>AppOpenAd</code> object that has been loaded.
+///
+- (void)didLoadAppOpenAd:(BLSAppOpenAd * _Nonnull)ad;
+/// Called when the app open ad fails to load. The error parameter provides details about the failure.
+/// \param ad The <code>AppOpenAd</code> object that failed
+///
+/// \param error The error describing the failure reason.
+///
+- (void)appOpenAd:(BLSAppOpenAd * _Nonnull)ad didFailedToLoadWithError:(NSError * _Nonnull)error;
+@end
+
+@protocol BLSBannerViewDelegate;
+@class NSCoder;
 SWIFT_CLASS_NAMED("BannerView")
 @interface BLSBannerView : UIView
 /// The banner ad size
@@ -382,7 +517,7 @@ SWIFT_CLASS_NAMED("BannerView")
 /// View controller from which ad will present full screen content after user interacts with the ad.
 @property (nonatomic, strong) UIViewController * _Nullable viewController;
 /// An optional delegate object that receives notifications about the ad’s state change events.
-@property (nonatomic, weak) IBOutlet id <BannerViewDelegate> _Nullable delegate;
+@property (nonatomic, weak) IBOutlet id <BLSBannerViewDelegate> _Nullable delegate;
 /// Initializes and returns a banner view with the specified ad size.
 /// \param adSize The banner ad size
 ///
@@ -402,8 +537,8 @@ SWIFT_CLASS_NAMED("BannerView")
 @end
 
 /// Delegate methods for receiving BannerView state change callbacks.
-SWIFT_PROTOCOL("_TtP12BlueStackSDK18BannerViewDelegate_")
-@protocol BannerViewDelegate <NSObject>
+SWIFT_PROTOCOL_NAMED("BannerViewDelegate")
+@protocol BLSBannerViewDelegate <NSObject>
 /// Called when the BannerView receives an ad.
 /// \param bannerView The <code>BannerView</code> object that has loaded an ad.
 ///
@@ -599,97 +734,6 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK25BiddingRewardedAdDelegate_")
 - (void)onRewardEarnedWithBiddingRewardedAd:(id <BiddingRewardedAd> _Nonnull)biddingRewardedAd rewardInfo:(NSDictionary<NSString *, id> * _Nonnull)rewardInfo;
 @end
 
-@class InitializationStatus;
-SWIFT_CLASS("_TtC12BlueStackSDK9BlueStack")
-@interface BlueStack : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Returns the shared BlueStack instance
-///
-/// returns:
-/// BlueStack instance
-+ (BlueStack * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
-/// Returns SDK version number. BlueStack sdk supports semantic versioning.
-///
-/// returns:
-/// Version string in format of MAJOR.MINOR.PATCH
-- (NSString * _Nonnull)getVersion SWIFT_WARN_UNUSED_RESULT;
-/// Returns the sdk initialization status
-@property (nonatomic, readonly, strong) InitializationStatus * _Nonnull initializationStatus;
-/// Initializes the BlueStack sdk
-/// \param appID BlueStack App ID
-///
-/// \param completion Completion block to be called after sdk finish to initialize
-///
-- (void)initializeWithAppID:(NSString * _Nonnull)appID completion:(void (^ _Nonnull)(InitializationStatus * _Nonnull))completion;
-/// Returns if BlueStack has been initialized or not
-///
-/// returns:
-/// <code>Bool</code> value indicating if BlueStack has finished initializating.
-- (BOOL)isInitialized SWIFT_WARN_UNUSED_RESULT;
-- (void)setDebugModeEnabled:(BOOL)enabled;
-@end
-
-/// Enumeration that defines the type of error in case an ad fails to load
-typedef SWIFT_ENUM(NSInteger, BlueStackAdapterInitializationState, open) {
-  BlueStackAdapterInitializationStateReady = 1,
-  BlueStackAdapterInitializationStateNotReady = 0,
-  BlueStackAdapterInitializationStateUnknown = 2,
-};
-
-@class BlueStackAdapterStatus;
-SWIFT_CLASS("_TtC12BlueStackSDK36BlueStackAdapterInitializationStatus")
-@interface BlueStackAdapterInitializationStatus : NSObject
-@property (nonatomic, copy) NSArray<BlueStackAdapterStatus *> * _Nonnull mediationAdapters;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithMediationAdapters:(NSArray<BlueStackAdapterStatus *> * _Nonnull)mediationAdapters OBJC_DESIGNATED_INITIALIZER;
-@end
-
-SWIFT_CLASS("_TtC12BlueStackSDK22BlueStackAdapterStatus")
-@interface BlueStackAdapterStatus : NSObject
-@property (nonatomic) enum BlueStackAdapterInitializationState state;
-@property (nonatomic, copy) NSString * _Nonnull provider;
-@property (nonatomic, copy) NSString * _Nonnull descriptionStatus;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithState:(enum BlueStackAdapterInitializationState)state provider:(NSString * _Nonnull)provider descriptionStatus:(NSString * _Nonnull)descriptionStatus OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSData;
-@class DispatcherConfiguration;
-SWIFT_CLASS("_TtC12BlueStackSDK21BlueStackConfigParser")
-@interface BlueStackConfigParser : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (DispatcherConfiguration * _Nullable)parse:(NSData * _Nonnull)data error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
-
-enum BlueStackConfigParserErrorCode : NSInteger;
-SWIFT_CLASS("_TtC12BlueStackSDK26BlueStackConfigParserError")
-@interface BlueStackConfigParserError : NSError
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull domain;)
-+ (NSString * _Nonnull)domain SWIFT_WARN_UNUSED_RESULT;
-+ (BlueStackConfigParserError * _Nonnull)errorWithCode:(enum BlueStackConfigParserErrorCode)code underlying:(NSError * _Nullable)underlying SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-typedef SWIFT_ENUM(NSInteger, BlueStackConfigParserErrorCode, open) {
-  BlueStackConfigParserErrorCodeInvalidData = 1,
-  BlueStackConfigParserErrorCodeDecodingError = 2,
-};
-
-SWIFT_CLASS("_TtC12BlueStackSDK24BlueStackPrivacySettings")
-@interface BlueStackPrivacySettings : NSObject
-/// If a user does opt-out of interest-based advertising, set the opt-out value using this method.
-/// \param isOptout Boolean value representing the opt-out state.
-///
-+ (void)setUserOptout:(BOOL)isOptout;
-/// Set the value to comply with COPPA
-/// \param enabled Set the value to true if the user qualifies as a “child” under applicable laws.
-///
-+ (void)setIsAgeRestrictedUser:(BOOL)enabled;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class NSNumber;
 SWIFT_CLASS("_TtC12BlueStackSDK12CappingState")
 @interface CappingState : NSObject
@@ -705,6 +749,10 @@ SWIFT_CLASS("_TtC12BlueStackSDK12CappingState")
 SWIFT_CLASS("_TtC12BlueStackSDK23DispatcherConfiguration")
 @interface DispatcherConfiguration : NSObject
 @property (nonatomic, readonly) NSInteger appid;
+@property (nonatomic, readonly, copy) NSString * _Nullable appName;
+@property (nonatomic, readonly, copy) NSString * _Nullable appIconUrl;
+@property (nonatomic, readonly, copy) NSString * _Nullable appOpenActionText;
+@property (nonatomic, readonly, copy) NSString * _Nullable advertisementLocalizedText;
 @property (nonatomic, readonly, copy) NSString * _Nullable schain;
 @property (nonatomic, readonly, copy) NSString * _Nullable storeId;
 @property (nonatomic, readonly, copy) NSArray<Placement *> * _Nullable placements;
@@ -746,7 +794,6 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK27FullScreenBiddingAdDelegate_")
 - (void)onDismissFullScreenBiddingAd:(id <FullScreenPresentableBiddingAd> _Nonnull)fullScreenBiddingAd;
 @end
 
-@protocol FullScreenDisplayableAd;
 /// Delegate methods for receiving callbacks about presenting and dismissal of full screen ads. Full screen ads covers your application’s content.
 SWIFT_PROTOCOL("_TtP12BlueStackSDK18FullScreenDelegate_")
 @protocol FullScreenDelegate <NSObject>
@@ -769,13 +816,6 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK18FullScreenDelegate_")
 /// \param ad The ad class object that has been presented.
 ///
 - (void)didDisplayAd:(id <FullScreenDisplayableAd> _Nonnull)ad;
-@end
-
-/// Ads that present full screen content confirms to this protocol.
-SWIFT_PROTOCOL("_TtP12BlueStackSDK23FullScreenDisplayableAd_")
-@protocol FullScreenDisplayableAd <NSObject>
-/// Delegate object that receives full screen related callbacks
-@property (nonatomic, strong) id <FullScreenDelegate> _Nullable fullScreenDelegate;
 @end
 
 /// Enum describing the Gender
@@ -805,10 +845,10 @@ SWIFT_CLASS("_TtC12BlueStackSDK20InitializationStatus")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@protocol InterstitialAdDelegate;
+@protocol BLSInterstitialAdDelegate;
 /// The InterstitialAd class is responsible for managing the lifecycle and display of interstitial advertisements in your application. Interstitial ads are full-screen ads that cover the interface of their host app. They are typically displayed at natural transition points in the flow of an app, such as between levels in a game or after completing a task.
-SWIFT_CLASS("_TtC12BlueStackSDK14InterstitialAd")
-@interface InterstitialAd : NSObject <FullScreenDisplayableAd>
+SWIFT_CLASS_NAMED("InterstitialAd")
+@interface BLSInterstitialAd : NSObject <FullScreenDisplayableAd>
 /// Returns whether the interstitial ad is ready to be displayed.
 @property (nonatomic, readonly) BOOL isReady;
 /// The placement ID.
@@ -816,7 +856,7 @@ SWIFT_CLASS("_TtC12BlueStackSDK14InterstitialAd")
 /// View controller from which ad will present full screen content after user interacts with the ad.
 @property (nonatomic, strong) UIViewController * _Nullable viewController;
 /// An optional delegate object that receives notifications about the ad’s lifecycle events, such as when the ad is loaded or failed to load.
-@property (nonatomic, strong) id <InterstitialAdDelegate> _Nullable delegate;
+@property (nonatomic, strong) id <BLSInterstitialAdDelegate> _Nullable delegate;
 /// An optional delegate object that receives notifications about the ad’s full screen content, such as when the ad presented, failed to present or dismissed.
 @property (nonatomic, strong) id <FullScreenDelegate> _Nullable fullScreenDelegate;
 /// Initializes a new instance of the <code>InterstitialAd</code> class with the specified placement ID.
@@ -837,18 +877,157 @@ SWIFT_CLASS("_TtC12BlueStackSDK14InterstitialAd")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_PROTOCOL("_TtP12BlueStackSDK22InterstitialAdDelegate_")
-@protocol InterstitialAdDelegate <NSObject>
+SWIFT_PROTOCOL_NAMED("InterstitialAdDelegate")
+@protocol BLSInterstitialAdDelegate <NSObject>
 /// Called when the interstitial ad has successfully loaded.
 /// \param ad The <code>InterstitialAd</code> object that has been loaded.
 ///
-- (void)didLoadInterstitialAd:(InterstitialAd * _Nonnull)ad;
+- (void)didLoadInterstitialAd:(BLSInterstitialAd * _Nonnull)ad;
 /// Called when the interstitial ad fails to load. The error parameter provides details about the failure.
 /// \param ad The <code>InterstitialAd</code> object that failed
 ///
 /// \param error The error describing the failure reason.
 ///
-- (void)interstitialAd:(InterstitialAd * _Nonnull)ad didFailedToLoadWithError:(NSError * _Nonnull)error;
+- (void)interstitialAd:(BLSInterstitialAd * _Nonnull)ad didFailedToLoadWithError:(NSError * _Nonnull)error;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK14LocalParamKeys")
+@interface LocalParamKeys : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull AGE;)
++ (NSString * _Nonnull)AGE SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull AD_CHOICE_POSITION;)
++ (NSString * _Nonnull)AD_CHOICE_POSITION SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull CONSENT_FLAG;)
++ (NSString * _Nonnull)CONSENT_FLAG SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull LOCATION;)
++ (NSString * _Nonnull)LOCATION SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull LANGUAGE;)
++ (NSString * _Nonnull)LANGUAGE SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull KEYWORD;)
++ (NSString * _Nonnull)KEYWORD SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull CONTENT_URL;)
++ (NSString * _Nonnull)CONTENT_URL SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull GENDER;)
++ (NSString * _Nonnull)GENDER SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK11MediationAd_")
+@protocol MediationAd <NSObject>
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK24MediationAdConfiguration")
+@interface MediationAdConfiguration : NSObject
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull serverParameters;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nullable localParameters;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK19MediationAdDelegate_")
+@protocol MediationAdDelegate <NSObject>
+- (void)onAdClicked;
+@end
+
+@class MediationAppOpenAdConfiguration;
+@protocol MediationAppOpenAd;
+SWIFT_PROTOCOL("_TtP12BlueStackSDK16MediationAdapter_")
+@protocol MediationAdapter <NSObject>
+@optional
+- (void)loadAppOpenAdForMediationAppOpenAdConfiguration:(MediationAppOpenAdConfiguration * _Nonnull)mediationAppOpenAdConfiguration completionHandler:(void (^ _Nonnull)(id <MediationAppOpenAd> _Nullable, NSError * _Nullable))completionHandler;
+@end
+
+/// Enumeration that defines the type of error in case an ad fails to load
+typedef SWIFT_ENUM(NSInteger, MediationAdapterInitializationState, open) {
+  MediationAdapterInitializationStateReady = 1,
+  MediationAdapterInitializationStateNotReady = 0,
+  MediationAdapterInitializationStateUnknown = 2,
+};
+
+@class MediationAdapterStatus;
+SWIFT_CLASS("_TtC12BlueStackSDK36MediationAdapterInitializationStatus")
+@interface MediationAdapterInitializationStatus : NSObject
+@property (nonatomic, copy) NSArray<MediationAdapterStatus *> * _Nonnull mediationAdapters;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithMediationAdapters:(NSArray<MediationAdapterStatus *> * _Nonnull)mediationAdapters OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK22MediationAdapterStatus")
+@interface MediationAdapterStatus : NSObject
+@property (nonatomic) enum MediationAdapterInitializationState state;
+@property (nonatomic, copy) NSString * _Nonnull provider;
+@property (nonatomic, copy) NSString * _Nonnull descriptionStatus;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithState:(enum MediationAdapterInitializationState)state provider:(NSString * _Nonnull)provider descriptionStatus:(NSString * _Nonnull)descriptionStatus OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@protocol MediationAppOpenAdDelegate;
+SWIFT_PROTOCOL("_TtP12BlueStackSDK18MediationAppOpenAd_")
+@protocol MediationAppOpenAd <MediationAd>
+@property (nonatomic, weak) id <MediationAppOpenAdDelegate> _Nullable mediationAdDelegate;
+- (void)showFrom:(UIViewController * _Nonnull)viewController;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK31MediationAppOpenAdConfiguration")
+@interface MediationAppOpenAdConfiguration : MediationAdConfiguration
+@property (nonatomic, readonly, copy) NSString * _Nonnull appName;
+@property (nonatomic, readonly, copy) NSString * _Nonnull appIcon;
+@property (nonatomic, readonly, copy) NSString * _Nonnull actionText;
+@property (nonatomic, readonly, copy) NSString * _Nonnull advertisementTag;
+- (nonnull instancetype)initWithAppName:(NSString * _Nonnull)appName appIcon:(NSString * _Nonnull)appIcon actionText:(NSString * _Nonnull)actionText advertisementTag:(NSString * _Nonnull)advertisementTag serverParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)serverParameters localParameters:(NSDictionary<NSString *, id> * _Nullable)localParameters OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK26MediationAppOpenAdDelegate_")
+@protocol MediationAppOpenAdDelegate <MediationAdDelegate>
+- (void)onAdDisplay;
+- (void)onAdFailedToDisplayWithError:(NSError * _Nonnull)error;
+- (void)onAdDismiss;
+@end
+
+SWIFT_CLASS_NAMED("MobileAds")
+@interface BLSMobileAds : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Returns the shared MobileAds instance
+///
+/// returns:
+/// MobileAds instance
++ (BLSMobileAds * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// Returns SDK version number. MobileAds sdk supports semantic versioning.
+///
+/// returns:
+/// Version string in format of MAJOR.MINOR.PATCH
+- (NSString * _Nonnull)getVersion SWIFT_WARN_UNUSED_RESULT;
+/// Returns the sdk initialization status
+@property (nonatomic, readonly, strong) InitializationStatus * _Nonnull initializationStatus;
+/// Initializes the MobileAds sdk
+/// \param appID MobileAds App ID
+///
+/// \param completion Completion block to be called after sdk finish to initialize
+///
+- (void)initializeWithAppID:(NSString * _Nonnull)appID completion:(void (^ _Nonnull)(InitializationStatus * _Nonnull))completion;
+/// Returns if MobileAds has been initialized or not
+///
+/// returns:
+/// <code>Bool</code> value indicating if MobileAds has finished initializating.
+- (BOOL)isInitialized SWIFT_WARN_UNUSED_RESULT;
+- (void)setDebugModeEnabled:(BOOL)enabled;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK13PerfAppOpenAd")
+@interface PerfAppOpenAd : NSObject
+@property (nonatomic, strong) id <MediationAppOpenAdDelegate> _Nullable mediationAdDelegate;
+- (nonnull instancetype)init;
+- (void)loadAppOpenAdForMediationAppOpenAdConfiguration:(MediationAppOpenAdConfiguration * _Nonnull)mediationAppOpenAdConfiguration completionHandler:(void (^ _Nonnull)(id <MediationAppOpenAd> _Nullable, NSError * _Nullable))completion;
+@end
+
+@interface PerfAppOpenAd (SWIFT_EXTENSION(BlueStackSDK)) <MediationAppOpenAd>
+- (void)showFrom:(UIViewController * _Nonnull)viewController;
+@end
+
+@class AdCreativeEvent;
+@interface PerfAppOpenAd (SWIFT_EXTENSION(BlueStackSDK)) <AdCreativeEventDelegate>
+- (void)onEvent:(AdCreativeEvent * _Nonnull)adCreativeEvent;
 @end
 
 SWIFT_CLASS("_TtC12BlueStackSDK9Placement")
@@ -880,6 +1059,19 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK24PlacementTimeoutDelegate_")
 - (void)onTimeout;
 @end
 
+SWIFT_CLASS("_TtC12BlueStackSDK15PrivacySettings")
+@interface PrivacySettings : NSObject
+/// If a user does opt-out of interest-based advertising, set the opt-out value using this method.
+/// \param isOptout Boolean value representing the opt-out state.
+///
++ (void)setUserOptout:(BOOL)isOptout;
+/// Set the value to comply with COPPA
+/// \param enabled Set the value to true if the user qualifies as a “child” under applicable laws.
+///
++ (void)setIsAgeRestrictedUser:(BOOL)enabled;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class CLLocation;
 /// The <code>RequestOptions</code> class for supplying targeting information while loading ads.
 SWIFT_CLASS("_TtC12BlueStackSDK14RequestOptions")
@@ -904,16 +1096,15 @@ SWIFT_CLASS("_TtC12BlueStackSDK14RequestOptions")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class MNGPreference;
 SWIFT_CLASS("_TtC12BlueStackSDK37RequestOptionsToPreferenceTransformer")
 @interface RequestOptionsToPreferenceTransformer : NSObject
-- (MNGPreference * _Nullable)transform:(RequestOptions * _Nullable)requestOptions SWIFT_WARN_UNUSED_RESULT;
+- (Preference * _Nullable)transform:(RequestOptions * _Nullable)requestOptions SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 /// The <code>Reward</code> class that describes earned reward
-SWIFT_CLASS("_TtC12BlueStackSDK6Reward")
-@interface Reward : NSObject
+SWIFT_CLASS_NAMED("Reward")
+@interface BLSReward : NSObject
 /// Currency of the reward
 @property (nonatomic, readonly, copy) NSString * _Nullable currency;
 /// Amount earned
@@ -922,10 +1113,10 @@ SWIFT_CLASS("_TtC12BlueStackSDK6Reward")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@protocol RewardedAdDelegate;
+@protocol BLSRewardedAdDelegate;
 /// The <code>RewardedAd</code> class is responsible for handling the lifecycle and presentation of rewarded ads. Rewarded ads are full-screen video or interactive ads that users can choose to watch in exchange for in-app rewards.
-SWIFT_CLASS("_TtC12BlueStackSDK10RewardedAd")
-@interface RewardedAd : NSObject <FullScreenDisplayableAd>
+SWIFT_CLASS_NAMED("RewardedAd")
+@interface BLSRewardedAd : NSObject <FullScreenDisplayableAd>
 /// Returns whether the rewarded ad is ready to be displayed.
 @property (nonatomic, readonly) BOOL isReady;
 /// The placement ID.
@@ -933,7 +1124,7 @@ SWIFT_CLASS("_TtC12BlueStackSDK10RewardedAd")
 /// View controller from which ad will present full screen content after user interacts with the ad.
 @property (nonatomic, strong) UIViewController * _Nullable viewController;
 /// An optional delegate object that receives notifications about the ad’s lifecycle events, such as when the ad is loaded or failed to load.
-@property (nonatomic, strong) id <RewardedAdDelegate> _Nullable delegate;
+@property (nonatomic, strong) id <BLSRewardedAdDelegate> _Nullable delegate;
 /// An optional delegate object that receives notifications about the ad’s full screen content, such as when the ad presented, failed to present or dismissed.
 @property (nonatomic, strong) id <FullScreenDelegate> _Nullable fullScreenDelegate;
 /// Initializes a new instance of the <code>RewardedAd</code> class with the specified placement ID.
@@ -954,24 +1145,31 @@ SWIFT_CLASS("_TtC12BlueStackSDK10RewardedAd")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_PROTOCOL("_TtP12BlueStackSDK18RewardedAdDelegate_")
-@protocol RewardedAdDelegate <NSObject>
+SWIFT_PROTOCOL_NAMED("RewardedAdDelegate")
+@protocol BLSRewardedAdDelegate <NSObject>
 /// Called when the rewarded ad has successfully loaded.
 /// \param ad The <code>RewardedAd</code> object that has been loaded.
 ///
-- (void)didLoadRewardedAd:(RewardedAd * _Nonnull)ad;
+- (void)didLoadRewardedAd:(BLSRewardedAd * _Nonnull)ad;
 /// Called when the rewarded ad fails to load. The error parameter provides details about the failure.
 /// \param ad The <code>RewardedAd</code> object that failed
 ///
 /// \param error The error describing the failure reason.
 ///
-- (void)rewardedAd:(RewardedAd * _Nonnull)ad didFailedToLoadWithError:(NSError * _Nonnull)error;
+- (void)rewardedAd:(BLSRewardedAd * _Nonnull)ad didFailedToLoadWithError:(NSError * _Nonnull)error;
 /// Called when the user has watched the ad and earned the reward.
 /// \param ad The <code>RewardedAd</code> object
 ///
 /// \param reward The <code>Reward</code> class object containing the reward details.
 ///
-- (void)rewardedAd:(RewardedAd * _Nonnull)ad didEarnedReward:(Reward * _Nullable)reward;
+- (void)rewardedAd:(BLSRewardedAd * _Nonnull)ad didEarnedReward:(BLSReward * _Nullable)reward;
+@end
+
+@protocol UserAgentProviderProtocol;
+@class ServerResponse;
+@interface ServerURLConnection (SWIFT_EXTENSION(BlueStackSDK)) <ServerConnectionProtocol>
+@property (nonatomic, readonly, strong) id <UserAgentProviderProtocol> _Nullable userAgentProvider;
+- (void)get:(NSString * _Nullable)resourceURL timeout:(NSTimeInterval)timeout completionHandler:(void (^ _Nonnull)(ServerResponse * _Nonnull))completionHandler;
 @end
 
 #endif

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "5.4.1"
+  spec.version          = "6.0.0"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
@@ -37,24 +37,17 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   #######                     #######
   ###################################
 
-  spec.subspec 'Core' do |mng|
-    mng.vendored_frameworks = 'BlueStackSDK.xcframework'
-    mng.dependency	'BlueStack-SDK/Utilities'
-  end
-
-  spec.subspec 'MAdvertiseLocation' do |mlo|
-    mlo.vendored_frameworks = 'BlueStackLocationAdapter.xcframework'
-    mlo.dependency 'MAdvertiseLocation', '3.1.7'
-    mlo.dependency 'BlueStack-SDK/Core'
-  end
-
-  spec.subspec 'BluestackAmazonPublisherServicesAdapter' do |amazon|
-    amazon.vendored_frameworks = 'BluestackAmazonPublisherServicesAdapter.xcframework'
-    amazon.dependency               'BlueStack-SDK/Core'
-    amazon.dependency               'AmazonPublisherServicesSDK',  '4.5.5'
+  spec.subspec 'Core' do |core|
+    core.vendored_frameworks = 'BlueStackSDK.xcframework'
+    core.dependency	'BlueStack-SDK/Utilities'
+    core.dependency	'BlueStack-SDK/Renderer'
   end
   
   spec.subspec 'Utilities' do |utilities|
-    utilities.vendored_frameworks = 'BlueStackUtilities.xcframework'
+    utilities.vendored_frameworks = 'MobileAdsUtilities.xcframework'
+  end
+
+  spec.subspec 'Renderer' do |renderer|
+    renderer.vendored_frameworks = 'AdRenderKit.xcframework'
   end
 end

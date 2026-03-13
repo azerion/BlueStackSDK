@@ -1,0 +1,11 @@
+framework module AdRenderKit {
+  umbrella header "AdRenderKit.h"
+  export *
+
+  module * { export * }
+}
+
+module AdRenderKit.Swift {
+  header "AdRenderKit-Swift.h"
+  requires objc
+}
