@@ -38,16 +38,11 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
   ###################################
 
   spec.subspec 'Core' do |core|
-    core.vendored_frameworks = 'BlueStackSDK.xcframework'
-    core.dependency	'BlueStack-SDK/Utilities'
-    core.dependency	'BlueStack-SDK/Renderer'
+    core.vendored_frameworks = [
+        'BlueStackSDK.xcframework',
+        'MobileAdsUtilities.xcframework',
+        'AdRenderKit.xcframework'
+      ]
   end
   
-  spec.subspec 'Utilities' do |utilities|
-    utilities.vendored_frameworks = 'MobileAdsUtilities.xcframework'
-  end
-
-  spec.subspec 'Renderer' do |renderer|
-    renderer.vendored_frameworks = 'AdRenderKit.xcframework'
-  end
 end
