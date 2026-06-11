@@ -11,6 +11,7 @@
 @class UserPrivacySettings;
 @class IDFAProvider;
 @class Initializer;
+@class ConsentProvider;
 @protocol UserAgentProviderProtocol;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -28,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UserPrivacySettings *)getPrivacySettings;
 - (IDFAProvider *)getIDFAProvider;
 - (Initializer *)getInitializer;
+- (ConsentProvider *)getConsentProvider;
 - (BOOL)isLogDisabled;
 - (id<UserAgentProviderProtocol>)getUserAgentProvider;
 
