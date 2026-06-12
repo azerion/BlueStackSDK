@@ -4,5 +4,6 @@ framework module BlueStackSDK_Private {
     header "AdServerError.h"
     header "AnalyticsManager.h"
     header "DebugShakeManager.h"
+    header "OMRegistration.h"
 }
 

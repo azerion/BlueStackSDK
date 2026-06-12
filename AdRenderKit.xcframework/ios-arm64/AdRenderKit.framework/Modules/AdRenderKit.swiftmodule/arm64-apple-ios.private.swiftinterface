@@ -16,6 +16,194 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class RendererImageDownloader : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func image(withUrl url: Swift.String, blured: Swift.Bool, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @objc deinit
+}
+@objc public enum Position : Swift.Int {
+  case undefined
+  case topLeft
+  case topCenter
+  case topRight
+  case center
+  case bottomLeft
+  case bottomCenter
+  case bottomRight
+  case custom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class AdCreativeModel : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc @objcMembers public class ViewabilitySettings : ObjectiveC.NSObject {
+  @objc public init(width: Swift.Float, height: Swift.Float, percent: Swift.Float, period: Swift.Float, alpha: Swift.Float, maxViewabilityTime: Swift.Int = 0, viewabilityUrl: Swift.String? = nil)
+  @objc deinit
+}
+@objc public enum AdChoicePosition : Swift.Int {
+  case topRight
+  case topLeft
+  case bottomRight
+  case bottomLeft
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AdCreativeFormat : Swift.Int {
+  case html
+  case image
+  case vast
+  case video
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers public class FullScreenConfig : ObjectiveC.NSObject {
+  @objc public init(fullScreenHeader: AdRenderKit.FullScreenHeader? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class FullScreenHeader : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @objcMembers public class AppOpenHeader : AdRenderKit.FullScreenHeader {
+  @objc public init(appName: Swift.String, appIcon: Swift.String, adtag: Swift.String, actionText: Swift.String, headerViewHeightInDP: Swift.Int, adTagViewHeightInDP: Swift.Int, separatorHeightInDP: Swift.Int, bottomMarginInDP: Swift.Int)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ImpressionManager {
+  @objc deinit
+}
+extension AdRenderKit.ImpressionManager : AdRenderKit.AdCreativeEventSubscriber {
+  @objc dynamic public func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func addFillSuperviewConstraints()
+  @_Concurrency.MainActor @preconcurrency public func addConstraints(from rect: CoreFoundation.CGRect)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class AdCreativeModelFactory : ObjectiveC.NSObject {
+  @objc public static func createHtmlAdCreative(contentUrl: Swift.String? = nil, adm: Swift.String? = nil, baseUrl: Swift.String? = nil, viewabilitySettings: AdRenderKit.ViewabilitySettings, syncTag: Swift.String? = nil, omScript: Swift.String? = nil, omVendorkey: Swift.String? = nil, omVerificationParameters: Swift.String? = nil, omVerificationScript: Swift.String? = nil, adchoiceImage: Swift.String? = nil, adchoiceUrl: Swift.String? = nil, adchoicePosition: AdRenderKit.AdChoicePosition = .topLeft, size: CoreFoundation.CGSize = .zero, macroApplier: (any AdRenderKit.MacroApplier)? = nil, injectionScripts: [AdRenderKit.InjectionScript] = [], isMRAID: Swift.Bool = false, placementType: AdRenderKit.PlacementType, closeImageUrl: Swift.String? = nil, closeButtonPosition: AdRenderKit.Position = .topRight, closeAppearanceDelay: Swift.Int = 0, shouldAutoClose: Swift.Bool = false, autoCloseDurationInSec: Swift.Int64 = 0, fullScreenConfig: AdRenderKit.FullScreenConfig? = nil) -> AdRenderKit.AdCreativeModel
+  @objc public static func createImageAdCreative(contentUrl: Swift.String? = nil, adm: Swift.String? = nil, baseUrl: Swift.String? = nil, viewabilitySettings: AdRenderKit.ViewabilitySettings, syncTag: Swift.String? = nil, omScript: Swift.String? = nil, omVendorkey: Swift.String? = nil, omVerificationParameters: Swift.String? = nil, omVerificationScript: Swift.String? = nil, adchoiceImage: Swift.String? = nil, adchoiceUrl: Swift.String? = nil, adchoicePosition: AdRenderKit.AdChoicePosition = .topLeft, size: CoreFoundation.CGSize = .zero, macroApplier: (any AdRenderKit.MacroApplier)? = nil) -> AdRenderKit.AdCreativeModel
+  @objc public static func createVastAdCreative(contentUrl: Swift.String? = nil, adm: Swift.String? = nil, baseUrl: Swift.String? = nil, viewabilitySettings: AdRenderKit.ViewabilitySettings, videoSettings: AdRenderKit.VideoSettings, syncTag: Swift.String? = nil, omScript: Swift.String? = nil, omVendorkey: Swift.String? = nil, omVerificationParameters: Swift.String? = nil, omVerificationScript: Swift.String? = nil, adchoiceImage: Swift.String? = nil, adchoiceUrl: Swift.String? = nil, adchoicePosition: AdRenderKit.AdChoicePosition = .topLeft, macroApplier: (any AdRenderKit.MacroApplier)? = nil, closeImageUrl: Swift.String? = nil, closeButtonPosition: AdRenderKit.Position = .topRight, closeAppearanceDelay: Swift.Int = 0, shouldAutoClose: Swift.Bool = false, autoCloseDurationInSec: Swift.Int64 = 0, fullScreenConfig: AdRenderKit.FullScreenConfig?) -> AdRenderKit.AdCreativeModel
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ViewabilityTrackDelegate : AnyObject {
+  func onComplete(_ trackResult: AdRenderKit.ViewabilityTrackResult)
+}
+@objc @objcMembers public class InjectionScript : ObjectiveC.NSObject {
+  @objc final public let location: AdRenderKit.InjectionLocation
+  @objc final public let url: Swift.String?
+  @objc final public let content: Swift.String?
+  @objc public init(location: AdRenderKit.InjectionLocation = .head, url: Swift.String? = nil, content: Swift.String? = nil)
+  @objc deinit
+}
+@objc public enum InjectionLocation : Swift.Int {
+  case head
+  case bodyStart
+  case bodyEnd
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PlacementType : Swift.Int {
+  case inline
+  case interstitial
+  case appopen
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias ViewabilityTrackerCompletionHandler = (AdRenderKit.ViewabilityTrackResult) -> ()
+@_hasMissingDesignatedInitializers @objc public class ViewabilityTracker : ObjectiveC.NSObject {
+  @objc public func track(_ onComplete: @escaping AdRenderKit.ViewabilityTrackerCompletionHandler)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class ViewabilityTrackResult : ObjectiveC.NSObject {
+  @objc final public let visiblePeriod: Swift.Float
+  @objc final public let totalPeriod: Swift.Float
+  @objc deinit
+}
+@objc @objcMembers public class VideoSettings : ObjectiveC.NSObject {
+  @objc final public let autoPlay: Swift.Bool
+  @objc final public let audio: Swift.String
+  @objc final public let blur: Swift.Bool
+  @objc final public let radius: Foundation.NSNumber
+  @objc final public let opacity: Foundation.NSNumber
+  @objc public init(autoPlay: Swift.Bool, audio: Swift.String, blur: Swift.Bool, radius: Foundation.NSNumber, opacity: Foundation.NSNumber)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class AdCreativeEvent : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class ReadyToDisplayEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class ClickEvent : AdRenderKit.AdCreativeEvent {
+  @objc final public let clickUrl: Foundation.URL
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class FailedToLoadEvent : AdRenderKit.AdCreativeEvent {
+  @objc final public let error: any Swift.Error
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class ImpressionEvent : AdRenderKit.AdCreativeEvent {
+  @objc final public let viewabilityTracker: AdRenderKit.ViewabilityTracker
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class CloseEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class FailedToShowEvent : AdRenderKit.AdCreativeEvent {
+  @objc final public let error: any Swift.Error
+  @objc deinit
+}
+@objc public protocol AdCreativeEventSubscriber {
+  @objc func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
+}
+@objc public protocol AdCreativeEventDelegate : AdRenderKit.AdCreativeEventSubscriber {
+}
+public enum PreloadState : Swift.UInt {
+  case unknown
+  case started
+  case complete
+  case cancelled
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+public protocol PreloaderDelegate : AnyObject {
+  func onPreloadStateChanged(_ preloadState: AdRenderKit.PreloadState)
+}
+public protocol Preloader : AnyObject {
+  var delegate: (any AdRenderKit.PreloaderDelegate)? { get set }
+  var preloadDuration: Swift.Double { get set }
+  func preload(from url: Foundation.URL)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class AdCreativeRenderer : ObjectiveC.NSObject {
+  @objc final public let adCreativeModel: AdRenderKit.AdCreativeModel
+  @objc weak public var delegate: (any AdRenderKit.AdCreativeEventDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc convenience public init(adCreativeModel: AdRenderKit.AdCreativeModel, viewControllerForPresentingModals: UIKit.UIViewController? = nil, userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? = nil, omStaticAd: (any AdRenderKit.OMStaticAd)?)
+  @objc public func load()
+  @objc deinit
+  @objc public func destroy()
+}
 @_inheritsConvenienceInitializers @objc public class VideoPreloader : ObjectiveC.NSObject, AdRenderKit.Preloader {
   weak public var delegate: (any AdRenderKit.PreloaderDelegate)?
   public var preloadDuration: Swift.Double
@@ -100,203 +288,15 @@ import _SwiftConcurrencyShims
 @objc public protocol MacroApplier {
   @objc func apply(to inputString: Swift.String) -> Swift.String
 }
-public typealias ViewabilityTrackerCompletionHandler = (AdRenderKit.ViewabilityTrackResult) -> ()
-@_hasMissingDesignatedInitializers @objc public class ViewabilityTracker : ObjectiveC.NSObject {
-  @objc public func track(_ onComplete: @escaping AdRenderKit.ViewabilityTrackerCompletionHandler)
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class RendererImageDownloader : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  @objc public func image(withUrl url: Swift.String, blured: Swift.Bool, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc public class AdCreativeModel : ObjectiveC.NSObject {
-  @objc deinit
-}
-@objc @objcMembers public class ViewabilitySettings : ObjectiveC.NSObject {
-  @objc public init(width: Swift.Float, height: Swift.Float, percent: Swift.Float, period: Swift.Float, alpha: Swift.Float, maxViewabilityTime: Swift.Int = 0, viewabilityUrl: Swift.String? = nil)
-  @objc deinit
-}
-@objc public enum AdChoicePosition : Swift.Int {
-  case topRight
-  case topLeft
-  case bottomRight
-  case bottomLeft
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum AdCreativeFormat : Swift.Int {
-  case html
-  case image
-  case vast
-  case video
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @objcMembers public class FullScreenConfig : ObjectiveC.NSObject {
-  @objc public init(fullScreenHeader: AdRenderKit.FullScreenHeader? = nil)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @objcMembers public class FullScreenHeader : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @objcMembers public class AppOpenHeader : AdRenderKit.FullScreenHeader {
-  @objc public init(appName: Swift.String, appIcon: Swift.String, adtag: Swift.String, actionText: Swift.String, headerViewHeightInDP: Swift.Int, adTagViewHeightInDP: Swift.Int, separatorHeightInDP: Swift.Int, bottomMarginInDP: Swift.Int)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class ImpressionManager {
-  @objc deinit
-}
-extension AdRenderKit.ImpressionManager : AdRenderKit.AdCreativeEventSubscriber {
-  @objc dynamic public func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
-}
-@objc @_inheritsConvenienceInitializers @objcMembers public class AdCreativeModelFactory : ObjectiveC.NSObject {
-  @objc public static func createHtmlAdCreative(contentUrl: Swift.String? = nil, adm: Swift.String? = nil, baseUrl: Swift.String? = nil, viewabilitySettings: AdRenderKit.ViewabilitySettings, syncTag: Swift.String? = nil, omScript: Swift.String? = nil, omVendorkey: Swift.String? = nil, omVerificationParameters: Swift.String? = nil, omVerificationScript: Swift.String? = nil, adchoiceImage: Swift.String? = nil, adchoiceUrl: Swift.String? = nil, adchoicePosition: AdRenderKit.AdChoicePosition = .topLeft, size: CoreFoundation.CGSize = .zero, macroApplier: (any AdRenderKit.MacroApplier)? = nil, injectionScripts: [AdRenderKit.InjectionScript] = [], isMRAID: Swift.Bool = false, placementType: AdRenderKit.PlacementType, closeImageUrl: Swift.String? = nil, closeButtonPosition: AdRenderKit.Position = .topRight, closeAppearanceDelay: Swift.Int = 0, shouldAutoClose: Swift.Bool = false, autoCloseDurationInSec: Swift.Int64 = 0, fullScreenConfig: AdRenderKit.FullScreenConfig? = nil) -> AdRenderKit.AdCreativeModel
-  @objc public static func createImageAdCreative(contentUrl: Swift.String? = nil, adm: Swift.String? = nil, baseUrl: Swift.String? = nil, viewabilitySettings: AdRenderKit.ViewabilitySettings, syncTag: Swift.String? = nil, omScript: Swift.String? = nil, omVendorkey: Swift.String? = nil, omVerificationParameters: Swift.String? = nil, omVerificationScript: Swift.String? = nil, adchoiceImage: Swift.String? = nil, adchoiceUrl: Swift.String? = nil, adchoicePosition: AdRenderKit.AdChoicePosition = .topLeft, size: CoreFoundation.CGSize = .zero, macroApplier: (any AdRenderKit.MacroApplier)? = nil) -> AdRenderKit.AdCreativeModel
-  @objc public static func createVastAdCreative(contentUrl: Swift.String? = nil, adm: Swift.String? = nil, baseUrl: Swift.String? = nil, viewabilitySettings: AdRenderKit.ViewabilitySettings, videoSettings: AdRenderKit.VideoSettings, syncTag: Swift.String? = nil, omScript: Swift.String? = nil, omVendorkey: Swift.String? = nil, omVerificationParameters: Swift.String? = nil, omVerificationScript: Swift.String? = nil, adchoiceImage: Swift.String? = nil, adchoiceUrl: Swift.String? = nil, adchoicePosition: AdRenderKit.AdChoicePosition = .topLeft, macroApplier: (any AdRenderKit.MacroApplier)? = nil, closeImageUrl: Swift.String? = nil, closeButtonPosition: AdRenderKit.Position = .topRight, closeAppearanceDelay: Swift.Int = 0, shouldAutoClose: Swift.Bool = false, autoCloseDurationInSec: Swift.Int64 = 0, fullScreenConfig: AdRenderKit.FullScreenConfig?) -> AdRenderKit.AdCreativeModel
-  @objc override dynamic public init()
-  @objc deinit
-}
-public protocol ViewabilityTrackDelegate : AnyObject {
-  func onComplete(_ trackResult: AdRenderKit.ViewabilityTrackResult)
-}
-@objc public enum Position : Swift.Int {
-  case undefined
-  case topLeft
-  case topCenter
-  case topRight
-  case center
-  case bottomLeft
-  case bottomCenter
-  case bottomRight
-  case custom
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @objcMembers public class InjectionScript : ObjectiveC.NSObject {
-  @objc final public let location: AdRenderKit.InjectionLocation
-  @objc final public let url: Swift.String?
-  @objc final public let content: Swift.String?
-  @objc public init(location: AdRenderKit.InjectionLocation = .head, url: Swift.String? = nil, content: Swift.String? = nil)
-  @objc deinit
-}
-@objc public enum InjectionLocation : Swift.Int {
-  case head
-  case bodyStart
-  case bodyEnd
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum PlacementType : Swift.Int {
-  case inline
-  case interstitial
-  case appopen
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public func addFillSuperviewConstraints()
-  @_Concurrency.MainActor @preconcurrency public func addConstraints(from rect: CoreFoundation.CGRect)
-}
-@objc @objcMembers public class VideoSettings : ObjectiveC.NSObject {
-  @objc final public let autoPlay: Swift.Bool
-  @objc final public let audio: Swift.String
-  @objc final public let blur: Swift.Bool
-  @objc final public let radius: Foundation.NSNumber
-  @objc final public let opacity: Foundation.NSNumber
-  @objc public init(autoPlay: Swift.Bool, audio: Swift.String, blur: Swift.Bool, radius: Foundation.NSNumber, opacity: Foundation.NSNumber)
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AdCreativeEvent : ObjectiveC.NSObject {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class ReadyToDisplayEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class ClickEvent : AdRenderKit.AdCreativeEvent {
-  @objc final public let clickUrl: Foundation.URL
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class FailedToLoadEvent : AdRenderKit.AdCreativeEvent {
-  @objc final public let error: any Swift.Error
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class ImpressionEvent : AdRenderKit.AdCreativeEvent {
-  @objc final public let viewabilityTracker: AdRenderKit.ViewabilityTracker
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class CloseEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class FailedToShowEvent : AdRenderKit.AdCreativeEvent {
-  @objc final public let error: any Swift.Error
-  @objc deinit
-}
-@objc public protocol AdCreativeEventSubscriber {
-  @objc func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
-}
-@objc public protocol AdCreativeEventDelegate : AdRenderKit.AdCreativeEventSubscriber {
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class ViewabilityTrackResult : ObjectiveC.NSObject {
-  @objc final public let visiblePeriod: Swift.Float
-  @objc final public let totalPeriod: Swift.Float
-  @objc deinit
-}
-public enum PreloadState : Swift.UInt {
-  case unknown
-  case started
-  case complete
-  case cancelled
-  public init?(rawValue: Swift.UInt)
-  public typealias RawValue = Swift.UInt
-  public var rawValue: Swift.UInt {
-    get
-  }
-}
-public protocol PreloaderDelegate : AnyObject {
-  func onPreloadStateChanged(_ preloadState: AdRenderKit.PreloadState)
-}
-public protocol Preloader : AnyObject {
-  var delegate: (any AdRenderKit.PreloaderDelegate)? { get set }
-  var preloadDuration: Swift.Double { get set }
-  func preload(from url: Foundation.URL)
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AdCreativeRenderer : ObjectiveC.NSObject {
-  @objc final public let adCreativeModel: AdRenderKit.AdCreativeModel
-  @objc weak public var delegate: (any AdRenderKit.AdCreativeEventDelegate)? {
-    @objc get
-    @objc set
-  }
-  @objc convenience public init(adCreativeModel: AdRenderKit.AdCreativeModel, viewControllerForPresentingModals: UIKit.UIViewController? = nil, userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? = nil, omStaticAd: (any AdRenderKit.OMStaticAd)?)
-  @objc public func load()
-  @objc deinit
-  @objc public func destroy()
-}
+extension AdRenderKit.Position : Swift.Equatable {}
+extension AdRenderKit.Position : Swift.Hashable {}
+extension AdRenderKit.Position : Swift.RawRepresentable {}
 extension AdRenderKit.AdChoicePosition : Swift.Equatable {}
 extension AdRenderKit.AdChoicePosition : Swift.Hashable {}
 extension AdRenderKit.AdChoicePosition : Swift.RawRepresentable {}
 extension AdRenderKit.AdCreativeFormat : Swift.Equatable {}
 extension AdRenderKit.AdCreativeFormat : Swift.Hashable {}
 extension AdRenderKit.AdCreativeFormat : Swift.RawRepresentable {}
-extension AdRenderKit.Position : Swift.Equatable {}
-extension AdRenderKit.Position : Swift.Hashable {}
-extension AdRenderKit.Position : Swift.RawRepresentable {}
 extension AdRenderKit.InjectionLocation : Swift.Equatable {}
 extension AdRenderKit.InjectionLocation : Swift.Hashable {}
 extension AdRenderKit.InjectionLocation : Swift.RawRepresentable {}
