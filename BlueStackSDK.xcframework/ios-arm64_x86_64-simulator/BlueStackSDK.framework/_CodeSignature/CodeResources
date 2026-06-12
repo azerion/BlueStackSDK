@@ -6,7 +6,7 @@
 	<dict>
 		<key>BlueStackSDKResources.bundle/Info.plist</key>
 		<data>
-		t10Xy2S0itHLnAr+Uh6ifO/+wQk=
+		8Mwwgidcg6relPDI8efZEg9Mn/g=
 		</data>
 		<key>BlueStackSDKResources.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		UNefqDnM+oM1ql2WrTbFvmo4fNc=
+		G4HNPpO1ASSeniKTBpUgnEfgxcU=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		X0WGE8LZhyLFOp7XPZ82UXt1XeQ=
+		o0kbEZSA9YHonMNb9iG9sDuOIFY=
 		</data>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/MAdvertiseRegistration.h</key>
 		<data>
-		LxMjraF0KSz/Br+hp5uI/F14gYo=
+		ffvDcIKdmt0NaLGSTzsQFUM1/AM=
 		</data>
 		<key>Headers/MAdvertiseReward.h</key>
 		<data>
@@ -182,11 +182,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dK4HVrctx2CeqK3MWZaKFMuoyvc=
+		/cCaJim7or1vpQXEapuIf8/ssM0=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		smc+9yyaqboHqxlT1W/DFWqrcmM=
+		9o2y3E/zXaOqxjx+juNJCFp9+Z0=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -202,11 +202,11 @@
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rjfqHWRwDxBLXGPxQhsjQ1rpYNA=
+		0kxFJ4SzR/HZqP253R2Jwqs5/14=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		smc+9yyaqboHqxlT1W/DFWqrcmM=
+		9o2y3E/zXaOqxjx+juNJCFp9+Z0=
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MdzstKcqL9CQUcTEDpmN6eruBGQ=
+		uV4hEuIJE2ichY81LBF5ZPEAJIM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>Modules/module.private.modulemap</key>
 		<data>
-		0JslnapRD6STLFdRh6pnkVfDJbw=
+		Mz6LUmM7CSQodBFbWVKt2ZixJ4A=
 		</data>
 		<key>PrivateHeaders/DebugShakeManager.h</key>
 		<data>
@@ -267,11 +267,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t10Xy2S0itHLnAr+Uh6ifO/+wQk=
+			8Mwwgidcg6relPDI8efZEg9Mn/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			p7Q57dsBmm81Tu/ddTZkVuWTcWjwPsqW1gWhV+fVXrc=
+			WRjBbGbeo4lFymWCewfLDRcePrdPhLjKkT2huRcWna8=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/PrivacyInfo.xcprivacy</key>
@@ -289,11 +289,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UNefqDnM+oM1ql2WrTbFvmo4fNc=
+			G4HNPpO1ASSeniKTBpUgnEfgxcU=
 			</data>
 			<key>hash2</key>
 			<data>
-			pJ+JdZG4wDmYU/DtEosg2FTpXMm9kB5K4ElDeyoad1M=
+			fC59QSo7PFr/2EB7NeyDabmyDYHEY/FnUE12fXuki9M=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -311,11 +311,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X0WGE8LZhyLFOp7XPZ82UXt1XeQ=
+			o0kbEZSA9YHonMNb9iG9sDuOIFY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zKE/jTIBrUOf/Ts44Md1fkSXaIRmBl41zG/xcEKGyJE=
+			m/uiaUrdry9RB9K8l7nm3CngkxhiVfYfmn8RnILs2Z8=
 			</data>
 		</dict>
 		<key>BlueStackSDKResources.bundle/_CodeSignature/CodeResources</key>
@@ -509,11 +509,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LxMjraF0KSz/Br+hp5uI/F14gYo=
+			ffvDcIKdmt0NaLGSTzsQFUM1/AM=
 			</data>
 			<key>hash2</key>
 			<data>
-			fAQpapZHiFoMlUZW4bhlN4iU5m3tqJsyO5ErvIGbJiw=
+			aO2vNLhB5JmoiaIwRfMa4gF0uS8Mv0LYfz7kMg1YVak=
 			</data>
 		</dict>
 		<key>Headers/MAdvertiseReward.h</key>
@@ -751,11 +751,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			smc+9yyaqboHqxlT1W/DFWqrcmM=
+			9o2y3E/zXaOqxjx+juNJCFp9+Z0=
 			</data>
 			<key>hash2</key>
 			<data>
-			fXwyZyQYaIWNm6pn26TH68opg5sWzsPqzQVh6t2JJHk=
+			2lstlRReclHtTSKIXJ3+UXp06Xx4Q79QIbxNsMNIODg=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -795,22 +795,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rjfqHWRwDxBLXGPxQhsjQ1rpYNA=
+			0kxFJ4SzR/HZqP253R2Jwqs5/14=
 			</data>
 			<key>hash2</key>
 			<data>
-			GUrE2K9cZUd0s4NkrUeMXEQiD3IHt43kGHh/PJ+fhV8=
+			L4CLUofBF9PkS5n0nlyU5LKLBGTe/TRQUT6hqyml4Xc=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			smc+9yyaqboHqxlT1W/DFWqrcmM=
+			9o2y3E/zXaOqxjx+juNJCFp9+Z0=
 			</data>
 			<key>hash2</key>
 			<data>
-			fXwyZyQYaIWNm6pn26TH68opg5sWzsPqzQVh6t2JJHk=
+			2lstlRReclHtTSKIXJ3+UXp06Xx4Q79QIbxNsMNIODg=
 			</data>
 		</dict>
 		<key>Modules/BlueStackSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -850,11 +850,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MdzstKcqL9CQUcTEDpmN6eruBGQ=
+			uV4hEuIJE2ichY81LBF5ZPEAJIM=
 			</data>
 			<key>hash2</key>
 			<data>
-			9Sq9ZdefVfPVos9CQNrvdC9F5r+JguOWWOMsRh6Sh8c=
+			R5vlgSJnlkDwpfakWPU9ENh6vbAGxMs7IYgkfSRqk5k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -872,11 +872,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0JslnapRD6STLFdRh6pnkVfDJbw=
+			Mz6LUmM7CSQodBFbWVKt2ZixJ4A=
 			</data>
 			<key>hash2</key>
 			<data>
-			USvdz/IHoj6/i4SmrDbFn0ywI56alyWi902TLizKy0Q=
+			YneuPVORk3P1diWbbLXYf5JkC6bYlA8pMFeU9T+Clac=
 			</data>
 		</dict>
 		<key>PrivateHeaders/DebugShakeManager.h</key>

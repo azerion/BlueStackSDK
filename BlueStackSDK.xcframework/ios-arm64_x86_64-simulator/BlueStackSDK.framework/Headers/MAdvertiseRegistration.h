@@ -20,6 +20,7 @@ void MAForceLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
 -(void)setDebugModeEnabled:(BOOL)enabled;
 +(NSString*)oMSDKVersion;
++(NSString*)oMSDKVersionString;
 +(BOOL)oMSDKState;
 +(NSString *)getOMSDKPaternVersion;
 @end

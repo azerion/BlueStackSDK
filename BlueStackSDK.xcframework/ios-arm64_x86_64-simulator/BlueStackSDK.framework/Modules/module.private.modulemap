@@ -4,5 +4,6 @@ framework module BlueStackSDK_Private {
     header "MNGError.h"
     header "MNGAnalyticsManager.h"
     header "DebugShakeManager.h"
+    header "MAdvertiseRegistration.h"
 }
 
