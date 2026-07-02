@@ -16,6 +16,24 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func addFillSuperviewConstraints()
+  @_Concurrency.MainActor @preconcurrency public func addConstraints(from rect: CoreFoundation.CGRect)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class ViewabilityTrackResult : ObjectiveC.NSObject {
+  @objc final public let visiblePeriod: Swift.Float
+  @objc final public let totalPeriod: Swift.Float
+  @objc deinit
+}
+@objc @objcMembers public class VideoSettings : ObjectiveC.NSObject {
+  @objc final public let autoPlay: Swift.Bool
+  @objc final public let audio: Swift.String
+  @objc final public let blur: Swift.Bool
+  @objc final public let radius: Foundation.NSNumber
+  @objc final public let opacity: Foundation.NSNumber
+  @objc public init(autoPlay: Swift.Bool, audio: Swift.String, blur: Swift.Bool, radius: Foundation.NSNumber, opacity: Foundation.NSNumber)
+  @objc deinit
+}
 @objc @_hasMissingDesignatedInitializers @objcMembers public class AdCreativeEvent : ObjectiveC.NSObject {
   @objc deinit
 }
@@ -41,6 +59,94 @@ import _SwiftConcurrencyShims
   @objc final public let error: any Swift.Error
   @objc deinit
 }
+@objc public protocol AdCreativeEventSubscriber {
+  @objc func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
+}
+@objc public protocol AdCreativeEventDelegate : AdRenderKit.AdCreativeEventSubscriber {
+}
+public enum PreloadState : Swift.UInt {
+  case unknown
+  case started
+  case complete
+  case cancelled
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+public protocol PreloaderDelegate : AnyObject {
+  func onPreloadStateChanged(_ preloadState: AdRenderKit.PreloadState)
+}
+public protocol Preloader : AnyObject {
+  var delegate: (any AdRenderKit.PreloaderDelegate)? { get set }
+  var preloadDuration: Swift.Double { get set }
+  func preload(from url: Foundation.URL)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class AdCreativeRenderer : ObjectiveC.NSObject {
+  @objc final public let adCreativeModel: AdRenderKit.AdCreativeModel
+  @objc weak public var delegate: (any AdRenderKit.AdCreativeEventDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc convenience public init(adCreativeModel: AdRenderKit.AdCreativeModel, viewControllerForPresentingModals: UIKit.UIViewController? = nil, userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? = nil, omStaticAd: (any AdRenderKit.OMStaticAd)?)
+  @objc public func load()
+  @objc deinit
+  @objc public func destroy()
+}
+@_inheritsConvenienceInitializers @objc public class VideoPreloader : ObjectiveC.NSObject, AdRenderKit.Preloader {
+  weak public var delegate: (any AdRenderKit.PreloaderDelegate)?
+  public var preloadDuration: Swift.Double
+  @objc override dynamic public init()
+  public func preload(from url: Foundation.URL)
+  @objc public func getVideoPlayer() -> AVFoundation.AVPlayer?
+  @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @objc deinit
+}
+@objc public protocol ContainerView {
+  @objc func add(view: UIKit.UIView)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdPauseEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdResumeEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdCompleteEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdBufferStartEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdBufferFinishEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdMidpointEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdFirstQuartileEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdThirdQuartileEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdClickEvent : AdRenderKit.AdCreativeEvent {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class VASTAdVolumeChangeEvent : AdRenderKit.AdCreativeEvent {
+  @objc final public let volume: Swift.Float
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class VASTAdStartEvent : AdRenderKit.AdCreativeEvent {
+  @objc final public let duration: Foundation.TimeInterval
+  @objc final public let volume: Swift.Float
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class FullScreenAdCreativeRenderer : AdRenderKit.AdCreativeRenderer {
+  @objc public func show(viewControllerForPresentingModals: UIKit.UIViewController? = nil)
+  @objc override public func destroy()
+  @objc deinit
+}
 @objc public protocol OMStaticAd {
   @objc func initializeHTMLAdCreativeOMSDK(adView: UIKit.UIView, webView: WebKit.WKWebView, content: Swift.String, contentUrl: Swift.String) throws
   @objc func initializeVASTAdCreativeOMSDK(adView: UIKit.UIView, content: Swift.String, contentUrl: Swift.String) throws
@@ -63,6 +169,19 @@ import _SwiftConcurrencyShims
   @objc func videoMidpoint() throws
   @objc func videoThirdQuartile() throws
   @objc func videoComplete() throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class InlineAdCreativeRenderer : AdRenderKit.AdCreativeRenderer {
+  @objc public func render(view: any AdRenderKit.ContainerView)
+  @objc override public func destroy()
+  @objc deinit
+}
+@objc public protocol MacroApplier {
+  @objc func apply(to inputString: Swift.String) -> Swift.String
+}
+@_inheritsConvenienceInitializers @objc public class RendererImageDownloader : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func image(withUrl url: Swift.String, blured: Swift.Bool, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AdCreativeModel : ObjectiveC.NSObject {
   @objc deinit
@@ -105,9 +224,6 @@ import _SwiftConcurrencyShims
   @objc public init(appName: Swift.String, appIcon: Swift.String, adtag: Swift.String, actionText: Swift.String, headerViewHeightInDP: Swift.Int, adTagViewHeightInDP: Swift.Int, separatorHeightInDP: Swift.Int, bottomMarginInDP: Swift.Int)
   @objc deinit
 }
-@objc public protocol MacroApplier {
-  @objc func apply(to inputString: Swift.String) -> Swift.String
-}
 @_hasMissingDesignatedInitializers public class ImpressionManager {
   @objc deinit
 }
@@ -124,19 +240,21 @@ extension AdRenderKit.ImpressionManager : AdRenderKit.AdCreativeEventSubscriber 
 public protocol ViewabilityTrackDelegate : AnyObject {
   func onComplete(_ trackResult: AdRenderKit.ViewabilityTrackResult)
 }
-@_inheritsConvenienceInitializers @objc public class VideoPreloader : ObjectiveC.NSObject, AdRenderKit.Preloader {
-  weak public var delegate: (any AdRenderKit.PreloaderDelegate)?
-  public var preloadDuration: Swift.Double
-  @objc override dynamic public init()
-  public func preload(from url: Foundation.URL)
-  @objc public func getVideoPlayer() -> AVFoundation.AVPlayer?
-  @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class RendererImageDownloader : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  @objc public func image(withUrl url: Swift.String, blured: Swift.Bool, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
-  @objc deinit
+@objc public enum Position : Swift.Int {
+  case undefined
+  case topLeft
+  case topCenter
+  case topRight
+  case center
+  case bottomLeft
+  case bottomCenter
+  case bottomRight
+  case custom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 @objc @objcMembers public class InjectionScript : ObjectiveC.NSObject {
   @objc final public let location: AdRenderKit.InjectionLocation
@@ -165,144 +283,26 @@ public protocol ViewabilityTrackDelegate : AnyObject {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdPauseEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdResumeEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdCompleteEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdBufferStartEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdBufferFinishEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdMidpointEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdFirstQuartileEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdThirdQuartileEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class VASTAdClickEvent : AdRenderKit.AdCreativeEvent {
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class VASTAdVolumeChangeEvent : AdRenderKit.AdCreativeEvent {
-  @objc final public let volume: Swift.Float
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class VASTAdStartEvent : AdRenderKit.AdCreativeEvent {
-  @objc final public let duration: Foundation.TimeInterval
-  @objc final public let volume: Swift.Float
-  @objc deinit
-}
 public typealias ViewabilityTrackerCompletionHandler = (AdRenderKit.ViewabilityTrackResult) -> ()
 @_hasMissingDesignatedInitializers @objc public class ViewabilityTracker : ObjectiveC.NSObject {
   @objc public func track(_ onComplete: @escaping AdRenderKit.ViewabilityTrackerCompletionHandler)
   @objc deinit
 }
-@objc public protocol AdCreativeEventSubscriber {
-  @objc func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
-}
-@objc public protocol AdCreativeEventDelegate : AdRenderKit.AdCreativeEventSubscriber {
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class ViewabilityTrackResult : ObjectiveC.NSObject {
-  @objc final public let visiblePeriod: Swift.Float
-  @objc final public let totalPeriod: Swift.Float
-  @objc deinit
-}
-@objc public enum Position : Swift.Int {
-  case undefined
-  case topLeft
-  case topCenter
-  case topRight
-  case center
-  case bottomLeft
-  case bottomCenter
-  case bottomRight
-  case custom
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @objcMembers public class VideoSettings : ObjectiveC.NSObject {
-  @objc final public let autoPlay: Swift.Bool
-  @objc final public let audio: Swift.String
-  @objc final public let blur: Swift.Bool
-  @objc final public let radius: Foundation.NSNumber
-  @objc final public let opacity: Foundation.NSNumber
-  @objc public init(autoPlay: Swift.Bool, audio: Swift.String, blur: Swift.Bool, radius: Foundation.NSNumber, opacity: Foundation.NSNumber)
-  @objc deinit
-}
-extension UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public func addFillSuperviewConstraints()
-  @_Concurrency.MainActor @preconcurrency public func addConstraints(from rect: CoreFoundation.CGRect)
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AdCreativeRenderer : ObjectiveC.NSObject {
-  @objc final public let adCreativeModel: AdRenderKit.AdCreativeModel
-  @objc weak public var delegate: (any AdRenderKit.AdCreativeEventDelegate)? {
-    @objc get
-    @objc set
-  }
-  @objc convenience public init(adCreativeModel: AdRenderKit.AdCreativeModel, viewControllerForPresentingModals: UIKit.UIViewController? = nil, userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? = nil, omStaticAd: (any AdRenderKit.OMStaticAd)?)
-  @objc public func load()
-  @objc deinit
-  @objc public func destroy()
-}
-@objc public protocol ContainerView {
-  @objc func add(view: UIKit.UIView)
-}
-public enum PreloadState : Swift.UInt {
-  case unknown
-  case started
-  case complete
-  case cancelled
-  public init?(rawValue: Swift.UInt)
-  public typealias RawValue = Swift.UInt
-  public var rawValue: Swift.UInt {
-    get
-  }
-}
-public protocol PreloaderDelegate : AnyObject {
-  func onPreloadStateChanged(_ preloadState: AdRenderKit.PreloadState)
-}
-public protocol Preloader : AnyObject {
-  var delegate: (any AdRenderKit.PreloaderDelegate)? { get set }
-  var preloadDuration: Swift.Double { get set }
-  func preload(from url: Foundation.URL)
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class FullScreenAdCreativeRenderer : AdRenderKit.AdCreativeRenderer {
-  @objc public func show(viewControllerForPresentingModals: UIKit.UIViewController? = nil)
-  @objc override public func destroy()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class InlineAdCreativeRenderer : AdRenderKit.AdCreativeRenderer {
-  @objc public func render(view: any AdRenderKit.ContainerView)
-  @objc override public func destroy()
-  @objc deinit
-}
+extension AdRenderKit.PreloadState : Swift.Equatable {}
+extension AdRenderKit.PreloadState : Swift.Hashable {}
+extension AdRenderKit.PreloadState : Swift.RawRepresentable {}
 extension AdRenderKit.AdChoicePosition : Swift.Equatable {}
 extension AdRenderKit.AdChoicePosition : Swift.Hashable {}
 extension AdRenderKit.AdChoicePosition : Swift.RawRepresentable {}
 extension AdRenderKit.AdCreativeFormat : Swift.Equatable {}
 extension AdRenderKit.AdCreativeFormat : Swift.Hashable {}
 extension AdRenderKit.AdCreativeFormat : Swift.RawRepresentable {}
+extension AdRenderKit.Position : Swift.Equatable {}
+extension AdRenderKit.Position : Swift.Hashable {}
+extension AdRenderKit.Position : Swift.RawRepresentable {}
 extension AdRenderKit.InjectionLocation : Swift.Equatable {}
 extension AdRenderKit.InjectionLocation : Swift.Hashable {}
 extension AdRenderKit.InjectionLocation : Swift.RawRepresentable {}
 extension AdRenderKit.PlacementType : Swift.Equatable {}
 extension AdRenderKit.PlacementType : Swift.Hashable {}
 extension AdRenderKit.PlacementType : Swift.RawRepresentable {}
-extension AdRenderKit.Position : Swift.Equatable {}
-extension AdRenderKit.Position : Swift.Hashable {}
-extension AdRenderKit.Position : Swift.RawRepresentable {}
-extension AdRenderKit.PreloadState : Swift.Equatable {}
-extension AdRenderKit.PreloadState : Swift.Hashable {}
-extension AdRenderKit.PreloadState : Swift.RawRepresentable {}
