@@ -10,8 +10,75 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+extension Swift.String {
+  public var trimmingWhitespacesAndNewLines: Swift.String {
+    get
+  }
+  public var trimmedAndEscaped: Swift.String {
+    get
+  }
+}
+public class HTTPClient {
+  public typealias RequestHeaders = MobileAdsUtilities.HTTPRequest.Headers
+  public typealias ResponseHeaders = MobileAdsUtilities.HTTPResponse<MobileAdsUtilities.HTTPEmptyResponseBody>.Headers
+  public typealias Completion<Value> = (MobileAdsUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : MobileAdsUtilities.HTTPResponseBody
+  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: MobileAdsUtilities.OperationDispatcher)
+  convenience public init(requestTimeout: Foundation.TimeInterval)
+  public func send<Value>(_ request: MobileAdsUtilities.HTTPRequest, completion: MobileAdsUtilities.HTTPClient.Completion<Value>?) where Value : MobileAdsUtilities.HTTPResponseBody
+  @objc deinit
+}
+extension MobileAdsUtilities.HTTPClient {
+  public enum RequestHeader : Swift.String {
+    case userAgent
+    case expire
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ResponseHeader : Swift.String {
+    case date
+    case expire
+    case contentType
+    case lastModified
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public class UserAgentUtils {
+  public init()
+  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  public func getUserAgentFromSystemInfo() -> Swift.String
+  @objc deinit
+}
+extension Swift.Result {
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
+    get
+  }
+}
+public class ErrorResponse {
+  public var code: Swift.Int? {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public init(code: Swift.Int? = nil, message: Swift.String? = nil)
+  @objc deinit
+}
 @objc public protocol UserAgentProviderProtocol {
   @objc func getUserAgent() -> Swift.String
+}
+extension Foundation.Date {
+  public func expireHeaderFormated() -> Swift.String
+  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
 }
 public protocol LogMessage : Swift.CustomStringConvertible {
   var description: Swift.String { get }
@@ -22,6 +89,14 @@ public protocol LogMessage : Swift.CustomStringConvertible {
   @objc convenience public init(userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)?)
   @objc public func get(_ resourceURL: Swift.String?, timeout: Foundation.TimeInterval, completionHandler: @escaping MobileAdsUtilities.ServerResponseCallback)
   @objc deinit
+}
+extension Foundation.JSONEncoder {
+  public static let `default`: Foundation.JSONEncoder
+  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
+}
+extension Foundation.JSONDecoder {
+  public static let `default`: Foundation.JSONDecoder
+  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
 }
 @objc public enum LogLevel : Swift.Int, Swift.CustomStringConvertible, Swift.CaseIterable, Swift.Sendable {
   case debug = 0
@@ -65,6 +140,21 @@ public typealias ServerResponseCallback = (MobileAdsUtilities.ServerResponse) ->
   @objc var userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? { get }
   @objc func get(_ resourceURL: Swift.String?, timeout: Foundation.TimeInterval, completionHandler: @escaping MobileAdsUtilities.ServerResponseCallback)
 }
+@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
+  public protocol Task {
+    func run()
+  }
+  public protocol Job {
+    var isActive: Swift.Bool { get }
+    func stop()
+    func start()
+  }
+  public static let `default`: MobileAdsUtilities.OperationDispatcher
+  @objc public func dispatchOnMainThread(_ block: @escaping @Sendable () -> Swift.Void)
+  @objc public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval = .zero, block: @escaping @Sendable () -> Swift.Void)
+  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any MobileAdsUtilities.OperationDispatcher.Task) -> any MobileAdsUtilities.OperationDispatcher.Job
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @objc public class Logger : ObjectiveC.NSObject, MobileAdsUtilities.LoggerType {
   @objc public static func isDebugModeEnabled() -> Swift.Bool
   @objc public static func isEventDebugEnabled() -> Swift.Bool
@@ -90,9 +180,6 @@ extension MobileAdsUtilities.NetworkError : Swift.CustomStringConvertible {
     get
   }
 }
-extension Foundation.UserDefaults {
-  public static func managed() -> Foundation.UserDefaults
-}
 public enum Strings {
 }
 public enum HTTPStatusCode {
@@ -110,13 +197,9 @@ extension MobileAdsUtilities.HTTPStatusCode : Swift.RawRepresentable {
 }
 extension MobileAdsUtilities.HTTPStatusCode : Swift.Hashable {
 }
-extension Swift.String {
-  public var trimmingWhitespacesAndNewLines: Swift.String {
-    get
-  }
-  public var trimmedAndEscaped: Swift.String {
-    get
-  }
+public protocol Validator {
+  associatedtype T
+  func validate(_ value: Self.T) -> MobileAdsUtilities.ValidationResult
 }
 public protocol HTTPResponseBody {
   static func create(using data: Foundation.Data) throws -> Self
@@ -132,18 +215,6 @@ extension Swift.Decodable {
 }
 extension Swift.Optional : MobileAdsUtilities.HTTPResponseBody where Wrapped : MobileAdsUtilities.HTTPResponseBody {
   public static func create(using data: Foundation.Data) throws -> Wrapped?
-}
-public protocol Validator {
-  associatedtype T
-  func validate(_ value: Self.T) -> MobileAdsUtilities.ValidationResult
-}
-extension Swift.Result {
-  public var value: Success? {
-    get
-  }
-  public var error: Failure? {
-    get
-  }
 }
 public protocol HTTPResponseType {
   associatedtype Body : MobileAdsUtilities.HTTPResponseBody
@@ -201,9 +272,8 @@ public protocol HTTPRequestBody : Swift.Encodable {
   @objc override dynamic public init()
   @objc deinit
 }
-extension Foundation.Date {
-  public func expireHeaderFormated() -> Swift.String
-  public static func date(from expireHeaderFormatedString: Swift.String) -> Foundation.Date?
+extension Foundation.UserDefaults {
+  public static func managed() -> Foundation.UserDefaults
 }
 public struct HTTPRequest {
   public typealias Headers = [Swift.String : Swift.String]
@@ -228,82 +298,12 @@ extension MobileAdsUtilities.HTTPRequest.Method {
     get
   }
 }
-extension Foundation.JSONEncoder {
-  public static let `default`: Foundation.JSONEncoder
-  public func encode<T>(_ type: T.Type = T.self, value: T, logError: Swift.Bool = true) throws -> Foundation.Data where T : Swift.Encodable
-}
-extension Foundation.JSONDecoder {
-  public static let `default`: Foundation.JSONDecoder
-  public func decode<T>(_ type: T.Type = T.self, jsonData: Foundation.Data, logError: Swift.Bool = true) throws -> T where T : Swift.Decodable
-}
-public class HTTPClient {
-  public typealias RequestHeaders = MobileAdsUtilities.HTTPRequest.Headers
-  public typealias ResponseHeaders = MobileAdsUtilities.HTTPResponse<MobileAdsUtilities.HTTPEmptyResponseBody>.Headers
-  public typealias Completion<Value> = (MobileAdsUtilities.HTTPResponse<Value>.Result) -> Swift.Void where Value : MobileAdsUtilities.HTTPResponseBody
-  public init(requestTimeout: Foundation.TimeInterval, session: Foundation.URLSession, operationDispatcher: MobileAdsUtilities.OperationDispatcher)
-  convenience public init(requestTimeout: Foundation.TimeInterval)
-  public func send<Value>(_ request: MobileAdsUtilities.HTTPRequest, completion: MobileAdsUtilities.HTTPClient.Completion<Value>?) where Value : MobileAdsUtilities.HTTPResponseBody
-  @objc deinit
-}
-extension MobileAdsUtilities.HTTPClient {
-  public enum RequestHeader : Swift.String {
-    case userAgent
-    case expire
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ResponseHeader : Swift.String {
-    case date
-    case expire
-    case contentType
-    case lastModified
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-public class UserAgentUtils {
-  public init()
-  public func getUserAgent(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
-  public func getUserAgentFromSystemInfo() -> Swift.String
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objcMembers public class OperationDispatcher {
-  public protocol Task {
-    func run()
-  }
-  public protocol Job {
-    var isActive: Swift.Bool { get }
-    func stop()
-    func start()
-  }
-  public static let `default`: MobileAdsUtilities.OperationDispatcher
-  @objc public func dispatchOnMainThread(_ block: @escaping @Sendable () -> Swift.Void)
-  @objc public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval = .zero, block: @escaping @Sendable () -> Swift.Void)
-  public func dispatchOnWorkerThread(after timeInterval: Foundation.TimeInterval, task: any MobileAdsUtilities.OperationDispatcher.Task) -> any MobileAdsUtilities.OperationDispatcher.Job
-  @objc deinit
-}
-public class ErrorResponse {
-  public var code: Swift.Int? {
-    get
-  }
-  public var message: Swift.String? {
-    get
-  }
-  public init(code: Swift.Int? = nil, message: Swift.String? = nil)
-  @objc deinit
-}
-extension MobileAdsUtilities.LogLevel : Swift.Equatable {}
-extension MobileAdsUtilities.LogLevel : Swift.Hashable {}
-extension MobileAdsUtilities.LogLevel : Swift.RawRepresentable {}
 extension MobileAdsUtilities.HTTPClient.RequestHeader : Swift.Equatable {}
 extension MobileAdsUtilities.HTTPClient.RequestHeader : Swift.Hashable {}
 extension MobileAdsUtilities.HTTPClient.RequestHeader : Swift.RawRepresentable {}
 extension MobileAdsUtilities.HTTPClient.ResponseHeader : Swift.Equatable {}
 extension MobileAdsUtilities.HTTPClient.ResponseHeader : Swift.Hashable {}
 extension MobileAdsUtilities.HTTPClient.ResponseHeader : Swift.RawRepresentable {}
+extension MobileAdsUtilities.LogLevel : Swift.Equatable {}
+extension MobileAdsUtilities.LogLevel : Swift.Hashable {}
+extension MobileAdsUtilities.LogLevel : Swift.RawRepresentable {}
