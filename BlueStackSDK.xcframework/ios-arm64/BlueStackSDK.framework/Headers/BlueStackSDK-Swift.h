@@ -383,6 +383,7 @@ typedef SWIFT_ENUM(NSInteger, AdType, open) {
   AdTypeInfeed = 3,
   AdTypeThumbnail = 4,
   AdTypeAppopen = 5,
+  AdTypeRewarded = 6,
 };
 
 SWIFT_CLASS("_TtC12BlueStackSDK23AdapterAdLoadErrorEvent")
@@ -920,6 +921,7 @@ SWIFT_CLASS("_TtC12BlueStackSDK24MediationAdConfiguration")
 @interface MediationAdConfiguration : NSObject
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull serverParameters;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nullable localParameters;
+@property (nonatomic, readonly) NSInteger timeoutInMillis;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -929,12 +931,18 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK19MediationAdDelegate_")
 - (void)onAdClicked;
 @end
 
+@class PartnerSDKInfo;
 @class MediationAppOpenAdConfiguration;
 @protocol MediationAppOpenAd;
+@class MediationRewardedAdConfiguration;
+@protocol MediationRewardedAd;
 SWIFT_PROTOCOL("_TtP12BlueStackSDK16MediationAdapter_")
 @protocol MediationAdapter <NSObject>
+- (PartnerSDKInfo * _Nonnull)getPartnerSDKVersion SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getAdapterVersion SWIFT_WARN_UNUSED_RESULT;
 @optional
 - (void)loadAppOpenAdForMediationAppOpenAdConfiguration:(MediationAppOpenAdConfiguration * _Nonnull)mediationAppOpenAdConfiguration completionHandler:(void (^ _Nonnull)(id <MediationAppOpenAd> _Nullable, NSError * _Nullable))completionHandler;
+- (void)loadRewardedAdForMediationRewardedAdConfiguration:(MediationRewardedAdConfiguration * _Nonnull)mediationRewardedAdConfiguration completionHandler:(void (^ _Nonnull)(id <MediationRewardedAd> _Nullable, NSError * _Nullable))completionHandler;
 @end
 
 /// Enumeration that defines the type of error in case an ad fails to load
@@ -974,7 +982,7 @@ SWIFT_CLASS("_TtC12BlueStackSDK31MediationAppOpenAdConfiguration")
 @property (nonatomic, readonly, copy) NSString * _Nonnull appIcon;
 @property (nonatomic, readonly, copy) NSString * _Nonnull actionText;
 @property (nonatomic, readonly, copy) NSString * _Nonnull advertisementTag;
-- (nonnull instancetype)initWithAppName:(NSString * _Nonnull)appName appIcon:(NSString * _Nonnull)appIcon actionText:(NSString * _Nonnull)actionText advertisementTag:(NSString * _Nonnull)advertisementTag serverParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)serverParameters localParameters:(NSDictionary<NSString *, id> * _Nullable)localParameters OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAppName:(NSString * _Nonnull)appName appIcon:(NSString * _Nonnull)appIcon actionText:(NSString * _Nonnull)actionText advertisementTag:(NSString * _Nonnull)advertisementTag serverParameters:(NSDictionary<NSString *, NSString *> * _Nonnull)serverParameters timeoutInMillis:(NSInteger)timeoutInMillis localParameters:(NSDictionary<NSString *, id> * _Nullable)localParameters OBJC_DESIGNATED_INITIALIZER;
 @end
 
 SWIFT_PROTOCOL("_TtP12BlueStackSDK26MediationAppOpenAdDelegate_")
@@ -982,6 +990,33 @@ SWIFT_PROTOCOL("_TtP12BlueStackSDK26MediationAppOpenAdDelegate_")
 - (void)onAdDisplay;
 - (void)onAdFailedToDisplayWithError:(NSError * _Nonnull)error;
 - (void)onAdDismiss;
+@end
+
+SWIFT_CLASS_NAMED("MediationReward")
+@interface BLSMediationReward : NSObject
+@property (nonatomic, readonly, strong) NSNumber * _Nullable amount;
+@property (nonatomic, readonly, copy) NSString * _Nullable type;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol MediationRewardedAdDelegate;
+SWIFT_PROTOCOL("_TtP12BlueStackSDK19MediationRewardedAd_")
+@protocol MediationRewardedAd <MediationAd>
+@property (nonatomic, weak) id <MediationRewardedAdDelegate> _Nullable mediationAdDelegate;
+- (void)showFrom:(UIViewController * _Nonnull)viewController;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK32MediationRewardedAdConfiguration")
+@interface MediationRewardedAdConfiguration : MediationAdConfiguration
+@end
+
+SWIFT_PROTOCOL("_TtP12BlueStackSDK27MediationRewardedAdDelegate_")
+@protocol MediationRewardedAdDelegate <MediationAdDelegate>
+- (void)onAdDisplay;
+- (void)onAdFailedToDisplayWithError:(NSError * _Nonnull)error;
+- (void)onAdDismiss;
+- (void)onRewardEarnedWithReward:(BLSMediationReward * _Nullable)reward;
 @end
 
 SWIFT_CLASS_NAMED("MobileAds")
@@ -1014,20 +1049,44 @@ SWIFT_CLASS_NAMED("MobileAds")
 - (void)setDebugModeEnabled:(BOOL)enabled;
 @end
 
-SWIFT_CLASS("_TtC12BlueStackSDK13PerfAppOpenAd")
-@interface PerfAppOpenAd : NSObject
-@property (nonatomic, strong) id <MediationAppOpenAdDelegate> _Nullable mediationAdDelegate;
-- (nonnull instancetype)init;
-- (void)loadAppOpenAdForMediationAppOpenAdConfiguration:(MediationAppOpenAdConfiguration * _Nonnull)mediationAppOpenAdConfiguration completionHandler:(void (^ _Nonnull)(id <MediationAppOpenAd> _Nullable, NSError * _Nullable))completion;
+SWIFT_CLASS("_TtC12BlueStackSDK14PartnerSDKInfo")
+@interface PartnerSDKInfo : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+@property (nonatomic, readonly, copy) NSString * _Nonnull version;
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name version:(NSString * _Nonnull)version OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@interface PerfAppOpenAd (SWIFT_EXTENSION(BlueStackSDK)) <MediationAppOpenAd>
+SWIFT_CLASS("_TtC12BlueStackSDK22PerfMediationAppOpenAd")
+@interface PerfMediationAppOpenAd : NSObject
+@property (nonatomic, strong) id <MediationAppOpenAdDelegate> _Nullable mediationAdDelegate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface PerfMediationAppOpenAd (SWIFT_EXTENSION(BlueStackSDK)) <MediationAppOpenAd>
 - (void)showFrom:(UIViewController * _Nonnull)viewController;
 @end
 
 @class AdCreativeEvent;
-@interface PerfAppOpenAd (SWIFT_EXTENSION(BlueStackSDK)) <AdCreativeEventDelegate>
+@interface PerfMediationAppOpenAd (SWIFT_EXTENSION(BlueStackSDK)) <AdCreativeEventDelegate>
 - (void)onEvent:(AdCreativeEvent * _Nonnull)adCreativeEvent;
+@end
+
+SWIFT_CLASS("_TtC12BlueStackSDK23PerfMediationRewardedAd")
+@interface PerfMediationRewardedAd : NSObject
+@property (nonatomic, strong) id <MediationRewardedAdDelegate> _Nullable mediationAdDelegate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface PerfMediationRewardedAd (SWIFT_EXTENSION(BlueStackSDK)) <AdCreativeEventDelegate>
+- (void)onEvent:(AdCreativeEvent * _Nonnull)adCreativeEvent;
+@end
+
+@interface PerfMediationRewardedAd (SWIFT_EXTENSION(BlueStackSDK)) <MediationRewardedAd>
+- (void)showFrom:(UIViewController * _Nonnull)viewController;
 @end
 
 SWIFT_CLASS("_TtC12BlueStackSDK9Placement")
