@@ -344,6 +344,23 @@ SWIFT_CLASS("_TtC18MobileAdsUtilities14ServerResponse")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@protocol TimeoutControllerDelegate;
+SWIFT_CLASS("_TtC18MobileAdsUtilities17TimeoutController")
+@interface TimeoutController : NSObject
+@property (nonatomic, weak) id <TimeoutControllerDelegate> _Nullable delegate;
+- (nonnull instancetype)initWithTimeoutInSeconds:(NSTimeInterval)timeoutInSeconds delegate:(id <TimeoutControllerDelegate> _Nullable)delegate;
+- (void)start;
+- (void)stop;
+- (BOOL)isTimeout SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_PROTOCOL("_TtP18MobileAdsUtilities25TimeoutControllerDelegate_")
+@protocol TimeoutControllerDelegate <NSObject>
+- (void)onAdLoadTimeout;
+@end
+
 SWIFT_CLASS("_TtC18MobileAdsUtilities20URLSessionHTTPClient")
 @interface URLSessionHTTPClient : NSObject <ServerConnectionProtocol>
 @property (nonatomic, readonly, strong) id <UserAgentProviderProtocol> _Nullable userAgentProvider;
@@ -734,6 +751,23 @@ SWIFT_CLASS("_TtC18MobileAdsUtilities14ServerResponse")
 @property (nonatomic) NSError * _Nullable error;
 @property (nonatomic) NSInteger statusCode;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@protocol TimeoutControllerDelegate;
+SWIFT_CLASS("_TtC18MobileAdsUtilities17TimeoutController")
+@interface TimeoutController : NSObject
+@property (nonatomic, weak) id <TimeoutControllerDelegate> _Nullable delegate;
+- (nonnull instancetype)initWithTimeoutInSeconds:(NSTimeInterval)timeoutInSeconds delegate:(id <TimeoutControllerDelegate> _Nullable)delegate;
+- (void)start;
+- (void)stop;
+- (BOOL)isTimeout SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_PROTOCOL("_TtP18MobileAdsUtilities25TimeoutControllerDelegate_")
+@protocol TimeoutControllerDelegate <NSObject>
+- (void)onAdLoadTimeout;
 @end
 
 SWIFT_CLASS("_TtC18MobileAdsUtilities20URLSessionHTTPClient")
