@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getVersionCacheKey:(NSString* )key;
 + (NSString *)getVersionNumber;
 + (NSString *)getSementicVersionNumber;
++ (NSString *)getPerfAdapterVersion;
 
 @end
 

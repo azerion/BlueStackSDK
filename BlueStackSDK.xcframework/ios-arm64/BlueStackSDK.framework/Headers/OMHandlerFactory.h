@@ -12,10 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMHandlerFactory : NSObject
 
-- (OMHandler *)createOMHandlerWithOmVerificationScript:(NSString *)omVerificationScript
-                   omVendorKey:(NSString *)omvendorkey
-       omVerificationParameter:(NSString *)omverificationparameters
-                      omScript:(NSString *)omscript;
+- (nonnull OMHandler *)createOMHandlerWithOMScriptUrl:(nonnull NSString *)omScriptUrl;
 
 @end
 
