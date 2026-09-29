@@ -20,57 +20,9 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_hasMissingDesignatedInitializers @objc(BLSReward) public class Reward : ObjectiveC.NSObject {
-  @objc final public let currency: Swift.String?
-  @objc final public let amount: Foundation.NSNumber?
-  @objc deinit
-}
-@objc(BLSInterstitialAdDelegate) public protocol InterstitialAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc(didLoadInterstitialAd:) func onAdLoaded(_ ad: BlueStackSDK.InterstitialAd)
-  @objc(interstitialAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.InterstitialAd, _ error: any Swift.Error)
-}
-@objc public enum AdapterState : Swift.Int {
-  case ready
-  case notReady
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers final public class AdapterStatus : ObjectiveC.NSObject {
-  @objc final public let name: Swift.String
-  @objc final public let state: BlueStackSDK.AdapterState
-  @objc final public let statusDescription: Swift.String?
-  @objc deinit
-}
-@objc public enum AdSize : Swift.Int {
-  case banner
-  case largeBanner
-  case mediumRectangle
-  case fullBanner
-  case leaderboard
-  case dynamicBanner
-  case dynamicLeaderboardBanner
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(BLSBannerView) @_Concurrency.MainActor @preconcurrency public class BannerView : UIKit.UIView {
-  @objc deinit
-  @objc @_Concurrency.MainActor @preconcurrency public var adSize: BlueStackSDK.AdSize
-  @objc @_Concurrency.MainActor @preconcurrency public var placementID: Swift.String?
-  @objc @_Concurrency.MainActor @preconcurrency public var viewController: UIKit.UIViewController?
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var delegate: (any BlueStackSDK.BannerViewDelegate)?
-  @objc @_Concurrency.MainActor @preconcurrency public init(adSize: BlueStackSDK.AdSize)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @objc @_Concurrency.MainActor @preconcurrency public func load(requestOptions: BlueStackSDK.RequestOptions?)
-  @objc @_Concurrency.MainActor @preconcurrency public func load()
-  @objc @_Concurrency.MainActor @preconcurrency public func startAutoRefresh()
-  @objc @_Concurrency.MainActor @preconcurrency public func stopAutoRefresh()
+@objc public protocol FullScreenPresentableBiddingAd {
+  @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
+  @objc(presentFromRootViewController:) @_Concurrency.MainActor func present(from rootViewController: UIKit.UIViewController)
 }
 @objc public protocol Bidder {
   @objc var delegate: (any BlueStackSDK.BidderDelegate)? { get set }
@@ -143,9 +95,181 @@ public enum BiddingAdType {
   @objc(onDisplayFailedFullScreenBiddingAd:error:) @_Concurrency.MainActor func onDisplayFailed(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd, _ error: any Swift.Error)
   @objc(onDismissFullScreenBiddingAd:) @_Concurrency.MainActor func onDismiss(_ fullScreenBiddingAd: any BlueStackSDK.FullScreenPresentableBiddingAd)
 }
-@objc public protocol FullScreenPresentableBiddingAd {
-  @objc var fullscreenDelegate: (any BlueStackSDK.FullScreenBiddingAdDelegate)? { get set }
-  @objc(presentFromRootViewController:) @_Concurrency.MainActor func present(from rootViewController: UIKit.UIViewController)
+@_hasMissingDesignatedInitializers @objc(BLSReward) public class Reward : ObjectiveC.NSObject {
+  @objc final public let currency: Swift.String?
+  @objc final public let amount: Foundation.NSNumber?
+  @objc deinit
+}
+@objc(BLSInterstitialAdDelegate) public protocol InterstitialAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(didLoadInterstitialAd:) func onAdLoaded(_ ad: BlueStackSDK.InterstitialAd)
+  @objc(interstitialAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.InterstitialAd, _ error: any Swift.Error)
+}
+@objc(BLSMediationReward) public class MediationReward : ObjectiveC.NSObject {
+  @objc final public let amount: Foundation.NSNumber?
+  @objc final public let type: Swift.String?
+  public init(amount: Foundation.NSNumber?, type: Swift.String?)
+  @objc deinit
+}
+@objc public protocol MediationRewardedAdDelegate : BlueStackSDK.MediationAdDelegate {
+  @objc func onAdDisplay()
+  @objc func onAdFailedToDisplay(error: any Swift.Error)
+  @objc func onAdDismiss()
+  @objc func onRewardEarned(reward: BlueStackSDK.MediationReward?)
+}
+@objc public protocol MediationAd : ObjectiveC.NSObjectProtocol {
+}
+public typealias MediationAppOpenAdLoadCompletionHandler = ((any BlueStackSDK.MediationAppOpenAd)?, (any Swift.Error)?) -> Swift.Void
+public typealias MediationRewardedAdLoadCompletionHandler = ((any BlueStackSDK.MediationRewardedAd)?, (any Swift.Error)?) -> Swift.Void
+@objc public protocol MediationAdapter : ObjectiveC.NSObjectProtocol {
+  @objc func getPartnerSDKVersion() -> BlueStackSDK.PartnerSDKInfo
+  @objc func getAdapterVersion() -> Swift.String
+  @objc(loadAppOpenAdForMediationAppOpenAdConfiguration:completionHandler:) optional func loadAppOpenAd(for mediationAppOpenAdConfiguration: BlueStackSDK.MediationAppOpenAdConfiguration, completionHandler: @escaping BlueStackSDK.MediationAppOpenAdLoadCompletionHandler)
+  @objc(loadRewardedAdForMediationRewardedAdConfiguration:completionHandler:) optional func loadRewardedAd(for mediationRewardedAdConfiguration: BlueStackSDK.MediationRewardedAdConfiguration, completionHandler: @escaping BlueStackSDK.MediationRewardedAdLoadCompletionHandler)
+}
+@objc @objcMembers public class MediationAdConfiguration : ObjectiveC.NSObject {
+  @objc final public let serverParameters: [Swift.String : Swift.String]
+  @objc final public let localParameters: [Swift.String : Any]?
+  @objc final public let timeoutInMillis: Swift.Int
+  @objc final public let mediationPrivacyState: BlueStackSDK.MediationPrivacyState?
+  @objc public init(serverParameters: [Swift.String : Swift.String], timeoutInMillis: Swift.Int, localParameters: [Swift.String : Any]?, mediationPrivacyState: BlueStackSDK.MediationPrivacyState? = nil)
+  @objc deinit
+}
+extension BlueStackSDK.MediationAdConfiguration {
+  public var age: Swift.Int? {
+    get
+  }
+  public var adChoicePosition: Swift.Int? {
+    get
+  }
+  public var consentFlag: Swift.Int? {
+    get
+  }
+  @objc dynamic public var location: CoreLocation.CLLocation? {
+    @objc get
+  }
+  @objc dynamic public var language: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var contentUrl: Swift.String? {
+    @objc get
+  }
+  public var gender: BlueStackSDK.Gender? {
+    get
+  }
+  @objc dynamic public var keyword: Swift.String? {
+    @objc get
+  }
+  @objc public static func timeoutInMillis(from timeoutString: Swift.String?) -> Swift.Int
+}
+@objc @objcMembers public class MediationAppOpenAdConfiguration : BlueStackSDK.MediationAdConfiguration {
+  @objc final public let appName: Swift.String
+  @objc final public let appIcon: Swift.String
+  @objc final public let actionText: Swift.String
+  @objc final public let advertisementTag: Swift.String
+  @objc public init(appName: Swift.String, appIcon: Swift.String, actionText: Swift.String, advertisementTag: Swift.String, serverParameters: [Swift.String : Swift.String], timeoutInMillis: Swift.Int, localParameters: [Swift.String : Any]?, mediationPrivacyState: BlueStackSDK.MediationPrivacyState? = nil)
+  @objc deinit
+}
+@objc public protocol MediationAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func onAdClicked()
+}
+@objc public protocol MediationAppOpenAdDelegate : BlueStackSDK.MediationAdDelegate {
+  @objc func onAdDisplay()
+  @objc func onAdFailedToDisplay(error: any Swift.Error)
+  @objc func onAdDismiss()
+}
+@objc @objcMembers public class MediationPrivacyState : ObjectiveC.NSObject {
+  @objc final public let isGDPRApplies: Swift.Bool
+  @objc final public let isUserOptOut: Swift.Bool
+  @objc final public let isAgeRestrictedUser: Swift.Bool
+  @objc final public let tcfConsentString: Swift.String?
+  @objc public init(isGDPRApplies: Swift.Bool, isUserOptOut: Swift.Bool, isAgeRestrictedUser: Swift.Bool, tcfConsentString: Swift.String?)
+  @objc deinit
+}
+@objc public protocol MediationAppOpenAd : BlueStackSDK.MediationAd {
+  @objc weak var mediationAdDelegate: (any BlueStackSDK.MediationAppOpenAdDelegate)? { get set }
+  @objc func show(from viewController: UIKit.UIViewController)
+}
+@objc @objcMembers public class PartnerSDKInfo : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String
+  @objc final public let version: Swift.String
+  @objc public init(name: Swift.String, version: Swift.String)
+  @objc deinit
+}
+@objc public protocol MediationBannerAd : BlueStackSDK.MediationAd {
+  @objc weak var mediationAdDelegate: (any BlueStackSDK.MediationBannerAdDelegate)? { get set }
+  @objc var adView: UIKit.UIView { get }
+  @objc var preferredHeightInDp: CoreFoundation.CGFloat { get }
+}
+@objc public protocol MediationInterstitialAd : BlueStackSDK.MediationAd {
+  @objc weak var mediationAdDelegate: (any BlueStackSDK.MediationInterstitialAdDelegate)? { get set }
+  @objc func show(from viewController: UIKit.UIViewController)
+}
+@objc @objcMembers public class MediationBannerAdConfiguration : BlueStackSDK.MediationAdConfiguration {
+  @objc final public let adSize: CoreFoundation.CGSize
+  @objc public init(adSize: CoreFoundation.CGSize, timeoutInMillis: Swift.Int, serverParameters: [Swift.String : Swift.String], localParameters: [Swift.String : Any]?, mediationPrivacyState: BlueStackSDK.MediationPrivacyState? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class MediationInterstitialAdConfiguration : BlueStackSDK.MediationAdConfiguration {
+  @objc override public init(serverParameters: [Swift.String : Swift.String], timeoutInMillis: Swift.Int, localParameters: [Swift.String : Any]?, mediationPrivacyState: BlueStackSDK.MediationPrivacyState? = nil)
+  @objc deinit
+}
+@objc public protocol MediationBannerAdDelegate : BlueStackSDK.MediationAdDelegate {
+}
+@objc public protocol MediationInterstitialAdDelegate : BlueStackSDK.MediationAdDelegate {
+  @objc func onAdDisplay()
+  @objc func onAdFailedToDisplay(error: any Swift.Error)
+  @objc func onAdDismiss()
+}
+@objc public protocol MediationRewardedAd : BlueStackSDK.MediationAd {
+  @objc weak var mediationAdDelegate: (any BlueStackSDK.MediationRewardedAdDelegate)? { get set }
+  @objc func show(from viewController: UIKit.UIViewController)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class MediationRewardedAdConfiguration : BlueStackSDK.MediationAdConfiguration {
+  @objc override public init(serverParameters: [Swift.String : Swift.String], timeoutInMillis: Swift.Int, localParameters: [Swift.String : Any]?, mediationPrivacyState: BlueStackSDK.MediationPrivacyState? = nil)
+  @objc deinit
+}
+@objc public enum AdapterState : Swift.Int {
+  case ready
+  case notReady
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class AdapterStatus : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String
+  @objc final public let state: BlueStackSDK.AdapterState
+  @objc final public let statusDescription: Swift.String?
+  @objc deinit
+}
+@objc public enum AdSize : Swift.Int {
+  case banner
+  case largeBanner
+  case mediumRectangle
+  case fullBanner
+  case leaderboard
+  case dynamicBanner
+  case dynamicLeaderboardBanner
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(BLSBannerView) @_Concurrency.MainActor @preconcurrency public class BannerView : UIKit.UIView {
+  @objc deinit
+  @objc @_Concurrency.MainActor @preconcurrency public var adSize: BlueStackSDK.AdSize
+  @objc @_Concurrency.MainActor @preconcurrency public var placementID: Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency public var viewController: UIKit.UIViewController?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var delegate: (any BlueStackSDK.BannerViewDelegate)?
+  @objc @_Concurrency.MainActor @preconcurrency public init(adSize: BlueStackSDK.AdSize)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor @preconcurrency public func load(requestOptions: BlueStackSDK.RequestOptions?)
+  @objc @_Concurrency.MainActor @preconcurrency public func load()
+  @objc @_Concurrency.MainActor @preconcurrency public func startAutoRefresh()
+  @objc @_Concurrency.MainActor @preconcurrency public func stopAutoRefresh()
 }
 @objc public protocol FullScreenDelegate : ObjectiveC.NSObjectProtocol {
   @objc(didClickAd:) optional func onAdClicked(_ ad: any BlueStackSDK.FullScreenDisplayableAd)
@@ -170,25 +294,6 @@ public enum BiddingAdType {
 }
 extension BlueStackSDK.HeaderBidderConfig {
   @objc dynamic public func bidderParams() -> [Swift.String : Any]?
-}
-@objc public enum AdType : Swift.Int {
-  case banner = 0
-  case interstitial
-  case native
-  case infeed
-  case thumbnail
-  case appopen
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension BlueStackSDK_Private.ServerURLConnection : @retroactive MobileAdsUtilities.ServerConnectionProtocol {
-  @objc dynamic public var userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? {
-    @objc get
-  }
-  @objc dynamic public func get(_ resourceURL: Swift.String?, timeout: Foundation.TimeInterval, completionHandler: @escaping MobileAdsUtilities.ServerResponseCallback)
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class RequestOptionsToPreferenceTransformer : ObjectiveC.NSObject {
   @objc public func transform(_ requestOptions: BlueStackSDK.RequestOptions?) -> BlueStackSDK.Preference?
@@ -285,6 +390,26 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
   @objc(setDebugModeEnabled:) final public func setDebugMode(enabled: Swift.Bool)
   @objc deinit
 }
+@objc public enum AdType : Swift.Int {
+  case banner = 0
+  case interstitial
+  case native
+  case infeed
+  case thumbnail
+  case appopen
+  case rewarded
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension BlueStackSDK_Private.ServerURLConnection : @retroactive MobileAdsUtilities.ServerConnectionProtocol {
+  @objc dynamic public var userAgentProvider: (any MobileAdsUtilities.UserAgentProviderProtocol)? {
+    @objc get
+  }
+  @objc dynamic public func get(_ resourceURL: Swift.String?, timeout: Foundation.TimeInterval, completionHandler: @escaping MobileAdsUtilities.ServerResponseCallback)
+}
 @_hasMissingDesignatedInitializers @objc(BLSInterstitialAd) final public class InterstitialAd : ObjectiveC.NSObject, BlueStackSDK.FullScreenDisplayableAd {
   @objc final public var isReady: Swift.Bool {
     @objc get
@@ -357,6 +482,9 @@ public typealias InitializationCompletionHandler = (BlueStackSDK.InitializationS
   @objc public func isTimeout() -> Swift.Bool
   @objc deinit
 }
+extension BlueStackSDK.Preference {
+  public func toLocalParameter() -> [Swift.String : Any]
+}
 @objc @_hasMissingDesignatedInitializers @objcMembers public class Placement : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let keywords: Swift.String?
   @objc deinit
@@ -395,61 +523,6 @@ extension BlueStackSDK.AdServer {
   @objc(rewardedAd:didFailedToLoadWithError:) func onAdFailedToLoad(_ ad: BlueStackSDK.RewardedAd, _ error: any Swift.Error)
   @objc(rewardedAd:didEarnedReward:) func onRewardEarned(_ ad: BlueStackSDK.RewardedAd, _ reward: BlueStackSDK.Reward?)
 }
-@objc public protocol MediationAd : ObjectiveC.NSObjectProtocol {
-}
-public typealias MediationAppOpenAdLoadCompletionHandler = ((any BlueStackSDK.MediationAppOpenAd)?, (any Swift.Error)?) -> Swift.Void
-@objc public protocol MediationAdapter : ObjectiveC.NSObjectProtocol {
-  @objc(loadAppOpenAdForMediationAppOpenAdConfiguration:completionHandler:) optional func loadAppOpenAd(for mediationAppOpenAdConfiguration: BlueStackSDK.MediationAppOpenAdConfiguration, completionHandler: @escaping BlueStackSDK.MediationAppOpenAdLoadCompletionHandler)
-}
-@objc @_inheritsConvenienceInitializers @objcMembers public class LocalParamKeys : ObjectiveC.NSObject {
-  @objc public static let AGE: Swift.String
-  @objc public static let AD_CHOICE_POSITION: Swift.String
-  @objc public static let CONSENT_FLAG: Swift.String
-  @objc public static let LOCATION: Swift.String
-  @objc public static let LANGUAGE: Swift.String
-  @objc public static let KEYWORD: Swift.String
-  @objc public static let CONTENT_URL: Swift.String
-  @objc public static let GENDER: Swift.String
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class MediationAdConfiguration : ObjectiveC.NSObject {
-  @objc final public let serverParameters: [Swift.String : Swift.String]
-  @objc final public let localParameters: [Swift.String : Any]?
-  @objc deinit
-}
-@objc public protocol MediationAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func onAdClicked()
-}
-@objc public protocol MediationAppOpenAd : BlueStackSDK.MediationAd {
-  @objc weak var mediationAdDelegate: (any BlueStackSDK.MediationAppOpenAdDelegate)? { get set }
-  @objc func show(from viewController: UIKit.UIViewController)
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class MediationAppOpenAdConfiguration : BlueStackSDK.MediationAdConfiguration {
-  @objc final public let appName: Swift.String
-  @objc final public let appIcon: Swift.String
-  @objc final public let actionText: Swift.String
-  @objc final public let advertisementTag: Swift.String
-  @objc public init(appName: Swift.String, appIcon: Swift.String, actionText: Swift.String, advertisementTag: Swift.String, serverParameters: [Swift.String : Swift.String], localParameters: [Swift.String : Any]?)
-  @objc deinit
-}
-@objc public protocol MediationAppOpenAdDelegate : BlueStackSDK.MediationAdDelegate {
-  @objc func onAdDisplay()
-  @objc func onAdFailedToDisplay(error: any Swift.Error)
-  @objc func onAdDismiss()
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class PerfAppOpenAd : ObjectiveC.NSObject {
-  @objc public var mediationAdDelegate: (any BlueStackSDK.MediationAppOpenAdDelegate)?
-  @objc deinit
-  @objc convenience override dynamic public init()
-  @objc(loadAppOpenAdForMediationAppOpenAdConfiguration:completionHandler:) public func load(_ mediationAppOpenAdConfiguration: BlueStackSDK.MediationAppOpenAdConfiguration, _ completion: @escaping BlueStackSDK.MediationAppOpenAdLoadCompletionHandler)
-}
-extension BlueStackSDK.PerfAppOpenAd : BlueStackSDK.MediationAppOpenAd {
-  @objc dynamic public func show(from viewController: UIKit.UIViewController)
-}
-extension BlueStackSDK.PerfAppOpenAd : AdRenderKit.AdCreativeEventDelegate {
-  @objc dynamic public func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
-}
 @objc @_hasMissingDesignatedInitializers @objcMembers public class DispatcherConfiguration : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let appid: Swift.Int
   @objc final public let appName: Swift.String?
@@ -481,6 +554,26 @@ extension BlueStackSDK.DispatcherConfiguration : MobileAdsUtilities.HTTPResponse
 }
 extension BlueStackSDK.DispatcherConfiguration {
   @objc convenience dynamic public init(appId: Swift.Int, expireDate: Foundation.Date? = nil, adapterInitConfigs: [BlueStackSDK.AdapterInitConfig]? = nil)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class PerfMediationRewardedAd : ObjectiveC.NSObject {
+  @objc public var mediationAdDelegate: (any BlueStackSDK.MediationRewardedAdDelegate)?
+  @objc deinit
+}
+extension BlueStackSDK.PerfMediationRewardedAd : BlueStackSDK.MediationRewardedAd {
+  @objc dynamic public func show(from viewController: UIKit.UIViewController)
+}
+extension BlueStackSDK.PerfMediationRewardedAd : AdRenderKit.AdCreativeEventDelegate {
+  @objc dynamic public func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class PerfMediationAppOpenAd : ObjectiveC.NSObject {
+  @objc public var mediationAdDelegate: (any BlueStackSDK.MediationAppOpenAdDelegate)?
+  @objc deinit
+}
+extension BlueStackSDK.PerfMediationAppOpenAd : BlueStackSDK.MediationAppOpenAd {
+  @objc dynamic public func show(from viewController: UIKit.UIViewController)
+}
+extension BlueStackSDK.PerfMediationAppOpenAd : AdRenderKit.AdCreativeEventDelegate {
+  @objc dynamic public func onEvent(_ adCreativeEvent: AdRenderKit.AdCreativeEvent)
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class CappingState : ObjectiveC.NSObject, Swift.Codable {
   @objc(cappingPeriodDelay) public var __cappingPeriodDelay: Foundation.NSNumber? {
@@ -516,20 +609,20 @@ extension BlueStackSDK.DispatcherConfiguration {
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
+extension BlueStackSDK.BiddingAdType : Swift.Equatable {}
+extension BlueStackSDK.BiddingAdType : Swift.Hashable {}
 extension BlueStackSDK.AdapterState : Swift.Equatable {}
 extension BlueStackSDK.AdapterState : Swift.Hashable {}
 extension BlueStackSDK.AdapterState : Swift.RawRepresentable {}
 extension BlueStackSDK.AdSize : Swift.Equatable {}
 extension BlueStackSDK.AdSize : Swift.Hashable {}
 extension BlueStackSDK.AdSize : Swift.RawRepresentable {}
-extension BlueStackSDK.BiddingAdType : Swift.Equatable {}
-extension BlueStackSDK.BiddingAdType : Swift.Hashable {}
-extension BlueStackSDK.AdType : Swift.Equatable {}
-extension BlueStackSDK.AdType : Swift.Hashable {}
-extension BlueStackSDK.AdType : Swift.RawRepresentable {}
 extension BlueStackSDK.Gender : Swift.Equatable {}
 extension BlueStackSDK.Gender : Swift.Hashable {}
 extension BlueStackSDK.Gender : Swift.RawRepresentable {}
 extension BlueStackSDK.MediationAdapterInitializationState : Swift.Equatable {}
 extension BlueStackSDK.MediationAdapterInitializationState : Swift.Hashable {}
 extension BlueStackSDK.MediationAdapterInitializationState : Swift.RawRepresentable {}
+extension BlueStackSDK.AdType : Swift.Equatable {}
+extension BlueStackSDK.AdType : Swift.Hashable {}
+extension BlueStackSDK.AdType : Swift.RawRepresentable {}

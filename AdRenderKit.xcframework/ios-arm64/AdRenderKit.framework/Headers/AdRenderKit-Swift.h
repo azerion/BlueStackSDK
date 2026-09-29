@@ -306,12 +306,33 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+@class NSString;
+SWIFT_CLASS("_TtC11AdRenderKit24AdAccessibilityConstants")
+@interface AdAccessibilityConstants : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull mraidResizeCloseButtonIdentifier;)
++ (NSString * _Nonnull)mraidResizeCloseButtonIdentifier SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull closeButtonResizeIdentifier;)
++ (NSString * _Nonnull)closeButtonResizeIdentifier SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull closeButtonStandardIdentifier;)
++ (NSString * _Nonnull)closeButtonStandardIdentifier SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull closeButtonCustomIdentifier;)
++ (NSString * _Nonnull)closeButtonCustomIdentifier SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull appOpenCloseButtonIdentifier;)
++ (NSString * _Nonnull)appOpenCloseButtonIdentifier SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 typedef SWIFT_ENUM(NSInteger, AdChoicePosition, open) {
   AdChoicePositionTopRight = 0,
   AdChoicePositionTopLeft = 1,
   AdChoicePositionBottomRight = 2,
   AdChoicePositionBottomLeft = 3,
 };
+
+typedef SWIFT_ENUM(NSInteger, AdCreativeError, open) {
+  AdCreativeErrorVastVerificationParamsNotFound = 1001,
+};
+static NSString * _Nonnull const AdCreativeErrorDomain = @"AdRenderKit.AdCreativeError";
 
 SWIFT_CLASS("_TtC11AdRenderKit15AdCreativeEvent")
 @interface AdCreativeEvent : NSObject
@@ -341,7 +362,6 @@ SWIFT_CLASS("_TtC11AdRenderKit15AdCreativeModel")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSString;
 @class ViewabilitySettings;
 @protocol MacroApplier;
 @class InjectionScript;
@@ -351,9 +371,9 @@ enum Position : NSInteger;
 @class VideoSettings;
 SWIFT_CLASS("_TtC11AdRenderKit22AdCreativeModelFactory")
 @interface AdCreativeModelFactory : NSObject
-+ (AdCreativeModel * _Nonnull)createHtmlAdCreativeWithContentUrl:(NSString * _Nullable)contentUrl adm:(NSString * _Nullable)adm baseUrl:(NSString * _Nullable)baseUrl viewabilitySettings:(ViewabilitySettings * _Nonnull)viewabilitySettings syncTag:(NSString * _Nullable)syncTag omScript:(NSString * _Nullable)omScript omVendorkey:(NSString * _Nullable)omVendorkey omVerificationParameters:(NSString * _Nullable)omVerificationParameters omVerificationScript:(NSString * _Nullable)omVerificationScript adchoiceImage:(NSString * _Nullable)adchoiceImage adchoiceUrl:(NSString * _Nullable)adchoiceUrl adchoicePosition:(enum AdChoicePosition)adchoicePosition size:(CGSize)size macroApplier:(id <MacroApplier> _Nullable)macroApplier injectionScripts:(NSArray<InjectionScript *> * _Nonnull)injectionScripts isMRAID:(BOOL)isMRAID placementType:(enum PlacementType)placementType closeImageUrl:(NSString * _Nullable)closeImageUrl closeButtonPosition:(enum Position)closeButtonPosition closeAppearanceDelay:(NSInteger)closeAppearanceDelay shouldAutoClose:(BOOL)shouldAutoClose autoCloseDurationInSec:(int64_t)autoCloseDurationInSec fullScreenConfig:(FullScreenConfig * _Nullable)fullScreenConfig SWIFT_WARN_UNUSED_RESULT;
-+ (AdCreativeModel * _Nonnull)createImageAdCreativeWithContentUrl:(NSString * _Nullable)contentUrl adm:(NSString * _Nullable)adm baseUrl:(NSString * _Nullable)baseUrl viewabilitySettings:(ViewabilitySettings * _Nonnull)viewabilitySettings syncTag:(NSString * _Nullable)syncTag omScript:(NSString * _Nullable)omScript omVendorkey:(NSString * _Nullable)omVendorkey omVerificationParameters:(NSString * _Nullable)omVerificationParameters omVerificationScript:(NSString * _Nullable)omVerificationScript adchoiceImage:(NSString * _Nullable)adchoiceImage adchoiceUrl:(NSString * _Nullable)adchoiceUrl adchoicePosition:(enum AdChoicePosition)adchoicePosition size:(CGSize)size macroApplier:(id <MacroApplier> _Nullable)macroApplier SWIFT_WARN_UNUSED_RESULT;
-+ (AdCreativeModel * _Nonnull)createVastAdCreativeWithContentUrl:(NSString * _Nullable)contentUrl adm:(NSString * _Nullable)adm baseUrl:(NSString * _Nullable)baseUrl viewabilitySettings:(ViewabilitySettings * _Nonnull)viewabilitySettings videoSettings:(VideoSettings * _Nonnull)videoSettings syncTag:(NSString * _Nullable)syncTag omScript:(NSString * _Nullable)omScript omVendorkey:(NSString * _Nullable)omVendorkey omVerificationParameters:(NSString * _Nullable)omVerificationParameters omVerificationScript:(NSString * _Nullable)omVerificationScript adchoiceImage:(NSString * _Nullable)adchoiceImage adchoiceUrl:(NSString * _Nullable)adchoiceUrl adchoicePosition:(enum AdChoicePosition)adchoicePosition macroApplier:(id <MacroApplier> _Nullable)macroApplier closeImageUrl:(NSString * _Nullable)closeImageUrl closeButtonPosition:(enum Position)closeButtonPosition closeAppearanceDelay:(NSInteger)closeAppearanceDelay shouldAutoClose:(BOOL)shouldAutoClose autoCloseDurationInSec:(int64_t)autoCloseDurationInSec fullScreenConfig:(FullScreenConfig * _Nullable)fullScreenConfig SWIFT_WARN_UNUSED_RESULT;
++ (AdCreativeModel * _Nonnull)createHtmlAdCreativeWithContentUrl:(NSString * _Nullable)contentUrl adm:(NSString * _Nullable)adm baseUrl:(NSString * _Nullable)baseUrl viewabilitySettings:(ViewabilitySettings * _Nonnull)viewabilitySettings syncTag:(NSString * _Nullable)syncTag omScript:(NSString * _Nullable)omScript omVendorkey:(NSString * _Nullable)omVendorkey omVerificationParameters:(NSString * _Nullable)omVerificationParameters omVerificationScript:(NSString * _Nullable)omVerificationScript adchoiceImage:(NSString * _Nullable)adchoiceImage adchoiceUrl:(NSString * _Nullable)adchoiceUrl adchoicePosition:(enum AdChoicePosition)adchoicePosition size:(CGSize)size macroApplier:(id <MacroApplier> _Nullable)macroApplier injectionScripts:(NSArray<InjectionScript *> * _Nonnull)injectionScripts isMRAID:(BOOL)isMRAID placementType:(enum PlacementType)placementType closeImageUrl:(NSString * _Nullable)closeImageUrl closeButtonPosition:(enum Position)closeButtonPosition closeAppearanceDelay:(NSInteger)closeAppearanceDelay shouldAutoClose:(BOOL)shouldAutoClose autoCloseDurationInSec:(int64_t)autoCloseDurationInSec fullScreenConfig:(FullScreenConfig * _Nullable)fullScreenConfig backgroundColorCode:(NSString * _Nullable)backgroundColorCode SWIFT_WARN_UNUSED_RESULT;
++ (AdCreativeModel * _Nonnull)createImageAdCreativeWithContentUrl:(NSString * _Nullable)contentUrl adm:(NSString * _Nullable)adm baseUrl:(NSString * _Nullable)baseUrl viewabilitySettings:(ViewabilitySettings * _Nonnull)viewabilitySettings syncTag:(NSString * _Nullable)syncTag omScript:(NSString * _Nullable)omScript omVendorkey:(NSString * _Nullable)omVendorkey omVerificationParameters:(NSString * _Nullable)omVerificationParameters omVerificationScript:(NSString * _Nullable)omVerificationScript adchoiceImage:(NSString * _Nullable)adchoiceImage adchoiceUrl:(NSString * _Nullable)adchoiceUrl adchoicePosition:(enum AdChoicePosition)adchoicePosition size:(CGSize)size macroApplier:(id <MacroApplier> _Nullable)macroApplier backgroundColorCode:(NSString * _Nullable)backgroundColorCode SWIFT_WARN_UNUSED_RESULT;
++ (AdCreativeModel * _Nonnull)createVastAdCreativeWithContentUrl:(NSString * _Nullable)contentUrl adm:(NSString * _Nullable)adm baseUrl:(NSString * _Nullable)baseUrl viewabilitySettings:(ViewabilitySettings * _Nonnull)viewabilitySettings videoSettings:(VideoSettings * _Nonnull)videoSettings syncTag:(NSString * _Nullable)syncTag omScript:(NSString * _Nullable)omScript omVendorkey:(NSString * _Nullable)omVendorkey omVerificationParameters:(NSString * _Nullable)omVerificationParameters omVerificationScript:(NSString * _Nullable)omVerificationScript adchoiceImage:(NSString * _Nullable)adchoiceImage adchoiceUrl:(NSString * _Nullable)adchoiceUrl adchoicePosition:(enum AdChoicePosition)adchoicePosition macroApplier:(id <MacroApplier> _Nullable)macroApplier closeImageUrl:(NSString * _Nullable)closeImageUrl closeButtonPosition:(enum Position)closeButtonPosition closeAppearanceDelay:(NSInteger)closeAppearanceDelay shouldAutoClose:(BOOL)shouldAutoClose autoCloseDurationInSec:(int64_t)autoCloseDurationInSec fullScreenConfig:(FullScreenConfig * _Nullable)fullScreenConfig backgroundColorCode:(NSString * _Nullable)backgroundColorCode SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -386,7 +406,7 @@ SWIFT_CLASS("_TtC11AdRenderKit13AppOpenHeader")
 @class NSURL;
 SWIFT_CLASS("_TtC11AdRenderKit10ClickEvent")
 @interface ClickEvent : AdCreativeEvent
-@property (nonatomic, readonly, copy) NSURL * _Nonnull clickUrl;
+@property (nonatomic, readonly, copy) NSURL * _Nullable clickUrl;
 @end
 
 SWIFT_CLASS("_TtC11AdRenderKit10CloseEvent")
@@ -456,10 +476,13 @@ SWIFT_PROTOCOL("_TtP11AdRenderKit12MacroApplier_")
 @end
 
 @class WKWebView;
+@class VideoVerificationParameters;
 SWIFT_PROTOCOL("_TtP11AdRenderKit10OMStaticAd_")
 @protocol OMStaticAd
-- (BOOL)initializeHTMLAdCreativeOMSDKWithAdView:(UIView * _Nonnull)adView webView:(WKWebView * _Nonnull)webView content:(NSString * _Nonnull)content contentUrl:(NSString * _Nonnull)contentUrl error:(NSError * _Nullable * _Nullable)error;
-- (BOOL)initializeVASTAdCreativeOMSDKWithAdView:(UIView * _Nonnull)adView content:(NSString * _Nonnull)content contentUrl:(NSString * _Nonnull)contentUrl error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)createAndConfigureSessionForWebViewDisplayWithAdView:(UIView * _Nonnull)adView webView:(WKWebView * _Nonnull)webView contentUrl:(NSString * _Nullable)contentUrl error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)createAndConfigureSessionForWebViewVideoWithAdView:(UIView * _Nonnull)adView webView:(WKWebView * _Nonnull)webView contentUrl:(NSString * _Nullable)contentUrl error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)createAndConfigureSessionForNativeDisplayWithAdView:(UIView * _Nonnull)adView verificationParameters:(VideoVerificationParameters * _Nonnull)verificationParameters contentUrl:(NSString * _Nullable)contentUrl error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)createAndConfigureSessionForNativeVideoWithAdView:(UIView * _Nonnull)adView verificationParameters:(VideoVerificationParameters * _Nonnull)verificationParameters contentUrl:(NSString * _Nullable)contentUrl error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSessionAndReturnError:(NSError * _Nullable * _Nullable)error;
 - (BOOL)finishSessionAndReturnError:(NSError * _Nullable * _Nullable)error;
 - (BOOL)loadedAndReturnError:(NSError * _Nullable * _Nullable)error;
@@ -483,8 +506,7 @@ SWIFT_PROTOCOL("_TtP11AdRenderKit10OMStaticAd_")
 
 typedef SWIFT_ENUM(NSInteger, PlacementType, open) {
   PlacementTypeInline = 0,
-  PlacementTypeInterstitial = 1,
-  PlacementTypeAppopen = 2,
+  PlacementTypeFullscreen = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, Position, open) {
@@ -516,10 +538,6 @@ SWIFT_CLASS("_TtC11AdRenderKit23VASTAdBufferFinishEvent")
 
 SWIFT_CLASS("_TtC11AdRenderKit22VASTAdBufferStartEvent")
 @interface VASTAdBufferStartEvent : AdCreativeEvent
-@end
-
-SWIFT_CLASS("_TtC11AdRenderKit16VASTAdClickEvent")
-@interface VASTAdClickEvent : AdCreativeEvent
 @end
 
 SWIFT_CLASS("_TtC11AdRenderKit19VASTAdCompleteEvent")
@@ -557,6 +575,10 @@ SWIFT_CLASS("_TtC11AdRenderKit23VASTAdVolumeChangeEvent")
 @property (nonatomic, readonly) float volume;
 @end
 
+SWIFT_CLASS("_TtC11AdRenderKit30VASTConfigurationReceivedEvent")
+@interface VASTConfigurationReceivedEvent : AdCreativeEvent
+@end
+
 @class AVPlayer;
 SWIFT_CLASS("_TtC11AdRenderKit14VideoPreloader")
 @interface VideoPreloader : NSObject
@@ -576,6 +598,21 @@ SWIFT_CLASS("_TtC11AdRenderKit13VideoSettings")
 - (nonnull instancetype)initWithAutoPlay:(BOOL)autoPlay audio:(NSString * _Nonnull)audio blur:(BOOL)blur radius:(NSNumber * _Nonnull)radius opacity:(NSNumber * _Nonnull)opacity OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class VideoVerificationResource;
+SWIFT_CLASS("_TtC11AdRenderKit27VideoVerificationParameters")
+@interface VideoVerificationParameters : NSObject
+@property (nonatomic, copy) NSArray<VideoVerificationResource *> * _Nonnull verificationResources;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS("_TtC11AdRenderKit25VideoVerificationResource")
+@interface VideoVerificationResource : NSObject
+@property (nonatomic, copy) NSString * _Nullable url;
+@property (nonatomic, copy) NSString * _Nullable vendorKey;
+@property (nonatomic, copy) NSString * _Nullable params;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 SWIFT_CLASS("_TtC11AdRenderKit19ViewabilitySettings")

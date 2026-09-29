@@ -12,10 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMHandler : NSObject <OMStaticAd>
 
-- (instancetype)initWithOMScripts:(NSString *)omScripts
-             omverificationscript:(nullable NSString *)omverificationscript
-                        vendorKey:(nullable NSString *)vendorKey
-                       parameters:(nullable NSString *)parameters;
+- (instancetype)initWithOMScripts:(NSString *)omScripts;
 
 @end
 

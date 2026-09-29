@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isPlaying;
 
+- (BOOL)isPaused;
+
 - (void)loadWithUrl:(NSURL *)videoUrl;
 
 - (void)cleanup;
@@ -27,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)play;
 
 - (void)pause;
+
+- (void)resume;
 
 - (void)toggleMute;
 

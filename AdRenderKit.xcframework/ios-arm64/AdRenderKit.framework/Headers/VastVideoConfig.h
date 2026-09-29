@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class VideoVerificationParameters;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VastVideoConfig : NSObject
@@ -33,12 +35,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) NSArray *resumeTrackers;
 @property(nonatomic) NSArray *skipTrackers;
 
-/** @name Viewability */
+/** @name Viewability **/
 
 @property(nonatomic) NSTimeInterval minimumViewabilityTimeInterval;
 @property(nonatomic) NSTimeInterval duration;
 @property(nonatomic) double minimumFractionOfVideoVisible;
 @property(nonatomic) NSURL *viewabilityTrackingURL;
+
+/** @name Ad Verification **/
+@property (nonatomic, strong, nullable) VideoVerificationParameters *verificationParameters;
+
 
 - (void)appendVideoConfig:(VastVideoConfig *)videoConfig;
 
