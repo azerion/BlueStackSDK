@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   
   spec.name             = "BlueStack-SDK"
-  spec.version          = "6.1.0"
+  spec.version          = "6.1.1"
   spec.static_framework = true
   spec.summary          = "BlueStack by Azerion provides functionalities for monetizing your mobile application"
   spec.description      = <<-DESC
@@ -22,7 +22,7 @@ spec.source           = { :git => "https://github.com/azerion/BlueStackSDK.git",
 
   spec.platform = :ios
   spec.swift_version = "5"
-  spec.ios.deployment_target  = '13.0'
+  spec.ios.deployment_target  = '15.0'
   spec.resources = 'BlueStackSDK.xcframework/ios-arm64/*/*.{bundle}'
 
   spec.frameworks = 'CoreGraphics', 'QuartzCore', 'SystemConfiguration', 'MediaPlayer', 'CoreMotion', 'EventKitUI', 'EventKit', 'AdSupport', 'StoreKit', 'CoreLocation', 'Accelerate', 'CoreTelephony', 'MessageUI'
